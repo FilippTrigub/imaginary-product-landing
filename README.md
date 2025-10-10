@@ -1,3 +1,3 @@
-# NovaSphere - The Future of Personal Computing
+# NovaSphere - 个人计算的未来
 
-This repository contains the landing page for NovaSphere, an imaginary product that features holographic interfaces and advanced computing technologies.
+此存储库包含 NovaSphere 的登录页面，NovaSphere 是一个虚构的产品，具有全息界面和先进的计算技术。
