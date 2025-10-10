@@ -1,86 +1,60 @@
-# NovaSphere - Revolucionizovanie osobného počítačstva holografickou technológiou
+# NovaSphere - Revolucionizovanie Osobného Počítačstva Technológiou Holografickou
 
 ## O NovaSphere
 
-NovaSphere je inovatívna startup spoločnosť založená v roku 2023, venovaná transformácii spôsobu, akým interagujeme s technológiou prostredníctvom pokročilých holografických rozhraní. Našou misiou je premostiť priepasť medzi digitálnym a fyzickým svetom, vytváraním immersívnych počítačových skúseností, ktoré zvyšujú produktivitu, kreativitu a ľudské spojenie.
+NovaSphere je inovatívny startup založený v roku 2023, venovaný transformácii interakcie s technológiou prostredníctvom holografických rozhraní. Naša misia je spojiť digitálne a fyzické svety s immersívnymi skúsenosťami.
 
-V NovaSphere veríme, že budúcnosť počítačstva spočíva v trojrozmerných, interaktívnych hologramoch, ktoré sa vznášajú vo vzduchu, umožňujúc používateľom manipulovať s údajmi a aplikáciami prirodzenými gestami rúk. Náš vlajkový produkt, NovaSphere HoloDesk, je revolučná pracovná stanica, ktorá premieta holografické displeje, umožňujúc používateľom pracovať, navrhovať a spolupracovať spôsobmi, ktoré boli predtým predstavené len vo vedecko-fantastických filmoch.
+Náš hlavný produkt, NovaSphere HoloDesk, premieta holografické displeje na prirodzené ovládanie gestami.
 
 ## Vízia
 
-Demokratizácia holografického počítačstva, vďaka čomu je pokročilá technológia prístupná každému, od individuálnych tvorcov až po veľké podniky. Predstavujeme si svet, kde sa fyzické a digitálne hranice rozpúšťajú, podporujúc bezprecedentné úrovne inovácie a interakcie človek-stroj.
+Demokratizácia holografického počítačstva pre všetkých, rozpúšťanie fyzicko-digitálnych hraníc.
 
-## Kľúčové funkcie
+## Hlavné Funkcie
 
-### Holografické rozhranie
-- **3D projekčná technológia**: Kryštalicky čisté holografické displeje, ktoré možno sledovať z akéhokoľvek uhla bez potreby špeciálnych okuliarov.
-- **Rozpoznávanie gest**: Pokročilé sledovanie gest poháňané AI, ktoré umožňuje intuitívnu kontrolu holografických prvkov.
-- **Viacpoužívateľská spolupráca**: Podpora pre viacerých používateľov na súčasnú interakciu s rovnakým holografickým pracovným priestorom.
+- **3D Projekcia**: Jasné hologramy viditeľné z akéhokoľvek uhla.
+- **Rozpoznávanie Gest**: Intuitívne ovládanie poháňané AI.
+- **Kolaborácia Viacerých Používateľov**: Súčasná interakcia.
+- **Kvantové Spracovanie**: Rýchle spracovanie dát.
+- **Integrácia AI**: Asistenti učenia sa.
+- **Bezproblémová Konektivita**: Integrácia zariadení.
+- **Ekologický**: Udržateľné materiály, energetická efektívnosť.
 
-### Pokročilé počítačové schopnosti
-- **Kvantovo vylepšené spracovanie**: Využitie princípov kvantového počítačstva pre bleskové spracovanie údajov a komplexné simulácie.
-- **Integrácia AI**: Vstavaní asistenti umelej inteligencie, ktorí sa učia z používateľského správania na optimalizáciu pracovných tokov.
-- **Bezproblémová konektivita**: Bezproblémová integrácia s existujúcimi zariadeniami a cloudovými službami.
+## Náš Tím
 
-### Ekologický dizajn
-- **Udržateľné materiály**: Postavené z recyklovaných a biologicky rozložiteľných materiálov.
-- **Energetická efektívnosť**: Nízka spotreba energie s inteligentnými systémami riadenia napájania.
-- **Dlhodobosť**: Navrhnuté pre trvanlivosť a upgradovateľnosť na zníženie elektronického odpadu.
-
-## Náš tím
-
-NovaSphere bola založená tímom vizionárskych inžinierov, dizajnérov a podnikateľov:
-
-- **Dr. Elena Vasquez**: CEO a Chief Technology Officer, bývalá vedúca výskumníčka v MIT's Media Lab.
-- **Marcus Chen**: Vedúci dizajnu produktov, ocenený priemyselný dizajnér s skúsenosťami v Apple a Google.
-- **Dr. Sofia Ramirez**: Vedúca AI vedkyňa, PhD v strojovom učení zo Stanford University.
-- **Alex Thompson**: Chief Operating Officer, sériový podnikateľ s úspešnými výstupmi v technologickom priemysle.
+- Dr. Elena Vasquez: CEO & CTO
+- Marcus Chen: Vedúci Dizajnu Produktu
+- Dr. Sofia Ramirez: Vedúci Vedec AI
+- Alex Thompson: COO
 
 ## Začíname
 
-Toto úložisko obsahuje pristávaciu stránku pre NovaSphere. Na zobrazenie webovej stránky:
+Klonujte repo, otvorte index.html v prehliadači.
 
-1. Naklonujte toto úložisko na svoj lokálny počítač.
-2. Otvorte `index.html` vo svojom webovom prehliadači na zobrazenie hlavnej pristávacej stránky.
-3. Prejdite na `team.html`, aby ste sa dozvedeli viac o našom tíme.
-4. `header.html` obsahuje opakovane použiteľné komponenty hlavičky.
+## Použité Technológie
 
-## Použité technológie
-
-- **HTML5**: Pre sémantickú a prístupnú webovú štruktúru.
-- **CSS3**: Pre responsívne a vizuálne atraktívne štýlovanie.
-- **JavaScript**: Pre interaktívne prvky a dynamický obsah.
-- **SVG**: Pre škálovateľnú vektorovú grafiku používanú v logách a ilustráciách.
+- HTML5, CSS3, JavaScript, SVG
 
 ## Prispievanie
 
-Vítajúme príspevky od open-source komunity! Ak máte záujem pomôcť nám stavať budúcnosť počítačstva:
+Forknite, vytvorte vetvu, urobte zmeny, pošlite PR.
 
-1. Forknite toto úložisko.
-2. Vytvorte funkčnú vetvu pre vaše zmeny.
-3. Urobte svoje úpravy.
-4. Pošlite pull request s jasným popisom vašich zmien.
+## Cesta
 
-## Cestovná mapa
+- Q1 2024: Spustenie prototypu
+- Q3 2024: Beta testy
+- Q1 2025: Komerčné vydanie
+- 2025: Riešenia pre podniky
 
-- **Q1 2024**: Spustenie prototypu NovaSphere HoloDesk.
-- **Q3 2024**: Beta testovací program pre vybraných partnerov.
-- **Q1 2025**: Komerčné vydanie spotrebiteľskej verzie.
-- **2025**: Podnikové riešenia a API integrácie.
-
-## Kontaktujte nás
-
-Máte záujem dozvedieť sa viac o NovaSphere? Kontaktujte nás:
+## Kontaktujte Nás
 
 - Email: info@novasphere.tech
-- Webová stránka: [www.novasphere.tech](https://www.novasphere.tech)
-- Twitter: [@NovaSphereTech](https://twitter.com/NovaSphereTech)
-- LinkedIn: [NovaSphere Technologies](https://linkedin.com/company/novasphere)
+- Webová stránka: www.novasphere.tech
+- Twitter: @NovaSphereTech
+- LinkedIn: NovaSphere Technologies
 
 ## Licencia
 
-Tento projekt je licencovaný pod MIT licenciou - pozrite si súbor [LICENSE](LICENSE) pre podrobnosti.
-
----
+Licencia MIT
 
 *NovaSphere - Kde hologramy stretávajú realitu.*
