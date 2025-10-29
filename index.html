@@ -28,44 +28,156 @@
     </header>
 
     <section class="hero">
+        <div class="particles-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <h1>The Future of Personal Computing - Version 2.0</h1>
-                <p>NovaSphere introduces a revolutionary way to interact with technology. Seamlessly blend your digital and physical worlds with our groundbreaking holographic interface.</p>
+                <div class="hero-badge">✨ Now Available - Version 2.0</div>
+                <h1>
+                    <span class="gradient-text">Transform Reality</span><br>
+                    The Future of Personal Computing
+                </h1>
+                <p class="hero-description">Experience the impossible. NovaSphere v2 introduces a revolutionary holographic interface that seamlessly blends your digital and physical worlds. Welcome to the next dimension of computing.</p>
                 <div class="cta-buttons">
-                    <a href="#demo" class="btn-primary">Watch Demo</a>
-                    <a href="#pricing" class="btn-secondary">Pre-order Now</a>
+                    <a href="#demo" class="btn-primary pulse">
+                        <span>Watch Demo</span>
+                        <span class="btn-icon">▶</span>
+                    </a>
+                    <a href="#pricing" class="btn-secondary">
+                        <span>Pre-order Now</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50000">0</div>
+                        <div class="stat-label">Pre-orders</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/product.svg" alt="NovaSphere Device">
+                <div class="floating-elements">
+                    <div class="float-circle circle-1"></div>
+                    <div class="float-circle circle-2"></div>
+                    <div class="float-circle circle-3"></div>
+                </div>
+                <img src="images/product.svg" alt="NovaSphere Device" class="product-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-video" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">See It In Action</span>
+                <h2>Experience the Magic</h2>
+                <p class="section-subtitle">Watch how NovaSphere v2 transforms everyday computing into an extraordinary experience</p>
+            </div>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-button">
+                        <span>▶</span>
+                    </div>
+                    <p>Product Demo Video</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="features" class="features">
         <div class="container">
-            <h2>Key Features</h2>
+            <div class="section-header">
+                <span class="section-tag">Revolutionary Technology</span>
+                <h2>Redefining What's Possible</h2>
+                <p class="section-subtitle">Cutting-edge features that push the boundaries of innovation</p>
+            </div>
             <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="icon">🌐</div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon-wrapper">
+                        <div class="icon">🌐</div>
+                        <div class="icon-glow"></div>
+                    </div>
                     <h3>Holographic Interface</h3>
-                    <p>Interact with digital content in three dimensions, bringing your work and entertainment to life.</p>
+                    <p>Interact with digital content in three dimensions, bringing your work and entertainment to life like never before imagined.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">⚡</div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon-wrapper">
+                        <div class="icon">⚡</div>
+                        <div class="icon-glow"></div>
+                    </div>
                     <h3>Quantum Processing</h3>
-                    <p>Our proprietary quantum chip delivers unprecedented performance while consuming minimal energy.</p>
+                    <p>Our proprietary quantum chip delivers unprecedented performance while consuming minimal energy. 10x faster than traditional processors.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🔒</div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon-wrapper">
+                        <div class="icon">🔒</div>
+                        <div class="icon-glow"></div>
+                    </div>
                     <h3>Neural Security</h3>
-                    <p>Advanced biometric authentication that learns and adapts to your unique patterns.</p>
+                    <p>Advanced biometric authentication that learns and adapts to your unique patterns. Your data has never been safer.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🔄</div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon-wrapper">
+                        <div class="icon">🔄</div>
+                        <div class="icon-glow"></div>
+                    </div>
                     <h3>Infinite Battery</h3>
-                    <p>Revolutionary energy harvesting technology that keeps your device powered for weeks.</p>
+                    <p>Revolutionary energy harvesting technology that keeps your device powered for weeks without a single charge.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What People Say</span>
+                <h2>Loved by Innovators Worldwide</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"NovaSphere v2 has completely transformed how I work. The holographic interface is not just a gimmick—it's genuinely revolutionary."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Mitchell</div>
+                            <div class="author-title">Creative Director, PixelCraft</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The quantum processing power is mind-blowing. Tasks that used to take hours now complete in minutes. This is the future."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JC</div>
+                        <div class="author-info">
+                            <div class="author-name">James Chen</div>
+                            <div class="author-title">Data Scientist, TechFlow</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I was skeptical at first, but after using NovaSphere for a week, I can't imagine going back. It's that good."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ER</div>
+                        <div class="author-info">
+                            <div class="author-name">Emily Rodriguez</div>
+                            <div class="author-title">Entrepreneur</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,35 +185,61 @@
 
     <section id="pricing" class="pricing">
         <div class="container">
-            <h2>Pricing Plans</h2>
+            <div class="section-header">
+                <span class="section-tag">Choose Your Plan</span>
+                <h2>Invest in Your Future</h2>
+                <p class="section-subtitle">Flexible pricing options designed for individuals and teams</p>
+            </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Standard</h3>
-                    <div class="price">$999</div>
+                    <div class="pricing-header">
+                        <h3>Standard</h3>
+                        <p class="pricing-subtitle">Perfect for individuals</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">999</span>
+                    </div>
                     <ul>
                         <li>Base NovaSphere Device</li>
                         <li>1-year warranty</li>
                         <li>Basic holographic apps</li>
                         <li>Cloud storage: 500GB</li>
+                        <li>Email support</li>
                     </ul>
-                    <a href="#" class="btn-primary">Pre-order</a>
+                    <a href="#" class="btn-primary">Pre-order Now</a>
                 </div>
                 <div class="pricing-card featured">
-                    <div class="badge">Most Popular</div>
-                    <h3>Pro</h3>
-                    <div class="price">$1,499</div>
+                    <div class="badge">
+                        <span>⭐</span> Most Popular
+                    </div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <p class="pricing-subtitle">For power users</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1,499</span>
+                    </div>
                     <ul>
                         <li>Enhanced NovaSphere Device</li>
                         <li>2-year warranty</li>
                         <li>Full suite of holographic apps</li>
                         <li>Cloud storage: 2TB</li>
                         <li>Priority customer support</li>
+                        <li>Advanced AI features</li>
                     </ul>
-                    <a href="#" class="btn-primary">Pre-order</a>
+                    <a href="#" class="btn-primary">Pre-order Now</a>
                 </div>
                 <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$2,499</div>
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="pricing-subtitle">For organizations</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">2,499</span>
+                    </div>
                     <ul>
                         <li>Premium NovaSphere Device</li>
                         <li>3-year warranty</li>
@@ -109,19 +247,73 @@
                         <li>Cloud storage: Unlimited</li>
                         <li>24/7 dedicated support</li>
                         <li>Custom integration services</li>
+                        <li>Team management tools</li>
                     </ul>
                     <a href="#" class="btn-primary">Contact Sales</a>
                 </div>
+            </div>
+            <div class="pricing-footer">
+                <p>🎁 Special Launch Offer: Save 20% on all plans with code <strong>NOVA2024</strong></p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <div class="about-content">
-                <h2>About NovaSphere</h2>
-                <p>Founded in 2024, NovaSphere is pioneering the next generation of computing technology. Our team of world-class engineers and designers are passionate about creating intuitive, powerful tools that seamlessly integrate with your life.</p>
-                <p>We believe that technology should enhance human potential, not distract from it. Every aspect of NovaSphere is designed with this philosophy in mind.</p>
+            <div class="about-layout">
+                <div class="about-content">
+                    <span class="section-tag">Our Story</span>
+                    <h2>Building Tomorrow's Technology Today</h2>
+                    <p class="lead-text">Founded in 2024, NovaSphere is pioneering the next generation of computing technology. Our team of world-class engineers and designers are passionate about creating intuitive, powerful tools that seamlessly integrate with your life.</p>
+                    <p>We believe that technology should enhance human potential, not distract from it. Every aspect of NovaSphere is designed with this philosophy in mind—from the elegant hardware to the intuitive software that powers it.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="stat-value">200+</div>
+                            <div class="stat-label">Team Members</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-value">15</div>
+                            <div class="stat-label">Patents Filed</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-value">$50M</div>
+                            <div class="stat-label">Funding Raised</div>
+                        </div>
+                    </div>
+                    <a href="team.html" class="btn-secondary">Meet Our Team →</a>
+                </div>
+                <div class="about-visual">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2024</h4>
+                                <p>Company founded with vision to revolutionize computing</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2024 Q3</h4>
+                                <p>First prototype developed and tested</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2025 Q1</h4>
+                                <p>NovaSphere v1 launched to critical acclaim</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2025 Q4</h4>
+                                <p>NovaSphere v2 - The future is now</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

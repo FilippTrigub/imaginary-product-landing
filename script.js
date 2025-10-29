@@ -20,6 +20,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Animated counter for hero stats
+    const animateCounter = (element, target, duration = 2000) => {
+        const start = 0;
+        const increment = target / (duration / 16);
+        let current = start;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target.toLocaleString() + (element.parentElement.querySelector('.stat-label').textContent.includes('Rate') ? '%' : '+');
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current).toLocaleString() + (element.parentElement.querySelector('.stat-label').textContent.includes('Rate') ? '%' : '+');
+            }
+        }, 16);
+    };
+
+    // Trigger counter animation when hero is visible
+    const heroStats = document.querySelectorAll('.stat-number');
+    let statsAnimated = false;
+    
+    const checkHeroStats = () => {
+        if (!statsAnimated && heroStats.length > 0) {
+            const firstStat = heroStats[0];
+            const statPosition = firstStat.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight;
+            
+            if (statPosition < screenPosition) {
+                statsAnimated = true;
+                heroStats.forEach(stat => {
+                    const target = parseInt(stat.getAttribute('data-target'));
+                    animateCounter(stat, target);
+                });
+            }
+        }
+    };
+    
+    checkHeroStats();
+    window.addEventListener('scroll', checkHeroStats);
+
     // Form submission handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
@@ -39,28 +79,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Simple animation for feature cards on scroll
+    // Enhanced animation for cards on scroll
     const animateOnScroll = () => {
-        const featureCards = document.querySelectorAll('.feature-card');
-        featureCards.forEach(card => {
+        const cards = document.querySelectorAll('.feature-card, .pricing-card, .testimonial-card');
+        cards.forEach((card, index) => {
             const cardPosition = card.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
+            const screenPosition = window.innerHeight / 1.2;
             
             if (cardPosition < screenPosition) {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
             }
         });
     };
     
     // Set initial state for animation
-    document.querySelectorAll('.feature-card').forEach(card => {
+    document.querySelectorAll('.feature-card, .pricing-card, .testimonial-card').forEach(card => {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.5s ease';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
     });
     
     // Call once on load and then on scroll
     animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);
+
+    // Video placeholder click handler
+    const videoPlaceholder = document.querySelector('.video-placeholder');
+    if (videoPlaceholder) {
+        videoPlaceholder.addEventListener('click', function() {
+            alert('Demo video would play here! 🎥\n\nIn a production environment, this would open a video player or modal with the product demo.');
+        });
+        videoPlaceholder.style.cursor = 'pointer';
+    }
+
+    // Add parallax effect to hero
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const heroImage = hero.querySelector('.hero-image');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        }
+    });
+
+    // Add tilt effect to feature cards
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+    });
 });
