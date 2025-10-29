@@ -24,15 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateCounter = (element, target, duration = 2000) => {
         const start = 0;
         const increment = target / (duration / 16);
-        let current = start;
+        let counter = start;
         
         const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                element.textContent = target.toLocaleString() + (element.parentElement.querySelector('.stat-label').textContent.includes('Rate') ? '%' : '+');
+            counter += increment;
+            if (counter >= target) {
+                const randomDigit = Math.floor(Math.random() * 10);
+                const displayValue = target.toLocaleString() + randomDigit;
+                element.textContent = displayValue + (element.parentElement.querySelector('.stat-label').textContent.includes('Rate') ? '%' : '+');
                 clearInterval(timer);
             } else {
-                element.textContent = Math.floor(current).toLocaleString() + (element.parentElement.querySelector('.stat-label').textContent.includes('Rate') ? '%' : '+');
+                const currentInt = Math.floor(counter);
+                const randomDigit = Math.floor(Math.random() * 10);
+                const displayValue = currentInt.toLocaleString() + randomDigit;
+                element.textContent = displayValue + (element.parentElement.querySelector('.stat-label').textContent.includes('Rate') ? '%' : '+');
             }
         }, 16);
     };

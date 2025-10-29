@@ -33,25 +33,25 @@ ul {
 
 /* Button Styles */
 .btn-primary {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     color: white;
     padding: 12px 24px;
     border-radius: 30px;
     font-weight: 600;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 15px rgba(110, 142, 251, 0.6);
+    box-shadow: 0 7px 15px rgba(147, 51, 234, 0.6);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #6e8efb;
-    border: 2px solid #6e8efb;
+    color: #9333ea;
+    border: 2px solid #9333ea;
     padding: 10px 22px;
     border-radius: 30px;
     font-weight: 600;
@@ -60,7 +60,7 @@ ul {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(110, 142, 251, 0.1);
+    background-color: rgba(147, 51, 234, 0.1);
     transform: translateY(-2px);
 }
 
@@ -94,7 +94,7 @@ header .container {
 .logo span {
     font-weight: 700;
     font-size: 1.5rem;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -110,7 +110,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6e8efb;
+    color: #9333ea;
 }
 
 /* Hero Section */
@@ -128,8 +128,8 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(110, 142, 251, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(167, 119, 227, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(192, 132, 252, 0.15) 0%, transparent 50%);
     animation: particleMove 20s ease-in-out infinite;
 }
 
@@ -168,7 +168,7 @@ nav ul li a:hover {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #6e8efb, #a777e3, #ff6b9d);
+    background: linear-gradient(135deg, #9333ea, #c084fc, #e879f9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -212,8 +212,8 @@ nav ul li a:hover {
 }
 
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4); }
-    50% { box-shadow: 0 4px 30px rgba(110, 142, 251, 0.8); }
+    0%, 100% { box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4); }
+    50% { box-shadow: 0 4px 30px rgba(147, 51, 234, 0.8); }
 }
 
 .hero-stats {
@@ -254,7 +254,7 @@ nav ul li a:hover {
 .float-circle {
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(110, 142, 251, 0.3), rgba(167, 119, 227, 0.3));
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(192, 132, 252, 0.3));
     filter: blur(40px);
 }
 
@@ -301,7 +301,7 @@ nav ul li a:hover {
 
 .section-tag {
     display: inline-block;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     color: white;
     padding: 6px 18px;
     border-radius: 20px;
@@ -356,14 +356,14 @@ section h2 {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 30% 40%, rgba(110, 142, 251, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 70% 60%, rgba(167, 119, 227, 0.2) 0%, transparent 50%);
+        radial-gradient(circle at 30% 40%, rgba(147, 51, 234, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(192, 132, 252, 0.2) 0%, transparent 50%);
 }
 
 .play-button {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -377,7 +377,7 @@ section h2 {
 
 .play-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(110, 142, 251, 0.5);
+    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
 }
 
 .play-button span {
@@ -406,13 +406,13 @@ section h2 {
 }
 
 .feature-card {
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    background: linear-gradient(135deg, #ffffff, #faf5ff);
     padding: 40px 30px;
     border-radius: 20px;
     text-align: center;
     transition: all 0.4s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(110, 142, 251, 0.1);
+    border: 1px solid rgba(147, 51, 234, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -424,7 +424,7 @@ section h2 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -435,7 +435,7 @@ section h2 {
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(110, 142, 251, 0.2);
+    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2);
 }
 
 .feature-icon-wrapper {
@@ -457,7 +457,7 @@ section h2 {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, rgba(110, 142, 251, 0.2), rgba(167, 119, 227, 0.2));
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(192, 132, 252, 0.2));
     border-radius: 50%;
     filter: blur(20px);
     opacity: 0;
@@ -482,14 +482,14 @@ section h2 {
 }
 
 .feature-link {
-    color: #6e8efb;
+    color: #9333ea;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .feature-link:hover {
-    color: #a777e3;
+    color: #c084fc;
     transform: translateX(5px);
     display: inline-block;
 }
@@ -543,7 +543,7 @@ section h2 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -577,7 +577,7 @@ section h2 {
 }
 
 .pricing-card {
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    background: linear-gradient(135deg, #ffffff, #faf5ff);
     padding: 45px 35px;
     border-radius: 20px;
     text-align: center;
@@ -590,14 +590,14 @@ section h2 {
 .pricing-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    border-color: rgba(110, 142, 251, 0.3);
+    border-color: rgba(147, 51, 234, 0.3);
 }
 
 .pricing-card.featured {
     transform: scale(1.05);
-    box-shadow: 0 20px 50px rgba(110, 142, 251, 0.25);
-    border: 2px solid #6e8efb;
-    background: linear-gradient(135deg, #ffffff, #f0f4ff);
+    box-shadow: 0 20px 50px rgba(147, 51, 234, 0.25);
+    border: 2px solid #9333ea;
+    background: linear-gradient(135deg, #ffffff, #faf5ff);
 }
 
 .pricing-card.featured:hover {
@@ -609,13 +609,13 @@ section h2 {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     color: white;
     padding: 8px 20px;
     border-radius: 25px;
     font-size: 0.85rem;
     font-weight: 600;
-    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+    box-shadow: 0 5px 15px rgba(147, 51, 234, 0.4);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -648,14 +648,14 @@ section h2 {
 .currency {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #6e8efb;
+    color: #9333ea;
     margin-top: 10px;
 }
 
 .amount {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #6e8efb;
+    color: #9333ea;
     line-height: 1;
 }
 
@@ -676,7 +676,7 @@ section h2 {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #6e8efb;
+    color: #9333ea;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -684,7 +684,7 @@ section h2 {
 .pricing-footer {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, rgba(110, 142, 251, 0.1), rgba(167, 119, 227, 0.1));
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(192, 132, 252, 0.1));
     border-radius: 15px;
     margin-top: 20px;
 }
@@ -695,7 +695,7 @@ section h2 {
 }
 
 .pricing-footer strong {
-    color: #6e8efb;
+    color: #9333ea;
     font-weight: 700;
 }
 
@@ -754,7 +754,7 @@ section h2 {
 .stat-value {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
@@ -788,7 +788,7 @@ section h2 {
     top: 40px;
     width: 2px;
     height: calc(100% + 10px);
-    background: linear-gradient(180deg, #6e8efb, #a777e3);
+    background: linear-gradient(180deg, #9333ea, #c084fc);
     opacity: 0.3;
 }
 
@@ -796,15 +796,15 @@ section h2 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #e6e9f0, #f5f7fa);
-    border: 3px solid #6e8efb;
+    background: linear-gradient(135deg, #faf5ff, #f5f7fa);
+    border: 3px solid #9333ea;
     flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
 .timeline-item.active .timeline-dot {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    box-shadow: 0 5px 15px rgba(147, 51, 234, 0.4);
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -858,8 +858,8 @@ section h2 {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #6e8efb;
-    box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.2);
+    border-color: #9333ea;
+    box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.2);
 }
 
 /* Footer */
@@ -963,6 +963,19 @@ footer {
     .about-stats {
         grid-template-columns: 1fr;
     }
+    
+    .video-placeholder {
+        padding: 60px 30px;
+    }
+    
+    .play-button {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .play-button span {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -999,5 +1012,32 @@ footer {
     
     .about-stats {
         grid-template-columns: 1fr;
+    }
+    
+    .video-placeholder {
+        padding: 40px 20px;
+    }
+    
+    .play-button {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .play-button span {
+        font-size: 1.3rem;
+    }
+    
+    .video-placeholder p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-buttons a {
+        width: 100%;
+        justify-content: center;
     }
 }
