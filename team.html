@@ -10,53 +10,244 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         .team-section {
-            padding: 80px 0;
-            background-color: #f8f9fa;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e6e9f0 100%);
+        }
+        
+        .team-intro {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: -40px auto 60px;
+            line-height: 1.8;
+        }
+        
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 2em;
+            color: #333;
+            margin: 60px 0 40px;
+            position: relative;
+        }
+        
+        .section-subtitle::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 15px auto 0;
+            border-radius: 2px;
         }
         
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
             margin-top: 40px;
         }
         
         .team-member {
             text-align: center;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
         }
         
         .team-member:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(102, 126, 234, 0.2);
+        }
+        
+        .team-member:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .member-image-wrapper {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 25px;
         }
         
         .team-member img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            margin-bottom: 20px;
             object-fit: cover;
+            border: 5px solid #f8f9fa;
+            transition: all 0.4s ease;
+        }
+        
+        .team-member:hover img {
+            border-color: #667eea;
+            transform: scale(1.05);
+        }
+        
+        .member-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(102, 126, 234, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .team-member:hover .member-overlay {
+            opacity: 1;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: white;
+            color: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+        }
+        
+        .social-links a:hover {
+            background: #764ba2;
+            color: white;
+            transform: scale(1.1);
         }
         
         .team-member h3 {
             color: #333;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 1.5em;
+            font-weight: 600;
         }
         
         .team-member .position {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 15px;
+            color: #667eea;
+            font-size: 1em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .team-member .bio {
             color: #555;
             font-size: 0.95em;
-            line-height: 1.6;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .expertise {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            color: #667eea;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            border: 1px solid #667eea30;
+        }
+        
+        .team-cta {
+            text-align: center;
+            margin-top: 80px;
+            padding: 60px 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .team-cta h3 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .team-cta p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -80,37 +271,162 @@
 
     <section class="team-section">
         <div class="container">
-            <h2>Meet Our Team</h2>
-            <p>The brilliant minds behind NovaSphere's revolutionary technology</p>
+            <h2>Meet Our Visionary Team</h2>
+            <p class="team-intro">The brilliant minds behind NovaSphere's revolutionary technology, united by a passion for pushing the boundaries of what's possible in personal computing</p>
+            
+            <div class="team-stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Countries Represented</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Patents Filed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Combined Experience</div>
+                </div>
+            </div>
+            
+            <h3 class="section-subtitle">Leadership Team</h3>
             
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="Sarah Chen">
+                    <div class="member-image-wrapper">
+                        <img src="https://via.placeholder.com/200x200/667eea/ffffff?text=SC" alt="Sarah Chen">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" title="LinkedIn">in</a>
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="Email">✉</a>
+                            </div>
+                        </div>
+                    </div>
                     <h3>Sarah Chen</h3>
                     <div class="position">CEO & Founder</div>
-                    <p class="bio">Former quantum computing researcher at MIT, Sarah leads NovaSphere's vision of revolutionizing personal computing through innovative technology.</p>
+                    <p class="bio">Former quantum computing researcher at MIT with a Ph.D. in Applied Physics, Sarah leads NovaSphere's vision of revolutionizing personal computing through innovative technology. Her groundbreaking work on quantum entanglement earned her the prestigious Turing Award in 2023.</p>
+                    <div class="expertise">
+                        <span class="tag">Quantum Computing</span>
+                        <span class="tag">Strategic Leadership</span>
+                        <span class="tag">Innovation</span>
+                    </div>
                 </div>
                 
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="Marcus Rodriguez">
+                    <div class="member-image-wrapper">
+                        <img src="https://via.placeholder.com/200x200/764ba2/ffffff?text=MR" alt="Marcus Rodriguez">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" title="LinkedIn">in</a>
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="Email">✉</a>
+                            </div>
+                        </div>
+                    </div>
                     <h3>Marcus Rodriguez</h3>
                     <div class="position">Chief Technology Officer</div>
-                    <p class="bio">With 15 years of experience in holographic interfaces, Marcus oversees the technical development of NovaSphere's core technologies.</p>
+                    <p class="bio">With 15 years of experience in holographic interfaces and augmented reality systems, Marcus oversees the technical development of NovaSphere's core technologies. Previously led engineering teams at Microsoft HoloLens and Magic Leap, pioneering spatial computing solutions.</p>
+                    <div class="expertise">
+                        <span class="tag">Holographic Systems</span>
+                        <span class="tag">AR/VR</span>
+                        <span class="tag">System Architecture</span>
+                    </div>
                 </div>
                 
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="Dr. Aisha Patel">
+                    <div class="member-image-wrapper">
+                        <img src="https://via.placeholder.com/200x200/f093fb/ffffff?text=AP" alt="Dr. Aisha Patel">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" title="LinkedIn">in</a>
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="Email">✉</a>
+                            </div>
+                        </div>
+                    </div>
                     <h3>Dr. Aisha Patel</h3>
-                    <div class="position">Head of Research</div>
-                    <p class="bio">Leading our R&D department, Aisha brings expertise in neural networks and machine learning to advance our AI capabilities.</p>
+                    <div class="position">Head of Research & AI</div>
+                    <p class="bio">Leading our R&D department, Aisha brings expertise in neural networks, machine learning, and cognitive computing to advance our AI capabilities. Her doctoral research at Stanford on adaptive neural interfaces has been cited over 5,000 times and forms the foundation of our Neural Security system.</p>
+                    <div class="expertise">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">Biometrics</span>
+                    </div>
                 </div>
                 
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="James Wilson">
+                    <div class="member-image-wrapper">
+                        <img src="https://via.placeholder.com/200x200/4facfe/ffffff?text=JW" alt="James Wilson">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" title="LinkedIn">in</a>
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="Email">✉</a>
+                            </div>
+                        </div>
+                    </div>
                     <h3>James Wilson</h3>
                     <div class="position">Design Director</div>
-                    <p class="bio">Former lead designer at Apple, James ensures that NovaSphere's interface is both beautiful and intuitive for users.</p>
+                    <p class="bio">Former lead designer at Apple where he contributed to the iPhone and Apple Watch interfaces, James ensures that NovaSphere's interface is both beautiful and intuitive for users. His human-centered design philosophy has earned him multiple Red Dot and iF Design Awards.</p>
+                    <div class="expertise">
+                        <span class="tag">UX/UI Design</span>
+                        <span class="tag">Human-Computer Interaction</span>
+                        <span class="tag">Product Design</span>
+                    </div>
                 </div>
+                
+                <div class="team-member">
+                    <div class="member-image-wrapper">
+                        <img src="https://via.placeholder.com/200x200/00f2fe/ffffff?text=EK" alt="Elena Kowalski">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" title="LinkedIn">in</a>
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="Email">✉</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Elena Kowalski</h3>
+                    <div class="position">VP of Engineering</div>
+                    <p class="bio">Elena brings 12 years of hardware engineering experience from Tesla and SpaceX, where she led battery innovation projects. At NovaSphere, she's pioneering our revolutionary Infinite Battery technology that harvests energy from ambient sources, enabling weeks of continuous operation.</p>
+                    <div class="expertise">
+                        <span class="tag">Hardware Engineering</span>
+                        <span class="tag">Energy Systems</span>
+                        <span class="tag">Manufacturing</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image-wrapper">
+                        <img src="https://via.placeholder.com/200x200/43e97b/ffffff?text=DL" alt="Dr. David Liu">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" title="LinkedIn">in</a>
+                                <a href="#" title="Twitter">𝕏</a>
+                                <a href="#" title="Email">✉</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Dr. David Liu</h3>
+                    <div class="position">Chief Security Officer</div>
+                    <p class="bio">Former cybersecurity lead at the NSA and Pentagon, David oversees all security aspects of NovaSphere. His expertise in cryptography and secure systems ensures that our Neural Security technology provides unparalleled protection while maintaining user privacy and data sovereignty.</p>
+                    <div class="expertise">
+                        <span class="tag">Cybersecurity</span>
+                        <span class="tag">Cryptography</span>
+                        <span class="tag">Privacy Engineering</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-cta">
+                <h3>Join Our Mission</h3>
+                <p>We're always looking for talented individuals who share our passion for innovation and excellence.</p>
+                <a href="#" class="btn-primary">View Open Positions</a>
             </div>
         </div>
     </section>
