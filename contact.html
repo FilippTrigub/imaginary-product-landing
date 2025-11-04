@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact NovaSphere — join our waitlist or send a message.">
+  <title>Contact — NovaSphere v2</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.svg" alt="NovaSphere Logo">
+        <span>NovaSphere v2</span>
+      </div>
+      <nav>
+        <ul id="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active btn-primary">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding: 160px 0 80px;">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p style="max-width: 800px; margin: 12px 0 24px; color: #555;">Have questions or want to join the waitlist? Send us a message below and we will get back to you.</p>
+
+      <section>
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+            <div class="field-error" id="error-name" aria-live="polite" style="color:#d9534f; display:none; margin-top:6px;">Please enter your name.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <div class="field-error" id="error-email" aria-live="polite" style="color:#d9534f; display:none; margin-top:6px;">Please enter a valid email address.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" required></textarea>
+            <div class="field-error" id="error-message" aria-live="polite" style="color:#d9534f; display:none; margin-top:6px;">Please enter a message.</div>
+          </div>
+
+          <button type="submit" class="btn-primary">Send Message</button>
+          <div id="form-success" role="status" aria-live="polite" style="display:none; color:green; margin-top:12px;">Your message looks good — in a real app this would be sent to the server.</div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.svg" alt="NovaSphere Logo">
+          <span>NovaSphere v2</span>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#pricing">Pricing</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 NovaSphere Inc. All rights reserved. Version 2.0
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

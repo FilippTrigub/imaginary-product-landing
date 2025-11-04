@@ -1,0 +1,7 @@
+This is a placeholder file for favicon.ico. Replace with a binary .ico file.
+
+To generate a proper favicon, you can use an online favicon generator or a command-line tool.
+Example using ImageMagick (on your machine):
+  convert logo.png -resize 64x64 favicon.ico
+
+Replace this file with a real favicon.ico binary.
