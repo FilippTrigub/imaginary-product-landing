@@ -569,3 +569,21 @@ footer {
         width: 260px;
     }
 }
+
+/* ASCII art style */
+.ascii-art {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
+    text-align: center;
+    color: #4b6bff; /* slightly darker than primary to improve contrast */
+    margin: 18px 0 24px;
+    white-space: pre;
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+@media (max-width: 480px) {
+    .ascii-art {
+        font-size: 12px;
+        margin: 12px 0 18px;
+    }
+}
