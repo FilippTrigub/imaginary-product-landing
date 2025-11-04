@@ -32,10 +32,38 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = document.getElementById('message').value;
             
             // Show success message (in a real app, this would send data to a server)
-            alert(`Thank you, ${name}! Your message has been received. We will contact you at ${email} shortly.`);
+            showToast(`Thank you, ${name}! Your message has been received. We will contact you at ${email} shortly.`, {timeout: 4500});
             
             // Reset form
             this.reset();
+        });
+    }
+
+    // Toast helper
+    function showToast(message, options = {}) {
+        const timeout = options.timeout || 4000;
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.setAttribute('role', 'status');
+        toast.setAttribute('aria-live', 'polite');
+        toast.innerHTML = `<div class="msg">${message}</div><button class="close" aria-label="Dismiss">×</button>`;
+
+        document.body.appendChild(toast);
+        // Force reflow to allow transition
+        void toast.offsetWidth;
+        toast.classList.add('show');
+
+        const remove = () => {
+            toast.classList.remove('show');
+            toast.addEventListener('transitionend', () => toast.remove(), {once: true});
+        };
+
+        const closeBtn = toast.querySelector('.close');
+        closeBtn.addEventListener('click', remove);
+
+        setTimeout(remove, timeout);
+    }
+
         });
     }
 

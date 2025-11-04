@@ -130,16 +130,29 @@ nav ul li a:hover {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    line-height: 1.2;
+    line-height: 1.1;
     background: linear-gradient(135deg, #333, #6e8efb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: heroFadeUp 700ms ease forwards 200ms;
 }
 
-.hero-content p {
-    font-size: 1.1rem;
+.hero-content p.lead {
+    font-size: 1.15rem;
     margin-bottom: 30px;
-    color: #666;
+    color: #555;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: heroFadeUp 700ms ease forwards 350ms;
+}
+
+@keyframes heroFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .cta-buttons {
@@ -281,6 +294,43 @@ section h2 {
     font-weight: bold;
 }
 
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(102,126,234,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(102,126,234,0.12);
+}
+
+.testimonial-card p {
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.testimonial-card .author {
+    font-weight: 700;
+    color: #6e8efb;
+    font-size: 0.95rem;
+}
+
 /* Product & Vision Section */
 .product-vision {
     padding: 100px 0;
@@ -414,6 +464,43 @@ section h2 {
 .contact {
     padding: 100px 0;
     background-color: #f8f9fa;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    background: linear-gradient(135deg, #243B55, #6e8efb);
+    color: white;
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    min-width: 260px;
+    z-index: 2000;
+    transform: translateY(12px);
+    opacity: 0;
+    transition: transform 240ms ease, opacity 240ms ease;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast .msg {
+    flex: 1;
+}
+
+.toast .close {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .contact-form {
