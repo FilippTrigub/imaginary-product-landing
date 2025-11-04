@@ -64,6 +64,29 @@
         </div>
     </section>
 
+    <!-- ASCII Art Gallery: added by Blackbox -->
+    <section id="ascii-art-section" class="ascii-art-section" aria-labelledby="ascii-title">
+        <div class="container">
+            <h2 id="ascii-title">ASCII Art Gallery</h2>
+            <p class="ascii-sub">A small collection of handcrafted ASCII artworks — use the controls to browse and adjust size. Keyboard: ← / → to navigate.</p>
+
+            <div class="ascii-controls" role="toolbar" aria-label="ASCII art controls">
+                <button id="ascii-prev" class="btn-secondary">◀ Previous</button>
+                <div class="ascii-meta" aria-live="polite" id="ascii-meta">1 / 6</div>
+                <button id="ascii-next" class="btn-secondary">Next ▶</button>
+
+                <label for="ascii-font-size" class="visually-hidden">ASCII font size</label>
+                <input id="ascii-font-size" type="range" min="12" max="28" value="14" />
+            </div>
+
+            <div class="ascii-view">
+                <pre id="ascii-art" tabindex="0" aria-live="polite" aria-label="ASCII artwork will appear here">Loading art...</pre>
+            </div>
+
+            <p class="ascii-tip">Tip: On narrow screens the art will horizontally scroll. You can also copy the artwork for sharing.</p>
+        </div>
+    </section>
+
     <!-- rest of page unchanged, kept for brevity but still present -->
 
     <section id="features" class="features">

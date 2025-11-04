@@ -477,3 +477,36 @@ footer {
     .device{ width: 240px; }
     .footer-links { grid-template-columns: 1fr 1fr; }
 }
+
+/* ASCII Art Gallery styles */
+.ascii-art-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, rgba(250,250,255,0.6), rgba(246,249,255,0.95));
+}
+
+.ascii-art-section h2 {
+    margin-bottom: 8px;
+}
+
+.ascii-sub { color: #666; text-align:center; margin-bottom: 18px; }
+
+.ascii-controls {
+    display:flex; align-items:center; gap:12px; justify-content:center; margin-bottom: 18px; flex-wrap:wrap;
+}
+
+.ascii-controls .ascii-meta {
+    font-weight:700; color:#444; padding:8px 12px; border-radius:8px; background: rgba(255,255,255,0.6); box-shadow:0 6px 18px rgba(0,0,0,0.03);
+}
+
+.ascii-view { overflow:auto; border-radius:12px; padding:20px; background: #0b1220; color: #dbeafe; }
+
+#ascii-art {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre; line-height:1; font-size:14px; margin:0; min-width: 100%;
+    color: #dbeafe;
+}
+
+.ascii-tip { text-align:center; color:#666; margin-top:12px; }
+
+/* visually-hidden utility */
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }

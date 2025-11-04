@@ -161,4 +161,91 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { heroContent.classList.add('show'); }, 200);
     }
 
+    // ASCII Art gallery data and controls
+    const asciiArts = [
+`   _   _           _        ____  _                 
+  | \ | | ___   __| | ___  / ___|| |__   ___  _ __  
+  |  \| |/ _ \ / _ |/ _ \ \___ \| '_ \ / _ \| '_ \ 
+  | |\  | (_) | (_| |  __/  ___) | | | | (_) | |_) |
+  |_| \_|\___/ \__,_|\___| |____/|_| |_|\___/| .__/ 
+                                             |_|    
+`,
+`      .-"""-.
+     / .===. \
+     \/ 6 6 \/
+     ( \___/ )
+ ___ooo__V__ooo___
+`,
+`            _--_                 
+         .-"     "-.             
+       .'  .-""-.   '.           
+      /   /  _  \     \         
+     ;   |  ( )  |     ;        
+     |    \     /      |        
+     ;     '---'       ;        
+      \               /         
+       '.           .'          
+         '-._____.-'            
+`,
+`      _____                    
+     / ____|                   
+    | (___   ___  _   _ _ __   
+     \___ \ / _ \| | | | '_ \  
+     ____) | (_) | |_| | |_) | 
+    |_____/ \___/ \__,_| .__/  
+                       | |     
+                       |_|     
+`,
+`      _._     _,-'""` + "'" + `-._
+     (,-.` + "'" + `._,'(       )` + "'" + `-.,
+    /,|` + "'" + `--'  ."--.\_,-'\` + "'" + `\
+    '  ` + "'" + `--.  (    )  .-'
+           ` + "'" + `--'--'` ,
+`,
+`        /\_/\
+       ( o.o )
+        > ^ <
+`,
+`  _____  _                 _ 
+ |  __ \| |               | |
+ | |  | | | ___  _   _  __| |
+ | |  | | |/ _ \| | | |/ _ |
+ | |__| | | (_) | |_| | (_| |
+ |_____/|_|\___/ \__,_|\__,_|
+`
+    ];
+
+    let asciiIndex = 0;
+    const asciiEl = document.getElementById('ascii-art');
+    const asciiMeta = document.getElementById('ascii-meta');
+    const asciiNext = document.getElementById('ascii-next');
+    const asciiPrev = document.getElementById('ascii-prev');
+    const asciiSize = document.getElementById('ascii-font-size');
+
+    function renderAscii(index) {
+        if (!asciiEl) return;
+        asciiEl.textContent = asciiArts[index] || '—';
+        asciiEl.style.fontSize = asciiSize ? asciiSize.value + 'px' : '14px';
+        asciiMeta.textContent = `${index + 1} / ${asciiArts.length}`;
+        asciiEl.setAttribute('data-index', index);
+    }
+
+    function nextAscii() { asciiIndex = (asciiIndex + 1) % asciiArts.length; renderAscii(asciiIndex); }
+    function prevAscii() { asciiIndex = (asciiIndex - 1 + asciiArts.length) % asciiArts.length; renderAscii(asciiIndex); }
+
+    if (asciiNext) asciiNext.addEventListener('click', nextAscii);
+    if (asciiPrev) asciiPrev.addEventListener('click', prevAscii);
+    if (asciiSize) asciiSize.addEventListener('input', () => { if (asciiEl) asciiEl.style.fontSize = asciiSize.value + 'px'; });
+
+    // keyboard navigation when ascii element is focused
+    if (asciiEl) {
+        asciiEl.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') { nextAscii(); e.preventDefault(); }
+            if (e.key === 'ArrowLeft') { prevAscii(); e.preventDefault(); }
+        });
+    }
+
+    // initialize ascii gallery
+    if (asciiEl) renderAscii(asciiIndex);
+
 });
