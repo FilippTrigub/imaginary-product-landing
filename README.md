@@ -1,51 +1,189 @@
-# NovaSphere v2 Marketing Site
+# NovaSphere v2
 
-NovaSphere v2 imagines a paradigm shift in personal computing: volumetric holographic displays, quantum-assisted processing, neural-grade security, and self-sustaining power. This repository hosts the static marketing experience that communicates the product story and vision.
+> The future of personal computing, today.
 
-## Overview
+A static marketing site showcasing NovaSphere v2: a next-generation computing platform featuring volumetric holographic displays, quantum-assisted processing, neural-grade security, and self-sustaining power systems.
 
-- `index.html` – flagship landing page with product narrative, pricing, and lead capture.
-- `header.html` – shared header fragment injected across secondary pages.
-- `team.html` – spotlight on the visionary team behind NovaSphere v2.
-- `styles.css` – global layout, typography, and component styling.
-- `script.js` – smooth scrolling, reveal animations, and minor UI helpers.
-- `images/` – hero renders, iconography, and branding assets.
+## Quick Start
 
-## Getting Started
+```bash
+# Clone the repository
+git clone <repository-url>
+cd novasphere-v2
 
-1. Clone or download the repository.
-2. Open `index.html` directly in a browser for a quick preview, or run a lightweight static server for live reload:
-   ```bash
-   npx serve .
-   ```
-3. Edit HTML, CSS, or JS files and refresh your browser to see updates.
+# Serve locally
+npx serve .
+```
 
-### Suggested Tooling
+Visit `http://localhost:3000` in your browser.
 
-- Install the Live Server extension (VS Code or similar) for auto-refresh.
-- Use a CSS preprocessor or PostCSS locally if you plan to add advanced styling workflows.
+## Project Structure
 
-## Customization Tips
+```
+.
+├── index.html      # Main landing page with product showcase and pricing
+├── team.html       # Team spotlight page
+├── header.html     # Reusable header component
+├── styles.css      # Global styles and component definitions
+├── script.js       # Interactive behaviors and animations
+└── images/         # Product renders and brand assets
+```
 
-- Replace assets in `images/` with your own renders; maintain consistent dimensions to preserve layout.
-- Update CTA links, pricing tiers, and copy directly in `index.html`.
-- Mirror any global navigation edits in `header.html` and `team.html` to keep pages in sync.
-- Keep the typography scale defined in `styles.css` to retain visual hierarchy.
+## Features
+
+- **Responsive Design** - Optimized for desktop, tablet, and mobile
+- **Smooth Animations** - Scroll-triggered reveals and transitions
+- **Modern Layout** - Flexbox-based grid system with BEM methodology
+- **Zero Build** - Pure HTML/CSS/JS, no compilation required
+- **Fast Loading** - Minimal dependencies, optimized assets
+
+## Development
+
+### Prerequisites
+
+- Modern web browser
+- Node.js 14+ (optional, for local server)
+
+### Local Development
+
+**Option 1: Simple HTTP Server**
+```bash
+npx serve .
+```
+
+**Option 2: Python Server**
+```bash
+python -m http.server 8000
+```
+
+**Option 3: VS Code Live Server**
+Install the Live Server extension and click "Go Live" in the status bar.
+
+### Editing Content
+
+**Update Product Information**
+Edit content directly in `index.html` - look for sections like:
+- Hero section
+- Features grid
+- Pricing tiers
+- CTA buttons
+
+**Modify Styles**
+All styling lives in `styles.css` with organized sections:
+- CSS variables for theming
+- Typography scale
+- Component styles
+- Utility classes
+
+**Change Interactions**
+Update `script.js` to modify:
+- Scroll animations
+- Navigation behavior
+- Form handling
+
+## Customization
+
+### Branding
+
+Replace images in the `images/` directory:
+- Product renders
+- Team photos
+- Icons and logos
+
+Maintain aspect ratios to preserve responsive layouts.
+
+### Typography
+
+Adjust the type scale in `styles.css`:
+```css
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --scale-ratio: 1.25;
+}
+```
+
+### Color Scheme
+
+Update CSS custom properties:
+```css
+:root {
+  --color-primary: #your-color;
+  --color-accent: #your-accent;
+}
+```
 
 ## Deployment
 
-- Host on any static provider (Vercel, Netlify, GitHub Pages, S3) without additional build steps.
-- Ensure relative asset paths remain intact when uploading.
-- Minify `styles.css` and `script.js` and enable caching headers for optimal performance.
-- Consider adding analytics or form integrations by injecting scripts at the end of `index.html`.
+### Recommended Platforms
+
+**Vercel**
+```bash
+vercel
+```
+
+**Netlify**
+```bash
+netlify deploy --prod
+```
+
+**GitHub Pages**
+Enable in repository settings under Pages section.
+
+### Performance Optimization
+
+Before deploying to production:
+
+1. **Minify Assets**
+   ```bash
+   npx minify styles.css > styles.min.css
+   npx minify script.js > script.min.js
+   ```
+
+2. **Optimize Images**
+   - Compress with tools like TinyPNG or ImageOptim
+   - Consider WebP format for better compression
+
+3. **Enable Caching**
+   Configure cache headers on your hosting platform
+
+4. **Add Analytics**
+   Insert tracking script before closing `</body>` tag
 
 ## Contributing
 
-1. Fork the repository and create a feature branch.
-2. Align new components with existing naming conventions (BEM-style classes, flexbox grid).
-3. Provide before/after screenshots for visual tweaks in your pull request.
-4. Request review from another contributor prior to merging.
+We welcome contributions! Please follow these guidelines:
 
----
+1. **Fork & Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-_NovaSphere v2 is a fictional concept crafted for experimentation and portfolio storytelling._
+2. **Follow Conventions**
+   - Use BEM naming for CSS classes
+   - Maintain existing code style
+   - Keep commits atomic and descriptive
+
+3. **Test Changes**
+   - Verify responsive behavior
+   - Check cross-browser compatibility
+   - Test all interactive elements
+
+4. **Submit PR**
+   - Include screenshots for visual changes
+   - Reference related issues
+   - Request review before merging
+
+## Browser Support
+
+- Chrome/Edge (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Mobile browsers (iOS Safari, Chrome Android)
+
+## License
+
+This project is a fictional concept created for demonstration purposes.
+
+## Acknowledgments
+
+NovaSphere v2 is an experimental portfolio piece exploring speculative technology and modern web design patterns.
