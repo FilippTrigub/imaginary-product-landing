@@ -2,188 +2,110 @@
 
 > The future of personal computing, today.
 
-A static marketing site showcasing NovaSphere v2: a next-generation computing platform featuring volumetric holographic displays, quantum-assisted processing, neural-grade security, and self-sustaining power systems.
+NovaSphere v2 is a concept marketing experience for a speculative holographic computing platform. The project ships as a static site built with vanilla HTML, CSS, and JavaScript to keep the stack lightweight and portable.
+
+## Table of Contents
+
+- [Highlights](#highlights)
+- [Preview & Hosting](#preview--hosting)
+- [Quick Start](#quick-start)
+- [Project Layout](#project-layout)
+- [Development Workflow](#development-workflow)
+- [Design System](#design-system)
+- [Deployment](#deployment)
+- [Optimization Checklist](#optimization-checklist)
+- [Contributing](#contributing)
+- [License & Attribution](#license--attribution)
+
+## Highlights
+
+- Responsive landing journey covering hero, feature grid, pricing, and narrative sections.
+- Modular header include (`header.html`) reused across the landing and team views.
+- Scroll-triggered animations and interactive behaviors powered by `script.js`.
+- BEM-inspired CSS class naming with custom properties for easy theming.
+- Zero-build workflow—no bundlers, frameworks, or runtime dependencies required.
+
+## Preview & Hosting
+
+- **Local preview** – Serve the project from any static file server (see [Quick Start](#quick-start)).
+- **Suggested hosts** – Vercel, Netlify, GitHub Pages, or any static hosting provider.
+- **Browser targets** – Latest two releases of Chrome/Edge, Firefox, Safari, plus iOS Safari and Chrome Android.
 
 ## Quick Start
 
 ```bash
-# Clone the repository
 git clone <repository-url>
 cd novasphere-v2
 
-# Serve locally
+# Launch a local server
 npx serve .
+
+# Visit the app
+open http://localhost:3000
 ```
 
-Visit `http://localhost:3000` in your browser.
+Alternative servers:
 
-## Project Structure
+- `python -m http.server 8000`
+- VS Code Live Server extension via the `Go Live` button
+
+## Project Layout
 
 ```
 .
-├── index.html      # Main landing page with product showcase and pricing
-├── team.html       # Team spotlight page
-├── header.html     # Reusable header component
-├── styles.css      # Global styles and component definitions
-├── script.js       # Interactive behaviors and animations
-└── images/         # Product renders and brand assets
+├── index.html      # Main landing experience
+├── team.html       # Team spotlight view
+├── header.html     # Shared header/navigation include
+├── styles.css      # Global styles, components, utilities
+├── script.js       # Animation hooks and UI interactions
+└── images/         # Logos, renders, and decorative art
 ```
 
-## Features
+## Development Workflow
 
-- **Responsive Design** - Optimized for desktop, tablet, and mobile
-- **Smooth Animations** - Scroll-triggered reveals and transitions
-- **Modern Layout** - Flexbox-based grid system with BEM methodology
-- **Zero Build** - Pure HTML/CSS/JS, no compilation required
-- **Fast Loading** - Minimal dependencies, optimized assets
+- **Edit copy** – Update marketing messaging directly in `index.html` and `team.html`. Key sections include the hero narrative, feature cards, pricing tiers, and product vision story.
+- **Adjust styling** – `styles.css` is organized into variables, base styles, components, and utilities. Follow the existing BEM naming patterns when introducing new blocks or elements.
+- **Tune interactions** – `script.js` handles scroll reveals, navigation state, and lightweight UI behaviors. Extend existing functions for new animations or controls.
+- **Swap assets** – Replace imagery inside `images/`. Maintain filenames and aspect ratios when possible to preserve layout assumptions.
 
-## Development
+### Content Tips
 
-### Prerequisites
+- Keep feature descriptions concise (2–3 sentences per card).
+- Align pricing tiers and CTAs with the speculative product narrative.
+- When adding sections, mirror the existing `section` + `container` structure for consistent spacing.
 
-- Modern web browser
-- Node.js 14+ (optional, for local server)
+## Design System
 
-### Local Development
-
-**Option 1: Simple HTTP Server**
-```bash
-npx serve .
-```
-
-**Option 2: Python Server**
-```bash
-python -m http.server 8000
-```
-
-**Option 3: VS Code Live Server**
-Install the Live Server extension and click "Go Live" in the status bar.
-
-### Editing Content
-
-**Update Product Information**
-Edit content directly in `index.html` - look for sections like:
-- Hero section
-- Features grid
-- Pricing tiers
-- CTA buttons
-
-**Modify Styles**
-All styling lives in `styles.css` with organized sections:
-- CSS variables for theming
-- Typography scale
-- Component styles
-- Utility classes
-
-**Change Interactions**
-Update `script.js` to modify:
-- Scroll animations
-- Navigation behavior
-- Form handling
-
-## Customization
-
-### Branding
-
-Replace images in the `images/` directory:
-- Product renders
-- Team photos
-- Icons and logos
-
-Maintain aspect ratios to preserve responsive layouts.
-
-### Typography
-
-Adjust the type scale in `styles.css`:
-```css
-:root {
-  --font-primary: 'Inter', sans-serif;
-  --scale-ratio: 1.25;
-}
-```
-
-### Color Scheme
-
-Update CSS custom properties:
-```css
-:root {
-  --color-primary: #your-color;
-  --color-accent: #your-accent;
-}
-```
+- **Colors** – Customize CSS variables in the `:root` declaration to theme the experience without touching component rules.
+- **Typography** – Montserrat is loaded via Google Fonts. Adjust scale or weights in the root variables or typography section.
+- **Spacing** – Utility classes and container widths live near the top of `styles.css`. Reuse them to preserve rhythm across new content.
+- **Components** – Buttons, cards, badges, and grids follow selectors like `.feature-card` and `.pricing-card`. Extend these patterns rather than introducing ad-hoc names.
 
 ## Deployment
 
-### Recommended Platforms
+Static hosting is sufficient. Popular options:
 
-**Vercel**
-```bash
-vercel
-```
+- **Vercel** – `vercel` and follow the prompts.
+- **Netlify** – `netlify deploy --prod` after configuring a site.
+- **GitHub Pages** – Enable Pages from the repository settings.
 
-**Netlify**
-```bash
-netlify deploy --prod
-```
+Ensure your host serves the repository root or the `index.html` entry point.
 
-**GitHub Pages**
-Enable in repository settings under Pages section.
+## Optimization Checklist
 
-### Performance Optimization
-
-Before deploying to production:
-
-1. **Minify Assets**
-   ```bash
-   npx minify styles.css > styles.min.css
-   npx minify script.js > script.min.js
-   ```
-
-2. **Optimize Images**
-   - Compress with tools like TinyPNG or ImageOptim
-   - Consider WebP format for better compression
-
-3. **Enable Caching**
-   Configure cache headers on your hosting platform
-
-4. **Add Analytics**
-   Insert tracking script before closing `</body>` tag
+- Minify assets (`npx minify styles.css > styles.min.css`, `npx minify script.js > script.min.js`) before production, updating references as needed.
+- Compress imagery with TinyPNG, ImageOptim, or Squoosh; consider WebP/AVIF exports for hero visuals.
+- Configure cache headers on your host to leverage long-lived asset caching.
+- Add analytics or tracking scripts before `</body>` if required for your deployment.
 
 ## Contributing
 
-We welcome contributions! Please follow these guidelines:
+- Fork the repository and create a topic branch (e.g., `feature/add-new-section`).
+- Follow existing formatting, naming, and accessibility patterns.
+- Test across desktop and mobile breakpoints before submitting a pull request.
+- Include screenshots or short screen recordings for visual updates.
 
-1. **Fork & Branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+## License & Attribution
 
-2. **Follow Conventions**
-   - Use BEM naming for CSS classes
-   - Maintain existing code style
-   - Keep commits atomic and descriptive
-
-3. **Test Changes**
-   - Verify responsive behavior
-   - Check cross-browser compatibility
-   - Test all interactive elements
-
-4. **Submit PR**
-   - Include screenshots for visual changes
-   - Reference related issues
-   - Request review before merging
-
-## Browser Support
-
-- Chrome/Edge (latest 2 versions)
-- Firefox (latest 2 versions)
-- Safari (latest 2 versions)
-- Mobile browsers (iOS Safari, Chrome Android)
-
-## License
-
-This project is a fictional concept created for demonstration purposes.
-
-## Acknowledgments
-
-NovaSphere v2 is an experimental portfolio piece exploring speculative technology and modern web design patterns.
+- This project is a fictional concept produced for portfolio and demonstration purposes.
+- NovaSphere, product imagery, and copy are speculative and not affiliated with any real brand.
