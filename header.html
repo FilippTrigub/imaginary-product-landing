@@ -1,80 +1,47 @@
-<!--
-    ╔═══════════════════════════════════════════════════════════════════════╗
-    ║              ENHANCED HEADER WITH NAVIGATION SYSTEM                   ║
-    ╚═══════════════════════════════════════════════════════════════════════╝
-
-                             ___________________________
-                            |  [≡]  NOVASPHERE v2  [×] |
-                            |___________________________|
-                            |                           |
-    ┌────────────────────────┤  🏠 Home   📦 Products  │────────────────────┐
-    │                        │  🏢 Company  📞 Contact │                    │
-    │  NAVIGATION FEATURES:  └─────────────────────────┘                    │
-    │                                                                        │
-    │  ✓ Dropdown Menus          ✓ Active States                           │
-    │  ✓ Mobile Responsive        ✓ Breadcrumb Navigation                   │
-    │  ✓ Sticky Header            ✓ Smooth Animations                       │
-    │                                                                        │
-    │   ╔═══════╗   ╔═══════╗   ╔═══════╗   ╔═══════╗                      │
-    │   ║ HOME  ║   ║ PROD  ║   ║ COMP  ║   ║ CONT  ║                      │
-    │   ╚═══════╝   ╚═══╤═══╝   ╚═══╤═══╝   ╚═══════╝                      │
-    │                   │           │                                        │
-    │              ┌────┴────┐ ┌───┴────┐                                   │
-    │              │Features │ │ About  │                                   │
-    │              │Pricing  │ │ Team   │                                   │
-    │              │Specs    │ │Careers │                                   │
-    │              └─────────┘ └────────┘                                   │
-    │                                                                        │
-    │   [Home] › [Products] › [Features]  ← Breadcrumb Trail                │
-    │                                                                        │
-    └────────────────────────────────────────────────────────────────────────┘
-
-    NovaSphere v2 Enhanced Header Demo | © 2025 NovaSphere Inc.
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaSphere v2 - Enhanced Header Navigation</title>
+    <title>NovaSphere - Enhanced Header</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!--
+    ◯ NovaSphere
+-->
     <style>
         .enhanced-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
+            padding: 30px 0;
         }
         
         .enhanced-header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
         
         .enhanced-logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
         
         .enhanced-logo img {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
         }
         
         .enhanced-logo span {
-            font-size: 1.5em;
-            font-weight: 700;
-            color: white;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #000;
             text-decoration: none;
         }
         
@@ -88,27 +55,24 @@
             list-style: none;
             margin: 0;
             padding: 0;
-            gap: 30px;
+            gap: 40px;
         }
         
         .enhanced-nav a {
-            color: white;
+            color: #000;
             text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            font-weight: 400;
+            padding: 8px 0;
+            transition: opacity 0.2s ease;
             position: relative;
         }
         
         .enhanced-nav a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-1px);
+            opacity: 0.5;
         }
         
         .enhanced-nav a.active {
-            background-color: rgba(255, 255, 255, 0.2);
-            font-weight: 600;
+            opacity: 1;
         }
         
         .enhanced-nav .dropdown {
@@ -120,12 +84,11 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: white;
+            background: #fff;
             min-width: 200px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            padding: 10px 0;
-            margin-top: 5px;
+            border: 1px solid #e0e0e0;
+            padding: 20px 0;
+            margin-top: 10px;
         }
         
         .enhanced-nav .dropdown:hover .dropdown-content {
@@ -133,22 +96,20 @@
         }
         
         .enhanced-nav .dropdown-content a {
-            color: #333;
-            padding: 10px 20px;
+            color: #000;
+            padding: 10px 30px;
             display: block;
-            border-radius: 0;
         }
         
         .enhanced-nav .dropdown-content a:hover {
-            background-color: #f8f9fa;
-            transform: none;
+            background-color: #f5f5f5;
         }
         
         .mobile-menu-toggle {
             display: none;
             background: none;
             border: none;
-            color: white;
+            color: #000;
             font-size: 1.5em;
             cursor: pointer;
         }
@@ -160,11 +121,11 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(102, 126, 234, 0.95);
+                background: #fff;
                 flex-direction: column;
                 padding: 20px;
-                gap: 15px;
-                border-radius: 0 0 10px 10px;
+                gap: 20px;
+                border-bottom: 1px solid #e0e0e0;
             }
             
             .enhanced-nav ul.active {
@@ -178,22 +139,20 @@
             .enhanced-nav .dropdown-content {
                 position: static;
                 display: block;
-                background: rgba(255, 255, 255, 0.1);
-                box-shadow: none;
+                background: #f5f5f5;
+                border: none;
                 margin-top: 10px;
-                border-radius: 5px;
             }
             
             .enhanced-nav .dropdown-content a {
-                color: white;
                 padding-left: 40px;
             }
         }
         
         .page-breadcrumb {
-            background-color: #f8f9fa;
-            padding: 15px 0;
-            border-bottom: 1px solid #e9ecef;
+            background-color: #f5f5f5;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
         }
         
         .breadcrumb {
@@ -205,12 +164,12 @@
         }
         
         .breadcrumb a {
-            color: #667eea;
+            color: #000;
             text-decoration: none;
         }
         
         .breadcrumb a:hover {
-            text-decoration: underline;
+            opacity: 0.5;
         }
         
         .breadcrumb-separator {
@@ -219,12 +178,11 @@
     </style>
 </head>
 <body>
-    <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
             <div class="enhanced-logo">
                 <img src="images/logo.svg" alt="NovaSphere Logo">
-                <a href="index.html"><span>NovaSphere v2</span></a>
+                <a href="index.html"><span>NovaSphere</span></a>
             </div>
             
             <nav class="enhanced-nav">
@@ -233,100 +191,73 @@
                     <li><a href="index.html" class="active">Home</a></li>
                     
                     <li class="dropdown">
-                        <a href="#">Products ▾</a>
+                        <a href="#">Products</a>
                         <div class="dropdown-content">
                             <a href="index.html#features">Features</a>
-                            <a href="index.html#pricing">Pricing Plans</a>
-                            <a href="#">Tech Specs</a>
-                            <a href="#">Documentation</a>
+                            <a href="index.html#pricing">Pricing</a>
                         </div>
                     </li>
                     
                     <li class="dropdown">
-                        <a href="#">Company ▾</a>
+                        <a href="#">Company</a>
                         <div class="dropdown-content">
-                            <a href="index.html#about">About Us</a>
-                            <a href="team.html">Our Team</a>
-                            <a href="#">Careers</a>
-                            <a href="#">News & Press</a>
+                            <a href="index.html#about">About</a>
+                            <a href="team.html">Team</a>
                         </div>
                     </li>
                     
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Blog</a></li>
                     <li><a href="index.html#contact" class="btn-primary">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
-    <!-- Breadcrumb Navigation -->
     <div class="page-breadcrumb">
         <div class="container">
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span class="breadcrumb-separator">›</span>
-                <span>Enhanced Header Demo</span>
+                <span>Enhanced Header</span>
             </div>
         </div>
     </div>
     
-    <!-- Demo Content -->
-    <section style="padding: 60px 0; text-align: center;">
+    <section style="padding: 120px 0; text-align: center;">
         <div class="container">
-            <!--
-                ╔═══════════════════════════════════════════════════════════╗
-                ║         🎯 ENHANCED NAVIGATION DEMONSTRATION              ║
-                ║                                                           ║
-                ║   ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐     ║
-                ║   │ Home │  │ Prod │  │ Comp │  │ Supp │  │ Blog │     ║
-                ║   └──┬───┘  └──┬───┘  └──┬───┘  └──────┘  └──────┘     ║
-                ║      │         │         │                               ║
-                ║      ▼         ▼         ▼                               ║
-                ║   Features   Specs    About                             ║
-                ║   Pricing    Docs     Team                              ║
-                ║                       Careers                            ║
-                ║                                                           ║
-                ║   ✓ Dropdown Menus    ✓ Mobile Responsive               ║
-                ║   ✓ Sticky Header     ✓ Smooth Animations               ║
-                ╚═══════════════════════════════════════════════════════════╝
-            -->
             <h1>Enhanced Header with Navigation</h1>
-            <p style="font-size: 1.1em; color: #666; margin-bottom: 40px;">
-                This page demonstrates the enhanced header with dropdown navigation for subpages.
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 60px;">
+                This page demonstrates the enhanced header with dropdown navigation.
             </p>
             
-            <div style="background: #f8f9fa; padding: 40px; border-radius: 10px; text-align: left; max-width: 800px; margin: 0 auto;">
-                <h3>Navigation Features:</h3>
-                <ul style="line-height: 2; color: #555;">
-                    <li><strong>Dropdown Menus:</strong> Products and Company sections with subpage links</li>
-                    <li><strong>Active States:</strong> Current page highlighting</li>
-                    <li><strong>Mobile Responsive:</strong> Collapsible mobile menu</li>
-                    <li><strong>Breadcrumb Navigation:</strong> Shows current page location</li>
-                    <li><strong>Sticky Header:</strong> Stays visible while scrolling</li>
-                    <li><strong>Smooth Animations:</strong> Hover effects and transitions</li>
+            <div style="background: #f5f5f5; padding: 60px 40px; border: 1px solid #e0e0e0; text-align: left; max-width: 700px; margin: 0 auto;">
+                <h3 style="margin-bottom: 30px;">Navigation Features</h3>
+                <ul style="line-height: 2; color: #666;">
+                    <li>Dropdown Menus</li>
+                    <li>Active States</li>
+                    <li>Mobile Responsive</li>
+                    <li>Breadcrumb Navigation</li>
+                    <li>Sticky Header</li>
                 </ul>
                 
-                <h3 style="margin-top: 30px;">Available Subpages:</h3>
-                <ul style="line-height: 2; color: #555;">
-                    <li><a href="index.html">Home</a> - Main landing page</li>
-                    <li><a href="team.html">Team</a> - Meet our team members</li>
-                    <li><a href="index.html#features">Features</a> - Product features section</li>
-                    <li><a href="index.html#pricing">Pricing</a> - Pricing plans</li>
-                    <li><a href="index.html#about">About</a> - Company information</li>
-                    <li><a href="index.html#contact">Contact</a> - Contact form</li>
+                <h3 style="margin-top: 40px; margin-bottom: 30px;">Available Pages</h3>
+                <ul style="line-height: 2; color: #666;">
+                    <li><a href="index.html" style="color: #000;">Home</a></li>
+                    <li><a href="team.html" style="color: #000;">Team</a></li>
+                    <li><a href="index.html#features" style="color: #000;">Features</a></li>
+                    <li><a href="index.html#pricing" style="color: #000;">Pricing</a></li>
+                    <li><a href="index.html#about" style="color: #000;">About</a></li>
+                    <li><a href="index.html#contact" style="color: #000;">Contact</a></li>
                 </ul>
             </div>
         </div>
     </section>
     
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
                     <img src="images/logo.svg" alt="NovaSphere Logo">
-                    <span>NovaSphere v2</span>
+                    <span>NovaSphere</span>
                 </div>
                 <div class="footer-links">
                     <div class="link-group">
@@ -334,53 +265,37 @@
                         <ul>
                             <li><a href="index.html#features">Features</a></li>
                             <li><a href="index.html#pricing">Pricing</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Tech Specs</a></li>
                         </ul>
                     </div>
                     <div class="link-group">
                         <h4>Company</h4>
                         <ul>
                             <li><a href="index.html#about">About</a></li>
-                            <li><a href="team.html">Our Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="team.html">Team</a></li>
                             <li><a href="index.html#contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="link-group">
-                        <h4>Support</h4>
+                        <h4>Legal</h4>
                         <ul>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Support Center</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Newsletter</a></li>
-                            <li><a href="#">Social Media</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 NovaSphere Inc. All rights reserved. Version 2.0
-                <br>123 Innovation Drive, Tech Valley, CA 94000 | Phone: (555) 123-4567 | Email: info@novasphere.com
+                © 2025 NovaSphere Inc.
             </div>
         </div>
     </footer>
     
     <script>
-        // Mobile menu toggle functionality
         function toggleMobileMenu() {
             const navMenu = document.getElementById('nav-menu');
             navMenu.classList.toggle('active');
         }
         
-        // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.querySelector('.enhanced-nav');
             const toggle = document.querySelector('.mobile-menu-toggle');
@@ -391,7 +306,6 @@
             }
         });
         
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
