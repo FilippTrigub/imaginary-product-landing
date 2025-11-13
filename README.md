@@ -1,107 +1,107 @@
-# 🌟 NovaSphere - The Future of Personal Computing
+# 🌟 NovaSphere - L'Avenir de l'Informatique Personnelle
 
-> **Redefining the boundaries of human-computer interaction through revolutionary holographic technology**
+> **Redéfinir les frontières de l'interaction homme-machine grâce à une technologie holographique révolutionnaire**
 
-Welcome to the official repository for **NovaSphere** - an innovative concept that reimagines personal computing through cutting-edge holographic interfaces and next-generation computing technologies.
+Bienvenue dans le dépôt officiel de **NovaSphere** - un concept innovant qui réinvente l'informatique personnelle à travers des interfaces holographiques de pointe et des technologies informatiques de nouvelle génération.
 
-## ✨ About NovaSphere
+## ✨ À Propos de NovaSphere
 
-NovaSphere represents a bold vision of tomorrow's computing landscape, where physical screens dissolve into immersive 3D holographic workspaces. This project showcases a modern, responsive landing page designed to capture the essence of this futuristic technology.
+NovaSphere représente une vision audacieuse du paysage informatique de demain, où les écrans physiques se dissolvent dans des espaces de travail holographiques 3D immersifs. Ce projet présente une page d'accueil moderne et responsive conçue pour capturer l'essence de cette technologie futuriste.
 
-## 🚀 Features
+## 🚀 Fonctionnalités
 
-- **Stunning Visual Design** - Modern, sleek interface that embodies the futuristic nature of holographic computing
-- **Fully Responsive** - Seamless experience across desktop, tablet, and mobile devices
-- **Interactive Elements** - Engaging animations and smooth transitions
-- **Team Showcase** - Meet the visionaries behind NovaSphere
-- **Product Highlights** - Comprehensive overview of revolutionary features
+- **Design Visuel Époustouflant** - Interface moderne et élégante qui incarne la nature futuriste de l'informatique holographique
+- **Entièrement Responsive** - Expérience fluide sur ordinateur de bureau, tablette et appareils mobiles
+- **Éléments Interactifs** - Animations captivantes et transitions fluides
+- **Présentation de l'Équipe** - Rencontrez les visionnaires derrière NovaSphere
+- **Points Forts du Produit** - Aperçu complet des fonctionnalités révolutionnaires
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
 /vercel/sandbox/
-├── index.html          # Main landing page
-├── team.html           # Team members page
-├── header.html         # Reusable header component
-├── styles.css          # Global styles and design system
-├── script.js           # Interactive functionality
-├── images/             # Visual assets
-│   ├── logo.svg        # NovaSphere brand logo
-│   └── product.svg     # Product illustrations
-└── README.md           # You are here!
+├── index.html          # Page d'accueil principale
+├── team.html           # Page des membres de l'équipe
+├── header.html         # Composant d'en-tête réutilisable
+├── styles.css          # Styles globaux et système de design
+├── script.js           # Fonctionnalités interactives
+├── images/             # Ressources visuelles
+│   ├── logo.svg        # Logo de la marque NovaSphere
+│   └── product.svg     # Illustrations du produit
+└── README.md           # Vous êtes ici !
 ```
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies Utilisées
 
-- **HTML5** - Semantic markup for modern web standards
-- **CSS3** - Advanced styling with animations and responsive design
-- **JavaScript** - Dynamic interactions and enhanced user experience
-- **SVG Graphics** - Scalable vector assets for crisp visuals
+- **HTML5** - Balisage sémantique pour les standards web modernes
+- **CSS3** - Stylisation avancée avec animations et design responsive
+- **JavaScript** - Interactions dynamiques et expérience utilisateur améliorée
+- **Graphiques SVG** - Ressources vectorielles évolutives pour des visuels nets
 
-## 🌐 Getting Started
+## 🌐 Démarrage
 
-### Quick Start
+### Démarrage Rapide
 
-Simply open `index.html` in your web browser to view the landing page locally:
+Ouvrez simplement `index.html` dans votre navigateur web pour visualiser la page d'accueil localement :
 
 ```bash
-# Clone the repository
-git clone <repository-url>
+# Cloner le dépôt
+git clone <url-du-dépôt>
 
-# Navigate to the project directory
+# Naviguer vers le répertoire du projet
 cd /vercel/sandbox
 
-# Open in your default browser (Linux)
+# Ouvrir dans votre navigateur par défaut (Linux)
 xdg-open index.html
 
-# Or use a local development server
+# Ou utiliser un serveur de développement local
 python3 -m http.server 8000
-# Then visit http://localhost:8000
+# Puis visitez http://localhost:8000
 ```
 
-### Using a Development Server
+### Utilisation d'un Serveur de Développement
 
-For the best development experience with live reloading:
+Pour une meilleure expérience de développement avec rechargement en direct :
 
 ```bash
-# Using Python 3
+# Avec Python 3
 python3 -m http.server 8000
 
-# Using Node.js (if http-server is installed)
+# Avec Node.js (si http-server est installé)
 npx http-server -p 8000
 
-# Using PHP
+# Avec PHP
 php -S localhost:8000
 ```
 
 ## 📄 Pages
 
-- **Home** (`index.html`) - Main landing page featuring product overview and key features
-- **Team** (`team.html`) - Meet the innovative minds behind NovaSphere
+- **Accueil** (`index.html`) - Page d'accueil principale présentant l'aperçu du produit et les fonctionnalités clés
+- **Équipe** (`team.html`) - Rencontrez les esprits innovants derrière NovaSphere
 
-## 🎨 Design Philosophy
+## 🎨 Philosophie de Design
 
-NovaSphere's design embodies:
-- **Minimalism** - Clean, uncluttered interfaces that let content shine
-- **Futurism** - Forward-thinking aesthetics that hint at tomorrow's technology
-- **Accessibility** - Inclusive design principles for all users
-- **Performance** - Optimized assets and efficient code for fast loading
+Le design de NovaSphere incarne :
+- **Minimalisme** - Interfaces épurées et dégagées qui laissent le contenu briller
+- **Futurisme** - Esthétique avant-gardiste qui évoque la technologie de demain
+- **Accessibilité** - Principes de conception inclusive pour tous les utilisateurs
+- **Performance** - Ressources optimisées et code efficace pour un chargement rapide
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-This is a conceptual project showcasing modern web design principles. Feel free to explore, learn, and adapt the code for your own projects!
+Il s'agit d'un projet conceptuel présentant les principes modernes de conception web. N'hésitez pas à explorer, apprendre et adapter le code pour vos propres projets !
 
-## 📝 License
+## 📝 Licence
 
-This project is a demonstration/portfolio piece. All rights reserved.
+Ce projet est une pièce de démonstration/portfolio. Tous droits réservés.
 
 ## 💡 Inspiration
 
-NovaSphere draws inspiration from:
-- Science fiction interfaces and holographic computing concepts
-- Modern design systems and UI/UX best practices
-- The endless possibilities of human imagination
+NovaSphere s'inspire de :
+- Interfaces de science-fiction et concepts d'informatique holographique
+- Systèmes de design modernes et meilleures pratiques UI/UX
+- Les possibilités infinies de l'imagination humaine
 
 ---
 
-**Built with passion for the future of computing** 🚀✨
+**Construit avec passion pour l'avenir de l'informatique** 🚀✨
