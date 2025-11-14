@@ -1,63 +1,63 @@
-# NovaSphere v2 – Landing Experience
+# NovaSphere v2 – Expérience de Landing Page
 
-A futuristic marketing site for **NovaSphere v2**, the imagined evolution of personal computing that blends holographic interactions, quantum-grade performance, and adaptive intelligence.
+Site marketing futuriste pour **NovaSphere v2**, l’évolution imaginée de l’informatique personnelle mêlant interactions holographiques, performances de niveau quantique et intelligence adaptative.
 
-## ✨ Highlights
-- **Immersive narrative** hero section introducing NovaSphere v2.
-- **Feature grid** outlining holographic interface, quantum processing, neural security, and infinite battery innovations.
-- **Pricing tiers** (Standard, Pro, Enterprise) with call-to-action buttons.
-- **Product & vision** showcase combining storytelling, stats, and visual emphasis.
-- **Multi-page support** with a dedicated team page and shared header component.
+## ✨ Points forts
+- **Section héro immersive** introduisant NovaSphere v2.
+- **Grille de fonctionnalités** présentant interface holographique, traitement quantique, sécurité neuronale et autonomie illimitée.
+- **Formules tarifaires** (Standard, Pro, Entreprise) avec boutons d’appel à l’action.
+- **Mise en avant du produit et de la vision** combinant storytelling, statistiques et mise en valeur visuelle.
+- **Support multi-pages** avec une page équipe dédiée et un composant d’en-tête partagé.
 
-## 📁 Project Structure
+## 📁 Structure du projet
 ```
 .
-├── index.html        # Main landing page
-├── header.html       # Reusable header markup
-├── team.html         # Team spotlight page
-├── styles.css        # Global styling (Montserrat typography, gradients, layouts)
-├── script.js         # Placeholder for interactive behaviors
+├── index.html        # Page d’accueil principale
+├── header.html       # En-tête réutilisable
+├── team.html         # Page de présentation de l’équipe
+├── styles.css        # Styles globaux (typographie Montserrat, dégradés, mises en page)
+├── script.js         # Placeholder pour comportements interactifs
 ├── images/
-│   ├── logo.svg      # NovaSphere wordmark
-│   └── product.svg   # Device illustration
-└── README.md         # Project documentation
+│   ├── logo.svg      # Wordmark NovaSphere
+│   └── product.svg   # Illustration de l’appareil
+└── README.md         # Documentation du projet
 ```
 
-## 🛠️ Tech Stack
-- **HTML5** semantic structure with accessible sectioning
-- **CSS3** custom layout, gradients, and responsive design
-- **Vanilla JavaScript** hook for future interactivity (currently minimal)
-- **Google Fonts – Montserrat** for typographic styling
+## 🛠️ Pile technologique
+- **HTML5** avec structure sémantique et sections accessibles
+- **CSS3** pour la mise en page, les dégradés et la conception responsive
+- **JavaScript Vanilla** prêt pour de futures interactions (actuellement minimal)
+- **Google Fonts – Montserrat** pour la mise en forme typographique
 
-## 🚀 Getting Started
-1. Clone or download this repository.
-2. Serve the project using any static file server:
+## 🚀 Mise en route
+1. Clonez ou téléchargez ce dépôt.
+2. Servez le projet via n’importe quel serveur de fichiers statiques :
    ```bash
-   # Option A: Python
+   # Option A : Python
    python3 -m http.server 8000
 
-   # Option B: Node.js (requires http-server)
+   # Option B : Node.js (requiert http-server)
    npx http-server -p 8000
    ```
-3. Open `http://localhost:8000` in your browser to explore the landing page.
+3. Ouvrez `http://localhost:8000` dans votre navigateur pour explorer la landing page.
 
-> Tip: If you open the HTML files directly in a browser without a server, some fonts or future dynamic assets may not load correctly, so a local server is recommended.
+> Astuce : si vous ouvrez directement les fichiers HTML dans un navigateur sans serveur, certaines polices ou futurs assets dynamiques pourraient ne pas se charger correctement ; un serveur local est donc recommandé.
 
-## 🎨 Customization
-- **Branding:** Replace `images/logo.svg` and `images/product.svg` with your own assets (preserve filenames or update references in HTML).
-- **Color palette & typography:** Adjust variables and styles in `styles.css`.
-- **Copywriting:** Update section text within `index.html`, `team.html`, and supporting components.
-- **Interactivity:** Extend `script.js` for animations, analytics, or form handling.
+## 🎨 Personnalisation
+- **Branding :** remplacez `images/logo.svg` et `images/product.svg` par vos propres assets (conservez les noms de fichiers ou mettez à jour les références dans le HTML).
+- **Palette de couleurs & typographie :** ajustez les variables et styles dans `styles.css`.
+- **Rédaction :** mettez à jour les textes des sections dans `index.html`, `team.html` et les composants associés.
+- **Interactivité :** complétez `script.js` pour des animations, analytics ou formulaires.
 
-## 🧪 Testing & Validation
-- Validate markup with [W3C HTML Validator](https://validator.w3.org/).
-- Check responsive behavior across desktop, tablet, and mobile breakpoints.
-- Run accessibility audits (e.g., Lighthouse, axe) to ensure inclusive design.
+## 🧪 Tests & validation
+- Validez le balisage via le [validateur HTML du W3C](https://validator.w3.org/).
+- Vérifiez le comportement responsive sur desktop, tablette et mobile.
+- Lancez des audits d’accessibilité (ex. Lighthouse, axe) pour garantir une conception inclusive.
 
-## 🤝 Contributing
-1. Fork the repository and create a feature branch.
-2. Apply your enhancements or fixes.
-3. Submit a pull request describing your changes.
+## 🤝 Contribution
+1. Forkez le dépôt et créez une branche de fonctionnalité.
+2. Apportez vos améliorations ou corrections.
+3. Soumettez une pull request en décrivant vos changements.
 
-## 📄 License
-MIT License © 2025 NovaSphere Inc. (imaginary product)
+## 📄 Licence
+Licence MIT © 2025 NovaSphere Inc. (produit imaginaire)
