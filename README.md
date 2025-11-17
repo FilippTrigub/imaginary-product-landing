@@ -1,206 +1,206 @@
 # NovaSphere v2.0
 
-> The Future of Personal Computing
+> L'Avenir de l'Informatique Personnelle
 
-A modern, responsive landing page showcasing NovaSphere - an imaginary revolutionary computing device featuring holographic interfaces, quantum processing, and advanced AI capabilities.
+Une page d'accueil moderne et responsive présentant NovaSphere - un appareil informatique révolutionnaire imaginaire doté d'interfaces holographiques, de traitement quantique et de capacités d'IA avancées.
 
-## 🌟 Overview
+## 🌟 Aperçu
 
-NovaSphere v2.0 is a conceptual product landing page demonstrating cutting-edge web design principles and modern HTML/CSS/JavaScript techniques. The site presents an immersive experience for a fictional holographic computing device with features like quantum processing, neural security, and infinite battery technology.
+NovaSphere v2.0 est une page d'accueil conceptuelle démontrant les principes de conception web de pointe et les techniques modernes HTML/CSS/JavaScript. Le site présente une expérience immersive pour un appareil informatique holographique fictif avec des fonctionnalités telles que le traitement quantique, la sécurité neuronale et la technologie de batterie infinie.
 
-## ✨ Features
+## ✨ Fonctionnalités
 
-### Product Highlights
-- **Holographic Interface** - 3D interaction with digital content
-- **Quantum Processing** - Proprietary quantum chip technology
-- **Neural Security** - Advanced biometric authentication
-- **Infinite Battery** - Revolutionary energy harvesting (up to 2 weeks)
+### Points Forts du Produit
+- **Interface Holographique** - Interaction 3D avec le contenu numérique
+- **Traitement Quantique** - Technologie de puce quantique propriétaire
+- **Sécurité Neuronale** - Authentification biométrique avancée
+- **Batterie Infinie** - Technologie révolutionnaire de récupération d'énergie (jusqu'à 2 semaines)
 
-### Website Features
-- Fully responsive design (mobile, tablet, desktop)
-- Modern gradient backgrounds and smooth animations
-- Interactive pricing cards with hover effects
-- Contact form with validation
-- Team page showcasing key personnel
-- Smooth scroll navigation
-- Custom SVG logo and product illustrations
+### Fonctionnalités du Site Web
+- Design entièrement responsive (mobile, tablette, ordinateur)
+- Arrière-plans dégradés modernes et animations fluides
+- Cartes de tarification interactives avec effets au survol
+- Formulaire de contact avec validation
+- Page d'équipe présentant le personnel clé
+- Navigation avec défilement fluide
+- Logo SVG personnalisé et illustrations de produits
 
-## 🚀 Quick Start
+## 🚀 Démarrage Rapide
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Local web server for development
+### Prérequis
+- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Optionnel : Serveur web local pour le développement
 
 ### Installation
 
-1. Clone or download this repository:
+1. Clonez ou téléchargez ce dépôt :
 ```bash
-git clone <repository-url>
+git clone <url-du-dépôt>
 cd sandbox
 ```
 
-2. Open the project:
+2. Ouvrez le projet :
 ```bash
-# Option 1: Open directly in browser
+# Option 1 : Ouvrir directement dans le navigateur
 open index.html
 
-# Option 2: Use a local server (recommended)
+# Option 2 : Utiliser un serveur local (recommandé)
 python3 -m http.server 8000
-# or
+# ou
 npx serve
 ```
 
-3. Navigate to `http://localhost:8000` in your browser
+3. Naviguez vers `http://localhost:8000` dans votre navigateur
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
 /vercel/sandbox/
-├── index.html          # Main landing page
-├── team.html           # Team members page
-├── header.html         # Reusable header component
-├── styles.css          # Global styles and animations
-├── script.js           # Interactive functionality
-├── README.md           # Project documentation
-├── .gitignore          # Git ignore rules
+├── index.html          # Page d'accueil principale
+├── team.html           # Page des membres de l'équipe
+├── header.html         # Composant d'en-tête réutilisable
+├── styles.css          # Styles globaux et animations
+├── script.js           # Fonctionnalités interactives
+├── README.md           # Documentation du projet
+├── .gitignore          # Règles d'exclusion Git
 └── images/
-    ├── logo.svg        # NovaSphere logo
-    └── product.svg     # Product illustration
+    ├── logo.svg        # Logo NovaSphere
+    └── product.svg     # Illustration du produit
 ```
 
-## 🎨 Design System
+## 🎨 Système de Design
 
-### Color Palette
-- **Primary**: `#6366f1` (Indigo)
-- **Secondary**: `#8b5cf6` (Purple)
-- **Accent**: `#ec4899` (Pink)
-- **Background**: Gradient from `#667eea` to `#764ba2`
-- **Text**: `#333` (Dark), `#666` (Medium), `#fff` (Light)
+### Palette de Couleurs
+- **Primaire** : `#6366f1` (Indigo)
+- **Secondaire** : `#8b5cf6` (Violet)
+- **Accent** : `#ec4899` (Rose)
+- **Arrière-plan** : Dégradé de `#667eea` à `#764ba2`
+- **Texte** : `#333` (Foncé), `#666` (Moyen), `#fff` (Clair)
 
-### Typography
-- **Font Family**: Montserrat (Google Fonts)
-- **Weights**: 300 (Light), 400 (Regular), 600 (Semi-bold), 700 (Bold)
+### Typographie
+- **Famille de Police** : Montserrat (Google Fonts)
+- **Graisses** : 300 (Léger), 400 (Normal), 600 (Semi-gras), 700 (Gras)
 
-### Breakpoints
-- Mobile: `< 768px`
-- Tablet: `768px - 1024px`
-- Desktop: `> 1024px`
+### Points de Rupture
+- Mobile : `< 768px`
+- Tablette : `768px - 1024px`
+- Ordinateur : `> 1024px`
 
-## 🔧 Technologies Used
+## 🔧 Technologies Utilisées
 
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)** - Interactive features
-- **Google Fonts** - Montserrat typography
-- **SVG** - Scalable vector graphics
+- **HTML5** - Balisage sémantique
+- **CSS3** - Stylisation moderne avec Flexbox et Grid
+- **JavaScript (ES6+)** - Fonctionnalités interactives
+- **Google Fonts** - Typographie Montserrat
+- **SVG** - Graphiques vectoriels évolutifs
 
 ## 📄 Pages
 
-### Main Landing Page (`index.html`)
-- Hero section with CTA buttons
-- Features showcase (4 key features)
-- Pricing plans (Standard, Pro, Enterprise)
-- Product & Vision section with stats
-- About section
-- Contact form
-- Footer with company information
+### Page d'Accueil Principale (`index.html`)
+- Section héros avec boutons d'appel à l'action
+- Présentation des fonctionnalités (4 fonctionnalités clés)
+- Plans tarifaires (Standard, Pro, Entreprise)
+- Section Produit & Vision avec statistiques
+- Section À propos
+- Formulaire de contact
+- Pied de page avec informations sur l'entreprise
 
-### Team Page (`team.html`)
-- Team member profiles
-- Leadership showcase
-- Responsive grid layout
+### Page Équipe (`team.html`)
+- Profils des membres de l'équipe
+- Présentation du leadership
+- Mise en page en grille responsive
 
-## 🎯 Key Sections
+## 🎯 Sections Clés
 
-### Hero Section
-Eye-catching introduction with product tagline and call-to-action buttons.
+### Section Héros
+Introduction accrocheuse avec slogan du produit et boutons d'appel à l'action.
 
-### Features Grid
-Four-column responsive grid highlighting core product capabilities.
+### Grille de Fonctionnalités
+Grille responsive à quatre colonnes mettant en évidence les capacités principales du produit.
 
-### Pricing Cards
-Three-tier pricing structure with feature comparisons and pre-order CTAs.
+### Cartes de Tarification
+Structure tarifaire à trois niveaux avec comparaison des fonctionnalités et CTA de précommande.
 
-### Product & Vision
-Detailed product overview with 5-year vision statement and technical specifications.
+### Produit & Vision
+Aperçu détaillé du produit avec déclaration de vision sur 5 ans et spécifications techniques.
 
-### Contact Form
-Functional contact form with name, email, and message fields.
+### Formulaire de Contact
+Formulaire de contact fonctionnel avec champs nom, email et message.
 
-## 🌐 Browser Support
+## 🌐 Support des Navigateurs
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Chrome (dernière version)
+- Firefox (dernière version)
+- Safari (dernière version)
+- Edge (dernière version)
+- Navigateurs mobiles (iOS Safari, Chrome Mobile)
 
-## 📱 Responsive Design
+## 📱 Design Responsive
 
-The site is fully responsive with breakpoints optimized for:
-- Mobile phones (320px - 767px)
-- Tablets (768px - 1023px)
-- Desktops (1024px+)
+Le site est entièrement responsive avec des points de rupture optimisés pour :
+- Téléphones mobiles (320px - 767px)
+- Tablettes (768px - 1023px)
+- Ordinateurs (1024px+)
 
-## 🛠️ Customization
+## 🛠️ Personnalisation
 
-### Changing Colors
-Edit the CSS variables in `styles.css`:
+### Changer les Couleurs
+Modifiez les variables CSS dans `styles.css` :
 ```css
 :root {
   --primary-color: #6366f1;
   --secondary-color: #8b5cf6;
-  /* Add more custom properties */
+  /* Ajoutez plus de propriétés personnalisées */
 }
 ```
 
-### Adding New Sections
-Follow the existing HTML structure and CSS class naming conventions:
+### Ajouter de Nouvelles Sections
+Suivez la structure HTML existante et les conventions de nommage des classes CSS :
 ```html
-<section class="your-section">
+<section class="votre-section">
   <div class="container">
-    <!-- Your content -->
+    <!-- Votre contenu -->
   </div>
 </section>
 ```
 
-### Modifying Content
-- Update text directly in `index.html` and `team.html`
-- Replace images in the `/images` directory
-- Adjust pricing in the pricing section
+### Modifier le Contenu
+- Mettez à jour le texte directement dans `index.html` et `team.html`
+- Remplacez les images dans le répertoire `/images`
+- Ajustez les tarifs dans la section de tarification
 
-## 📝 License
+## 📝 Licence
 
-© 2025 NovaSphere Inc. All rights reserved.
+© 2025 NovaSphere Inc. Tous droits réservés.
 
-This is a fictional product created for demonstration purposes.
+Il s'agit d'un produit fictif créé à des fins de démonstration.
 
-## 👥 Team
+## 👥 Équipe
 
-- **Sarah Chen** - CEO & Founder
-- **Marcus Rodriguez** - Chief Technology Officer
-- **Dr. Aisha Patel** - Head of Research
-- **James Wilson** - Design Director
+- **Sarah Chen** - PDG & Fondatrice
+- **Marcus Rodriguez** - Directeur Technique
+- **Dr. Aisha Patel** - Directrice de la Recherche
+- **James Wilson** - Directeur du Design
 
 ## 📞 Contact
 
-- **Address**: 123 Innovation Drive, Tech Valley, CA 94025, United States
-- **Phone**: (555) 123-4567
-- **Email**: info@novasphere.com
+- **Adresse** : 123 Innovation Drive, Tech Valley, CA 94025, États-Unis
+- **Téléphone** : (555) 123-4567
+- **Email** : info@novasphere.com
 
-## 🔮 Future Enhancements
+## 🔮 Améliorations Futures
 
-- [ ] Add demo video section
-- [ ] Implement newsletter signup
-- [ ] Add blog/news section
-- [ ] Create customer testimonials carousel
-- [ ] Add FAQ accordion
-- [ ] Implement dark mode toggle
-- [ ] Add loading animations
-- [ ] Create product comparison tool
+- [ ] Ajouter une section vidéo de démonstration
+- [ ] Implémenter l'inscription à la newsletter
+- [ ] Ajouter une section blog/actualités
+- [ ] Créer un carrousel de témoignages clients
+- [ ] Ajouter un accordéon FAQ
+- [ ] Implémenter un bouton de mode sombre
+- [ ] Ajouter des animations de chargement
+- [ ] Créer un outil de comparaison de produits
 
 ---
 
-**Version**: 2.0  
-**Last Updated**: November 2025  
-**Status**: Active Development
+**Version** : 2.0  
+**Dernière Mise à Jour** : Novembre 2025  
+**Statut** : Développement Actif
