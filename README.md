@@ -1,155 +1,155 @@
 # NovaSphere v2.0
 
-> The Future of Personal Computing
+> L'Avenir de l'Informatique Personnelle
 
-A modern, responsive landing page showcasing NovaSphere — an imaginary revolutionary computing device featuring holographic interfaces, quantum processing, and advanced AI capabilities.
+Une page d'accueil moderne et responsive présentant NovaSphere — un appareil informatique révolutionnaire imaginaire doté d'interfaces holographiques, de traitement quantique et de capacités d'IA avancées.
 
-## 🌟 Overview
+## 🌟 Aperçu
 
-NovaSphere v2.0 is a conceptual product landing page demonstrating cutting-edge web design principles and modern HTML/CSS/JavaScript techniques. The site presents a fictional holographic computing device with an immersive, professional user experience.
+NovaSphere v2.0 est une page d'accueil conceptuelle démontrant les principes de conception web de pointe et les techniques modernes HTML/CSS/JavaScript. Le site présente un appareil informatique holographique fictif avec une expérience utilisateur immersive et professionnelle.
 
-## ✨ Features
+## ✨ Fonctionnalités
 
-### Product Highlights
-- **Holographic Interface** - 3D interaction with digital content
-- **Quantum Processing** - Proprietary quantum chip technology
-- **Neural Security** - Adaptive biometric authentication
-- **Infinite Battery** - Revolutionary energy harvesting technology
+### Points Forts du Produit
+- **Interface Holographique** - Interaction 3D avec le contenu numérique
+- **Traitement Quantique** - Technologie de puce quantique propriétaire
+- **Sécurité Neuronale** - Authentification biométrique adaptative
+- **Batterie Infinie** - Technologie révolutionnaire de récupération d'énergie
 
-### Website Features
-- Fully responsive design (mobile, tablet, desktop)
-- Modern, clean UI with smooth animations
-- Interactive navigation and scroll effects
-- Comprehensive pricing plans (Standard, Pro, Enterprise)
-- Product vision and company information sections
-- Contact form for user inquiries
-- Dedicated team page showcasing key personnel
+### Fonctionnalités du Site Web
+- Design entièrement responsive (mobile, tablette, ordinateur)
+- Interface utilisateur moderne et épurée avec animations fluides
+- Navigation interactive et effets de défilement
+- Plans tarifaires complets (Standard, Pro, Entreprise)
+- Sections vision produit et informations sur l'entreprise
+- Formulaire de contact pour les demandes des utilisateurs
+- Page d'équipe dédiée présentant le personnel clé
 
-## 🚀 Quick Start
+## 🚀 Démarrage Rapide
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Local web server for development
+### Prérequis
+- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Optionnel : Serveur web local pour le développement
 
 ### Installation
 
-1. **Clone or download the repository**
+1. **Cloner ou télécharger le dépôt**
    ```bash
-   git clone <repository-url>
+   git clone <url-du-dépôt>
    cd sandbox
    ```
 
-2. **Open in browser**
-   - Simply open `index.html` in your web browser
-   - Or use a local development server:
+2. **Ouvrir dans le navigateur**
+   - Ouvrez simplement `index.html` dans votre navigateur web
+   - Ou utilisez un serveur de développement local :
    
    ```bash
-   # Using Python 3
+   # Avec Python 3
    python3 -m http.server 8000
    
-   # Using Node.js (http-server)
+   # Avec Node.js (http-server)
    npx http-server -p 8000
    
-   # Using PHP
+   # Avec PHP
    php -S localhost:8000
    ```
 
-3. **Navigate to the site**
-   - Open `http://localhost:8000` in your browser
+3. **Accéder au site**
+   - Ouvrez `http://localhost:8000` dans votre navigateur
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
 /vercel/sandbox/
-├── index.html          # Main landing page
-├── team.html           # Team members page
-├── header.html         # Reusable header component
-├── styles.css          # Global styles and responsive design
-├── script.js           # Interactive functionality
-├── README.md           # Project documentation
-├── .gitignore          # Git ignore rules
+├── index.html          # Page d'accueil principale
+├── team.html           # Page des membres de l'équipe
+├── header.html         # Composant d'en-tête réutilisable
+├── styles.css          # Styles globaux et design responsive
+├── script.js           # Fonctionnalités interactives
+├── README.md           # Documentation du projet
+├── .gitignore          # Règles d'exclusion Git
 └── images/
-    ├── logo.svg        # NovaSphere logo
-    └── product.svg     # Product visualization
+    ├── logo.svg        # Logo NovaSphere
+    └── product.svg     # Visualisation du produit
 ```
 
-## 🎨 Design & Technology
+## 🎨 Design & Technologie
 
-### Design System
-- **Font**: Montserrat (Google Fonts) - weights 300, 400, 600, 700
-- **Color Palette**: 
-  - Primary: Modern blue gradients
-  - Background: Light gray (#f8f9fa) with gradient overlays
-  - Text: Dark gray (#333) with accessible contrast ratios
-- **Layout**: CSS Grid and Flexbox for responsive layouts
-- **Animations**: Smooth CSS transitions and hover effects
+### Système de Design
+- **Police** : Montserrat (Google Fonts) - poids 300, 400, 600, 700
+- **Palette de Couleurs** : 
+  - Primaire : Dégradés bleus modernes
+  - Arrière-plan : Gris clair (#f8f9fa) avec superpositions de dégradés
+  - Texte : Gris foncé (#333) avec ratios de contraste accessibles
+- **Mise en Page** : CSS Grid et Flexbox pour des mises en page responsives
+- **Animations** : Transitions CSS fluides et effets au survol
 
-### Technologies Used
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with Grid, Flexbox, animations
-- **Vanilla JavaScript** - Interactive features without dependencies
-- **SVG Graphics** - Scalable vector images for logo and product
+### Technologies Utilisées
+- **HTML5** - Balisage sémantique
+- **CSS3** - Stylisation moderne avec Grid, Flexbox, animations
+- **JavaScript Vanilla** - Fonctionnalités interactives sans dépendances
+- **Graphiques SVG** - Images vectorielles évolutives pour le logo et le produit
 
 ## 📄 Pages
 
-### Main Landing Page (`index.html`)
-- Hero section with product introduction
-- Key features showcase (4 main features)
-- Pricing plans (3 tiers: Standard, Pro, Enterprise)
-- Product vision and 5-year roadmap
-- About section
-- Contact form
-- Comprehensive footer with links and contact info
+### Page d'Accueil Principale (`index.html`)
+- Section hero avec présentation du produit
+- Présentation des fonctionnalités clés (4 fonctionnalités principales)
+- Plans tarifaires (3 niveaux : Standard, Pro, Entreprise)
+- Vision produit et feuille de route sur 5 ans
+- Section à propos
+- Formulaire de contact
+- Pied de page complet avec liens et informations de contact
 
-### Team Page (`team.html`)
-- Team member profiles with photos
-- Key personnel: CEO, CTO, Head of Research, Design Director
-- Individual bios and expertise areas
-- Consistent navigation and footer
+### Page Équipe (`team.html`)
+- Profils des membres de l'équipe avec photos
+- Personnel clé : PDG, CTO, Responsable Recherche, Directeur Design
+- Biographies individuelles et domaines d'expertise
+- Navigation et pied de page cohérents
 
-## 🛠️ Customization
+## 🛠️ Personnalisation
 
-### Updating Content
-1. **Text Content**: Edit HTML files directly
-2. **Styling**: Modify `styles.css` for colors, fonts, spacing
-3. **Images**: Replace SVG files in `/images/` directory
-4. **Team Members**: Update team grid in `team.html`
+### Mise à Jour du Contenu
+1. **Contenu Textuel** : Modifiez directement les fichiers HTML
+2. **Stylisation** : Modifiez `styles.css` pour les couleurs, polices, espacements
+3. **Images** : Remplacez les fichiers SVG dans le répertoire `/images/`
+4. **Membres de l'Équipe** : Mettez à jour la grille d'équipe dans `team.html`
 
-### Adding New Sections
-1. Create new section in HTML with appropriate semantic tags
-2. Add corresponding styles in `styles.css`
-3. Update navigation links if needed
-4. Add JavaScript interactions in `script.js` if required
+### Ajout de Nouvelles Sections
+1. Créez une nouvelle section en HTML avec les balises sémantiques appropriées
+2. Ajoutez les styles correspondants dans `styles.css`
+3. Mettez à jour les liens de navigation si nécessaire
+4. Ajoutez des interactions JavaScript dans `script.js` si requis
 
-## 🌐 Browser Support
+## 🌐 Support Navigateurs
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Chrome (dernière version)
+- Firefox (dernière version)
+- Safari (dernière version)
+- Edge (dernière version)
+- Navigateurs mobiles (iOS Safari, Chrome Mobile)
 
-## 📱 Responsive Breakpoints
+## 📱 Points de Rupture Responsive
 
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+- **Mobile** : < 768px
+- **Tablette** : 768px - 1024px
+- **Ordinateur** : > 1024px
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-This is a demonstration project. Feel free to fork and customize for your own purposes.
+Ceci est un projet de démonstration. N'hésitez pas à le forker et à le personnaliser pour vos propres besoins.
 
 ## 📧 Contact
 
-For inquiries about NovaSphere:
-- **Email**: info@novasphere.com
-- **Phone**: (555) 123-4567
-- **Address**: 123 Innovation Drive, Tech Valley, CA 94025
+Pour toute demande concernant NovaSphere :
+- **Email** : info@novasphere.com
+- **Téléphone** : (555) 123-4567
+- **Adresse** : 123 Innovation Drive, Tech Valley, CA 94025
 
-## 📝 License
+## 📝 Licence
 
-© 2025 NovaSphere Inc. All rights reserved.
+© 2025 NovaSphere Inc. Tous droits réservés.
 
 ---
 
-**Note**: NovaSphere is a fictional product created for demonstration purposes. All features, specifications, and company information are imaginary.
+**Note** : NovaSphere est un produit fictif créé à des fins de démonstration. Toutes les fonctionnalités, spécifications et informations sur l'entreprise sont imaginaires.
