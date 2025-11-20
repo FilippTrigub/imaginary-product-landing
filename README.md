@@ -1,3 +1,3 @@
-# NovaSphere - The Future of Personal Computing
+# NovaSphere - L'Avenir de l'Informatique Personnelle
 
-This repository contains the landing page for NovaSphere, an imaginary product that features holographic interfaces and advanced computing technologies.
+Ce dépôt contient la page d'accueil de NovaSphere, un produit imaginaire qui présente des interfaces holographiques et des technologies informatiques avancées.
