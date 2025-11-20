@@ -1,162 +1,162 @@
-# NovaSphere v2.0 - Landing Page
+# NovaSphere v2.0 - Page d'Accueil
 
-A modern, responsive landing page for NovaSphere, a fictional revolutionary personal computing device featuring holographic interfaces and quantum processing technology.
+Une page d'accueil moderne et responsive pour NovaSphere, un appareil informatique personnel révolutionnaire fictif doté d'interfaces holographiques et de technologie de traitement quantique.
 
-## 🚀 Overview
+## 🚀 Aperçu
 
-This project showcases a complete product landing page built with vanilla HTML, CSS, and JavaScript. It demonstrates modern web design principles, smooth animations, and responsive layouts suitable for marketing a cutting-edge technology product.
+Ce projet présente une page d'accueil produit complète construite avec HTML, CSS et JavaScript vanilla. Il démontre les principes modernes de conception web, des animations fluides et des mises en page responsives adaptées au marketing d'un produit technologique de pointe.
 
-## ✨ Features
+## ✨ Fonctionnalités
 
 ### Pages
-- **Main Landing Page** (`index.html`) - Complete product showcase with:
-  - Hero section with call-to-action buttons
-  - Feature highlights with animated cards
-  - Pricing tiers (Standard, Pro, Enterprise)
-  - Product vision and statistics
-  - About section
-  - Contact form
+- **Page d'Accueil Principale** (`index.html`) - Vitrine produit complète avec :
+  - Section hero avec boutons d'appel à l'action
+  - Points forts des fonctionnalités avec cartes animées
+  - Niveaux de tarification (Standard, Pro, Entreprise)
+  - Vision produit et statistiques
+  - Section à propos
+  - Formulaire de contact
   
-- **Team Page** (`team.html`) - Meet the team behind NovaSphere with:
-  - Team member profiles
-  - Role descriptions
-  - Hover animations
+- **Page Équipe** (`team.html`) - Rencontrez l'équipe derrière NovaSphere avec :
+  - Profils des membres de l'équipe
+  - Descriptions des rôles
+  - Animations au survol
 
-### Functionality
-- **Smooth Scrolling** - Seamless navigation between page sections
-- **Form Handling** - Contact form with validation and submission handling
-- **Scroll Animations** - Feature cards animate into view on scroll
-- **Responsive Design** - Fully responsive layout for all device sizes
-- **Modern UI/UX** - Clean, professional design with Montserrat font family
+### Fonctionnalités
+- **Défilement Fluide** - Navigation transparente entre les sections de la page
+- **Gestion de Formulaire** - Formulaire de contact avec validation et gestion de soumission
+- **Animations au Défilement** - Les cartes de fonctionnalités s'animent lors du défilement
+- **Design Responsive** - Mise en page entièrement responsive pour toutes les tailles d'écran
+- **UI/UX Moderne** - Design propre et professionnel avec la famille de polices Montserrat
 
-## 🛠️ Technology Stack
+## 🛠️ Stack Technologique
 
-- **HTML5** - Semantic markup structure
-- **CSS3** - Modern styling with flexbox/grid layouts
-- **JavaScript (ES6+)** - Interactive features and animations
-- **Google Fonts** - Montserrat font family
-- **SVG Graphics** - Scalable logo and product images
+- **HTML5** - Structure de balisage sémantique
+- **CSS3** - Stylisation moderne avec mises en page flexbox/grid
+- **JavaScript (ES6+)** - Fonctionnalités interactives et animations
+- **Google Fonts** - Famille de polices Montserrat
+- **Graphiques SVG** - Logo et images produit évolutifs
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
 /vercel/sandbox/
-├── index.html          # Main landing page
-├── team.html           # Team members page
-├── styles.css          # Global styles and responsive design
-├── script.js           # Interactive functionality
-├── header.html         # Header component (if used)
+├── index.html          # Page d'accueil principale
+├── team.html           # Page des membres de l'équipe
+├── styles.css          # Styles globaux et design responsive
+├── script.js           # Fonctionnalités interactives
+├── header.html         # Composant d'en-tête (si utilisé)
 ├── images/
-│   ├── logo.svg        # NovaSphere logo
-│   └── product.svg     # Product illustration
-├── .gitignore          # Git ignore rules
-└── README.md           # This file
+│   ├── logo.svg        # Logo NovaSphere
+│   └── product.svg     # Illustration du produit
+├── .gitignore          # Règles d'exclusion Git
+└── README.md           # Ce fichier
 ```
 
-## 🚀 Getting Started
+## 🚀 Démarrage
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Local web server for development
+### Prérequis
+- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Optionnel : Serveur web local pour le développement
 
-### Installation & Running
+### Installation et Exécution
 
-1. **Clone or download the repository**
+1. **Cloner ou télécharger le dépôt**
    ```bash
-   git clone <repository-url>
+   git clone <url-du-dépôt>
    cd /vercel/sandbox
    ```
 
-2. **Open directly in browser**
-   - Simply open `index.html` in your web browser
-   - Or double-click the file in your file explorer
+2. **Ouvrir directement dans le navigateur**
+   - Ouvrez simplement `index.html` dans votre navigateur web
+   - Ou double-cliquez sur le fichier dans votre explorateur de fichiers
 
-3. **Using a local server (recommended)**
+3. **Utiliser un serveur local (recommandé)**
    ```bash
-   # Using Python 3
+   # Avec Python 3
    python3 -m http.server 8000
    
-   # Using Node.js (http-server)
+   # Avec Node.js (http-server)
    npx http-server -p 8000
    
-   # Using PHP
+   # Avec PHP
    php -S localhost:8000
    ```
    
-   Then navigate to `http://localhost:8000` in your browser
+   Puis naviguez vers `http://localhost:8000` dans votre navigateur
 
-## 📱 Responsive Breakpoints
+## 📱 Points de Rupture Responsive
 
-The design adapts to various screen sizes:
-- **Desktop**: 1200px and above
-- **Tablet**: 768px - 1199px
-- **Mobile**: Below 768px
+Le design s'adapte à différentes tailles d'écran :
+- **Bureau** : 1200px et plus
+- **Tablette** : 768px - 1199px
+- **Mobile** : Moins de 768px
 
-## 🎨 Design Features
+## 🎨 Caractéristiques de Design
 
-- **Color Scheme**: Modern gradient backgrounds with professional color palette
-- **Typography**: Montserrat font family for clean, modern aesthetics
-- **Animations**: Smooth transitions and scroll-triggered animations
-- **Layout**: CSS Grid and Flexbox for responsive layouts
-- **Icons**: Emoji-based icons for visual appeal
+- **Palette de Couleurs** : Arrière-plans dégradés modernes avec palette de couleurs professionnelle
+- **Typographie** : Famille de polices Montserrat pour une esthétique moderne et épurée
+- **Animations** : Transitions fluides et animations déclenchées par le défilement
+- **Mise en Page** : CSS Grid et Flexbox pour des mises en page responsives
+- **Icônes** : Icônes basées sur des emojis pour un attrait visuel
 
-## 🔧 Customization
+## 🔧 Personnalisation
 
-### Changing Colors
-Edit the CSS variables or color values in `styles.css`
+### Changer les Couleurs
+Modifiez les variables CSS ou les valeurs de couleur dans `styles.css`
 
-### Modifying Content
-- Update text content directly in `index.html` and `team.html`
-- Replace images in the `/images` directory
-- Adjust pricing tiers in the pricing section
+### Modifier le Contenu
+- Mettez à jour le contenu texte directement dans `index.html` et `team.html`
+- Remplacez les images dans le répertoire `/images`
+- Ajustez les niveaux de tarification dans la section tarification
 
-### Adding Features
-- Extend `script.js` for additional interactivity
-- Add new sections following the existing HTML structure
-- Update navigation links in the header
+### Ajouter des Fonctionnalités
+- Étendez `script.js` pour une interactivité supplémentaire
+- Ajoutez de nouvelles sections en suivant la structure HTML existante
+- Mettez à jour les liens de navigation dans l'en-tête
 
-## 📄 Pages Overview
+## 📄 Aperçu des Pages
 
-### Main Page Sections
-1. **Header** - Navigation and branding
-2. **Hero** - Main value proposition with CTAs
-3. **Features** - Four key product features
-4. **Pricing** - Three pricing tiers
-5. **Product Vision** - Detailed product information and vision
-6. **About** - Company background
-7. **Contact** - Contact form
-8. **Footer** - Links and company information
+### Sections de la Page Principale
+1. **En-tête** - Navigation et image de marque
+2. **Hero** - Proposition de valeur principale avec CTAs
+3. **Fonctionnalités** - Quatre fonctionnalités clés du produit
+4. **Tarification** - Trois niveaux de tarification
+5. **Vision Produit** - Informations détaillées sur le produit et vision
+6. **À Propos** - Contexte de l'entreprise
+7. **Contact** - Formulaire de contact
+8. **Pied de Page** - Liens et informations sur l'entreprise
 
-### Team Page
-- Grid layout of team members
-- Individual profiles with photos, names, roles, and bios
-- Hover effects for enhanced interactivity
+### Page Équipe
+- Mise en page en grille des membres de l'équipe
+- Profils individuels avec photos, noms, rôles et biographies
+- Effets de survol pour une interactivité améliorée
 
-## 🌐 Browser Support
+## 🌐 Support Navigateurs
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
+- Chrome (dernière version)
+- Firefox (dernière version)
+- Safari (dernière version)
+- Edge (dernière version)
+- Opera (dernière version)
 
-## 📝 License
+## 📝 Licence
 
-© 2025 NovaSphere Inc. All rights reserved.
+© 2025 NovaSphere Inc. Tous droits réservés.
 
-This is a fictional product created for demonstration purposes.
+Il s'agit d'un produit fictif créé à des fins de démonstration.
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-This is a demonstration project. Feel free to fork and modify for your own use.
+Il s'agit d'un projet de démonstration. N'hésitez pas à le forker et à le modifier pour votre propre usage.
 
 ## 📧 Contact
 
-For questions or feedback about this project:
-- Email: info@novasphere.com
-- Phone: (555) 123-4567
-- Address: 123 Innovation Drive, Tech Valley, CA 94025
+Pour toute question ou commentaire sur ce projet :
+- Email : info@novasphere.com
+- Téléphone : (555) 123-4567
+- Adresse : 123 Innovation Drive, Tech Valley, CA 94025
 
 ---
 
-**Note**: NovaSphere is a fictional product created for demonstration purposes. All features, pricing, and company information are imaginary.
+**Note** : NovaSphere est un produit fictif créé à des fins de démonstration. Toutes les fonctionnalités, tarifications et informations sur l'entreprise sont imaginaires.
