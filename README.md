@@ -1,228 +1,228 @@
-# NovaSphere v2.0 - Product Landing Page
+# NovaSphere v2.0 - Page de Destination Produit
 
-A modern, responsive landing page for NovaSphere, a revolutionary personal computing device featuring holographic interfaces, quantum processing, and neural security.
+Une page de destination moderne et responsive pour NovaSphere, un appareil informatique personnel révolutionnaire doté d'interfaces holographiques, de traitement quantique et de sécurité neuronale.
 
-## 🚀 Project Overview
+## 🚀 Aperçu du Projet
 
-NovaSphere v2.0 is a multi-page marketing website showcasing a futuristic computing device. The site features a clean, modern design with smooth animations, responsive layouts, and an intuitive navigation system.
+NovaSphere v2.0 est un site web marketing multi-pages présentant un appareil informatique futuriste. Le site présente un design épuré et moderne avec des animations fluides, des mises en page responsives et un système de navigation intuitif.
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
 /vercel/sandbox/
-├── index.html          # Main landing page
-├── team.html           # Team members page
-├── header.html         # Enhanced header navigation demo
-├── styles.css          # Global styles and responsive design
-├── script.js           # Interactive functionality
-├── README.md           # Project documentation
-├── .gitignore          # Git ignore rules
+├── index.html          # Page d'accueil principale
+├── team.html           # Page des membres de l'équipe
+├── header.html         # Démo de navigation d'en-tête améliorée
+├── styles.css          # Styles globaux et design responsive
+├── script.js           # Fonctionnalités interactives
+├── README.md           # Documentation du projet
+├── .gitignore          # Règles d'exclusion Git
 └── images/
-    ├── logo.svg        # NovaSphere logo
-    └── product.svg     # Product image
+    ├── logo.svg        # Logo NovaSphere
+    └── product.svg     # Image du produit
 ```
 
-## ✨ Features
+## ✨ Fonctionnalités
 
-### Main Landing Page (`index.html`)
-- **Hero Section**: Eye-catching introduction with animated product image
-- **Key Features**: Grid layout showcasing 4 main product features
-  - Holographic Interface
-  - Quantum Processing
-  - Neural Security
-  - Infinite Battery
-- **Pricing Plans**: Three-tier pricing structure (Standard, Pro, Enterprise)
-- **Product & Vision**: Detailed product information with statistics and 5-year vision
-- **About Section**: Company background and mission
-- **Contact Form**: Interactive form with validation
-- **Sticky Header**: Fixed navigation with smooth scrolling
-- **Responsive Footer**: Multi-column layout with company information
+### Page d'Accueil Principale (`index.html`)
+- **Section Hero** : Introduction accrocheuse avec image de produit animée
+- **Fonctionnalités Clés** : Mise en page en grille présentant 4 fonctionnalités principales du produit
+  - Interface Holographique
+  - Traitement Quantique
+  - Sécurité Neuronale
+  - Batterie Infinie
+- **Plans Tarifaires** : Structure tarifaire à trois niveaux (Standard, Pro, Entreprise)
+- **Produit & Vision** : Informations détaillées sur le produit avec statistiques et vision à 5 ans
+- **Section À Propos** : Contexte et mission de l'entreprise
+- **Formulaire de Contact** : Formulaire interactif avec validation
+- **En-tête Fixe** : Navigation fixe avec défilement fluide
+- **Pied de Page Responsive** : Mise en page multi-colonnes avec informations de l'entreprise
 
-### Team Page (`team.html`)
-- Team member profiles with photos and bios
-- 4 key team members:
-  - Sarah Chen (CEO & Founder)
-  - Marcus Rodriguez (CTO)
-  - Dr. Aisha Patel (Head of Research)
-  - James Wilson (Design Director)
-- Hover effects on team cards
-- Consistent header and footer navigation
+### Page Équipe (`team.html`)
+- Profils des membres de l'équipe avec photos et biographies
+- 4 membres clés de l'équipe :
+  - Sarah Chen (PDG & Fondatrice)
+  - Marcus Rodriguez (Directeur Technique)
+  - Dr. Aisha Patel (Responsable de la Recherche)
+  - James Wilson (Directeur du Design)
+- Effets de survol sur les cartes d'équipe
+- Navigation cohérente dans l'en-tête et le pied de page
 
-### Enhanced Header (`header.html`)
-- Dropdown navigation menus
-- Mobile-responsive hamburger menu
-- Breadcrumb navigation
-- Active page highlighting
-- Smooth transitions and animations
+### En-tête Amélioré (`header.html`)
+- Menus de navigation déroulants
+- Menu hamburger responsive pour mobile
+- Navigation par fil d'Ariane
+- Mise en évidence de la page active
+- Transitions et animations fluides
 
-## 🎨 Design Features
+## 🎨 Caractéristiques du Design
 
-- **Color Scheme**: Purple gradient theme (#6e8efb to #a777e3)
-- **Typography**: Montserrat font family (Google Fonts)
-- **Animations**: 
-  - Floating product image
-  - Scroll-triggered feature card animations
-  - Hover effects on buttons and cards
-- **Responsive Design**: Mobile-first approach with breakpoints at 768px and 992px
+- **Palette de Couleurs** : Thème dégradé violet (#6e8efb à #a777e3)
+- **Typographie** : Famille de polices Montserrat (Google Fonts)
+- **Animations** : 
+  - Image de produit flottante
+  - Animations de cartes de fonctionnalités déclenchées par le défilement
+  - Effets de survol sur les boutons et les cartes
+- **Design Responsive** : Approche mobile-first avec points de rupture à 768px et 992px
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies Utilisées
 
-- **HTML5**: Semantic markup
-- **CSS3**: 
-  - CSS Grid and Flexbox layouts
-  - CSS animations and transitions
-  - Custom properties and gradients
-- **Vanilla JavaScript**: 
-  - Smooth scrolling
-  - Form validation
-  - Scroll animations
-  - Mobile menu toggle
+- **HTML5** : Balisage sémantique
+- **CSS3** : 
+  - Mises en page CSS Grid et Flexbox
+  - Animations et transitions CSS
+  - Propriétés personnalisées et dégradés
+- **JavaScript Vanilla** : 
+  - Défilement fluide
+  - Validation de formulaire
+  - Animations au défilement
+  - Basculement du menu mobile
 
-## 🚀 Getting Started
+## 🚀 Démarrage
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Local web server for development
+### Prérequis
+- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Optionnel : Serveur web local pour le développement
 
 ### Installation
 
-1. Clone the repository:
+1. Cloner le dépôt :
 ```bash
-git clone <repository-url>
+git clone <url-du-dépôt>
 cd /vercel/sandbox
 ```
 
-2. Open the project:
-   - **Option 1**: Open `index.html` directly in your browser
-   - **Option 2**: Use a local server:
+2. Ouvrir le projet :
+   - **Option 1** : Ouvrir `index.html` directement dans votre navigateur
+   - **Option 2** : Utiliser un serveur local :
      ```bash
      # Python 3
      python -m http.server 8000
      
-     # Node.js (with http-server)
+     # Node.js (avec http-server)
      npx http-server
      ```
 
-3. Navigate to `http://localhost:8000` in your browser
+3. Naviguer vers `http://localhost:8000` dans votre navigateur
 
-## 📄 Page Navigation
+## 📄 Navigation des Pages
 
-- **Home**: `index.html` - Main landing page
-- **Team**: `team.html` - Meet the team
-- **Header Demo**: `header.html` - Enhanced navigation showcase
+- **Accueil** : `index.html` - Page d'accueil principale
+- **Équipe** : `team.html` - Rencontrez l'équipe
+- **Démo En-tête** : `header.html` - Présentation de la navigation améliorée
 
-### Internal Links
-- `#features` - Product features section
-- `#pricing` - Pricing plans
-- `#about` - About the company
-- `#contact` - Contact form
-- `#product-vision` - Product vision section
+### Liens Internes
+- `#features` - Section des fonctionnalités du produit
+- `#pricing` - Plans tarifaires
+- `#about` - À propos de l'entreprise
+- `#contact` - Formulaire de contact
+- `#product-vision` - Section vision du produit
 
-## 🎯 Key Sections
+## 🎯 Sections Clés
 
-### Hero Section
-Introduces NovaSphere v2.0 with compelling headline and call-to-action buttons for demo and pre-order.
+### Section Hero
+Présente NovaSphere v2.0 avec un titre accrocheur et des boutons d'appel à l'action pour la démo et la précommande.
 
-### Features Grid
-Four-column responsive grid highlighting:
-- 🌐 Holographic Interface
-- ⚡ Quantum Processing
-- 🔒 Neural Security
-- 🔄 Infinite Battery
+### Grille de Fonctionnalités
+Grille responsive à quatre colonnes mettant en avant :
+- 🌐 Interface Holographique
+- ⚡ Traitement Quantique
+- 🔒 Sécurité Neuronale
+- 🔄 Batterie Infinie
 
-### Pricing Plans
-Three pricing tiers with feature comparisons:
-- **Standard**: $999 - Base device with 1-year warranty
-- **Pro**: $1,499 - Enhanced device with 2-year warranty (Most Popular)
-- **Enterprise**: $2,499 - Premium device with unlimited storage
+### Plans Tarifaires
+Trois niveaux tarifaires avec comparaison des fonctionnalités :
+- **Standard** : 999 $ - Appareil de base avec garantie 1 an
+- **Pro** : 1 499 $ - Appareil amélioré avec garantie 2 ans (Le Plus Populaire)
+- **Entreprise** : 2 499 $ - Appareil premium avec stockage illimité
 
-### Product & Vision
-Two-column layout featuring:
-- Product benefits and features
-- Technical specifications
-- 5-year company vision
-- Call-to-action buttons
+### Produit & Vision
+Mise en page à deux colonnes présentant :
+- Avantages et fonctionnalités du produit
+- Spécifications techniques
+- Vision de l'entreprise à 5 ans
+- Boutons d'appel à l'action
 
-## 📱 Responsive Breakpoints
+## 📱 Points de Rupture Responsive
 
-- **Desktop**: > 992px (Full grid layouts)
-- **Tablet**: 768px - 992px (Adjusted grids)
-- **Mobile**: < 768px (Single column, hamburger menu)
+- **Bureau** : > 992px (Mises en page en grille complètes)
+- **Tablette** : 768px - 992px (Grilles ajustées)
+- **Mobile** : < 768px (Colonne unique, menu hamburger)
 
-## 🎨 Color Palette
+## 🎨 Palette de Couleurs
 
-- **Primary Gradient**: `linear-gradient(135deg, #6e8efb, #a777e3)`
-- **Background**: `#f8f9fa`
-- **Text**: `#333` (primary), `#666` (secondary)
-- **Footer**: `#2d3748`
-- **Accent**: `#6e8efb`
+- **Dégradé Principal** : `linear-gradient(135deg, #6e8efb, #a777e3)`
+- **Arrière-plan** : `#f8f9fa`
+- **Texte** : `#333` (primaire), `#666` (secondaire)
+- **Pied de Page** : `#2d3748`
+- **Accent** : `#6e8efb`
 
-## 🔧 Customization
+## 🔧 Personnalisation
 
-### Changing Colors
-Edit the CSS variables in `styles.css`:
+### Changer les Couleurs
+Modifier les variables CSS dans `styles.css` :
 ```css
 .btn-primary {
     background: linear-gradient(135deg, #6e8efb, #a777e3);
 }
 ```
 
-### Adding New Sections
-Follow the existing section structure:
+### Ajouter de Nouvelles Sections
+Suivre la structure de section existante :
 ```html
-<section id="new-section" class="new-section">
+<section id="nouvelle-section" class="nouvelle-section">
     <div class="container">
-        <h2>Section Title</h2>
-        <!-- Content here -->
+        <h2>Titre de la Section</h2>
+        <!-- Contenu ici -->
     </div>
 </section>
 ```
 
-### Modifying Navigation
-Update the navigation in the `<header>` section of each HTML file.
+### Modifier la Navigation
+Mettre à jour la navigation dans la section `<header>` de chaque fichier HTML.
 
-## 📞 Contact Information
+## 📞 Informations de Contact
 
-- **Address**: 123 Innovation Drive, Tech Valley, CA 94025, United States
-- **Phone**: (555) 123-4567
-- **Email**: info@novasphere.com
+- **Adresse** : 123 Innovation Drive, Tech Valley, CA 94025, États-Unis
+- **Téléphone** : (555) 123-4567
+- **Email** : info@novasphere.com
 
-## 📝 License
+## 📝 Licence
 
-© 2025 NovaSphere Inc. All rights reserved. Version 2.0
+© 2025 NovaSphere Inc. Tous droits réservés. Version 2.0
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-This is a demonstration project. For actual contributions, please follow standard Git workflow:
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+Il s'agit d'un projet de démonstration. Pour les contributions réelles, veuillez suivre le flux de travail Git standard :
+1. Forker le dépôt
+2. Créer une branche de fonctionnalité
+3. Commiter vos modifications
+4. Pousser vers la branche
+5. Ouvrir une Pull Request
 
-## 🐛 Known Issues
+## 🐛 Problèmes Connus
 
-- Team member images use placeholder URLs (`via.placeholder.com`)
-- Contact form doesn't actually send emails (client-side only)
-- Some navigation links are placeholder (`#`)
+- Les images des membres de l'équipe utilisent des URL de substitution (`via.placeholder.com`)
+- Le formulaire de contact n'envoie pas réellement d'emails (côté client uniquement)
+- Certains liens de navigation sont des espaces réservés (`#`)
 
-## 🔮 Future Enhancements
+## 🔮 Améliorations Futures
 
-- [ ] Backend integration for contact form
-- [ ] Real team member photos
-- [ ] Blog section
-- [ ] Product documentation pages
-- [ ] Customer testimonials
-- [ ] Video demo integration
-- [ ] Multi-language support
-- [ ] Dark mode toggle
+- [ ] Intégration backend pour le formulaire de contact
+- [ ] Photos réelles des membres de l'équipe
+- [ ] Section blog
+- [ ] Pages de documentation produit
+- [ ] Témoignages clients
+- [ ] Intégration de démo vidéo
+- [ ] Support multilingue
+- [ ] Basculement mode sombre
 
-## 📚 Resources
+## 📚 Ressources
 
-- **Font**: [Montserrat on Google Fonts](https://fonts.google.com/specimen/Montserrat)
-- **Icons**: Emoji-based (no external dependencies)
-- **Images**: SVG format for scalability
+- **Police** : [Montserrat sur Google Fonts](https://fonts.google.com/specimen/Montserrat)
+- **Icônes** : Basées sur des emojis (aucune dépendance externe)
+- **Images** : Format SVG pour l'évolutivité
 
 ---
 
-**Built with ❤️ for the future of personal computing**
+**Construit avec ❤️ pour l'avenir de l'informatique personnelle**
