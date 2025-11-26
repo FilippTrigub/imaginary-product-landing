@@ -1,204 +1,204 @@
 # NovaSphere v2.0
 
-> The Future of Personal Computing
+> L'Avenir de l'Informatique Personnelle
 
-A modern, responsive landing page showcasing NovaSphere — an imaginary revolutionary computing device featuring holographic interfaces, quantum processing, and advanced AI capabilities.
+Une page d'accueil moderne et responsive présentant NovaSphere — un appareil informatique révolutionnaire imaginaire doté d'interfaces holographiques, de traitement quantique et de capacités d'IA avancées.
 
-## 🌟 Overview
+## 🌟 Aperçu
 
-NovaSphere v2.0 is a conceptual product landing page demonstrating cutting-edge web design principles and modern HTML/CSS/JavaScript techniques. The site presents a fictional holographic computing device with an immersive, professional user experience.
+NovaSphere v2.0 est une page de présentation de produit conceptuel démontrant les principes de conception web de pointe et les techniques modernes HTML/CSS/JavaScript. Le site présente un appareil informatique holographique fictif avec une expérience utilisateur immersive et professionnelle.
 
-## ✨ Features
+## ✨ Fonctionnalités
 
-### Product Highlights
-- **Holographic Interface** - 3D interaction with digital content
-- **Quantum Processing** - Proprietary quantum chip technology
-- **Neural Security** - Adaptive biometric authentication
-- **Infinite Battery** - Revolutionary energy harvesting technology
+### Points Forts du Produit
+- **Interface Holographique** - Interaction 3D avec le contenu numérique
+- **Traitement Quantique** - Technologie de puce quantique propriétaire
+- **Sécurité Neuronale** - Authentification biométrique adaptative
+- **Batterie Infinie** - Technologie révolutionnaire de récupération d'énergie
 
-### Website Features
-- Fully responsive design (mobile, tablet, desktop)
-- Modern, clean UI with smooth animations
-- Interactive navigation and scroll effects
-- Comprehensive pricing plans (Standard, Pro, Enterprise)
-- Product vision and company information sections
-- Contact form for user inquiries
-- Dedicated team page showcasing leadership
+### Fonctionnalités du Site Web
+- Design entièrement responsive (mobile, tablette, ordinateur)
+- Interface utilisateur moderne et épurée avec animations fluides
+- Navigation interactive et effets de défilement
+- Plans tarifaires complets (Standard, Pro, Entreprise)
+- Sections vision produit et informations sur l'entreprise
+- Formulaire de contact pour les demandes des utilisateurs
+- Page dédiée à l'équipe présentant la direction
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
 /vercel/sandbox/
-├── index.html          # Main landing page
-├── team.html           # Team members page
-├── header.html         # Reusable header component
-├── styles.css          # Global styles and responsive design
-├── script.js           # Interactive functionality
-├── README.md           # Project documentation
-├── .gitignore          # Git ignore rules
+├── index.html          # Page d'accueil principale
+├── team.html           # Page des membres de l'équipe
+├── header.html         # Composant d'en-tête réutilisable
+├── styles.css          # Styles globaux et design responsive
+├── script.js           # Fonctionnalités interactives
+├── README.md           # Documentation du projet
+├── .gitignore          # Règles d'exclusion Git
 └── images/
-    ├── logo.svg        # NovaSphere logo
-    └── product.svg     # Product visualization
+    ├── logo.svg        # Logo NovaSphere
+    └── product.svg     # Visualisation du produit
 ```
 
-## 🚀 Getting Started
+## 🚀 Démarrage
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Local web server for development
+### Prérequis
+- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Optionnel : Serveur web local pour le développement
 
 ### Installation
 
-1. **Clone the repository**
+1. **Cloner le dépôt**
    ```bash
-   git clone <repository-url>
+   git clone <url-du-dépôt>
    cd /vercel/sandbox
    ```
 
-2. **Open in browser**
+2. **Ouvrir dans le navigateur**
    
-   Simply open `index.html` in your web browser:
+   Ouvrez simplement `index.html` dans votre navigateur web :
    ```bash
-   # Using default browser
+   # Utiliser le navigateur par défaut
    open index.html
    
-   # Or with a specific browser
+   # Ou avec un navigateur spécifique
    firefox index.html
    chrome index.html
    ```
 
-3. **Optional: Run with local server**
+3. **Optionnel : Exécuter avec un serveur local**
    
-   For better development experience:
+   Pour une meilleure expérience de développement :
    ```bash
    # Python 3
    python3 -m http.server 8000
    
-   # Node.js (with http-server)
+   # Node.js (avec http-server)
    npx http-server -p 8000
    ```
    
-   Then visit: `http://localhost:8000`
+   Puis visitez : `http://localhost:8000`
 
-## 🎨 Design & Technology
+## 🎨 Design & Technologie
 
-### Technologies Used
-- **HTML5** - Semantic markup and structure
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)** - Interactive functionality
-- **Google Fonts** - Montserrat font family
-- **SVG Graphics** - Scalable vector images
+### Technologies Utilisées
+- **HTML5** - Balisage sémantique et structure
+- **CSS3** - Stylisation moderne avec Flexbox et Grid
+- **JavaScript (ES6+)** - Fonctionnalités interactives
+- **Google Fonts** - Famille de polices Montserrat
+- **Graphiques SVG** - Images vectorielles évolutives
 
-### Design Principles
-- Mobile-first responsive design
-- Clean, minimalist aesthetic
-- Smooth transitions and animations
-- Accessible color contrast
-- Intuitive navigation patterns
+### Principes de Design
+- Design responsive mobile-first
+- Esthétique épurée et minimaliste
+- Transitions et animations fluides
+- Contraste de couleurs accessible
+- Modèles de navigation intuitifs
 
 ## 📄 Pages
 
-### Main Landing Page (`index.html`)
-- Hero section with product introduction
-- Key features showcase
-- Pricing plans comparison
-- Product vision and roadmap
-- About company section
-- Contact form
-- Comprehensive footer
+### Page d'Accueil Principale (`index.html`)
+- Section héros avec présentation du produit
+- Présentation des fonctionnalités clés
+- Comparaison des plans tarifaires
+- Vision produit et feuille de route
+- Section à propos de l'entreprise
+- Formulaire de contact
+- Pied de page complet
 
-### Team Page (`team.html`)
-- Leadership team profiles
-- Individual bios and roles
-- Consistent branding and navigation
+### Page Équipe (`team.html`)
+- Profils de l'équipe de direction
+- Biographies et rôles individuels
+- Image de marque et navigation cohérentes
 
-## 🎯 Key Sections
+## 🎯 Sections Clés
 
-### Hero Section
-Eye-catching introduction with call-to-action buttons for demo and pre-order.
+### Section Héros
+Introduction accrocheuse avec boutons d'appel à l'action pour la démo et la précommande.
 
-### Features Grid
-Four core features presented in an accessible card layout with icons and descriptions.
+### Grille de Fonctionnalités
+Quatre fonctionnalités principales présentées dans une mise en page en cartes accessible avec icônes et descriptions.
 
-### Pricing Plans
-Three tiers (Standard, Pro, Enterprise) with detailed feature comparisons and clear CTAs.
+### Plans Tarifaires
+Trois niveaux (Standard, Pro, Entreprise) avec comparaisons détaillées des fonctionnalités et CTA clairs.
 
-### Product Vision
-5-year roadmap and company philosophy with technical specifications.
+### Vision Produit
+Feuille de route sur 5 ans et philosophie de l'entreprise avec spécifications techniques.
 
-### Contact Form
-User-friendly form for inquiries with validation.
+### Formulaire de Contact
+Formulaire convivial pour les demandes avec validation.
 
-## 🛠️ Customization
+## 🛠️ Personnalisation
 
-### Updating Content
-Edit the HTML files directly to modify:
-- Product features and descriptions
-- Pricing information
-- Team member details
-- Contact information
+### Mise à Jour du Contenu
+Modifiez directement les fichiers HTML pour changer :
+- Fonctionnalités et descriptions du produit
+- Informations tarifaires
+- Détails des membres de l'équipe
+- Informations de contact
 
-### Styling Changes
-Modify `styles.css` to customize:
-- Color scheme
-- Typography
-- Layout and spacing
-- Animations and transitions
+### Modifications de Style
+Modifiez `styles.css` pour personnaliser :
+- Palette de couleurs
+- Typographie
+- Mise en page et espacement
+- Animations et transitions
 
-### Adding Functionality
-Extend `script.js` to add:
-- Form validation and submission
-- Interactive animations
-- Dynamic content loading
-- Analytics tracking
+### Ajout de Fonctionnalités
+Étendez `script.js` pour ajouter :
+- Validation et soumission de formulaire
+- Animations interactives
+- Chargement de contenu dynamique
+- Suivi analytique
 
-## 📱 Responsive Breakpoints
+## 📱 Points de Rupture Responsive
 
-The design adapts to various screen sizes:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
+Le design s'adapte à différentes tailles d'écran :
+- **Mobile** : < 768px
+- **Tablette** : 768px - 1024px
+- **Ordinateur** : > 1024px
 
-## 🌐 Browser Support
+## 🌐 Support des Navigateurs
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
+- Chrome (dernière version)
+- Firefox (dernière version)
+- Safari (dernière version)
+- Edge (dernière version)
+- Opera (dernière version)
 
-## 📝 License
+## 📝 Licence
 
-© 2025 NovaSphere Inc. All rights reserved.
+© 2025 NovaSphere Inc. Tous droits réservés.
 
-This is a fictional product created for demonstration purposes.
+Ceci est un produit fictif créé à des fins de démonstration.
 
-## 👥 Team
+## 👥 Équipe
 
-- **Sarah Chen** - CEO & Founder
-- **Marcus Rodriguez** - Chief Technology Officer
-- **Dr. Aisha Patel** - Head of Research
-- **James Wilson** - Design Director
+- **Sarah Chen** - PDG & Fondatrice
+- **Marcus Rodriguez** - Directeur Technique
+- **Dr. Aisha Patel** - Directrice de la Recherche
+- **James Wilson** - Directeur du Design
 
 ## 📧 Contact
 
-- **Address**: 123 Innovation Drive, Tech Valley, CA 94025, United States
-- **Phone**: (555) 123-4567
-- **Email**: info@novasphere.com
+- **Adresse** : 123 Innovation Drive, Tech Valley, CA 94025, États-Unis
+- **Téléphone** : (555) 123-4567
+- **Email** : info@novasphere.com
 
-## 🔮 Future Enhancements
+## 🔮 Améliorations Futures
 
-- [ ] Add interactive product demo
-- [ ] Implement backend for contact form
-- [ ] Add blog/news section
-- [ ] Create customer testimonials section
-- [ ] Integrate video content
-- [ ] Add multi-language support
-- [ ] Implement dark mode toggle
-- [ ] Add accessibility improvements (ARIA labels, keyboard navigation)
+- [ ] Ajouter une démo interactive du produit
+- [ ] Implémenter un backend pour le formulaire de contact
+- [ ] Ajouter une section blog/actualités
+- [ ] Créer une section témoignages clients
+- [ ] Intégrer du contenu vidéo
+- [ ] Ajouter le support multilingue
+- [ ] Implémenter un bouton de basculement mode sombre
+- [ ] Ajouter des améliorations d'accessibilité (labels ARIA, navigation au clavier)
 
 ---
 
-**Version**: 2.0  
-**Last Updated**: November 2025  
-**Status**: Active Development
+**Version** : 2.0  
+**Dernière Mise à Jour** : Novembre 2025  
+**Statut** : Développement Actif
