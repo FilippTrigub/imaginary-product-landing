@@ -1,204 +1,204 @@
 # NovaSphere v2.0
 
-> Il Futuro dell'Informatica Personale
+> Przyszłość Komputerów Osobistych
 
-Una landing page moderna e responsive che presenta NovaSphere — un dispositivo informatico rivoluzionario immaginario con interfacce olografiche, elaborazione quantistica e capacità avanzate di intelligenza artificiale.
+Nowoczesna i responsywna strona docelowa prezentująca NovaSphere — rewolucyjne, wyimaginowane urządzenie komputerowe z holograficznymi interfejsami, przetwarzaniem kwantowym i zaawansowanymi możliwościami sztucznej inteligencji.
 
-## 🌟 Panoramica
+## 🌟 Przegląd
 
-NovaSphere v2.0 è una landing page di prodotto concettuale che dimostra principi di design web all'avanguardia e tecniche moderne di HTML/CSS/JavaScript. Il sito presenta un dispositivo informatico olografico fittizio con un'esperienza utente immersiva e professionale.
+NovaSphere v2.0 to koncepcyjna strona produktowa, która demonstruje najnowocześniejsze zasady projektowania stron internetowych oraz nowoczesne techniki HTML/CSS/JavaScript. Witryna prezentuje fikcyjne holograficzne urządzenie komputerowe z wciągającym i profesjonalnym doświadczeniem użytkownika.
 
-## ✨ Caratteristiche
+## ✨ Funkcje
 
-### Punti Salienti del Prodotto
-- **Interfaccia Olografica** - Interazione 3D con contenuti digitali
-- **Elaborazione Quantistica** - Tecnologia proprietaria di chip quantistico
-- **Sicurezza Neurale** - Autenticazione biometrica adattiva
-- **Batteria Infinita** - Tecnologia rivoluzionaria di recupero energetico
+### Najważniejsze Cechy Produktu
+- **Interfejs Holograficzny** - Interakcja 3D z treściami cyfrowymi
+- **Przetwarzanie Kwantowe** - Zastrzeżona technologia chipów kwantowych
+- **Zabezpieczenia Neuronowe** - Adaptacyjne uwierzytelnianie biometryczne
+- **Nieskończona Bateria** - Rewolucyjna technologia odzyskiwania energii
 
-### Funzionalità del Sito Web
-- Design completamente responsive (mobile, tablet, desktop)
-- Interfaccia utente moderna e pulita con animazioni fluide
-- Navigazione interattiva ed effetti di scorrimento
-- Piani tariffari completi (Standard, Pro, Enterprise)
-- Sezioni sulla visione del prodotto e informazioni aziendali
-- Modulo di contatto per richieste degli utenti
-- Pagina dedicata al team con presentazione della leadership
+### Funkcjonalności Strony
+- W pełni responsywny design (mobile, tablet, desktop)
+- Nowoczesny i czysty interfejs użytkownika z płynnymi animacjami
+- Interaktywna nawigacja i efekty przewijania
+- Kompleksowe plany cenowe (Standard, Pro, Enterprise)
+- Sekcje wizji produktu i informacji o firmie
+- Formularz kontaktowy dla zapytań użytkowników
+- Dedykowana strona zespołu z prezentacją kierownictwa
 
-## 📁 Struttura del Progetto
+## 📁 Struktura Projektu
 
 ```
 /vercel/sandbox/
-├── index.html          # Pagina principale
-├── team.html           # Pagina membri del team
-├── header.html         # Componente header riutilizzabile
-├── styles.css          # Stili globali e design responsive
-├── script.js           # Funzionalità interattive
-├── README.md           # Documentazione del progetto
-├── .gitignore          # Regole di esclusione Git
+├── index.html          # Strona główna
+├── team.html           # Strona członków zespołu
+├── header.html         # Komponent nagłówka wielokrotnego użytku
+├── styles.css          # Globalne style i responsywny design
+├── script.js           # Funkcjonalności interaktywne
+├── README.md           # Dokumentacja projektu
+├── .gitignore          # Reguły wykluczeń Git
 └── images/
     ├── logo.svg        # Logo NovaSphere
-    └── product.svg     # Visualizzazione del prodotto
+    └── product.svg     # Wizualizacja produktu
 ```
 
-## 🚀 Iniziare
+## 🚀 Rozpoczęcie Pracy
 
-### Prerequisiti
-- Un browser web moderno (Chrome, Firefox, Safari, Edge)
-- Opzionale: Server web locale per lo sviluppo
+### Wymagania Wstępne
+- Nowoczesna przeglądarka internetowa (Chrome, Firefox, Safari, Edge)
+- Opcjonalnie: Lokalny serwer WWW do rozwoju
 
-### Installazione
+### Instalacja
 
-1. **Clonare il repository**
+1. **Sklonuj repozytorium**
    ```bash
-   git clone <url-del-repository>
+   git clone <url-repozytorium>
    cd /vercel/sandbox
    ```
 
-2. **Aprire nel browser**
+2. **Otwórz w przeglądarce**
    
-   Semplicemente apri `index.html` nel tuo browser web:
+   Po prostu otwórz `index.html` w swojej przeglądarce:
    ```bash
-   # Usare il browser predefinito
+   # Użyj domyślnej przeglądarki
    open index.html
    
-   # Oppure con un browser specifico
+   # Lub z konkretną przeglądarką
    firefox index.html
    chrome index.html
    ```
 
-3. **Opzionale: Eseguire con un server locale**
+3. **Opcjonalnie: Uruchom z lokalnym serwerem**
    
-   Per una migliore esperienza di sviluppo:
+   Dla lepszego doświadczenia deweloperskiego:
    ```bash
    # Python 3
    python3 -m http.server 8000
    
-   # Node.js (con http-server)
+   # Node.js (z http-server)
    npx http-server -p 8000
    ```
    
-   Poi visita: `http://localhost:8000`
+   Następnie odwiedź: `http://localhost:8000`
 
-## 🎨 Design e Tecnologia
+## 🎨 Design i Technologia
 
-### Tecnologie Utilizzate
-- **HTML5** - Markup semantico e struttura
-- **CSS3** - Stilizzazione moderna con Flexbox e Grid
-- **JavaScript (ES6+)** - Funzionalità interattive
-- **Google Fonts** - Famiglia di caratteri Montserrat
-- **Grafica SVG** - Immagini vettoriali scalabili
+### Użyte Technologie
+- **HTML5** - Semantyczny markup i struktura
+- **CSS3** - Nowoczesne stylowanie z Flexbox i Grid
+- **JavaScript (ES6+)** - Funkcjonalności interaktywne
+- **Google Fonts** - Rodzina czcionek Montserrat
+- **Grafika SVG** - Skalowalne obrazy wektorowe
 
-### Principi di Design
-- Design responsive mobile-first
-- Estetica pulita e minimalista
-- Transizioni e animazioni fluide
-- Contrasto dei colori accessibile
-- Pattern di navigazione intuitivi
+### Zasady Projektowania
+- Responsywny design mobile-first
+- Czysta i minimalistyczna estetyka
+- Płynne przejścia i animacje
+- Dostępny kontrast kolorów
+- Intuicyjne wzorce nawigacji
 
-## 📄 Pagine
+## 📄 Strony
 
-### Pagina Principale (`index.html`)
-- Sezione hero con presentazione del prodotto
-- Presentazione delle caratteristiche principali
-- Confronto dei piani tariffari
-- Visione del prodotto e roadmap
-- Sezione informazioni aziendali
-- Modulo di contatto
-- Footer completo
+### Strona Główna (`index.html`)
+- Sekcja hero z prezentacją produktu
+- Prezentacja głównych funkcji
+- Porównanie planów cenowych
+- Wizja produktu i mapa drogowa
+- Sekcja informacji o firmie
+- Formularz kontaktowy
+- Kompleksowa stopka
 
-### Pagina del Team (`team.html`)
-- Profili del team di leadership
-- Biografie e ruoli individuali
-- Branding e navigazione coerenti
+### Strona Zespołu (`team.html`)
+- Profile zespołu kierowniczego
+- Biografie i role poszczególnych osób
+- Spójny branding i nawigacja
 
-## 🎯 Sezioni Principali
+## 🎯 Główne Sekcje
 
-### Sezione Hero
-Introduzione accattivante con pulsanti call-to-action per demo e preordine.
+### Sekcja Hero
+Przyciągająca uwagę prezentacja z przyciskami call-to-action dla demo i przedsprzedaży.
 
-### Griglia delle Caratteristiche
-Quattro caratteristiche principali presentate in un layout a schede accessibile con icone e descrizioni.
+### Siatka Funkcji
+Cztery główne funkcje prezentowane w dostępnym układzie kart z ikonami i opisami.
 
-### Piani Tariffari
-Tre livelli (Standard, Pro, Enterprise) con confronti dettagliati delle caratteristiche e CTA chiari.
+### Plany Cenowe
+Trzy poziomy (Standard, Pro, Enterprise) ze szczegółowym porównaniem funkcji i wyraźnymi CTA.
 
-### Visione del Prodotto
-Roadmap quinquennale e filosofia aziendale con specifiche tecniche.
+### Wizja Produktu
+Pięcioletnia mapa drogowa i filozofia firmy ze specyfikacjami technicznymi.
 
-### Modulo di Contatto
-Modulo user-friendly per richieste con validazione.
+### Formularz Kontaktowy
+Przyjazny dla użytkownika formularz zapytań z walidacją.
 
-## 🛠️ Personalizzazione
+## 🛠️ Personalizacja
 
-### Aggiornamento dei Contenuti
-Modifica direttamente i file HTML per cambiare:
-- Caratteristiche e descrizioni del prodotto
-- Informazioni sui prezzi
-- Dettagli dei membri del team
-- Informazioni di contatto
+### Aktualizacja Treści
+Edytuj bezpośrednio pliki HTML, aby zmienić:
+- Funkcje i opisy produktu
+- Informacje o cenach
+- Szczegóły członków zespołu
+- Informacje kontaktowe
 
-### Modifiche allo Stile
-Modifica `styles.css` per personalizzare:
-- Palette di colori
-- Tipografia
-- Layout e spaziatura
-- Animazioni e transizioni
+### Zmiany Stylu
+Modyfikuj `styles.css`, aby dostosować:
+- Paletę kolorów
+- Typografię
+- Układ i odstępy
+- Animacje i przejścia
 
-### Aggiungere Funzionalità
-Estendi `script.js` per aggiungere:
-- Validazione e invio moduli
-- Animazioni interattive
-- Caricamento dinamico dei contenuti
-- Tracciamento analitico
+### Dodawanie Funkcjonalności
+Rozszerz `script.js`, aby dodać:
+- Walidację i wysyłanie formularzy
+- Interaktywne animacje
+- Dynamiczne ładowanie treści
+- Śledzenie analityczne
 
-## 📱 Breakpoint Responsive
+## 📱 Punkty Przerwania Responsywności
 
-Il design si adatta a diverse dimensioni dello schermo:
+Design dostosowuje się do różnych rozmiarów ekranu:
 - **Mobile** : < 768px
 - **Tablet** : 768px - 1024px
 - **Desktop** : > 1024px
 
-## 🌐 Compatibilità Browser
+## 🌐 Kompatybilność Przeglądarek
 
-- Chrome (ultima versione)
-- Firefox (ultima versione)
-- Safari (ultima versione)
-- Edge (ultima versione)
-- Opera (ultima versione)
+- Chrome (najnowsza wersja)
+- Firefox (najnowsza wersja)
+- Safari (najnowsza wersja)
+- Edge (najnowsza wersja)
+- Opera (najnowsza wersja)
 
-## 📝 Licenza
+## 📝 Licencja
 
-© 2025 NovaSphere Inc. Tutti i diritti riservati.
+© 2025 NovaSphere Inc. Wszelkie prawa zastrzeżone.
 
-Questo è un prodotto fittizio creato a scopo dimostrativo.
+To jest fikcyjny produkt stworzony w celach demonstracyjnych.
 
-## 👥 Team
+## 👥 Zespół
 
-- **Sarah Chen** - CEO e Fondatrice
-- **Marcus Rodriguez** - Direttore Tecnologico
-- **Dr. Aisha Patel** - Direttrice della Ricerca
-- **James Wilson** - Direttore del Design
+- **Sarah Chen** - CEO i Założycielka
+- **Marcus Rodriguez** - Dyrektor ds. Technologii
+- **Dr. Aisha Patel** - Dyrektor ds. Badań
+- **James Wilson** - Dyrektor ds. Designu
 
-## 📧 Contatti
+## 📧 Kontakt
 
-- **Indirizzo** : 123 Innovation Drive, Tech Valley, CA 94025, Stati Uniti
-- **Telefono** : (555) 123-4567
+- **Adres** : 123 Innovation Drive, Tech Valley, CA 94025, USA
+- **Telefon** : (555) 123-4567
 - **Email** : info@novasphere.com
 
-## 🔮 Miglioramenti Futuri
+## 🔮 Przyszłe Ulepszenia
 
-- [ ] Aggiungere una demo interattiva del prodotto
-- [ ] Implementare un backend per il modulo di contatto
-- [ ] Aggiungere una sezione blog/notizie
-- [ ] Creare una sezione testimonianze clienti
-- [ ] Integrare contenuti video
-- [ ] Aggiungere supporto multilingue
-- [ ] Implementare un pulsante di alternanza modalità scura
-- [ ] Aggiungere miglioramenti di accessibilità (etichette ARIA, navigazione da tastiera)
+- [ ] Dodać interaktywne demo produktu
+- [ ] Zaimplementować backend dla formularza kontaktowego
+- [ ] Dodać sekcję blog/aktualności
+- [ ] Stworzyć sekcję opinii klientów
+- [ ] Zintegrować treści wideo
+- [ ] Dodać wsparcie wielojęzyczne
+- [ ] Zaimplementować przełącznik trybu ciemnego
+- [ ] Dodać ulepszenia dostępności (etykiety ARIA, nawigacja klawiaturą)
 
 ---
 
-**Versione** : 2.0  
-**Ultimo Aggiornamento** : Novembre 2025  
-**Stato** : Sviluppo Attivo
+**Wersja** : 2.0  
+**Ostatnia Aktualizacja** : Listopad 2025  
+**Status** : Aktywny Rozwój
