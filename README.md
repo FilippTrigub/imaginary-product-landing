@@ -1,204 +1,204 @@
 # NovaSphere v2.0
 
-> L'Avenir de l'Informatique Personnelle
+> El Futuro de la Computación Personal
 
-Une page d'accueil moderne et responsive présentant NovaSphere — un appareil informatique révolutionnaire imaginaire doté d'interfaces holographiques, de traitement quantique et de capacités d'IA avancées.
+Una página de inicio moderna y responsive que presenta NovaSphere — un dispositivo informático revolucionario imaginario con interfaces holográficas, procesamiento cuántico y capacidades avanzadas de IA.
 
-## 🌟 Aperçu
+## 🌟 Descripción General
 
-NovaSphere v2.0 est une page de présentation de produit conceptuel démontrant les principes de conception web de pointe et les techniques modernes HTML/CSS/JavaScript. Le site présente un appareil informatique holographique fictif avec une expérience utilisateur immersive et professionnelle.
+NovaSphere v2.0 es una página de presentación de producto conceptual que demuestra principios de diseño web de vanguardia y técnicas modernas de HTML/CSS/JavaScript. El sitio presenta un dispositivo informático holográfico ficticio con una experiencia de usuario inmersiva y profesional.
 
-## ✨ Fonctionnalités
+## ✨ Características
 
-### Points Forts du Produit
-- **Interface Holographique** - Interaction 3D avec le contenu numérique
-- **Traitement Quantique** - Technologie de puce quantique propriétaire
-- **Sécurité Neuronale** - Authentification biométrique adaptative
-- **Batterie Infinie** - Technologie révolutionnaire de récupération d'énergie
+### Aspectos Destacados del Producto
+- **Interfaz Holográfica** - Interacción 3D con contenido digital
+- **Procesamiento Cuántico** - Tecnología de chip cuántico propietario
+- **Seguridad Neural** - Autenticación biométrica adaptativa
+- **Batería Infinita** - Tecnología revolucionaria de recuperación de energía
 
-### Fonctionnalités du Site Web
-- Design entièrement responsive (mobile, tablette, ordinateur)
-- Interface utilisateur moderne et épurée avec animations fluides
-- Navigation interactive et effets de défilement
-- Plans tarifaires complets (Standard, Pro, Entreprise)
-- Sections vision produit et informations sur l'entreprise
-- Formulaire de contact pour les demandes des utilisateurs
-- Page dédiée à l'équipe présentant la direction
+### Funcionalidades del Sitio Web
+- Diseño completamente responsive (móvil, tableta, escritorio)
+- Interfaz de usuario moderna y limpia con animaciones fluidas
+- Navegación interactiva y efectos de desplazamiento
+- Planes de precios completos (Estándar, Pro, Empresarial)
+- Secciones de visión del producto e información de la empresa
+- Formulario de contacto para consultas de usuarios
+- Página dedicada al equipo que presenta la dirección
 
-## 📁 Structure du Projet
+## 📁 Estructura del Proyecto
 
 ```
 /vercel/sandbox/
-├── index.html          # Page d'accueil principale
-├── team.html           # Page des membres de l'équipe
-├── header.html         # Composant d'en-tête réutilisable
-├── styles.css          # Styles globaux et design responsive
-├── script.js           # Fonctionnalités interactives
-├── README.md           # Documentation du projet
-├── .gitignore          # Règles d'exclusion Git
+├── index.html          # Página de inicio principal
+├── team.html           # Página de miembros del equipo
+├── header.html         # Componente de encabezado reutilizable
+├── styles.css          # Estilos globales y diseño responsive
+├── script.js           # Funcionalidades interactivas
+├── README.md           # Documentación del proyecto
+├── .gitignore          # Reglas de exclusión de Git
 └── images/
-    ├── logo.svg        # Logo NovaSphere
-    └── product.svg     # Visualisation du produit
+    ├── logo.svg        # Logo de NovaSphere
+    └── product.svg     # Visualización del producto
 ```
 
-## 🚀 Démarrage
+## 🚀 Comenzar
 
-### Prérequis
-- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
-- Optionnel : Serveur web local pour le développement
+### Requisitos Previos
+- Un navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Opcional: Servidor web local para desarrollo
 
-### Installation
+### Instalación
 
-1. **Cloner le dépôt**
+1. **Clonar el repositorio**
    ```bash
-   git clone <url-du-dépôt>
+   git clone <url-del-repositorio>
    cd /vercel/sandbox
    ```
 
-2. **Ouvrir dans le navigateur**
+2. **Abrir en el navegador**
    
-   Ouvrez simplement `index.html` dans votre navigateur web :
+   Simplemente abre `index.html` en tu navegador web:
    ```bash
-   # Utiliser le navigateur par défaut
+   # Usar el navegador predeterminado
    open index.html
    
-   # Ou avec un navigateur spécifique
+   # O con un navegador específico
    firefox index.html
    chrome index.html
    ```
 
-3. **Optionnel : Exécuter avec un serveur local**
+3. **Opcional: Ejecutar con un servidor local**
    
-   Pour une meilleure expérience de développement :
+   Para una mejor experiencia de desarrollo:
    ```bash
    # Python 3
    python3 -m http.server 8000
    
-   # Node.js (avec http-server)
+   # Node.js (con http-server)
    npx http-server -p 8000
    ```
    
-   Puis visitez : `http://localhost:8000`
+   Luego visita: `http://localhost:8000`
 
-## 🎨 Design & Technologie
+## 🎨 Diseño y Tecnología
 
-### Technologies Utilisées
-- **HTML5** - Balisage sémantique et structure
-- **CSS3** - Stylisation moderne avec Flexbox et Grid
-- **JavaScript (ES6+)** - Fonctionnalités interactives
-- **Google Fonts** - Famille de polices Montserrat
-- **Graphiques SVG** - Images vectorielles évolutives
+### Tecnologías Utilizadas
+- **HTML5** - Marcado semántico y estructura
+- **CSS3** - Estilización moderna con Flexbox y Grid
+- **JavaScript (ES6+)** - Funcionalidades interactivas
+- **Google Fonts** - Familia de fuentes Montserrat
+- **Gráficos SVG** - Imágenes vectoriales escalables
 
-### Principes de Design
-- Design responsive mobile-first
-- Esthétique épurée et minimaliste
-- Transitions et animations fluides
-- Contraste de couleurs accessible
-- Modèles de navigation intuitifs
+### Principios de Diseño
+- Diseño responsive mobile-first
+- Estética limpia y minimalista
+- Transiciones y animaciones suaves
+- Contraste de colores accesible
+- Patrones de navegación intuitivos
 
-## 📄 Pages
+## 📄 Páginas
 
-### Page d'Accueil Principale (`index.html`)
-- Section héros avec présentation du produit
-- Présentation des fonctionnalités clés
-- Comparaison des plans tarifaires
-- Vision produit et feuille de route
-- Section à propos de l'entreprise
-- Formulaire de contact
-- Pied de page complet
+### Página de Inicio Principal (`index.html`)
+- Sección hero con presentación del producto
+- Presentación de características clave
+- Comparación de planes de precios
+- Visión del producto y hoja de ruta
+- Sección sobre la empresa
+- Formulario de contacto
+- Pie de página completo
 
-### Page Équipe (`team.html`)
-- Profils de l'équipe de direction
-- Biographies et rôles individuels
-- Image de marque et navigation cohérentes
+### Página del Equipo (`team.html`)
+- Perfiles del equipo directivo
+- Biografías y roles individuales
+- Imagen de marca y navegación coherentes
 
-## 🎯 Sections Clés
+## 🎯 Secciones Clave
 
-### Section Héros
-Introduction accrocheuse avec boutons d'appel à l'action pour la démo et la précommande.
+### Sección Hero
+Introducción atractiva con botones de llamada a la acción para demo y reserva anticipada.
 
-### Grille de Fonctionnalités
-Quatre fonctionnalités principales présentées dans une mise en page en cartes accessible avec icônes et descriptions.
+### Cuadrícula de Características
+Cuatro características principales presentadas en un diseño de tarjetas accesible con iconos y descripciones.
 
-### Plans Tarifaires
-Trois niveaux (Standard, Pro, Entreprise) avec comparaisons détaillées des fonctionnalités et CTA clairs.
+### Planes de Precios
+Tres niveles (Estándar, Pro, Empresarial) con comparaciones detalladas de características y CTA claros.
 
-### Vision Produit
-Feuille de route sur 5 ans et philosophie de l'entreprise avec spécifications techniques.
+### Visión del Producto
+Hoja de ruta de 5 años y filosofía de la empresa con especificaciones técnicas.
 
-### Formulaire de Contact
-Formulaire convivial pour les demandes avec validation.
+### Formulario de Contacto
+Formulario fácil de usar para consultas con validación.
 
-## 🛠️ Personnalisation
+## 🛠️ Personalización
 
-### Mise à Jour du Contenu
-Modifiez directement les fichiers HTML pour changer :
-- Fonctionnalités et descriptions du produit
-- Informations tarifaires
-- Détails des membres de l'équipe
-- Informations de contact
+### Actualización del Contenido
+Edita directamente los archivos HTML para cambiar:
+- Características y descripciones del producto
+- Información de precios
+- Detalles de los miembros del equipo
+- Información de contacto
 
-### Modifications de Style
-Modifiez `styles.css` pour personnaliser :
-- Palette de couleurs
-- Typographie
-- Mise en page et espacement
-- Animations et transitions
+### Modificaciones de Estilo
+Modifica `styles.css` para personalizar:
+- Paleta de colores
+- Tipografía
+- Diseño y espaciado
+- Animaciones y transiciones
 
-### Ajout de Fonctionnalités
-Étendez `script.js` pour ajouter :
-- Validation et soumission de formulaire
-- Animations interactives
-- Chargement de contenu dynamique
-- Suivi analytique
+### Agregar Funcionalidades
+Extiende `script.js` para añadir:
+- Validación y envío de formularios
+- Animaciones interactivas
+- Carga de contenido dinámico
+- Seguimiento analítico
 
-## 📱 Points de Rupture Responsive
+## 📱 Puntos de Interrupción Responsive
 
-Le design s'adapte à différentes tailles d'écran :
-- **Mobile** : < 768px
-- **Tablette** : 768px - 1024px
-- **Ordinateur** : > 1024px
+El diseño se adapta a diferentes tamaños de pantalla:
+- **Móvil** : < 768px
+- **Tableta** : 768px - 1024px
+- **Escritorio** : > 1024px
 
-## 🌐 Support des Navigateurs
+## 🌐 Compatibilidad con Navegadores
 
-- Chrome (dernière version)
-- Firefox (dernière version)
-- Safari (dernière version)
-- Edge (dernière version)
-- Opera (dernière version)
+- Chrome (última versión)
+- Firefox (última versión)
+- Safari (última versión)
+- Edge (última versión)
+- Opera (última versión)
 
-## 📝 Licence
+## 📝 Licencia
 
-© 2025 NovaSphere Inc. Tous droits réservés.
+© 2025 NovaSphere Inc. Todos los derechos reservados.
 
-Ceci est un produit fictif créé à des fins de démonstration.
+Este es un producto ficticio creado con fines de demostración.
 
-## 👥 Équipe
+## 👥 Equipo
 
-- **Sarah Chen** - PDG & Fondatrice
-- **Marcus Rodriguez** - Directeur Technique
-- **Dr. Aisha Patel** - Directrice de la Recherche
-- **James Wilson** - Directeur du Design
+- **Sarah Chen** - CEO y Fundadora
+- **Marcus Rodriguez** - Director de Tecnología
+- **Dr. Aisha Patel** - Directora de Investigación
+- **James Wilson** - Director de Diseño
 
-## 📧 Contact
+## 📧 Contacto
 
-- **Adresse** : 123 Innovation Drive, Tech Valley, CA 94025, États-Unis
-- **Téléphone** : (555) 123-4567
+- **Dirección** : 123 Innovation Drive, Tech Valley, CA 94025, Estados Unidos
+- **Teléfono** : (555) 123-4567
 - **Email** : info@novasphere.com
 
-## 🔮 Améliorations Futures
+## 🔮 Mejoras Futuras
 
-- [ ] Ajouter une démo interactive du produit
-- [ ] Implémenter un backend pour le formulaire de contact
-- [ ] Ajouter une section blog/actualités
-- [ ] Créer une section témoignages clients
-- [ ] Intégrer du contenu vidéo
-- [ ] Ajouter le support multilingue
-- [ ] Implémenter un bouton de basculement mode sombre
-- [ ] Ajouter des améliorations d'accessibilité (labels ARIA, navigation au clavier)
+- [ ] Agregar una demo interactiva del producto
+- [ ] Implementar un backend para el formulario de contacto
+- [ ] Añadir una sección de blog/noticias
+- [ ] Crear una sección de testimonios de clientes
+- [ ] Integrar contenido de video
+- [ ] Agregar soporte multilingüe
+- [ ] Implementar un botón de alternancia de modo oscuro
+- [ ] Añadir mejoras de accesibilidad (etiquetas ARIA, navegación por teclado)
 
 ---
 
-**Version** : 2.0  
-**Dernière Mise à Jour** : Novembre 2025  
-**Statut** : Développement Actif
+**Versión** : 2.0  
+**Última Actualización** : Noviembre 2025  
+**Estado** : Desarrollo Activo
