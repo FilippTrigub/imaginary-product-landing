@@ -1,204 +1,204 @@
 # NovaSphere v2.0
 
-> Przyszłość Komputerów Osobistych
+> Майбутнє Персональних Комп'ютерів
 
-Nowoczesna i responsywna strona docelowa prezentująca NovaSphere — rewolucyjne, wyimaginowane urządzenie komputerowe z holograficznymi interfejsami, przetwarzaniem kwantowym i zaawansowanymi możliwościami sztucznej inteligencji.
+Сучасна та адаптивна цільова сторінка, що представляє NovaSphere — революційний, уявний комп'ютерний пристрій з голографічними інтерфейсами, квантовою обробкою та передовими можливостями штучного інтелекту.
 
-## 🌟 Przegląd
+## 🌟 Огляд
 
-NovaSphere v2.0 to koncepcyjna strona produktowa, która demonstruje najnowocześniejsze zasady projektowania stron internetowych oraz nowoczesne techniki HTML/CSS/JavaScript. Witryna prezentuje fikcyjne holograficzne urządzenie komputerowe z wciągającym i profesjonalnym doświadczeniem użytkownika.
+NovaSphere v2.0 — це концептуальна сторінка продукту, яка демонструє найсучасніші принципи веб-дизайну та сучасні техніки HTML/CSS/JavaScript. Сайт представляє вигаданий голографічний комп'ютерний пристрій із захоплюючим та професійним користувацьким досвідом.
 
-## ✨ Funkcje
+## ✨ Функції
 
-### Najważniejsze Cechy Produktu
-- **Interfejs Holograficzny** - Interakcja 3D z treściami cyfrowymi
-- **Przetwarzanie Kwantowe** - Zastrzeżona technologia chipów kwantowych
-- **Zabezpieczenia Neuronowe** - Adaptacyjne uwierzytelnianie biometryczne
-- **Nieskończona Bateria** - Rewolucyjna technologia odzyskiwania energii
+### Ключові Особливості Продукту
+- **Голографічний Інтерфейс** - 3D-взаємодія з цифровим контентом
+- **Квантова Обробка** - Запатентована технологія квантових чіпів
+- **Нейронний Захист** - Адаптивна біометрична автентифікація
+- **Нескінченна Батарея** - Революційна технологія відновлення енергії
 
-### Funkcjonalności Strony
-- W pełni responsywny design (mobile, tablet, desktop)
-- Nowoczesny i czysty interfejs użytkownika z płynnymi animacjami
-- Interaktywna nawigacja i efekty przewijania
-- Kompleksowe plany cenowe (Standard, Pro, Enterprise)
-- Sekcje wizji produktu i informacji o firmie
-- Formularz kontaktowy dla zapytań użytkowników
-- Dedykowana strona zespołu z prezentacją kierownictwa
+### Функціональність Сайту
+- Повністю адаптивний дизайн (мобільні пристрої, планшети, комп'ютери)
+- Сучасний та чистий інтерфейс користувача з плавними анімаціями
+- Інтерактивна навігація та ефекти прокручування
+- Комплексні тарифні плани (Стандарт, Про, Корпоративний)
+- Розділи бачення продукту та інформації про компанію
+- Контактна форма для запитів користувачів
+- Спеціальна сторінка команди з презентацією керівництва
 
-## 📁 Struktura Projektu
+## 📁 Структура Проєкту
 
 ```
 /vercel/sandbox/
-├── index.html          # Strona główna
-├── team.html           # Strona członków zespołu
-├── header.html         # Komponent nagłówka wielokrotnego użytku
-├── styles.css          # Globalne style i responsywny design
-├── script.js           # Funkcjonalności interaktywne
-├── README.md           # Dokumentacja projektu
-├── .gitignore          # Reguły wykluczeń Git
+├── index.html          # Головна сторінка
+├── team.html           # Сторінка членів команди
+├── header.html         # Компонент заголовка багаторазового використання
+├── styles.css          # Глобальні стилі та адаптивний дизайн
+├── script.js           # Інтерактивні функції
+├── README.md           # Документація проєкту
+├── .gitignore          # Правила виключень Git
 └── images/
-    ├── logo.svg        # Logo NovaSphere
-    └── product.svg     # Wizualizacja produktu
+    ├── logo.svg        # Логотип NovaSphere
+    └── product.svg     # Візуалізація продукту
 ```
 
-## 🚀 Rozpoczęcie Pracy
+## 🚀 Початок Роботи
 
-### Wymagania Wstępne
-- Nowoczesna przeglądarka internetowa (Chrome, Firefox, Safari, Edge)
-- Opcjonalnie: Lokalny serwer WWW do rozwoju
+### Передумови
+- Сучасний веб-браузер (Chrome, Firefox, Safari, Edge)
+- Опціонально: Локальний веб-сервер для розробки
 
-### Instalacja
+### Встановлення
 
-1. **Sklonuj repozytorium**
+1. **Клонуйте репозиторій**
    ```bash
-   git clone <url-repozytorium>
+   git clone <url-репозиторію>
    cd /vercel/sandbox
    ```
 
-2. **Otwórz w przeglądarce**
+2. **Відкрийте у браузері**
    
-   Po prostu otwórz `index.html` w swojej przeglądarce:
+   Просто відкрийте `index.html` у вашому браузері:
    ```bash
-   # Użyj domyślnej przeglądarki
+   # Використайте браузер за замовчуванням
    open index.html
    
-   # Lub z konkretną przeglądarką
+   # Або з конкретним браузером
    firefox index.html
    chrome index.html
    ```
 
-3. **Opcjonalnie: Uruchom z lokalnym serwerem**
+3. **Опціонально: Запустіть з локальним сервером**
    
-   Dla lepszego doświadczenia deweloperskiego:
+   Для кращого досвіду розробки:
    ```bash
    # Python 3
    python3 -m http.server 8000
    
-   # Node.js (z http-server)
+   # Node.js (з http-server)
    npx http-server -p 8000
    ```
    
-   Następnie odwiedź: `http://localhost:8000`
+   Потім відвідайте: `http://localhost:8000`
 
-## 🎨 Design i Technologia
+## 🎨 Дизайн та Технології
 
-### Użyte Technologie
-- **HTML5** - Semantyczny markup i struktura
-- **CSS3** - Nowoczesne stylowanie z Flexbox i Grid
-- **JavaScript (ES6+)** - Funkcjonalności interaktywne
-- **Google Fonts** - Rodzina czcionek Montserrat
-- **Grafika SVG** - Skalowalne obrazy wektorowe
+### Використані Технології
+- **HTML5** - Семантична розмітка та структура
+- **CSS3** - Сучасне стилізування з Flexbox та Grid
+- **JavaScript (ES6+)** - Інтерактивні функції
+- **Google Fonts** - Сімейство шрифтів Montserrat
+- **Графіка SVG** - Масштабовані векторні зображення
 
-### Zasady Projektowania
-- Responsywny design mobile-first
-- Czysta i minimalistyczna estetyka
-- Płynne przejścia i animacje
-- Dostępny kontrast kolorów
-- Intuicyjne wzorce nawigacji
+### Принципи Дизайну
+- Адаптивний дизайн mobile-first
+- Чиста та мінімалістична естетика
+- Плавні переходи та анімації
+- Доступний контраст кольорів
+- Інтуїтивні шаблони навігації
 
-## 📄 Strony
+## 📄 Сторінки
 
-### Strona Główna (`index.html`)
-- Sekcja hero z prezentacją produktu
-- Prezentacja głównych funkcji
-- Porównanie planów cenowych
-- Wizja produktu i mapa drogowa
-- Sekcja informacji o firmie
-- Formularz kontaktowy
-- Kompleksowa stopka
+### Головна Сторінка (`index.html`)
+- Героїчна секція з презентацією продукту
+- Презентація основних функцій
+- Порівняння тарифних планів
+- Бачення продукту та дорожня карта
+- Розділ інформації про компанію
+- Контактна форма
+- Комплексний футер
 
-### Strona Zespołu (`team.html`)
-- Profile zespołu kierowniczego
-- Biografie i role poszczególnych osób
-- Spójny branding i nawigacja
+### Сторінка Команди (`team.html`)
+- Профілі керівної команди
+- Біографії та ролі окремих осіб
+- Послідовний брендинг та навігація
 
-## 🎯 Główne Sekcje
+## 🎯 Основні Розділи
 
-### Sekcja Hero
-Przyciągająca uwagę prezentacja z przyciskami call-to-action dla demo i przedsprzedaży.
+### Героїчна Секція
+Привертаюча увагу презентація з кнопками заклику до дії для демо та передпродажу.
 
-### Siatka Funkcji
-Cztery główne funkcje prezentowane w dostępnym układzie kart z ikonami i opisami.
+### Сітка Функцій
+Чотири основні функції, представлені в доступному макеті карток з іконками та описами.
 
-### Plany Cenowe
-Trzy poziomy (Standard, Pro, Enterprise) ze szczegółowym porównaniem funkcji i wyraźnymi CTA.
+### Тарифні Плани
+Три рівні (Стандарт, Про, Корпоративний) з детальним порівнянням функцій та чіткими CTA.
 
-### Wizja Produktu
-Pięcioletnia mapa drogowa i filozofia firmy ze specyfikacjami technicznymi.
+### Бачення Продукту
+П'ятирічна дорожня карта та філософія компанії з технічними специфікаціями.
 
-### Formularz Kontaktowy
-Przyjazny dla użytkownika formularz zapytań z walidacją.
+### Контактна Форма
+Зручна для користувача форма запитів з валідацією.
 
-## 🛠️ Personalizacja
+## 🛠️ Персоналізація
 
-### Aktualizacja Treści
-Edytuj bezpośrednio pliki HTML, aby zmienić:
-- Funkcje i opisy produktu
-- Informacje o cenach
-- Szczegóły członków zespołu
-- Informacje kontaktowe
+### Оновлення Контенту
+Редагуйте безпосередньо HTML-файли, щоб змінити:
+- Функції та описи продукту
+- Інформацію про ціни
+- Деталі членів команди
+- Контактну інформацію
 
-### Zmiany Stylu
-Modyfikuj `styles.css`, aby dostosować:
-- Paletę kolorów
-- Typografię
-- Układ i odstępy
-- Animacje i przejścia
+### Зміни Стилю
+Модифікуйте `styles.css`, щоб налаштувати:
+- Палітру кольорів
+- Типографіку
+- Макет та відступи
+- Анімації та переходи
 
-### Dodawanie Funkcjonalności
-Rozszerz `script.js`, aby dodać:
-- Walidację i wysyłanie formularzy
-- Interaktywne animacje
-- Dynamiczne ładowanie treści
-- Śledzenie analityczne
+### Додавання Функціональності
+Розширте `script.js`, щоб додати:
+- Валідацію та відправку форм
+- Інтерактивні анімації
+- Динамічне завантаження контенту
+- Аналітичне відстеження
 
-## 📱 Punkty Przerwania Responsywności
+## 📱 Точки Перелому Адаптивності
 
-Design dostosowuje się do różnych rozmiarów ekranu:
-- **Mobile** : < 768px
-- **Tablet** : 768px - 1024px
-- **Desktop** : > 1024px
+Дизайн адаптується до різних розмірів екрану:
+- **Мобільні** : < 768px
+- **Планшети** : 768px - 1024px
+- **Комп'ютери** : > 1024px
 
-## 🌐 Kompatybilność Przeglądarek
+## 🌐 Сумісність Браузерів
 
-- Chrome (najnowsza wersja)
-- Firefox (najnowsza wersja)
-- Safari (najnowsza wersja)
-- Edge (najnowsza wersja)
-- Opera (najnowsza wersja)
+- Chrome (остання версія)
+- Firefox (остання версія)
+- Safari (остання версія)
+- Edge (остання версія)
+- Opera (остання версія)
 
-## 📝 Licencja
+## 📝 Ліцензія
 
-© 2025 NovaSphere Inc. Wszelkie prawa zastrzeżone.
+© 2025 NovaSphere Inc. Усі права захищені.
 
-To jest fikcyjny produkt stworzony w celach demonstracyjnych.
+Це вигаданий продукт, створений для демонстраційних цілей.
 
-## 👥 Zespół
+## 👥 Команда
 
-- **Sarah Chen** - CEO i Założycielka
-- **Marcus Rodriguez** - Dyrektor ds. Technologii
-- **Dr. Aisha Patel** - Dyrektor ds. Badań
-- **James Wilson** - Dyrektor ds. Designu
+- **Sarah Chen** - Генеральний Директор та Засновниця
+- **Marcus Rodriguez** - Директор з Технологій
+- **Dr. Aisha Patel** - Директор з Досліджень
+- **James Wilson** - Директор з Дизайну
 
-## 📧 Kontakt
+## 📧 Контакти
 
-- **Adres** : 123 Innovation Drive, Tech Valley, CA 94025, USA
-- **Telefon** : (555) 123-4567
+- **Адреса** : 123 Innovation Drive, Tech Valley, CA 94025, USA
+- **Телефон** : (555) 123-4567
 - **Email** : info@novasphere.com
 
-## 🔮 Przyszłe Ulepszenia
+## 🔮 Майбутні Покращення
 
-- [ ] Dodać interaktywne demo produktu
-- [ ] Zaimplementować backend dla formularza kontaktowego
-- [ ] Dodać sekcję blog/aktualności
-- [ ] Stworzyć sekcję opinii klientów
-- [ ] Zintegrować treści wideo
-- [ ] Dodać wsparcie wielojęzyczne
-- [ ] Zaimplementować przełącznik trybu ciemnego
-- [ ] Dodać ulepszenia dostępności (etykiety ARIA, nawigacja klawiaturą)
+- [ ] Додати інтерактивне демо продукту
+- [ ] Реалізувати бекенд для контактної форми
+- [ ] Додати розділ блог/новини
+- [ ] Створити розділ відгуків клієнтів
+- [ ] Інтегрувати відеоконтент
+- [ ] Додати підтримку багатомовності
+- [ ] Реалізувати перемикач темного режиму
+- [ ] Додати покращення доступності (мітки ARIA, клавіатурна навігація)
 
 ---
 
-**Wersja** : 2.0  
-**Ostatnia Aktualizacja** : Listopad 2025  
-**Status** : Aktywny Rozwój
+**Версія** : 2.0  
+**Останнє Оновлення** : Листопад 2025  
+**Статус** : Активна Розробка
