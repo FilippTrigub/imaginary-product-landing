@@ -1,224 +1,224 @@
-# NovaSphere v2.0 - The Future of Personal Computing
+# NovaSphere v2.0 - L'Avenir de l'Informatique Personnelle
 
-A modern, responsive landing page showcasing NovaSphere, a revolutionary personal computing device featuring holographic interfaces, quantum processing, neural security, and infinite battery technology.
+Une page d'accueil moderne et responsive présentant NovaSphere, un appareil informatique révolutionnaire doté d'interfaces holographiques, de traitement quantique, de sécurité neuronale et d'une technologie de batterie infinie.
 
-## 🌟 Project Overview
+## 🌟 Aperçu du Projet
 
-NovaSphere v2.0 is a product landing page built with vanilla HTML, CSS, and JavaScript. The website presents a futuristic computing device with an elegant, modern design and smooth user interactions.
+NovaSphere v2.0 est une page de destination produit construite avec HTML, CSS et JavaScript vanilla. Le site web présente un appareil informatique futuriste avec un design élégant et moderne et des interactions utilisateur fluides.
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
 /vercel/sandbox/
-├── index.html          # Main landing page
-├── team.html           # Team members page
-├── header.html         # Enhanced header navigation demo
-├── styles.css          # Global styles and responsive design
-├── script.js           # Interactive functionality
-├── README.md           # Project documentation
-├── .gitignore          # Git ignore rules
+├── index.html          # Page d'accueil principale
+├── team.html           # Page des membres de l'équipe
+├── header.html         # Démo de navigation d'en-tête améliorée
+├── styles.css          # Styles globaux et design responsive
+├── script.js           # Fonctionnalités interactives
+├── README.md           # Documentation du projet
+├── .gitignore          # Règles d'exclusion Git
 └── images/
-    ├── logo.svg        # NovaSphere logo
-    └── product.svg     # Product image
+    ├── logo.svg        # Logo NovaSphere
+    └── product.svg     # Image du produit
 ```
 
-## 🎨 Features
+## 🎨 Fonctionnalités
 
-### Main Landing Page (index.html)
-- **Hero Section**: Eye-catching introduction with animated product image
-- **Key Features**: 4 feature cards highlighting:
-  - 🌐 Holographic Interface
-  - ⚡ Quantum Processing
-  - 🔒 Neural Security
-  - 🔄 Infinite Battery
-- **Pricing Plans**: Three tiers (Standard, Pro, Enterprise)
-- **Product & Vision Section**: Detailed product information with statistics
-- **About Section**: Company background
-- **Contact Form**: Interactive form with validation
-- **Responsive Footer**: Multi-column layout with company information
+### Page d'Accueil Principale (index.html)
+- **Section Hero** : Introduction accrocheuse avec image de produit animée
+- **Fonctionnalités Clés** : 4 cartes de fonctionnalités mettant en avant :
+  - 🌐 Interface Holographique
+  - ⚡ Traitement Quantique
+  - 🔒 Sécurité Neuronale
+  - 🔄 Batterie Infinie
+- **Plans Tarifaires** : Trois niveaux (Standard, Pro, Entreprise)
+- **Section Produit & Vision** : Informations détaillées sur le produit avec statistiques
+- **Section À Propos** : Historique de l'entreprise
+- **Formulaire de Contact** : Formulaire interactif avec validation
+- **Pied de Page Responsive** : Disposition multi-colonnes avec informations de l'entreprise
 
-### Team Page (team.html)
-- Grid layout showcasing 4 team members:
-  - Sarah Chen - CEO & Founder
-  - Marcus Rodriguez - CTO
-  - Dr. Aisha Patel - Head of Research
-  - James Wilson - Design Director
-- Hover effects on team cards
-- Consistent navigation and footer
+### Page Équipe (team.html)
+- Disposition en grille présentant 4 membres de l'équipe :
+  - Sarah Chen - PDG & Fondatrice
+  - Marcus Rodriguez - Directeur Technique
+  - Dr. Aisha Patel - Responsable de la Recherche
+  - James Wilson - Directeur du Design
+- Effets de survol sur les cartes d'équipe
+- Navigation et pied de page cohérents
 
-### Enhanced Header (header.html)
-- Sticky navigation with dropdown menus
-- Mobile-responsive hamburger menu
-- Breadcrumb navigation
-- Active state highlighting
-- Smooth scroll animations
+### En-tête Amélioré (header.html)
+- Navigation fixe avec menus déroulants
+- Menu hamburger responsive pour mobile
+- Navigation par fil d'Ariane
+- Mise en évidence de l'état actif
+- Animations de défilement fluides
 
-## 🎯 Key Technologies
+## 🎯 Technologies Clés
 
-- **HTML5**: Semantic markup with accessibility features
-- **CSS3**: Modern styling with:
-  - CSS Grid & Flexbox layouts
-  - Gradient backgrounds
-  - Smooth transitions and animations
-  - Responsive design (mobile-first approach)
-- **JavaScript (ES6+)**: Interactive features including:
-  - Smooth scrolling
-  - Form validation
-  - Scroll-triggered animations
-  - Mobile menu toggle
+- **HTML5** : Balisage sémantique avec fonctionnalités d'accessibilité
+- **CSS3** : Style moderne avec :
+  - Mises en page CSS Grid & Flexbox
+  - Arrière-plans en dégradé
+  - Transitions et animations fluides
+  - Design responsive (approche mobile-first)
+- **JavaScript (ES6+)** : Fonctionnalités interactives incluant :
+  - Défilement fluide
+  - Validation de formulaire
+  - Animations déclenchées par le défilement
+  - Basculement du menu mobile
 
-## 🎨 Design Features
+## 🎨 Caractéristiques du Design
 
-### Typography
-- **Font**: Montserrat (Google Fonts)
-- **Weights**: 300, 400, 600, 700
+### Typographie
+- **Police** : Montserrat (Google Fonts)
+- **Graisses** : 300, 400, 600, 700
 
-### Color Palette
-- **Primary Gradient**: `#6e8efb` → `#a777e3`
-- **Background**: `#f8f9fa`
-- **Text**: `#333` (primary), `#666` (secondary)
-- **Footer**: `#2d3748`
+### Palette de Couleurs
+- **Dégradé Principal** : `#6e8efb` → `#a777e3`
+- **Arrière-plan** : `#f8f9fa`
+- **Texte** : `#333` (primaire), `#666` (secondaire)
+- **Pied de page** : `#2d3748`
 
 ### Animations
-- Floating product image (6s infinite loop)
-- Hover effects on cards and buttons
-- Scroll-triggered fade-in animations
-- Smooth page transitions
+- Image de produit flottante (boucle infinie de 6s)
+- Effets de survol sur les cartes et boutons
+- Animations d'apparition déclenchées par le défilement
+- Transitions de page fluides
 
-## 🚀 Getting Started
+## 🚀 Démarrage
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Local web server for development
+### Prérequis
+- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Optionnel : Serveur web local pour le développement
 
 ### Installation
 
-1. **Clone the repository**:
+1. **Cloner le dépôt** :
    ```bash
-   git clone <repository-url>
+   git clone <url-du-dépôt>
    cd /vercel/sandbox
    ```
 
-2. **Open in browser**:
-   - Simply open `index.html` in your web browser
-   - Or use a local server:
+2. **Ouvrir dans le navigateur** :
+   - Ouvrez simplement `index.html` dans votre navigateur web
+   - Ou utilisez un serveur local :
      ```bash
-     # Using Python 3
+     # Avec Python 3
      python3 -m http.server 8000
      
-     # Using Node.js (http-server)
+     # Avec Node.js (http-server)
      npx http-server -p 8000
      ```
 
-3. **Navigate to**:
+3. **Naviguer vers** :
    ```
    http://localhost:8000
    ```
 
-## 📱 Responsive Design
+## 📱 Design Responsive
 
-The website is fully responsive with breakpoints at:
-- **Desktop**: > 992px
-- **Tablet**: 768px - 992px
-- **Mobile**: < 768px
+Le site web est entièrement responsive avec des points de rupture à :
+- **Bureau** : > 992px
+- **Tablette** : 768px - 992px
+- **Mobile** : < 768px
 
-### Mobile Features
-- Collapsible navigation menu
-- Stacked grid layouts
-- Touch-friendly buttons
-- Optimized font sizes
+### Fonctionnalités Mobile
+- Menu de navigation pliable
+- Mises en page en grille empilées
+- Boutons adaptés au tactile
+- Tailles de police optimisées
 
-## 🔧 Customization
+## 🔧 Personnalisation
 
-### Changing Colors
-Edit the CSS variables in `styles.css`:
+### Changer les Couleurs
+Modifiez les variables CSS dans `styles.css` :
 ```css
-/* Primary gradient colors */
+/* Couleurs du dégradé principal */
 background: linear-gradient(135deg, #6e8efb, #a777e3);
 ```
 
-### Adding New Sections
-1. Add HTML structure in `index.html`
-2. Style in `styles.css`
-3. Add interactivity in `script.js` if needed
+### Ajouter de Nouvelles Sections
+1. Ajoutez la structure HTML dans `index.html`
+2. Stylisez dans `styles.css`
+3. Ajoutez de l'interactivité dans `script.js` si nécessaire
 
-### Modifying Content
-- **Product Features**: Edit `.feature-card` elements
-- **Pricing Plans**: Modify `.pricing-card` sections
-- **Team Members**: Update `.team-member` cards in `team.html`
+### Modifier le Contenu
+- **Fonctionnalités du Produit** : Modifiez les éléments `.feature-card`
+- **Plans Tarifaires** : Modifiez les sections `.pricing-card`
+- **Membres de l'Équipe** : Mettez à jour les cartes `.team-member` dans `team.html`
 
 ## 📄 Pages
 
-### 1. Home (index.html)
-Main landing page with all product information, features, pricing, and contact form.
+### 1. Accueil (index.html)
+Page d'accueil principale avec toutes les informations sur le produit, les fonctionnalités, les tarifs et le formulaire de contact.
 
-### 2. Team (team.html)
-Dedicated page showcasing the leadership team with bios and roles.
+### 2. Équipe (team.html)
+Page dédiée présentant l'équipe de direction avec biographies et rôles.
 
-### 3. Header Demo (header.html)
-Demonstration page for the enhanced navigation system with dropdown menus and breadcrumbs.
+### 3. Démo En-tête (header.html)
+Page de démonstration pour le système de navigation amélioré avec menus déroulants et fils d'Ariane.
 
-## 🎭 Interactive Features
+## 🎭 Fonctionnalités Interactives
 
-### Smooth Scrolling
-All anchor links smoothly scroll to their target sections with offset for fixed header.
+### Défilement Fluide
+Tous les liens d'ancrage défilent en douceur vers leurs sections cibles avec décalage pour l'en-tête fixe.
 
-### Form Validation
-Contact form includes:
-- Required field validation
-- Email format validation
-- Success message on submission
-- Form reset after submission
+### Validation de Formulaire
+Le formulaire de contact inclut :
+- Validation des champs obligatoires
+- Validation du format d'email
+- Message de succès lors de la soumission
+- Réinitialisation du formulaire après soumission
 
-### Scroll Animations
-Feature cards fade in and slide up when scrolled into view.
+### Animations de Défilement
+Les cartes de fonctionnalités apparaissent en fondu et glissent vers le haut lorsqu'elles entrent dans la vue.
 
-### Mobile Menu
-Responsive hamburger menu with smooth toggle animation.
+### Menu Mobile
+Menu hamburger responsive avec animation de basculement fluide.
 
-## 🌐 Browser Support
+## 🌐 Support des Navigateurs
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Chrome (dernière version)
+- Firefox (dernière version)
+- Safari (dernière version)
+- Edge (dernière version)
+- Navigateurs mobiles (iOS Safari, Chrome Mobile)
 
-## 📝 License
+## 📝 Licence
 
-© 2025 NovaSphere Inc. All rights reserved. Version 2.0
+© 2025 NovaSphere Inc. Tous droits réservés. Version 2.0
 
-## 📞 Contact Information
+## 📞 Informations de Contact
 
-- **Address**: 123 Innovation Drive, Tech Valley, CA 94025, United States
-- **Phone**: (555) 123-4567
-- **Email**: info@novasphere.com
+- **Adresse** : 123 Innovation Drive, Tech Valley, CA 94025, États-Unis
+- **Téléphone** : (555) 123-4567
+- **Email** : info@novasphere.com
 
-## 🎨 ASCII Art Credits
+## 🎨 Crédits Art ASCII
 
-The project includes creative ASCII art in HTML comments:
-- NovaSphere logo banner
-- Product device illustration
-- Team member representations
-- Navigation system diagram
+Le projet inclut de l'art ASCII créatif dans les commentaires HTML :
+- Bannière du logo NovaSphere
+- Illustration de l'appareil produit
+- Représentations des membres de l'équipe
+- Diagramme du système de navigation
 
-## 🔮 Future Enhancements
+## 🔮 Améliorations Futures
 
-Potential improvements for future versions:
-- Backend integration for contact form
-- Product demo video integration
-- Blog section
-- Customer testimonials
-- Live chat support
-- Multi-language support
-- Dark mode toggle
-- Advanced animations with GSAP
-- E-commerce integration for pre-orders
+Améliorations potentielles pour les versions futures :
+- Intégration backend pour le formulaire de contact
+- Intégration de vidéo de démonstration du produit
+- Section blog
+- Témoignages clients
+- Support de chat en direct
+- Support multilingue
+- Basculement mode sombre
+- Animations avancées avec GSAP
+- Intégration e-commerce pour les précommandes
 
-## 🤝 Contributing
+## 🤝 Contribution
 
-This is a demonstration project. For contributions or suggestions, please contact the development team.
+Il s'agit d'un projet de démonstration. Pour les contributions ou suggestions, veuillez contacter l'équipe de développement.
 
 ---
 
-**Built with ❤️ by the NovaSphere Team**
+**Construit avec ❤️ par l'Équipe NovaSphere**
