@@ -1,0 +1,9 @@
+This is a dummy text file.
+
+It contains some sample text content across multiple lines.
+You can use this file for testing purposes.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+End of dummy text file.
