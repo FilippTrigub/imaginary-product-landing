@@ -1,0 +1,10 @@
+This is a dummy text file.
+
+It contains some sample text content for testing purposes.
+
+Here are some lines:
+- Line 1: Hello World
+- Line 2: Lorem ipsum dolor sit amet
+- Line 3: The quick brown fox jumps over the lazy dog
+
+End of dummy text file.
