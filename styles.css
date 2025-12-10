@@ -64,54 +64,184 @@ ul {
     transform: translateY(-2px);
 }
 
-/* Header Styles */
-header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
+/* Enhanced Header */
+.enhanced-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 15px 0;
 }
 
-header .container {
+.enhanced-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.logo {
+.enhanced-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.enhanced-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.enhanced-logo span {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.enhanced-nav {
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.logo span {
-    font-weight: 700;
-    font-size: 1.5rem;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-nav ul {
+.enhanced-nav ul {
     display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     gap: 30px;
 }
 
-nav ul li a {
+.enhanced-nav a {
+    color: white;
+    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-nav ul li a:hover {
-    color: #6e8efb;
+.enhanced-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
 }
+
+.enhanced-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.enhanced-nav .dropdown {
+    position: relative;
+}
+
+.enhanced-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+.enhanced-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.enhanced-nav .dropdown-content a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 0;
+}
+
+.enhanced-nav .dropdown-content a:hover {
+    background-color: #f8f9fa;
+    transform: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .enhanced-nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(102, 126, 234, 0.95);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .enhanced-nav ul.active {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .enhanced-nav .dropdown-content {
+        position: static;
+        display: block;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    
+    .enhanced-nav .dropdown-content a {
+        color: white;
+        padding-left: 40px;
+    }
+}
+
+.page-breadcrumb {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.breadcrumb a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: #ccc;
+}
+
+
+
 
 /* Hero Section */
 .hero {
@@ -289,7 +419,7 @@ section h2 {
 
 .pv-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
     align-items: center;
 }
@@ -410,6 +540,63 @@ section h2 {
     color: #666;
 }
 
+
+
+/* Team Page */
+.team-header {
+    padding: 120px 0 60px;
+    background: linear-gradient(135deg, #f5f7fa, #e6e9f0);
+    text-align: center;
+}
+
+.team-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #333, #6e8efb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.team-members {
+    padding: 100px 0;
+}
+
+.team-member-card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e6e9f0;
+    margin: 0 auto 20px;
+}
+
+.team-member-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member-card .role {
+    font-weight: 600;
+    color: #6e8efb;
+    margin-bottom: 20px;
+}
+
 /* Contact Section */
 .contact {
     padding: 100px 0;
@@ -450,6 +637,35 @@ section h2 {
     box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.2);
 }
 
+/* Careers Section */
+.careers {
+    padding: 100px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.job-openings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+.job-opening {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.job-opening h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+
 /* Footer */
 footer {
     background-color: #2d3748;
@@ -481,7 +697,7 @@ footer {
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
@@ -549,23 +765,5 @@ footer {
         font-size: 2rem;
     }
 
-    /* Product & Vision responsive tweaks */
-    .pv-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
 
-    .pv-feature {
-        justify-content: center;
-    }
-
-    .pv-stats {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .pv-visual .device {
-        width: 260px;
-    }
 }

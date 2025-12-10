@@ -30,25 +30,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaSphere v2 - The Future of Personal Computing</title>
+    <title>NovaSphere v2 - Experience the Future</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- Enhanced Header with Navigation -->
+    <header class="enhanced-header">
         <div class="container">
-            <div class="logo">
+            <div class="enhanced-logo">
                 <img src="images/logo.svg" alt="NovaSphere Logo">
-                <span>NovaSphere v2</span>
+                <a href="index.html"><span>NovaSphere v2</span></a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+            
+            <nav class="enhanced-nav">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#">Products ▾</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#features">Features</a>
+                            <a href="index.html#pricing">Pricing Plans</a>
+                            <a href="#">Tech Specs</a>
+                            <a href="#">Documentation</a>
+                        </div>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#">Company ▾</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#about">About Us</a>
+                            <a href="team.html">Our Team</a>
+                            <a href="#">Careers</a>
+                            <a href="#">News & Press</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="index.html#contact" class="btn-primary">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,7 +81,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>The Future of Personal Computing - Version 2.0</h1>
+                <h1>Experience the Future of Computing with NovaSphere v2</h1>
                 <p>NovaSphere introduces a revolutionary way to interact with technology. Seamlessly blend your digital and physical worlds with our groundbreaking holographic interface.</p>
                 <div class="cta-buttons">
                     <a href="#demo" class="btn-primary">Watch Demo</a>
@@ -168,24 +192,7 @@
                     </div>
                 </div>
 
-                <div class="pv-visual">
-                    <img src="images/product.svg" alt="NovaSphere device floating" class="device">
 
-                    <div class="pv-stats">
-                        <div class="pv-stat">
-                            <h4>3D Display</h4>
-                            <p>True volumetric depth</p>
-                        </div>
-                        <div class="pv-stat">
-                            <h4>Latency</h4>
-                            <p>Sub-10ms interactions</p>
-                        </div>
-                        <div class="pv-stat">
-                            <h4>Battery</h4>
-                            <p>Up to 2 weeks</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -193,11 +200,14 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
+
                 <h2>About NovaSphere</h2>
                 <p>Founded in 2024, NovaSphere brings together engineers, designers, and thinkers to build tools that extend human creativity. Our products focus on delightful, meaningful interactions that scale from individual creators to large organizations.</p>
             </div>
         </div>
     </section>
+
+
 
     <section id="contact" class="contact">
         <div class="container">
@@ -220,6 +230,8 @@
         </div>
     </section>
 
+
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -234,37 +246,40 @@
                             <li><a href="#features">Features</a></li>
                             <li><a href="#pricing">Pricing</a></li>
                             <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Tech Specs</a></li>
                         </ul>
                     </div>
                     <div class="link-group">
                         <h4>Company</h4>
                         <ul>
                             <li><a href="#about">About</a></li>
+                            <li><a href="team.html">Our Team</a></li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="link-group">
-                        <h4>Contact Info</h4>
+                        <h4>Support</h4>
                         <ul>
-                            <li>123 Innovation Drive</li>
-                            <li>Tech Valley, CA 94025</li>
-                            <li>United States</li>
-                            <li>Phone: (555) 123-4567</li>
-                            <li>Email: info@novasphere.com</li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
                         </ul>
                     </div>
                     <div class="link-group">
-                        <h4>Legal</h4>
+                        <h4>Connect</h4>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Social Media</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copyright">
                 &copy; 2025 NovaSphere Inc. All rights reserved. Version 2.0
+                <br>123 Innovation Drive, Tech Valley, CA 94000 | Phone: (555) 123-4567 | Email: info@novasphere.com
             </div>
         </div>
     </footer>
