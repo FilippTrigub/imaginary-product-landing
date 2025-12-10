@@ -50,7 +50,7 @@
             z-index: 1000;
             padding: 15px 0;
         }
-        
+
         .enhanced-header .container {
             display: flex;
             justify-content: space-between;
@@ -59,30 +59,30 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .enhanced-logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
+
         .enhanced-logo img {
             width: 40px;
             height: 40px;
         }
-        
+
         .enhanced-logo span {
             font-size: 1.5em;
             font-weight: 700;
             color: white;
             text-decoration: none;
         }
-        
+
         .enhanced-nav {
             display: flex;
             align-items: center;
         }
-        
+
         .enhanced-nav ul {
             display: flex;
             list-style: none;
@@ -90,7 +90,7 @@
             padding: 0;
             gap: 30px;
         }
-        
+
         .enhanced-nav a {
             color: white;
             text-decoration: none;
@@ -100,21 +100,21 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .enhanced-nav a:hover {
             background-color: rgba(255, 255, 255, 0.1);
             transform: translateY(-1px);
         }
-        
+
         .enhanced-nav a.active {
             background-color: rgba(255, 255, 255, 0.2);
             font-weight: 600;
         }
-        
+
         .enhanced-nav .dropdown {
             position: relative;
         }
-        
+
         .enhanced-nav .dropdown-content {
             display: none;
             position: absolute;
@@ -127,23 +127,23 @@
             padding: 10px 0;
             margin-top: 5px;
         }
-        
+
         .enhanced-nav .dropdown:hover .dropdown-content {
             display: block;
         }
-        
+
         .enhanced-nav .dropdown-content a {
             color: #333;
             padding: 10px 20px;
             display: block;
             border-radius: 0;
         }
-        
+
         .enhanced-nav .dropdown-content a:hover {
             background-color: #f8f9fa;
             transform: none;
         }
-        
+
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -152,7 +152,7 @@
             font-size: 1.5em;
             cursor: pointer;
         }
-        
+
         @media (max-width: 768px) {
             .enhanced-nav ul {
                 display: none;
@@ -166,15 +166,15 @@
                 gap: 15px;
                 border-radius: 0 0 10px 10px;
             }
-            
+
             .enhanced-nav ul.active {
                 display: flex;
             }
-            
+
             .mobile-menu-toggle {
                 display: block;
             }
-            
+
             .enhanced-nav .dropdown-content {
                 position: static;
                 display: block;
@@ -183,19 +183,19 @@
                 margin-top: 10px;
                 border-radius: 5px;
             }
-            
+
             .enhanced-nav .dropdown-content a {
                 color: white;
                 padding-left: 40px;
             }
         }
-        
+
         .page-breadcrumb {
             background-color: #f8f9fa;
             padding: 15px 0;
             border-bottom: 1px solid #e9ecef;
         }
-        
+
         .breadcrumb {
             display: flex;
             align-items: center;
@@ -203,18 +203,47 @@
             color: #666;
             font-size: 0.9em;
         }
-        
+
         .breadcrumb a {
             color: #667eea;
             text-decoration: none;
         }
-        
+
         .breadcrumb a:hover {
             text-decoration: underline;
         }
-        
+
         .breadcrumb-separator {
             color: #ccc;
+        }
+
+        .demo-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .demo-section p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .demo-box {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .demo-list {
+            line-height: 2;
+            color: #555;
+        }
+
+        .demo-list-heading {
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -226,12 +255,12 @@
                 <img src="images/logo.svg" alt="NovaSphere Logo">
                 <a href="index.html"><span>NovaSphere v2</span></a>
             </div>
-            
+
             <nav class="enhanced-nav">
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <button class="mobile-menu-toggle" type="button" onclick="toggleMobileMenu()">☰</button>
                 <ul id="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
-                    
+
                     <li class="dropdown">
                         <a href="#">Products ▾</a>
                         <div class="dropdown-content">
@@ -241,17 +270,17 @@
                             <a href="#">Documentation</a>
                         </div>
                     </li>
-                    
+
                     <li class="dropdown">
                         <a href="#">Company ▾</a>
                         <div class="dropdown-content">
                             <a href="index.html#about">About Us</a>
                             <a href="team.html">Our Team</a>
                             <a href="#">Careers</a>
-                            <a href="#">News & Press</a>
+                            <a href="#">News &amp; Press</a>
                         </div>
                     </li>
-                    
+
                     <li><a href="#">Support</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="index.html#contact" class="btn-primary">Contact</a></li>
@@ -259,7 +288,7 @@
             </nav>
         </div>
     </header>
-    
+
     <!-- Breadcrumb Navigation -->
     <div class="page-breadcrumb">
         <div class="container">
@@ -270,18 +299,18 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Demo Content -->
-    <section style="padding: 60px 0; text-align: center;">
+    <section class="demo-section">
         <div class="container">
             <h1>Enhanced Header with Navigation</h1>
-            <p style="font-size: 1.1em; color: #666; margin-bottom: 40px;">
+            <p>
                 This page demonstrates the enhanced header with dropdown navigation for subpages.
             </p>
-            
-            <div style="background: #f8f9fa; padding: 40px; border-radius: 10px; text-align: left; max-width: 800px; margin: 0 auto;">
+
+            <div class="demo-box">
                 <h3>Navigation Features:</h3>
-                <ul style="line-height: 2; color: #555;">
+                <ul class="demo-list">
                     <li><strong>Dropdown Menus:</strong> Products and Company sections with subpage links</li>
                     <li><strong>Active States:</strong> Current page highlighting</li>
                     <li><strong>Mobile Responsive:</strong> Collapsible mobile menu</li>
@@ -289,9 +318,9 @@
                     <li><strong>Sticky Header:</strong> Stays visible while scrolling</li>
                     <li><strong>Smooth Animations:</strong> Hover effects and transitions</li>
                 </ul>
-                
-                <h3 style="margin-top: 30px;">Available Subpages:</h3>
-                <ul style="line-height: 2; color: #555;">
+
+                <h3 class="demo-list-heading">Available Subpages:</h3>
+                <ul class="demo-list">
                     <li><a href="index.html">Home</a> - Main landing page</li>
                     <li><a href="team.html">Team</a> - Meet our team members</li>
                     <li><a href="index.html#features">Features</a> - Product features section</li>
@@ -302,7 +331,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -355,25 +384,25 @@
             </div>
         </div>
     </footer>
-    
+
     <script>
         // Mobile menu toggle functionality
         function toggleMobileMenu() {
             const navMenu = document.getElementById('nav-menu');
             navMenu.classList.toggle('active');
         }
-        
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.querySelector('.enhanced-nav');
             const toggle = document.querySelector('.mobile-menu-toggle');
             const menu = document.getElementById('nav-menu');
-            
+
             if (!nav.contains(event.target) && menu.classList.contains('active')) {
                 menu.classList.remove('active');
             }
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
