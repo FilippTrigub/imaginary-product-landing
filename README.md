@@ -1,3 +1,3 @@
-# NovaSphere - The Future of Personal Computing
+# Lorem Ipsum - Dolor Sit Amet Consectetur
 
-This repository contains the landing page for NovaSphere, an imaginary product that features holographic interfaces and advanced computing technologies.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
