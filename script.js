@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        const helloHeading = document.createElement('h2');
+        helloHeading.className = 'hello-world';
+        helloHeading.textContent = 'Hello, world!';
+        heroContent.prepend(helloHeading);
+    }
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

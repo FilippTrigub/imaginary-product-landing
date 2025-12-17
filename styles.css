@@ -126,6 +126,13 @@ nav ul li a:hover {
     align-items: center;
 }
 
+.hello-world {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #6e8efb;
+    margin-bottom: 10px;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 700;
