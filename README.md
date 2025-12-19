@@ -1,32 +1,32 @@
-# NovaSphere - The Future of Personal Computing
+# NovaSphere - L'avenir de l'informatique personnelle
 
-This repository contains the marketing website for NovaSphere, a revolutionary product featuring holographic interfaces and advanced computing technologies. The website is designed to showcase the product's features, introduce the team, and provide a visually engaging experience for potential customers.
+Ce dépôt contient le site web marketing de NovaSphere, un produit révolutionnaire doté d'interfaces holographiques et de technologies informatiques avancées. Le site web est conçu pour présenter les fonctionnalités du produit, introduire l'équipe et offrir une expérience visuellement attrayante aux clients potentiels.
 
-## Project Structure
+## Structure du projet
 
-The project is structured as a static website with the following key files and directories:
+Le projet est structuré comme un site web statique avec les fichiers et répertoires clés suivants :
 
-- `index.html`: The main landing page for NovaSphere, introducing the product and its core features.
-- `header.html`: A reusable HTML partial for the website's header, likely containing navigation and branding.
-- `team.html`: A dedicated page to showcase the team behind NovaSphere.
-- `styles.css`: Contains all the styling rules for the website, ensuring a consistent and modern look and feel.
-- `script.js`: Implements interactive functionalities and dynamic behaviors on the website.
-- `images/`: This directory holds all image assets used across the website, including:
-    - `logo.svg`: The official logo of NovaSphere.
-    - `product.svg`: An illustration or icon representing the NovaSphere product.
-- `.gitignore`: Specifies intentionally untracked files that Git should ignore.
-- `README.md`: This file, providing an overview of the project.
+- `index.html` : La page d'accueil principale de NovaSphere, présentant le produit et ses fonctionnalités essentielles.
+- `header.html` : Un partiel HTML réutilisable pour l'en-tête du site web, contenant probablement la navigation et l'image de marque.
+- `team.html` : Une page dédiée à la présentation de l'équipe derrière NovaSphere.
+- `styles.css` : Contient toutes les règles de style pour le site web, garantissant un aspect cohérent et moderne.
+- `script.js` : Implémente les fonctionnalités interactives et les comportements dynamiques sur le site web.
+- `images/` : Ce répertoire contient toutes les ressources d'image utilisées sur le site web, y compris :
+    - `logo.svg` : Le logo officiel de NovaSphere.
+    - `product.svg` : Une illustration ou une icône représentant le produit NovaSphere.
+- `.gitignore` : Spécifie les fichiers intentionnellement non suivis que Git doit ignorer.
+- `README.md` : Ce fichier, fournissant un aperçu du projet.
 
-## Technologies Used
+## Technologies utilisées
 
-- **HTML5**: For structuring the content of the web pages.
-- **CSS3**: For styling and layout.
-- **JavaScript**: For interactive elements and dynamic content.
+- **HTML5** : Pour structurer le contenu des pages web.
+- **CSS3** : Pour le style et la mise en page.
+- **JavaScript** : Pour les éléments interactifs et le contenu dynamique.
 
-## Getting Started
+## Démarrage rapide
 
-To view the website, simply open `index.html` in your web browser.
+Pour visualiser le site web, ouvrez simplement `index.html` dans votre navigateur web.
 
-## Contributing
+## Contribuer
 
-For any contributions or suggestions, please refer to the project's contributing guidelines (if available).
+Pour toute contribution ou suggestion, veuillez vous référer aux directives de contribution du projet (si disponibles).
