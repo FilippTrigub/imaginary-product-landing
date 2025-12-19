@@ -1,104 +1,104 @@
-# NovaSphere v2 - The Future of Personal Computing
+# NovaSphere v2 - El Futuro de la Computación Personal
 
-Welcome to the official landing page repository for **NovaSphere v2**, a cutting-edge computing platform featuring holographic interfaces, quantum processing, neural security, and infinite battery technology.
+Bienvenido al repositorio oficial de la página de destino de **NovaSphere v2**, una plataforma informática de vanguardia que presenta interfaces holográficas, procesamiento cuántico, seguridad neural y tecnología de batería infinita.
 
-## Overview
+## Descripción General
 
-This project is a modern, responsive landing page that showcases NovaSphere's revolutionary features and vision for the future of personal computing. Built with clean HTML, CSS, and vanilla JavaScript, it delivers a seamless user experience with engaging visuals and interactive elements.
+Este proyecto es una página de destino moderna y receptiva que muestra las características revolucionarias de NovaSphere y su visión para el futuro de la computación personal. Construida con HTML limpio, CSS y JavaScript vanilla, ofrece una experiencia de usuario sin interrupciones con elementos visuales atractivos e interactivos.
 
-## Features
+## Características
 
-- **Holographic Interface** - Immersive visual interactions
-- **Quantum Processing** - Next-generation computational power
-- **Neural Security** - Advanced biometric protection
-- **Infinite Battery** - Revolutionary power management
+- **Interfaz Holográfica** - Interacciones visuales inmersivas
+- **Procesamiento Cuántico** - Potencia computacional de próxima generación
+- **Seguridad Neural** - Protección biométrica avanzada
+- **Batería Infinita** - Gestión de energía revolucionaria
 
-## Project Structure
+## Estructura del Proyecto
 
 ```
-├── index.html          # Main landing page
-├── header.html         # Shared header component
-├── team.html           # Team/About section
-├── styles.css          # Global styling with responsive design
-├── script.js           # Interactive functionality
-├── images/             # Assets and graphics
-├── README.md           # Project documentation
-└── .gitignore          # Git configuration
+├── index.html          # Página de destino principal
+├── header.html         # Componente de encabezado compartido
+├── team.html           # Sección de equipo/Acerca de
+├── styles.css          # Estilos globales con diseño receptivo
+├── script.js           # Funcionalidad interactiva
+├── images/             # Recursos y gráficos
+├── README.md           # Documentación del proyecto
+└── .gitignore          # Configuración de Git
 ```
 
-## Getting Started
+## Primeros Pasos
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No build tools or server required
+### Requisitos Previos
+- Un navegador web moderno (Chrome, Firefox, Safari, Edge)
+- No se requieren herramientas de compilación ni servidor
 
-### Installation
+### Instalación
 
-1. Clone the repository:
+1. Clona el repositorio:
 ```bash
 git clone <repository-url>
 cd novasphere
 ```
 
-2. Open `index.html` in your web browser:
+2. Abre `index.html` en tu navegador web:
 ```bash
 open index.html  # macOS
-# or
+# o
 xdg-open index.html  # Linux
-# or simply double-click the file in your file explorer
+# o simplemente haz doble clic en el archivo en tu explorador de archivos
 ```
 
-## Technologies Used
+## Tecnologías Utilizadas
 
-- **HTML5** - Semantic markup structure
-- **CSS3** - Modern styling with flexbox and animations
-- **JavaScript (Vanilla)** - Interactive enhancements without dependencies
+- **HTML5** - Estructura semántica de marcado
+- **CSS3** - Estilos modernos con flexbox y animaciones
+- **JavaScript (Vanilla)** - Mejoras interactivas sin dependencias
 
-## Pages
+## Páginas
 
-- **index.html** - Main landing page with hero section, features, and pricing
-- **team.html** - Team information and about section
-- **header.html** - Reusable header component
+- **index.html** - Página de destino principal con sección hero, características y precios
+- **team.html** - Información del equipo y sección acerca de
+- **header.html** - Componente de encabezado reutilizable
 
-## Customization
+## Personalización
 
-### Styling
-Edit `styles.css` to customize colors, fonts, and layouts. The CSS uses modern features like CSS Grid and Flexbox for responsive design.
+### Estilos
+Edita `styles.css` para personalizar colores, fuentes y diseños. El CSS utiliza características modernas como CSS Grid y Flexbox para diseño receptivo.
 
-### Content
-Modify the HTML files to update copy, images, and sections. All content is clearly structured for easy updates.
+### Contenido
+Modifica los archivos HTML para actualizar el texto, imágenes y secciones. Todo el contenido está claramente estructurado para facilitar las actualizaciones.
 
-### Interactivity
-Update `script.js` to add or modify interactive features and animations.
+### Interactividad
+Actualiza `script.js` para agregar o modificar características e animaciones interactivas.
 
-## Browser Support
+## Compatibilidad del Navegador
 
 - Chrome/Edge 90+
 - Firefox 88+
 - Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Navegadores móviles (iOS Safari, Chrome Mobile)
 
-## Performance
+## Rendimiento
 
-The landing page is optimized for:
-- Fast load times with minimal HTTP requests
-- Mobile-responsive design
-- Smooth animations and transitions
-- Accessibility standards
+La página de destino está optimizada para:
+- Tiempos de carga rápidos con solicitudes HTTP mínimas
+- Diseño receptivo para móviles
+- Animaciones y transiciones suaves
+- Estándares de accesibilidad
 
-## Contributing
+## Contribución
 
-To contribute improvements:
+Para contribuir mejoras:
 
-1. Create a feature branch
-2. Make your changes
-3. Test across different browsers and devices
-4. Submit a pull request with a clear description
+1. Crea una rama de características
+2. Realiza tus cambios
+3. Prueba en diferentes navegadores y dispositivos
+4. Envía una solicitud de extracción con una descripción clara
 
-## License
+## Licencia
 
-© 2025 NovaSphere Inc. All rights reserved.
+© 2025 NovaSphere Inc. Todos los derechos reservados.
 
-## Contact
+## Contacto
 
-For more information about NovaSphere, visit our landing page or contact our team.
+Para obtener más información sobre NovaSphere, visita nuestra página de destino o ponte en contacto con nuestro equipo.
