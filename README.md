@@ -1,172 +1,172 @@
 # NovaSphere v2.0
 
-A modern, responsive landing page for NovaSphere - a futuristic personal computing device featuring holographic interfaces, quantum processing, and revolutionary energy technology.
+Una página de aterrizaje moderna y responsiva para NovaSphere - un dispositivo de computación personal futurista que presenta interfaces holográficas, procesamiento cuántico y tecnología energética revolucionaria.
 
-## Overview
+## Descripción General
 
-This project showcases a product landing page built with clean HTML, CSS, and vanilla JavaScript. It demonstrates modern web development practices with responsive design, smooth animations, and an engaging user experience.
+Este proyecto muestra una página de aterrizaje de producto construida con HTML limpio, CSS y JavaScript vanilla. Demuestra prácticas modernas de desarrollo web con diseño responsivo, animaciones suaves y una experiencia de usuario atractiva.
 
-## Features
+## Características
 
-### Product Highlights
-- **Holographic Interface** - 3D interactive digital content
-- **Quantum Processing** - High-performance, energy-efficient computing
-- **Neural Security** - Advanced biometric authentication
-- **Infinite Battery** - Revolutionary energy harvesting technology
+### Aspectos Destacados del Producto
+- **Interfaz Holográfica** - Contenido digital interactivo en 3D
+- **Procesamiento Cuántico** - Computación de alto rendimiento y eficiencia energética
+- **Seguridad Neural** - Autenticación biométrica avanzada
+- **Batería Infinita** - Tecnología revolucionaria de recolección de energía
 
-### Website Capabilities
-- Fully responsive design optimized for all screen sizes
-- Smooth scroll navigation with anchor links
-- Animated feature cards on scroll
-- Interactive pricing tiers (Standard, Pro, Enterprise)
-- Contact form with validation
-- Team member showcase page
-- Modern typography using Montserrat font family
-- Clean, professional styling with hover effects
+### Capacidades del Sitio Web
+- Diseño completamente responsivo optimizado para todos los tamaños de pantalla
+- Navegación con desplazamiento suave con enlaces de anclaje
+- Tarjetas de características animadas al desplazarse
+- Niveles de precios interactivos (Estándar, Pro, Empresarial)
+- Formulario de contacto con validación
+- Página de presentación de miembros del equipo
+- Tipografía moderna usando la familia de fuentes Montserrat
+- Estilo limpio y profesional con efectos hover
 
-## Project Structure
+## Estructura del Proyecto
 
 ```
 .
-├── index.html          # Main landing page
-├── team.html           # Team member showcase
-├── styles.css          # Global styles
-├── script.js           # Interactive functionality
-├── header.html         # Reusable header component
-└── images/             # Logo and product images
+├── index.html          # Página de aterrizaje principal
+├── team.html           # Presentación de miembros del equipo
+├── styles.css          # Estilos globales
+├── script.js           # Funcionalidad interactiva
+├── header.html         # Componente de encabezado reutilizable
+└── images/             # Logo e imágenes del producto
     ├── logo.svg
     └── product.svg
 ```
 
-## Pages
+## Páginas
 
-### Main Landing Page (index.html)
-- Hero section with product introduction
-- Key features showcase
-- Pricing plans (3 tiers)
-- Product & Vision section with 5-year roadmap
-- About section
-- Contact form
-- Comprehensive footer
+### Página de Aterrizaje Principal (index.html)
+- Sección hero con introducción del producto
+- Presentación de características clave
+- Planes de precios (3 niveles)
+- Sección de Producto y Visión con hoja de ruta de 5 años
+- Sección Acerca de
+- Formulario de contacto
+- Pie de página completo
 
-### Team Page (team.html)
-- Meet the team section
-- Four key team members with bios
-- CEO & Founder, CTO, Head of Research, Design Director
+### Página del Equipo (team.html)
+- Sección Conoce al equipo
+- Cuatro miembros clave del equipo con biografías
+- CEO y Fundador, CTO, Jefe de Investigación, Director de Diseño
 
-## Technology Stack
+## Stack Tecnológico
 
-- **HTML5** - Semantic markup with accessibility features
-- **CSS3** - Modern styling with flexbox and grid layouts
-- **JavaScript (Vanilla)** - No frameworks, pure DOM manipulation
-- **Google Fonts** - Montserrat font family
+- **HTML5** - Marcado semántico con características de accesibilidad
+- **CSS3** - Estilo moderno con diseños flexbox y grid
+- **JavaScript (Vanilla)** - Sin frameworks, manipulación pura del DOM
+- **Google Fonts** - Familia de fuentes Montserrat
 
-## Setup and Installation
+## Configuración e Instalación
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A local web server (optional, but recommended for best experience)
+### Requisitos Previos
+- Un navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Un servidor web local (opcional, pero recomendado para la mejor experiencia)
 
-### Quick Start
+### Inicio Rápido
 
-1. Clone the repository:
+1. Clonar el repositorio:
 ```bash
-git clone <repository-url>
+git clone <url-del-repositorio>
 cd novasphere
 ```
 
-2. Open directly in browser:
+2. Abrir directamente en el navegador:
 ```bash
-# Simply open the index.html file in your browser
+# Simplemente abre el archivo index.html en tu navegador
 open index.html
 ```
 
-Or use a local development server:
+O usar un servidor de desarrollo local:
 
 ```bash
-# Using Python 3
+# Usando Python 3
 python -m http.server 8000
 
-# Using Node.js (http-server)
+# Usando Node.js (http-server)
 npx http-server -p 8000
 
-# Using PHP
+# Usando PHP
 php -S localhost:8000
 ```
 
-3. Navigate to `http://localhost:8000` in your browser
+3. Navegar a `http://localhost:8000` en tu navegador
 
-## Features Breakdown
+## Desglose de Características
 
-### Smooth Scrolling
-Click any navigation link to smoothly scroll to the corresponding section with a header offset for optimal viewing.
+### Desplazamiento Suave
+Haz clic en cualquier enlace de navegación para desplazarte suavemente a la sección correspondiente con un desplazamiento de encabezado para una visualización óptima.
 
-### Form Handling
-The contact form includes basic validation and submission handling. Currently displays an alert message (production version would integrate with a backend API).
+### Manejo de Formularios
+El formulario de contacto incluye validación básica y manejo de envío. Actualmente muestra un mensaje de alerta (la versión de producción se integraría con una API backend).
 
-### Scroll Animations
-Feature cards fade in and slide up as they enter the viewport, creating an engaging scroll experience.
+### Animaciones de Desplazamiento
+Las tarjetas de características se desvanecen y se deslizan hacia arriba cuando entran en el viewport, creando una experiencia de desplazamiento atractiva.
 
-### Responsive Design
-The layout adapts seamlessly across devices:
-- Desktop: Full multi-column layouts
-- Tablet: Adjusted grid columns
-- Mobile: Single-column stacked layout
+### Diseño Responsivo
+El diseño se adapta perfectamente a través de dispositivos:
+- Escritorio: Diseños completos de múltiples columnas
+- Tablet: Columnas de cuadrícula ajustadas
+- Móvil: Diseño apilado de una sola columna
 
-## Customization
+## Personalización
 
-### Updating Content
-- Edit HTML files to modify text content
-- Update `styles.css` for design changes
-- Modify `script.js` for behavioral changes
+### Actualizar Contenido
+- Edita archivos HTML para modificar el contenido de texto
+- Actualiza `styles.css` para cambios de diseño
+- Modifica `script.js` para cambios de comportamiento
 
-### Color Scheme
-Primary colors used:
-- Primary: `#6C63FF` (purple-blue)
-- Secondary: `#4CAF50` (green)
-- Neutral: Various grays for text and backgrounds
+### Esquema de Colores
+Colores principales utilizados:
+- Primario: `#6C63FF` (púrpura-azul)
+- Secundario: `#4CAF50` (verde)
+- Neutral: Varios grises para texto y fondos
 
-### Images
-Replace placeholder images in the `/images` directory:
-- `logo.svg` - Company logo
-- `product.svg` - Product showcase image
-- Team photos use placeholder.com (replace with actual photos)
+### Imágenes
+Reemplaza las imágenes de marcador de posición en el directorio `/images`:
+- `logo.svg` - Logo de la empresa
+- `product.svg` - Imagen de presentación del producto
+- Las fotos del equipo usan placeholder.com (reemplazar con fotos reales)
 
-## Browser Support
+## Compatibilidad de Navegadores
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Chrome (última versión)
+- Firefox (última versión)
+- Safari (última versión)
+- Edge (última versión)
 
-## Performance
+## Rendimiento
 
-- Minimal dependencies (no frameworks)
-- Optimized CSS with efficient selectors
-- Lazy-loading compatible structure
-- Fast load times
+- Dependencias mínimas (sin frameworks)
+- CSS optimizado con selectores eficientes
+- Estructura compatible con carga diferida
+- Tiempos de carga rápidos
 
-## Future Enhancements
+## Mejoras Futuras
 
-Potential features to add:
-- Backend integration for contact form
-- Product demo video modal
-- Blog section
-- Customer testimonials
-- Newsletter signup
-- Multi-language support
-- Dark mode toggle
+Características potenciales para agregar:
+- Integración backend para formulario de contacto
+- Modal de video de demostración del producto
+- Sección de blog
+- Testimonios de clientes
+- Registro de boletín informativo
+- Soporte multiidioma
+- Alternador de modo oscuro
 
-## Contributing
+## Contribuciones
 
-This is a demonstration project. Feel free to fork and customize for your own projects.
+Este es un proyecto de demostración. Siéntete libre de hacer fork y personalizar para tus propios proyectos.
 
-## License
+## Licencia
 
-Copyright 2025 NovaSphere Inc. All rights reserved.
+Copyright 2025 NovaSphere Inc. Todos los derechos reservados.
 
 ---
 
-**Version:** 2.0
-**Last Updated:** 2025-12-19
-**Status:** Active Development
+**Versión:** 2.0
+**Última Actualización:** 2025-12-19
+**Estado:** Desarrollo Activo
