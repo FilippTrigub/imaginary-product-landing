@@ -1,0 +1,23 @@
+{
+  "name": "novasphere-v2",
+  "version": "1.0.0",
+  "description": "The landing page for NovaSphere v2.",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novasphere/novasphere-v2.git"
+  },
+  "author": "NovaSphere Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/novasphere/novasphere-v2/issues"
+  },
+  "homepage": "https://github.com/novasphere/novasphere-v2#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

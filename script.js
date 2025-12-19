@@ -1,4 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+    const logoHeading = document.querySelector('.logo h1');
+    if (logoHeading) {
+        logoHeading.style.cursor = 'pointer';
+        logoHeading.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    }
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
