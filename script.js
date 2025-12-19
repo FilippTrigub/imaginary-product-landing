@@ -63,4 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call once on load and then on scroll
     animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);
+
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+
+    if (backToTopButton) {
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        backToTopButton.addEventListener('click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    }
 });

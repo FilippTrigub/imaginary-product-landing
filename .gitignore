@@ -1,5 +1,16 @@
-node_modules/
-*.log
-.DS_Store
-build/
+# IDEs and editors
+.idea/
+.vscode/
+
+# Build output
 dist/
+build/
+
+# Node dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
