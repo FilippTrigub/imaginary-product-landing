@@ -62,5 +62,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Call once on load and then on scroll
     animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
+    alert("Hello World!");
 });
