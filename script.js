@@ -64,3 +64,5 @@ document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);
 });
+
+console.log("Hello, World!");
