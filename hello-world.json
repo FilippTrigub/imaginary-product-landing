@@ -1,0 +1,29 @@
+{
+  "message": "Hello World!",
+  "project": "NovaSphere",
+  "description": "Hello World data in JSON format",
+  "greetings": [
+    "Hello World!",
+    "¡Hola Mundo!",
+    "Bonjour le Monde!",
+    "Hallo Welt!",
+    "Ciao Mondo!",
+    "こんにちは世界!",
+    "안녕하세요 세계!",
+    "Привет мир!",
+    "你好世界!",
+    "مرحبا بالعالم!"
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "NovaSphere Team",
+    "created": "2026-01-02",
+    "type": "hello-world-demo"
+  },
+  "endpoints": {
+    "html": "hello-world.html",
+    "javascript": "hello-world.js",
+    "node": "hello-world-node.js",
+    "server": "hello-world-server.js"
+  }
+}
