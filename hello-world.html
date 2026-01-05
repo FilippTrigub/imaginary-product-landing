@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - NovaSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hello-container {
+            background: white;
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #667eea;
+            margin-bottom: 20px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            min-height: 50px;
+            display: none;
+        }
+
+        #output.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hello-container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-container">
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="#667eea"/>
+            <text x="50" y="65" font-size="50" fill="white" text-anchor="middle" font-weight="bold">H</text>
+        </svg>
+        
+        <h1>Hello World!</h1>
+        <p>Welcome to the NovaSphere Hello World Demo</p>
+        
+        <div class="button-group">
+            <button class="btn-primary" onclick="showConsoleMessage()">Console Log</button>
+            <button class="btn-primary" onclick="showAlert()">Show Alert</button>
+            <button class="btn-secondary" onclick="showDynamicMessage()">Dynamic Message</button>
+            <button class="btn-secondary" onclick="showMultiLanguage()">Multi-Language</button>
+        </div>
+        
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function showConsoleMessage() {
+            console.log('Hello World!');
+            const output = document.getElementById('output');
+            output.innerHTML = '<strong>✓ Check your browser console!</strong><br>Message: "Hello World!" has been logged.';
+            output.classList.add('show');
+        }
+
+        function showAlert() {
+            alert('Hello World!');
+        }
+
+        function showDynamicMessage() {
+            const output = document.getElementById('output');
+            const timestamp = new Date().toLocaleTimeString();
+            output.innerHTML = `
+                <strong>Dynamic Hello World!</strong><br>
+                Generated at: ${timestamp}<br>
+                Message: Hello from JavaScript! 🚀
+            `;
+            output.classList.add('show');
+        }
+
+        function showMultiLanguage() {
+            const greetings = [
+                '🇺🇸 Hello World!',
+                '🇪🇸 ¡Hola Mundo!',
+                '🇫🇷 Bonjour le Monde!',
+                '🇩🇪 Hallo Welt!',
+                '🇮🇹 Ciao Mondo!',
+                '🇯🇵 こんにちは世界!',
+                '🇨🇳 你好世界!',
+                '🇷🇺 Привет мир!',
+                '🇰🇷 안녕하세요 세계!',
+                '🇮🇳 नमस्ते दुनिया!'
+            ];
+            
+            const output = document.getElementById('output');
+            output.innerHTML = '<strong>Hello World in Multiple Languages:</strong><br><br>' + 
+                greetings.join('<br>');
+            output.classList.add('show');
+        }
+
+        // Auto-display message on load
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Hello World! - Page loaded successfully');
+        });
+    </script>
+</body>
+</html>
