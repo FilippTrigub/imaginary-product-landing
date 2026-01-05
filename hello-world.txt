@@ -1,0 +1,25 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║                      HELLO WORLD                              ║
+║                                                               ║
+║              Welcome to NovaSphere Project                    ║
+║         The Future of Personal Computing                      ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+Hello World!
+
+This is a simple text file demonstrating the classic "Hello World" 
+message for the NovaSphere project.
+
+Project: NovaSphere Landing Page
+Date: January 5, 2026
+Purpose: Hello World demonstration files
+
+Files created:
+- hello.html  : HTML Hello World page with styling
+- hello.js    : JavaScript Hello World script
+- hello.css   : CSS styling for Hello World
+- hello-world.txt : This text file
+
+Thank you for exploring NovaSphere!
