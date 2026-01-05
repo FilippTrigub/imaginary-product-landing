@@ -1,0 +1,83 @@
+/* Hello World CSS File */
+/* NovaSphere Project */
+
+.hello-world {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello-world h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    animation: bounceIn 1s ease;
+}
+
+.hello-world p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    opacity: 0.9;
+    animation: fadeIn 1.5s ease;
+}
+
+.hello-world .greeting-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px 80px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hello-world h1 {
+        font-size: 3rem;
+    }
+    
+    .hello-world p {
+        font-size: 1.3rem;
+    }
+    
+    .hello-world .greeting-box {
+        padding: 30px 40px;
+    }
+}
