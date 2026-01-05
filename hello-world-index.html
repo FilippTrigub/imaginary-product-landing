@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Scripts - NovaSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            font-size: 2.5em;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .card-type {
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .features li {
+            padding: 5px 0;
+            color: #555;
+        }
+
+        .features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .info-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .command-box {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .command-box code {
+            color: #50fa7b;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Hello World Scripts</h1>
+            <p class="subtitle">NovaSphere Demo Collection</p>
+        </header>
+
+        <div class="info-section">
+            <h2>📦 Available Scripts</h2>
+            <p>This collection includes 5 different Hello World implementations, each demonstrating unique features and use cases. All scripts are tested, documented, and ready to use.</p>
+        </div>
+
+        <div class="grid">
+            <!-- JavaScript Module -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">📜</span>
+                    <div>
+                        <div class="card-title">hello-world.js</div>
+                        <div class="card-type">JavaScript Module</div>
+                    </div>
+                </div>
+                <p class="card-description">
+                    Versatile JavaScript module with console logging, DOM manipulation, and reusable functions.
+                </p>
+                <ul class="features">
+                    <li>Console logging</li>
+                    <li>DOM manipulation</li>
+                    <li>Alert dialogs</li>
+                    <li>Module exports</li>
+                </ul>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="runJSModule()">Run Demo</button>
+                    <a href="hello-world.js" class="btn btn-secondary" download>Download</a>
+                </div>
+            </div>
+
+            <!-- HTML Page -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">🌐</span>
+                    <div>
+                        <div class="card-title">hello-world.html</div>
+                        <div class="card-type">Interactive Web Page</div>
+                    </div>
+                </div>
+                <p class="card-description">
+                    Beautiful, fully-styled HTML page with interactive demonstrations and multi-language support.
+                </p>
+                <ul class="features">
+                    <li>Modern UI design</li>
+                    <li>10+ languages</li>
+                    <li>Smooth animations</li>
+                    <li>Responsive layout</li>
+                </ul>
+                <div class="button-group">
+                    <a href="hello-world.html" class="btn btn-primary" target="_blank">Open Page</a>
+                    <a href="hello-world.html" class="btn btn-secondary" download>Download</a>
+                </div>
+            </div>
+
+            <!-- Node.js CLI -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">💻</span>
+                    <div>
+                        <div class="card-title">hello-world-node.js</div>
+                        <div class="card-type">Node.js CLI Script</div>
+                    </div>
+                </div>
+                <p class="card-description">
+                    Command-line script with colored output, ASCII art, and system information display.
+                </p>
+                <ul class="features">
+                    <li>Colored terminal output</li>
+                    <li>ASCII art banner</li>
+                    <li>System info display</li>
+                    <li>Async/await examples</li>
+                </ul>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="showCommand('node hello-world-node.js')">Show Command</button>
+                    <a href="hello-world-node.js" class="btn btn-secondary" download>Download</a>
+                </div>
+            </div>
+
+            <!-- HTTP Server -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">🚀</span>
+                    <div>
+                        <div class="card-title">hello-world-server.js</div>
+                        <div class="card-type">HTTP Server</div>
+                    </div>
+                </div>
+                <p class="card-description">
+                    Complete Node.js HTTP server with multiple endpoints and response formats.
+                </p>
+                <ul class="features">
+                    <li>REST API endpoints</li>
+                    <li>JSON/HTML/text responses</li>
+                    <li>CORS enabled</li>
+                    <li>Graceful shutdown</li>
+                </ul>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="showCommand('node hello-world-server.js')">Show Command</button>
+                    <a href="hello-world-server.js" class="btn btn-secondary" download>Download</a>
+                </div>
+            </div>
+
+            <!-- Bash Script -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">🐚</span>
+                    <div>
+                        <div class="card-title">hello-world.sh</div>
+                        <div class="card-type">Bash Shell Script</div>
+                    </div>
+                </div>
+                <p class="card-description">
+                    Colorful bash script with system information and multi-language greetings.
+                </p>
+                <ul class="features">
+                    <li>Colored output</li>
+                    <li>ASCII art banner</li>
+                    <li>Multi-language support</li>
+                    <li>Loop examples</li>
+                </ul>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="showCommand('./hello-world.sh')">Show Command</button>
+                    <a href="hello-world.sh" class="btn btn-secondary" download>Download</a>
+                </div>
+            </div>
+
+            <!-- Documentation -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">📚</span>
+                    <div>
+                        <div class="card-title">Documentation</div>
+                        <div class="card-type">README & Summary</div>
+                    </div>
+                </div>
+                <p class="card-description">
+                    Complete documentation with usage examples, features, and quick start guides.
+                </p>
+                <ul class="features">
+                    <li>Detailed README</li>
+                    <li>Quick reference guide</li>
+                    <li>Usage examples</li>
+                    <li>API documentation</li>
+                </ul>
+                <div class="button-group">
+                    <a href="HELLO-WORLD-README.md" class="btn btn-primary" download>README.md</a>
+                    <a href="HELLO-WORLD-SUMMARY.txt" class="btn btn-secondary" download>Summary.txt</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>🚀 Quick Start</h2>
+            <p><strong>Run JavaScript Module:</strong></p>
+            <div class="command-box"><code>node hello-world.js</code></div>
+
+            <p><strong>Run Node.js CLI:</strong></p>
+            <div class="command-box"><code>node hello-world-node.js</code></div>
+
+            <p><strong>Run Bash Script:</strong></p>
+            <div class="command-box"><code>./hello-world.sh</code></div>
+
+            <p><strong>Start HTTP Server:</strong></p>
+            <div class="command-box"><code>node hello-world-server.js</code></div>
+            <p style="margin-top: 10px; color: #666;">Then visit: <a href="http://localhost:3000" style="color: #667eea;">http://localhost:3000</a></p>
+        </div>
+
+        <footer>
+            <p>© 2026 NovaSphere Inc. | All scripts tested and verified ✓</p>
+        </footer>
+    </div>
+
+    <script src="hello-world.js"></script>
+    <script>
+        function runJSModule() {
+            console.log('Running JavaScript module demo...');
+            displayHelloWorld();
+        }
+
+        function showCommand(command) {
+            alert(`Run this command in your terminal:\n\n${command}`);
+        }
+
+        console.log('%c🌍 Hello World Scripts Loaded!', 'color: #667eea; font-size: 20px; font-weight: bold;');
+        console.log('%cTry running: runJSModule()', 'color: #764ba2; font-size: 14px;');
+    </script>
+</body>
+</html>
