@@ -1,0 +1,57 @@
+{
+  "message": "Hello, World!",
+  "greetings": [
+    {
+      "language": "english",
+      "text": "Hello, World!"
+    },
+    {
+      "language": "spanish",
+      "text": "Hola, Mundo!"
+    },
+    {
+      "language": "french",
+      "text": "Bonjour, Monde!"
+    },
+    {
+      "language": "german",
+      "text": "Guten Tag, Welt!"
+    },
+    {
+      "language": "italian",
+      "text": "Ciao, Mondo!"
+    },
+    {
+      "language": "japanese",
+      "text": "こんにちは、世界！"
+    },
+    {
+      "language": "chinese",
+      "text": "你好，世界！"
+    },
+    {
+      "language": "russian",
+      "text": "Привет, мир!"
+    }
+  ],
+  "people": [
+    {
+      "name": "Alice",
+      "greeting": "Hello, Alice!"
+    },
+    {
+      "name": "Bob",
+      "greeting": "Hello, Bob!"
+    },
+    {
+      "name": "Charlie",
+      "greeting": "Hello, Charlie!"
+    }
+  ],
+  "metadata": {
+    "title": "Hello World Collection",
+    "description": "A collection of greetings in various languages",
+    "version": "1.0.0",
+    "author": "Hello World Generator"
+  }
+}

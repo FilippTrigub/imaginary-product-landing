@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hello World in XML -->
+<hello-world>
+    <message>Hello, World!</message>
+    
+    <greetings>
+        <greeting language="english">
+            <text>Hello, World!</text>
+        </greeting>
+        <greeting language="spanish">
+            <text>Hola, Mundo!</text>
+        </greeting>
+        <greeting language="french">
+            <text>Bonjour, Monde!</text>
+        </greeting>
+        <greeting language="german">
+            <text>Guten Tag, Welt!</text>
+        </greeting>
+        <greeting language="italian">
+            <text>Ciao, Mondo!</text>
+        </greeting>
+        <greeting language="japanese">
+            <text>こんにちは、世界！</text>
+        </greeting>
+        <greeting language="chinese">
+            <text>你好，世界！</text>
+        </greeting>
+        <greeting language="russian">
+            <text>Привет, мир!</text>
+        </greeting>
+    </greetings>
+    
+    <people>
+        <person>
+            <name>Alice</name>
+            <greeting>Hello, Alice!</greeting>
+        </person>
+        <person>
+            <name>Bob</name>
+            <greeting>Hello, Bob!</greeting>
+        </person>
+        <person>
+            <name>Charlie</name>
+            <greeting>Hello, Charlie!</greeting>
+        </person>
+    </people>
+    
+    <metadata>
+        <title>Hello World Collection</title>
+        <description>A collection of greetings in various languages</description>
+        <version>1.0.0</version>
+        <author>Hello World Generator</author>
+    </metadata>
+</hello-world>
