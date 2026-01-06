@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin: 0 0 1rem 0;
+            font-size: 3rem;
+        }
+        p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+        button {
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, World!</h1>
+        <p>Welcome to the Hello World page</p>
+        <button onclick="showAlert()">Click Me!</button>
+    </div>
+    
+    <script>
+        function showAlert() {
+            alert('Hello, World from JavaScript!');
+        }
+        
+        console.log('Hello, World from the console!');
+    </script>
+</body>
+</html>
