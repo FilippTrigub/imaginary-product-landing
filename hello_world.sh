@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-
-echo "Hello, world!"
+# Simple Hello World in bash
+echo "Hello from bash: $(whoami)"
