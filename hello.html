@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - NovaSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .hello-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+        }
+        
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        button {
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 600;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #dynamic-message {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: 600;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-container">
+        <h1>Hello World!</h1>
+        <p>Welcome to NovaSphere - The Future of Personal Computing</p>
+        
+        <div class="button-group">
+            <button onclick="showConsoleMessage()">Console Log</button>
+            <button onclick="showAlert()">Show Alert</button>
+            <button onclick="changeDynamicMessage()">Dynamic Message</button>
+        </div>
+        
+        <div id="dynamic-message"></div>
+    </div>
+    
+    <script>
+        // Console log hello world
+        console.log('Hello World from NovaSphere!');
+        
+        function showConsoleMessage() {
+            console.log('Hello World! Check your browser console.');
+            document.getElementById('dynamic-message').textContent = '✓ Check your console!';
+        }
+        
+        function showAlert() {
+            alert('Hello World!');
+        }
+        
+        function changeDynamicMessage() {
+            const messages = [
+                'Hello World!',
+                'Greetings from NovaSphere!',
+                'Welcome to the future!',
+                'Hello, Universe!',
+                'Hi there, Developer!'
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('dynamic-message').textContent = randomMessage;
+        }
+        
+        // Auto-display a message on load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('dynamic-message').textContent = '👋 Hello from JavaScript!';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
