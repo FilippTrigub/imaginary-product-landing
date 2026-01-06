@@ -1,0 +1,14 @@
+---
+message: Hello World
+language: YAML
+created: 2026-01-06
+greetings:
+  - language: English
+    text: Hello World
+  - language: Spanish
+    text: Hola Mundo
+  - language: French
+    text: Bonjour le Monde
+metadata:
+  purpose: demonstration
+  type: hello-world

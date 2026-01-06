@@ -1,0 +1,14 @@
+{
+  "message": "Hello World",
+  "language": "JSON",
+  "timestamp": "2026-01-06",
+  "data": {
+    "greeting": "Hello World",
+    "languages": ["English", "Spanish", "French"],
+    "translations": {
+      "en": "Hello World",
+      "es": "Hola Mundo",
+      "fr": "Bonjour le Monde"
+    }
+  }
+}

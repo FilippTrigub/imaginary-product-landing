@@ -1,0 +1,6 @@
+Hello World
+
+This is a simple text file containing the classic "Hello World" message.
+
+Created on: January 6, 2026
+Purpose: Demonstration file

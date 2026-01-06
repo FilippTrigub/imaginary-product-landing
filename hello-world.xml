@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <message>Hello World</message>
+    <greeting language="en">Hello World</greeting>
+    <greeting language="es">Hola Mundo</greeting>
+    <greeting language="fr">Bonjour le Monde</greeting>
+    <metadata>
+        <created>2026-01-06</created>
+        <type>demonstration</type>
+    </metadata>
+</root>
