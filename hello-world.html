@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - NovaSphere</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .hello-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in;
+        }
+        
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        
+        p {
+            font-size: 1.5em;
+            opacity: 0.9;
+        }
+        
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        button {
+            padding: 12px 30px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .greeting-list {
+            margin-top: 30px;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .greeting-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            animation: slideIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-container">
+        <h1>Hello World! 👋</h1>
+        <p>Welcome to NovaSphere's Hello World Demo</p>
+        
+        <div class="button-group">
+            <button onclick="showAlert()">Show Alert</button>
+            <button onclick="changeGreeting()">Change Greeting</button>
+            <button onclick="showMultiLanguage()">Multi-Language</button>
+        </div>
+        
+        <div id="greeting-output"></div>
+    </div>
+    
+    <script>
+        const greetings = [
+            'Hello World!',
+            '¡Hola Mundo!',
+            'Bonjour le Monde!',
+            'Hallo Welt!',
+            'Ciao Mondo!',
+            'こんにちは世界！',
+            '你好世界！',
+            'Привет мир!',
+            'مرحبا بالعالم!',
+            'नमस्ते दुनिया!'
+        ];
+        
+        let currentIndex = 0;
+        
+        function showAlert() {
+            alert('Hello World from NovaSphere! 🚀');
+        }
+        
+        function changeGreeting() {
+            currentIndex = (currentIndex + 1) % greetings.length;
+            document.querySelector('h1').textContent = greetings[currentIndex] + ' 👋';
+        }
+        
+        function showMultiLanguage() {
+            const output = document.getElementById('greeting-output');
+            output.innerHTML = '<div class="greeting-list">' +
+                greetings.map((greeting, index) => 
+                    `<div class="greeting-item" style="animation-delay: ${index * 0.1}s">${greeting}</div>`
+                ).join('') +
+                '</div>';
+        }
+        
+        console.log('Hello World from the console! 🌍');
+    </script>
+</body>
+</html>
