@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World CSS Effects Demo</title>
+    <link rel="stylesheet" href="hello-world.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            color: #999;
+        }
+        
+        .demo-section {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: #2a2a2a;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .demo-section h2 {
+            margin-bottom: 30px;
+            color: #667eea;
+            font-size: 1.8em;
+        }
+        
+        .demo-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .code-block {
+            margin-top: 20px;
+            background: #0d1117;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        
+        .code-block code {
+            color: #58a6ff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .demo-section {
+                padding: 20px;
+            }
+            
+            .demo-content {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Hello World CSS Effects</h1>
+        <p>A showcase of creative CSS-only Hello World implementations</p>
+    </div>
+    
+    <div class="demo-section">
+        <h2>1. CSS Content Property</h2>
+        <div class="demo-content">
+            <div class="hello-world-css"></div>
+        </div>
+        <div class="code-block">
+            <code>.hello-world-css::before { content: "Hello World!"; }</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>2. Gradient Text</h2>
+        <div class="demo-content">
+            <div class="hello-gradient">Hello World!</div>
+        </div>
+        <div class="code-block">
+            <code>background: linear-gradient(...); -webkit-background-clip: text;</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>3. Neon Effect</h2>
+        <div class="demo-content">
+            <div class="hello-neon">Hello World!</div>
+        </div>
+        <div class="code-block">
+            <code>text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #667eea...</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>4. 3D Text Effect</h2>
+        <div class="demo-content">
+            <div class="hello-3d">Hello World!</div>
+        </div>
+        <div class="code-block">
+            <code>text-shadow: 1px 1px 0 #764ba2, 2px 2px 0 #764ba2...</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>5. Typing Animation</h2>
+        <div class="demo-content">
+            <div class="hello-typing"></div>
+        </div>
+        <div class="code-block">
+            <code>animation: typing 3s steps(13, end), blink 0.75s step-end infinite;</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>6. Glitch Effect</h2>
+        <div class="demo-content">
+            <div class="hello-glitch">Hello World!</div>
+        </div>
+        <div class="code-block">
+            <code>animation: glitch 1s infinite; clip-path: polygon(...);</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>7. Rainbow Text</h2>
+        <div class="demo-content">
+            <div class="hello-rainbow">Hello World!</div>
+        </div>
+        <div class="code-block">
+            <code>background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00...);</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>8. Bouncing Animation</h2>
+        <div class="demo-content">
+            <div class="hello-bounce">Hello World!</div>
+        </div>
+        <div class="code-block">
+            <code>animation: bounce 2s ease-in-out infinite;</code>
+        </div>
+    </div>
+    
+    <div class="demo-section">
+        <h2>9. Rotating Text</h2>
+        <div class="demo-content">
+            <div class="hello-rotate">Hello World!</div>
+        </div>
+        <div class="code-block">
+            <code>animation: rotate 3s linear infinite;</code>
+        </div>
+    </div>
+    
+    <script>
+        console.log('%cHello World from the Console!', 'color: #667eea; font-size: 24px; font-weight: bold;');
+        console.log('Check out these amazing CSS effects! 🎨');
+    </script>
+</body>
+</html>

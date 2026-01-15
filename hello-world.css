@@ -1,0 +1,277 @@
+/**
+ * Hello World CSS Styles
+ * Demonstrating CSS-only Hello World effects
+ */
+
+/* CSS-only Hello World using content property */
+.hello-world-css::before {
+    content: "Hello World!";
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated Hello World */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hello-animated {
+    animation: fadeInScale 1s ease-out;
+}
+
+/* Gradient text Hello World */
+.hello-gradient {
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #4facfe);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Neon Hello World */
+.hello-neon {
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #667eea,
+        0 0 40px #667eea,
+        0 0 50px #667eea,
+        0 0 60px #667eea,
+        0 0 70px #667eea;
+    animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 30px #667eea,
+            0 0 40px #667eea,
+            0 0 50px #667eea,
+            0 0 60px #667eea,
+            0 0 70px #667eea;
+    }
+    to {
+        text-shadow: 
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px #667eea,
+            0 0 20px #667eea,
+            0 0 25px #667eea,
+            0 0 30px #667eea,
+            0 0 35px #667eea;
+    }
+}
+
+/* 3D Hello World */
+.hello-3d {
+    font-size: 4em;
+    font-weight: bold;
+    color: #667eea;
+    text-shadow: 
+        1px 1px 0 #764ba2,
+        2px 2px 0 #764ba2,
+        3px 3px 0 #764ba2,
+        4px 4px 0 #764ba2,
+        5px 5px 0 #764ba2,
+        6px 6px 10px rgba(0, 0, 0, 0.3);
+    transform: perspective(500px) rotateX(10deg);
+}
+
+/* Typing effect Hello World */
+.hello-typing {
+    font-size: 2em;
+    font-family: monospace;
+    border-right: 3px solid #667eea;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(13, end), blink 0.75s step-end infinite;
+}
+
+.hello-typing::before {
+    content: "Hello World!";
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 13ch;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #667eea;
+    }
+}
+
+/* Glitch effect Hello World */
+.hello-glitch {
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+.hello-glitch::before,
+.hello-glitch::after {
+    content: "Hello World!";
+    position: absolute;
+    left: 0;
+}
+
+.hello-glitch::before {
+    animation: glitchTop 1s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    color: #ff00ff;
+}
+
+.hello-glitch::after {
+    animation: glitchBottom 1.5s infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    color: #00ffff;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+}
+
+@keyframes glitchTop {
+    0%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-3px, -3px);
+    }
+    40% {
+        transform: translate(3px, 3px);
+    }
+}
+
+@keyframes glitchBottom {
+    0%, 100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(3px, 3px);
+    }
+    40% {
+        transform: translate(-3px, -3px);
+    }
+}
+
+/* Rainbow Hello World */
+.hello-rainbow {
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(
+        to right,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #9400d3
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbowShift 3s linear infinite;
+    background-size: 200% auto;
+}
+
+@keyframes rainbowShift {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* Bouncing Hello World */
+.hello-bounce {
+    font-size: 3em;
+    font-weight: bold;
+    color: #667eea;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Rotating Hello World */
+.hello-rotate {
+    font-size: 3em;
+    font-weight: bold;
+    color: #764ba2;
+    animation: rotate 3s linear infinite;
+    display: inline-block;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
