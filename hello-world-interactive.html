@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Hello World - NovaSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: 'Montserrat', Arial, sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .output {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .output-text {
+            font-size: 1.5em;
+            color: #667eea;
+            font-weight: 600;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .output-text.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .language-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .language-btn {
+            flex: 1;
+            min-width: 80px;
+            padding: 10px;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        
+        .language-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Hello World</h1>
+        
+        <div class="language-selector">
+            <button class="language-btn active" data-lang="en">English</button>
+            <button class="language-btn" data-lang="es">Español</button>
+            <button class="language-btn" data-lang="fr">Français</button>
+            <button class="language-btn" data-lang="de">Deutsch</button>
+        </div>
+        
+        <div class="input-group">
+            <label for="nameInput">Enter Your Name:</label>
+            <input type="text" id="nameInput" placeholder="Your name here..." />
+        </div>
+        
+        <button id="greetBtn">Say Hello!</button>
+        
+        <div class="output">
+            <div class="output-text" id="outputText">Your greeting will appear here</div>
+        </div>
+    </div>
+    
+    <script>
+        const greetings = {
+            en: 'Hello',
+            es: 'Hola',
+            fr: 'Bonjour',
+            de: 'Hallo'
+        };
+        
+        let currentLang = 'en';
+        
+        // Language selector
+        document.querySelectorAll('.language-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.language-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentLang = this.dataset.lang;
+            });
+        });
+        
+        // Greeting button
+        document.getElementById('greetBtn').addEventListener('click', function() {
+            const name = document.getElementById('nameInput').value.trim() || 'World';
+            const greeting = greetings[currentLang];
+            const outputText = document.getElementById('outputText');
+            
+            // Animation
+            outputText.classList.remove('show');
+            
+            setTimeout(() => {
+                outputText.textContent = `${greeting}, ${name}!`;
+                outputText.classList.add('show');
+            }, 100);
+        });
+        
+        // Enter key support
+        document.getElementById('nameInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('greetBtn').click();
+            }
+        });
+        
+        // Initial animation
+        setTimeout(() => {
+            document.getElementById('outputText').classList.add('show');
+        }, 300);
+    </script>
+</body>
+</html>
