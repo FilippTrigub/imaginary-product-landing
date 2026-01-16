@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Hello World - NovaSphere</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        
+        canvas {
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="helloCanvas" width="800" height="400"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('helloCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Background gradient
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, '#667eea');
+        gradient.addColorStop(1, '#764ba2');
+        
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw "Hello World" text
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 60px Montserrat, Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        // Add shadow for depth
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+        ctx.shadowBlur = 10;
+        ctx.shadowOffsetX = 3;
+        ctx.shadowOffsetY = 3;
+        
+        ctx.fillText('Hello World!', canvas.width / 2, canvas.height / 2 - 30);
+        
+        // Draw subtitle
+        ctx.font = '24px Montserrat, Arial, sans-serif';
+        ctx.fillText('Welcome to NovaSphere', canvas.width / 2, canvas.height / 2 + 40);
+        
+        // Draw animated circles
+        let angle = 0;
+        function animate() {
+            // Clear previous circles
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, 100);
+            ctx.fillRect(0, canvas.height - 100, canvas.width, 100);
+            
+            // Draw orbiting circles
+            for (let i = 0; i < 5; i++) {
+                const x = canvas.width / 2 + Math.cos(angle + i * Math.PI / 2.5) * 150;
+                const y = 50 + Math.sin(angle + i * Math.PI / 2.5) * 20;
+                
+                ctx.shadowBlur = 20;
+                ctx.fillStyle = `rgba(255, 255, 255, ${0.3 + Math.sin(angle + i) * 0.2})`;
+                ctx.beginPath();
+                ctx.arc(x, y, 10, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Bottom circles
+                const y2 = canvas.height - 50 + Math.sin(angle + i * Math.PI / 2.5) * 20;
+                ctx.beginPath();
+                ctx.arc(x, y2, 10, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            angle += 0.02;
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    </script>
+</body>
+</html>
