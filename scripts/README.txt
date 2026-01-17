@@ -7,6 +7,10 @@ Run the scripts directly if you have the runtime installed. Examples:
   node scripts/hello.js
   perl scripts/hello.pl
   ruby scripts/hello.rb
+  php scripts/hello.php
+  lua scripts/hello.lua
+  Rscript scripts/hello.r
+  awk -f scripts/hello.awk
 
 Some scripts are executable; to make all scripts executable run:
 
