@@ -1,0 +1,18 @@
+# This is a text representation of a Piet program
+# Piet programs are actually images with colored pixels
+# The actual program would be a PNG image with specific colored blocks
+# This text representation describes what the image would contain
+
+# Start with light red (push 1)
+# Dark red (duplicate)
+# Light yellow (push 4)
+# Dark yellow (multiply - gives 4)
+# Light green (duplicate)
+# Dark green (add - gives 5)
+# Continue with color transitions to build ASCII values for "Hello, World!"
+
+# In reality, this would be a colorful pixel art image
+# Each color transition performs a specific operation
+# The program pointer follows the colored regions
+
+Hello, World! in Piet requires a visual image file to run properly.
