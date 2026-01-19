@@ -1,3 +1,14 @@
+/*
+    ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+    ║                                                JAVASCRIPT POWERED INTERACTIVITY                                                                     ║
+    ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+    
+        - Smooth Scrolling
+        - Form Submission
+        - Animations
+    
+    NovaSphere v2 Interactive Script | © 2025 NovaSphere Inc.
+*/
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
