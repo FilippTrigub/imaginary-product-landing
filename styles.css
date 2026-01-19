@@ -398,6 +398,40 @@ section h2 {
     background-color: white;
 }
 
+/* ASCII Art Section */
+.ascii-art-section {
+    padding: 70px 0;
+    background: radial-gradient(1200px circle at 20% 10%, rgba(110, 142, 251, 0.28), transparent 55%),
+        radial-gradient(900px circle at 80% 30%, rgba(167, 119, 227, 0.22), transparent 60%),
+        linear-gradient(135deg, #0b1020, #111a33);
+    color: #e6edf7;
+}
+
+.ascii-art {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.15;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    letter-spacing: 0.2px;
+}
+
+.ascii-art .dim {
+    color: rgba(230, 237, 247, 0.7);
+}
+
+@media (min-width: 768px) {
+    .ascii-art {
+        font-size: 13px;
+    }
+}
+
 .about-content {
     max-width: 800px;
     margin: 0 auto;
