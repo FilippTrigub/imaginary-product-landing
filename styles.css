@@ -31,6 +31,30 @@ ul {
     padding: 0 20px;
 }
 
+/* ASCII Art */
+.ascii-art {
+    margin: 35px auto 50px;
+    padding: 20px;
+    border-radius: 14px;
+    background: radial-gradient(1200px 500px at 20% 0%, rgba(110, 142, 251, 0.18), rgba(0, 0, 0, 0)),
+        radial-gradient(900px 450px at 80% 10%, rgba(167, 119, 227, 0.16), rgba(0, 0, 0, 0)),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
+    border: 1px solid rgba(110, 142, 251, 0.25);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+.ascii-art__pre {
+    margin: 0;
+    padding: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+        monospace;
+    font-size: 13px;
+    line-height: 1.1;
+    color: #1f2a44;
+    white-space: pre;
+}
+
 /* Button Styles */
 .btn-primary {
     background: linear-gradient(135deg, #6e8efb, #a777e3);
