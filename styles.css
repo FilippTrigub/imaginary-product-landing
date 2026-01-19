@@ -512,6 +512,221 @@ footer {
     font-size: 0.9rem;
 }
 
+/* ASCII Art Styles */
+.ascii-art {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    line-height: 1.2;
+    white-space: pre;
+    overflow-x: auto;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #00ff88;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    font-size: 0.85rem;
+}
+
+.ascii-logo {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #00d4ff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 30px rgba(0, 212, 255, 0.5);
+    }
+}
+
+.ascii-icon {
+    font-size: 0.75rem;
+    padding: 15px;
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: #a777e3;
+    text-shadow: 0 0 8px rgba(167, 119, 227, 0.6);
+    margin-bottom: 15px;
+}
+
+.ascii-architecture {
+    font-size: 0.7rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+    margin-bottom: 20px;
+}
+
+.ascii-pricing {
+    font-size: 0.8rem;
+    padding: 10px;
+    background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    color: #fbbf24;
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+    margin-bottom: 15px;
+}
+
+.ascii-about {
+    font-size: 0.65rem;
+    background: linear-gradient(135deg, #4c1d95 0%, #312e81 100%);
+    color: #c084fc;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
+    margin-bottom: 30px;
+}
+
+.ascii-contact {
+    font-size: 0.8rem;
+    background: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+    color: #34d399;
+    text-shadow: 0 0 8px rgba(52, 211, 153, 0.5);
+    margin-bottom: 30px;
+}
+
+.ascii-footer {
+    font-size: 0.7rem;
+    padding: 15px;
+    background: transparent;
+    color: #cbd5e0;
+    text-shadow: none;
+    margin-bottom: 20px;
+}
+
+.ascii-divider {
+    text-align: center;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.ascii-divider .ascii-art {
+    display: inline-block;
+    padding: 10px 40px;
+    font-size: 0.6rem;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+    background-size: 200% auto;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+    100% {
+        background-position: 0% center;
+    }
+}
+
+/* Hero ASCII adjustments */
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-ascii {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Feature card ASCII adjustments */
+.feature-card .ascii-art {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .ascii-art {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(167, 119, 227, 0.3);
+}
+
+/* Pricing card ASCII adjustments */
+.pricing-card .ascii-art {
+    margin: 0 auto 20px;
+}
+
+.pricing-card.featured .ascii-art {
+    color: #6e8efb;
+    text-shadow: 0 0 12px rgba(110, 142, 251, 0.8);
+}
+
+/* Responsive ASCII Art */
+@media (max-width: 992px) {
+    .ascii-art {
+        font-size: 0.7rem;
+        padding: 15px;
+    }
+    
+    .ascii-logo {
+        font-size: 0.6rem;
+    }
+    
+    .ascii-architecture {
+        font-size: 0.55rem;
+    }
+    
+    .ascii-about {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ascii-art {
+        font-size: 0.6rem;
+        padding: 10px;
+    }
+    
+    .ascii-logo {
+        font-size: 0.45rem;
+    }
+    
+    .ascii-icon {
+        font-size: 0.65rem;
+        padding: 10px;
+    }
+    
+    .ascii-architecture {
+        font-size: 0.4rem;
+    }
+    
+    .ascii-about {
+        font-size: 0.35rem;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-ascii {
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .ascii-art {
+        font-size: 0.5rem;
+        padding: 8px;
+    }
+    
+    .ascii-logo {
+        font-size: 0.35rem;
+    }
+    
+    .ascii-architecture {
+        font-size: 0.3rem;
+    }
+    
+    .ascii-about {
+        font-size: 0.28rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero .container,
