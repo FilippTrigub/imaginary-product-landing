@@ -343,11 +343,13 @@ async function runAllTests() {
     testChallenge1();
     testChallenge2();
     testChallenge3();
+    testChallenge4();
+    testChallenge6();
+    testChallenge7();
+    testChallenge8();
     
     // Wait for debounce test to complete
     setTimeout(() => {
-        testChallenge4();
-        
         // Run async test last
         setTimeout(async () => {
             await testChallenge5();
@@ -359,6 +361,166 @@ async function runAllTests() {
 // Uncomment to run all tests:
 // runAllTests();
 
+
+// ============================================================================
+// CHALLENGE 6: Find Missing Number
+// Difficulty: Easy
+// ============================================================================
+
+/**
+ * Problem: Find the missing number in an array.
+ * 
+ * Given an array containing n distinct numbers taken from 0, 1, 2, ..., n,
+ * find the one that is missing from the array.
+ * 
+ * Examples:
+ * findMissingNumber([3, 0, 1]) => 2
+ * findMissingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]) => 8
+ * findMissingNumber([0, 1]) => 2
+ */
+
+function findMissingNumber(nums) {
+    // YOUR CODE HERE
+}
+
+// Test cases for Challenge 6
+function testChallenge6() {
+    console.log('=== CHALLENGE 6: Find Missing Number ===');
+    console.log('Test 1:', findMissingNumber([3, 0, 1]));
+    // Expected: 2
+
+    console.log('Test 2:', findMissingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]));
+    // Expected: 8
+
+    console.log('Test 3:', findMissingNumber([0, 1]));
+    // Expected: 2
+    console.log('');
+}
+
+/* SOLUTION 6 (uncomment to reveal):
+function findMissingNumber(nums) {
+    const n = nums.length;
+    const expectedSum = n * (n + 1) / 2;
+    const actualSum = nums.reduce((sum, num) => sum + num, 0);
+    return expectedSum - actualSum;
+}
+*/
+
+
+// ============================================================================
+// CHALLENGE 7: Flatten Array
+// Difficulty: Medium
+// ============================================================================
+
+/**
+ * Problem: Flatten a nested array.
+ * 
+ * Given a nested array, return a new array with all elements flattened
+ * to a single level.
+ * 
+ * Examples:
+ * flattenArray([1, [2, 3], [4, [5]]]) => [1, 2, 3, 4, 5]
+ * flattenArray([1, 2, 3]) => [1, 2, 3]
+ * flattenArray([]) => []
+ */
+
+function flattenArray(arr) {
+    // YOUR CODE HERE
+}
+
+// Test cases for Challenge 7
+function testChallenge7() {
+    console.log('=== CHALLENGE 7: Flatten Array ===');
+    console.log('Test 1:', JSON.stringify(flattenArray([1, [2, 3], [4, [5]]])));
+    // Expected: [1, 2, 3, 4, 5]
+
+    console.log('Test 2:', JSON.stringify(flattenArray([1, 2, 3])));
+    // Expected: [1, 2, 3]
+
+    console.log('Test 3:', JSON.stringify(flattenArray([])));
+    // Expected: []
+    console.log('');
+}
+
+/* SOLUTION 7 (uncomment to reveal):
+function flattenArray(arr) {
+    const result = [];
+    for (const item of arr) {
+        if (Array.isArray(item)) {
+            result.push(...flattenArray(item));
+        } else {
+            result.push(item);
+        }
+    }
+    return result;
+}
+*/
+
+
+// ============================================================================
+// CHALLENGE 8: Curry Function
+// Difficulty: Hard
+// ============================================================================
+
+/**
+ * Problem: Implement a currying function.
+ * 
+ * Write a `curry` function that takes a function `fn` as an argument and
+ * returns a curried version of `fn`. Currying is a technique of converting
+ * a function that takes multiple arguments into a sequence of functions that
+ * each takes a single argument.
+ * 
+ * Examples:
+ * const add = (a, b, c) => a + b + c;
+ * const curriedAdd = curry(add);
+ * curriedAdd(1)(2)(3) => 6
+ * curriedAdd(1, 2)(3) => 6
+ * curriedAdd(1)(2, 3) => 6
+ */
+
+function curry(fn) {
+    // YOUR CODE HERE
+}
+
+// Test cases for Challenge 8
+function testChallenge8() {
+    console.log('=== CHALLENGE 8: Curry Function ===');
+
+    const add = (a, b, c) => a + b + c;
+    const curriedAdd = curry(add);
+
+    console.log('Test 1 (curriedAdd(1)(2)(3)):', curriedAdd(1)(2)(3));
+    // Expected: 6
+
+    console.log('Test 2 (curriedAdd(1, 2)(3)):', curriedAdd(1, 2)(3));
+    // Expected: 6
+
+    console.log('Test 3 (curriedAdd(1)(2, 3)):', curriedAdd(1)(2, 3));
+    // Expected: 6
+
+    const multiply = (a, b) => a * b;
+    const curriedMultiply = curry(multiply);
+    console.log('Test 4 (curriedMultiply(5)(4)):', curriedMultiply(5)(4));
+    // Expected: 20
+    
+    console.log('');
+}
+
+/* SOLUTION 8 (uncomment to reveal):
+function curry(fn) {
+    return function curried(...args) {
+        if (args.length >= fn.length) {
+            return fn(...args);
+        } else {
+            return function (...nextArgs) {
+                return curried(...args, ...nextArgs);
+            }
+        }
+    };
+}
+*/
+
+
 // Export functions for use in other files (if using modules)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -366,6 +528,9 @@ if (typeof module !== 'undefined' && module.exports) {
         isPalindrome,
         debounce,
         deepEqual,
-        rateLimiter
+        rateLimiter,
+        findMissingNumber,
+        flattenArray,
+        curry
     };
 }
