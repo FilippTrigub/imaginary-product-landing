@@ -1,0 +1,18 @@
+NovaSphere Vision Statement
+===========================
+
+NovaSphere envisions a personal computing environment where holographic
+interfaces blend with ambient intelligence to keep people focused on what
+matters most. Every surface becomes an adaptive canvas, responding to voice,
+gesture, and intent with fluid, latency-free feedback.
+
+Guiding Principles
+------------------
+- Holograms should feel as tangible as physical tools.
+- Privacy must be preserved through on-device inference and encryption.
+- Interfaces adapt contextually, reducing cognitive load instead of adding
+  menu clutter.
+
+This file captures the north star for NovaSphere's product narrative and can
+serve as reference material when iterating on copy, visuals, or feature
+priorities.
