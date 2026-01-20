@@ -1,4 +1,3 @@
-
 /*
   Coding Challenge 1: Two Sum
 
@@ -69,5 +68,48 @@ const isAnagram = (str1, str2) => {
 */
 
 const factorial = (num) => {
+  // Your code here
+};
+
+/*
+  Coding Challenge 6: Reverse a String
+
+  Write a function that reverses a string.
+
+  Example:
+  reverseString('hello') // => 'olleh'
+*/
+
+const reverseString = (str) => {
+  // Your code here
+};
+
+/*
+  Coding Challenge 7: Find the Missing Number
+
+  Given an array containing n distinct numbers taken from 0, 1, 2, ..., n,
+  find the one that is missing from the array.
+
+  Example:
+  missingNumber([3, 0, 1]) // => 2
+  missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]) // => 8
+*/
+
+const missingNumber = (nums) => {
+  // Your code here
+};
+
+/*
+  Coding Challenge 8: Fibonacci Sequence
+
+  Write a function to generate the Fibonacci sequence up to a certain number of terms.
+  The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1.
+
+  Example:
+  fibonacci(5) // => [0, 1, 1, 2, 3]
+  fibonacci(8) // => [0, 1, 1, 2, 3, 5, 8, 13]
+*/
+
+const fibonacci = (n) => {
   // Your code here
 };
