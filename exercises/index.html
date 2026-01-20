@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Coding Exercises - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .feature-card ul {
+            list-style: none;
+            color: #555;
+        }
+
+        .feature-card ul li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        .stats {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .emoji {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="emoji">🚀</div>
+            <h1>JavaScript Coding Exercises</h1>
+            <p>Master JavaScript through hands-on practice with 80+ coding challenges</p>
+            <a href="test-runner.html" class="cta-button">Start Coding Now</a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>📚 Beginner Level</h3>
+                <p>Build a strong foundation with fundamental concepts:</p>
+                <ul>
+                    <li>Variables and Data Types</li>
+                    <li>Control Flow (if/else, loops)</li>
+                    <li>Functions and Scope</li>
+                    <li>String Manipulation</li>
+                    <li>Basic Problem Solving</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Intermediate Level</h3>
+                <p>Level up with data structures and DOM:</p>
+                <ul>
+                    <li>Array Methods (map, filter, reduce)</li>
+                    <li>Object Manipulation</li>
+                    <li>DOM Manipulation</li>
+                    <li>Event Handling</li>
+                    <li>Functional Programming</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔥 Advanced Level</h3>
+                <p>Master complex patterns and algorithms:</p>
+                <ul>
+                    <li>Async/Await & Promises</li>
+                    <li>Closures & Scope</li>
+                    <li>Design Patterns</li>
+                    <li>Algorithm Challenges</li>
+                    <li>Performance Optimization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <h2>80+</h2>
+                <p>Coding Challenges</p>
+            </div>
+            <div class="stat-item">
+                <h2>8</h2>
+                <p>Exercise Sets</p>
+            </div>
+            <div class="stat-item">
+                <h2>3</h2>
+                <p>Difficulty Levels</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Free & Open Source</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💡 <strong>Pro Tip:</strong> Start with beginner exercises even if you have experience!</p>
+            <p style="margin-top: 10px;">Built with ❤️ for JavaScript learners everywhere</p>
+        </div>
+    </div>
+</body>
+</html>

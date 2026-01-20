@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercise Test Runner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .exercise-selector {
+            margin-bottom: 30px;
+        }
+
+        .exercise-selector label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .exercise-selector select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .exercise-selector select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-run {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-run:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-clear {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-clear:hover {
+            background: #e0e0e0;
+        }
+
+        .output {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 300px;
+            max-height: 500px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .output:empty::before {
+            content: 'Click "Run Tests" to see results...';
+            color: #888;
+        }
+
+        .pass {
+            color: #4ade80;
+        }
+
+        .fail {
+            color: #f87171;
+        }
+
+        .info {
+            color: #60a5fa;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .instructions h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 JavaScript Exercise Test Runner</h1>
+            <p>Practice and test your JavaScript skills</p>
+        </div>
+
+        <div class="content">
+            <div class="instructions">
+                <h3>How to Use:</h3>
+                <ul>
+                    <li>Select an exercise from the dropdown menu</li>
+                    <li>Open the corresponding exercise file and write your solutions</li>
+                    <li>Click "Run Tests" to check your solutions</li>
+                    <li>Green ✓ means your solution passed, Red ✗ means it needs work</li>
+                    <li>Check the solutions folder if you get stuck!</li>
+                </ul>
+            </div>
+
+            <div class="exercise-selector">
+                <label for="exercise-select">Select Exercise:</label>
+                <select id="exercise-select">
+                    <optgroup label="Beginner">
+                        <option value="beginner/01-variables-and-types.js">Exercise 1: Variables and Types</option>
+                        <option value="beginner/02-control-flow.js">Exercise 2: Control Flow</option>
+                    </optgroup>
+                    <optgroup label="Intermediate">
+                        <option value="intermediate/01-arrays.js">Exercise 3: Arrays</option>
+                        <option value="intermediate/02-objects.js">Exercise 4: Objects</option>
+                        <option value="intermediate/03-dom-manipulation.js">Exercise 5: DOM Manipulation</option>
+                    </optgroup>
+                    <optgroup label="Advanced">
+                        <option value="advanced/01-async-programming.js">Exercise 6: Async Programming</option>
+                        <option value="advanced/02-closures-and-scope.js">Exercise 7: Closures and Scope</option>
+                        <option value="advanced/03-algorithms.js">Exercise 8: Algorithms</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-run" onclick="runTests()">Run Tests</button>
+                <button class="btn-clear" onclick="clearOutput()">Clear Output</button>
+            </div>
+
+            <div id="output" class="output"></div>
+        </div>
+    </div>
+
+    <script>
+        const output = document.getElementById('output');
+        const exerciseSelect = document.getElementById('exercise-select');
+
+        // Override console.log to capture output
+        const originalLog = console.log;
+        function captureLog(...args) {
+            const message = args.join(' ');
+            const line = document.createElement('div');
+            
+            if (message.includes('✓ PASS')) {
+                line.className = 'pass';
+            } else if (message.includes('✗ FAIL')) {
+                line.className = 'fail';
+            } else if (message.includes('Test')) {
+                line.className = 'info';
+            }
+            
+            line.textContent = message;
+            output.appendChild(line);
+            originalLog(...args);
+        }
+
+        async function runTests() {
+            output.innerHTML = '';
+            console.log = captureLog;
+
+            const selectedExercise = exerciseSelect.value;
+            
+            try {
+                captureLog(`Loading ${selectedExercise}...`);
+                captureLog('='.repeat(50));
+                
+                // Dynamically import and run the exercise
+                const module = await import(`./${selectedExercise}`);
+                
+                // Check if the module has a runTests function
+                if (typeof module.runTests === 'function') {
+                    await module.runTests();
+                } else {
+                    captureLog('⚠ This exercise does not have automated tests.');
+                    captureLog('Please check the file for manual testing instructions.');
+                }
+                
+            } catch (error) {
+                captureLog(`❌ Error loading exercise: ${error.message}`);
+                captureLog('Make sure you have completed the exercise functions.');
+            } finally {
+                console.log = originalLog;
+            }
+        }
+
+        function clearOutput() {
+            output.innerHTML = '';
+        }
+
+        // Add keyboard shortcut
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                runTests();
+            }
+        });
+    </script>
+</body>
+</html>

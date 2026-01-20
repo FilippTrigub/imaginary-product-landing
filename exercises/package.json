@@ -1,0 +1,33 @@
+{
+  "name": "javascript-coding-exercises",
+  "version": "1.0.0",
+  "description": "Comprehensive JavaScript coding exercises for all skill levels",
+  "main": "index.js",
+  "scripts": {
+    "verify": "node verify-solutions.js",
+    "test:beginner:1": "node beginner/01-variables-and-types.js",
+    "test:beginner:2": "node beginner/02-control-flow.js",
+    "test:intermediate:1": "node intermediate/01-arrays.js",
+    "test:intermediate:2": "node intermediate/02-objects.js",
+    "test:intermediate:3": "node intermediate/03-dom-manipulation.js",
+    "test:advanced:1": "node advanced/01-async-programming.js",
+    "test:advanced:2": "node advanced/02-closures-and-scope.js",
+    "test:advanced:3": "node advanced/03-algorithms.js",
+    "start": "echo 'Open index.html in your browser to get started!'"
+  },
+  "keywords": [
+    "javascript",
+    "exercises",
+    "coding",
+    "practice",
+    "learning",
+    "tutorial",
+    "algorithms",
+    "data-structures"
+  ],
+  "author": "JavaScript Learning Community",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
