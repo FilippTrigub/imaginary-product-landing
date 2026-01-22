@@ -1,0 +1,33 @@
+/* Hello World CSS Styles for NovaSphere */
+
+.hello-world {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #667eea;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hello-world::before {
+    content: '👋 ';
+}
+
+.hello-world::after {
+    content: ' 🚀';
+}
+
+/* Animated hello world */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hello-world-animated {
+    animation: wave 2s ease-in-out infinite;
+    display: inline-block;
+}

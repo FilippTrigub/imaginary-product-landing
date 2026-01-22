@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Hello World - NovaSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .input-group {
+            margin: 30px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #greeting {
+            margin-top: 30px;
+            font-size: 1.5em;
+            color: #764ba2;
+            font-weight: 600;
+            min-height: 40px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .emoji {
+            font-size: 2em;
+            display: inline-block;
+            animation: wave 1s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(20deg); }
+            75% { transform: rotate(-20deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World! <span class="emoji">👋</span></h1>
+        <p style="color: #666; font-size: 1.1em; margin-bottom: 20px;">
+            Interactive greeting from NovaSphere
+        </p>
+        
+        <div class="input-group">
+            <input 
+                type="text" 
+                id="nameInput" 
+                placeholder="Enter your name..."
+                onkeypress="if(event.key === 'Enter') greetUser()"
+            >
+        </div>
+        
+        <button onclick="greetUser()">Say Hello!</button>
+        
+        <div id="greeting"></div>
+    </div>
+
+    <script>
+        function greetUser() {
+            const nameInput = document.getElementById('nameInput');
+            const greeting = document.getElementById('greeting');
+            const name = nameInput.value.trim() || 'World';
+            
+            greeting.style.animation = 'none';
+            setTimeout(() => {
+                greeting.textContent = `Hello ${name}! Welcome to NovaSphere! 🚀`;
+                greeting.style.animation = 'fadeIn 0.5s ease';
+            }, 10);
+        }
+
+        // Auto-focus on input
+        document.getElementById('nameInput').focus();
+    </script>
+</body>
+</html>
