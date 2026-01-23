@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "mongodb": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mongodb-mcp-server@latest"
+      ],
+      "enabled": true,
+      "environment": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb+srv://filipp_db_user:7V9BeycHA2kq9sRl@bbai-dev.wumt1ki.mongodb.net/?appName=bbai-dev"
+      }
+    }
+  }
+}
