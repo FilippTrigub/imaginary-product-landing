@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(-1px);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            min-height: 30px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, World!</h1>
+        <p>Welcome to the Hello World page</p>
+        <button onclick="showMessage()">Click Me!</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                'Hello, World!',
+                'Hello, NovaSphere!',
+                'Greetings from JavaScript!',
+                'Welcome to the future!',
+                'Hello from the web!'
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = randomMessage;
+            
+            // Add animation
+            messageDiv.style.animation = 'none';
+            setTimeout(() => {
+                messageDiv.style.animation = 'slideIn 0.5s ease-out';
+            }, 10);
+        }
+
+        // Show a message on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Hello, World from the console!');
+        });
+    </script>
+</body>
+</html>
