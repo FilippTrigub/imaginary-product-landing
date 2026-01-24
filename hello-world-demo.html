@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Demo - NovaSphere</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .demo-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .demo-section h2 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 5px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .output {
+            background: #2d3748;
+            color: #48bb78;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin-top: 1rem;
+            min-height: 100px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .output-line {
+            margin: 5px 0;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+        
+        .keyword {
+            color: #f687b3;
+        }
+        
+        .string {
+            color: #68d391;
+        }
+        
+        .function {
+            color: #63b3ed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Hello World Demo</h1>
+        <p class="subtitle">NovaSphere - Interactive Examples</p>
+        
+        <div class="demo-section">
+            <h2>1. Simple Console Output</h2>
+            <button onclick="simpleHello()">Run Simple Hello</button>
+            <div class="code-block">
+<span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'Hello, World!'</span>);
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>2. Function-based Greeting</h2>
+            <button onclick="functionHello()">Greet Developer</button>
+            <button onclick="functionHello('User')">Greet User</button>
+            <div class="code-block">
+<span class="keyword">function</span> <span class="function">greet</span>(name) {
+    <span class="keyword">return</span> <span class="string">`Hello, ${name}!`</span>;
+}
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>3. Class-based Greeter</h2>
+            <button onclick="classHello()">Use Greeter Class</button>
+            <div class="code-block">
+<span class="keyword">class</span> Greeter {
+    <span class="function">greet</span>(name) {
+        <span class="keyword">return</span> <span class="string">`Hello, ${name}!`</span>;
+    }
+}
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>4. Async Hello World</h2>
+            <button onclick="asyncHello()">Run Async</button>
+            <div class="code-block">
+<span class="keyword">async function</span> <span class="function">asyncHello</span>() {
+    <span class="keyword">return</span> <span class="keyword">await</span> Promise.<span class="function">resolve</span>(<span class="string">'Hello!'</span>);
+}
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Console Output</h2>
+            <button onclick="clearOutput()">Clear Output</button>
+            <div class="output" id="output">
+                <div class="output-line">Ready to run examples...</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Output helper
+        function addOutput(message) {
+            const output = document.getElementById('output');
+            const line = document.createElement('div');
+            line.className = 'output-line';
+            line.textContent = `> ${message}`;
+            output.appendChild(line);
+            output.scrollTop = output.scrollHeight;
+            console.log(message);
+        }
+        
+        function clearOutput() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<div class="output-line">Output cleared.</div>';
+        }
+        
+        // Example 1: Simple Hello
+        function simpleHello() {
+            addOutput('Hello, World!');
+            addOutput('Welcome to NovaSphere!');
+        }
+        
+        // Example 2: Function-based
+        function greet(name = 'Developer') {
+            return `Hello, ${name}!`;
+        }
+        
+        function functionHello(name) {
+            const message = greet(name);
+            addOutput(message);
+        }
+        
+        // Example 3: Class-based
+        class Greeter {
+            constructor(greeting = 'Hello') {
+                this.greeting = greeting;
+            }
+            
+            greet(name) {
+                return `${this.greeting}, ${name}!`;
+            }
+        }
+        
+        function classHello() {
+            const greeter = new Greeter('Welcome');
+            addOutput(greeter.greet('World'));
+            addOutput(greeter.greet('NovaSphere User'));
+        }
+        
+        // Example 4: Async
+        async function asyncHello() {
+            addOutput('Starting async operation...');
+            
+            const promise = new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve('Hello, World! (async)');
+                }, 1000);
+            });
+            
+            const result = await promise;
+            addOutput(result);
+            addOutput('Async operation completed!');
+        }
+        
+        // Initial greeting
+        window.addEventListener('DOMContentLoaded', () => {
+            addOutput('Hello World Demo loaded successfully!');
+            addOutput('Click any button to see examples.');
+        });
+    </script>
+</body>
+</html>
