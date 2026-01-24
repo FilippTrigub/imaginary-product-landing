@@ -1,0 +1,2 @@
+// CommonJS Node hello world
+console.log('Hello, world from Node (CommonJS)!');
