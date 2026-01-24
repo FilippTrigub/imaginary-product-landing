@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Demo - NovaSphere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .demo-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .code-block {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #2196f3;
+            margin: 15px 0;
+        }
+        .success {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #4caf50;
+            margin: 15px 0;
+            display: none;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World Scripts Demo</h1>
+    <p class="subtitle">NovaSphere Project - Multiple Hello World Implementations</p>
+
+    <div class="demo-section">
+        <h2>Available Scripts</h2>
+        <p>This repository contains several "Hello World" scripts in different languages and formats:</p>
+        <ul>
+            <li><strong>hello.js</strong> - Basic Node.js console script</li>
+            <li><strong>hello-browser.js</strong> - Interactive browser script (loaded on this page!)</li>
+            <li><strong>hello-server.js</strong> - Full HTTP server with multiple routes</li>
+            <li><strong>hello.sh</strong> - Bash shell script with colored output</li>
+            <li><strong>hello.py</strong> - Python script with classes and functions</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>Browser Demo</h2>
+        <p>The <code>hello-browser.js</code> script is loaded on this page. Click the button below to trigger it:</p>
+        <button class="button" onclick="loadHelloScript()">Show Hello World Popup</button>
+        <div id="demo-success" class="success">
+            Script loaded! Check the top-right corner of the page.
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Usage Examples</h2>
+        
+        <h3>Node.js Script</h3>
+        <div class="code-block">$ node hello.js<br>Hello, World!<br>Welcome to NovaSphere!</div>
+        
+        <h3>Shell Script</h3>
+        <div class="code-block">$ bash hello.sh<br># or<br>$ chmod +x hello.sh && ./hello.sh</div>
+        
+        <h3>Python Script</h3>
+        <div class="code-block">$ python3 hello.py<br># or<br>$ chmod +x hello.py && ./hello.py</div>
+        
+        <h3>HTTP Server</h3>
+        <div class="code-block">$ node hello-server.js<br># Then visit http://localhost:3000</div>
+        
+        <div class="info">
+            <strong>Note:</strong> The HTTP server includes multiple routes:
+            <ul style="margin: 10px 0 0 0;">
+                <li><code>/</code> - Main page with styled interface</li>
+                <li><code>/api</code> - Plain text API endpoint</li>
+                <li><code>/json</code> - JSON response with metadata</li>
+                <li><code>/about</code> - About page</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>Features</h2>
+        <ul>
+            <li>Multiple programming languages (JavaScript, Python, Bash)</li>
+            <li>Both CLI and browser implementations</li>
+            <li>Full HTTP server with routing</li>
+            <li>Colored terminal output (shell script)</li>
+            <li>Object-oriented examples (Python)</li>
+            <li>Module exports (Node.js)</li>
+            <li>Graceful shutdown handling (server)</li>
+            <li>Responsive design (browser/server)</li>
+        </ul>
+    </div>
+
+    <script>
+        function loadHelloScript() {
+            // Dynamically load the hello-browser.js script
+            const script = document.createElement('script');
+            script.src = 'hello-browser.js';
+            script.onload = function() {
+                document.getElementById('demo-success').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('demo-success').style.display = 'none';
+                }, 3000);
+            };
+            document.head.appendChild(script);
+        }
+        
+        // Log to console
+        console.log('%c Hello World Demo Page Loaded! ', 'background: #667eea; color: white; font-size: 16px; padding: 10px;');
+        console.log('Open the browser console to see this message!');
+        console.log('Click the button above to load the interactive hello-browser.js script.');
+    </script>
+</body>
+</html>
