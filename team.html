@@ -45,9 +45,22 @@
             background-color: #f8f9fa;
         }
         
+        .team-intro {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+            color: #555;
+        }
+
+        .team-featured {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
@@ -55,10 +68,23 @@
         .team-member {
             text-align: center;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 24px;
+            border-radius: 16px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+        }
+
+        .team-featured .team-member {
+            display: flex;
+            text-align: left;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .team-featured .team-member img {
+            margin-bottom: 0;
+            width: 160px;
+            height: 160px;
         }
         
         .team-member:hover {
@@ -66,8 +92,8 @@
         }
         
         .team-member img {
-            width: 200px;
-            height: 200px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             margin-bottom: 20px;
             object-fit: cover;
@@ -111,36 +137,54 @@
 
     <section class="team-section">
         <div class="container">
-            <h2>Meet Our Team</h2>
-            <p>The brilliant minds behind NovaSphere's revolutionary technology</p>
-            
+            <div class="team-intro">
+                <h2>Meet the Visionaries</h2>
+                <p>Every NovaSphere breakthrough is powered by deep expertise and fearless creativity.</p>
+            </div>
+
+            <div class="team-featured">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/320x320" alt="Sarah Chen">
+                    <div>
+                        <h3>Sarah Chen</h3>
+                        <div class="position">CEO & Founder</div>
+                        <p class="bio">Sarah blends MIT quantum research roots with bold product intuition to steer NovaSphere's long-term vision.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/320x320" alt="Marcus Rodriguez">
+                    <div>
+                        <h3>Marcus Rodriguez</h3>
+                        <div class="position">Chief Technology Officer</div>
+                        <p class="bio">Marcus architected our volumetric interface stack and keeps NovaSphere's engineering culture relentlessly experimental.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="Sarah Chen">
-                    <h3>Sarah Chen</h3>
-                    <div class="position">CEO & Founder</div>
-                    <p class="bio">Former quantum computing researcher at MIT, Sarah leads NovaSphere's vision of revolutionizing personal computing through innovative technology.</p>
-                </div>
-                
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="Marcus Rodriguez">
-                    <h3>Marcus Rodriguez</h3>
-                    <div class="position">Chief Technology Officer</div>
-                    <p class="bio">With 15 years of experience in holographic interfaces, Marcus oversees the technical development of NovaSphere's core technologies.</p>
-                </div>
-                
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="Dr. Aisha Patel">
+                    <img src="https://via.placeholder.com/220x220" alt="Dr. Aisha Patel">
                     <h3>Dr. Aisha Patel</h3>
                     <div class="position">Head of Research</div>
-                    <p class="bio">Leading our R&D department, Aisha brings expertise in neural networks and machine learning to advance our AI capabilities.</p>
+                    <p class="bio">Aisha orchestrates our neural systems, pairing academic rigor with rapid prototyping to unlock adaptive intelligence.</p>
                 </div>
-                
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="James Wilson">
-                    <h3>James Wilson</h3>
-                    <div class="position">Design Director</div>
-                    <p class="bio">Former lead designer at Apple, James ensures that NovaSphere's interface is both beautiful and intuitive for users.</p>
+                    <img src="https://via.placeholder.com/220x220" alt="James Wilson">
+                        <h3>James Wilson</h3>
+                        <div class="position">Design Director</div>
+                        <p class="bio">James shapes every surface and gesture, ensuring our spatial experiences feel human, calm, and undeniably NovaSphere.</p>
+                    </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/220x220" alt="Priya Natarajan">
+                    <h3>Priya Natarajan</h3>
+                    <div class="position">Head of Platform Partnerships</div>
+                    <p class="bio">Priya builds alliances with ecosystem leaders so NovaSphere surfaces seamlessly in workplaces, studios, and labs worldwide.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/220x220" alt="Leo Martinez">
+                    <h3>Leo Martinez</h3>
+                    <div class="position">Lead Systems Engineer</div>
+                    <p class="bio">Leo bridges hardware and software, translating concept devices into resilient production systems at scale.</p>
                 </div>
             </div>
         </div>
