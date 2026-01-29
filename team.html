@@ -89,6 +89,26 @@
             font-size: 0.95em;
             line-height: 1.6;
         }
+        
+        .team-member.featured {
+            grid-column: 1 / -1;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            border: 2px solid #6e8efb;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+        }
+        
+        .team-member.featured img {
+            width: 220px;
+            height: 220px;
+            border: 3px solid #6e8efb;
+        }
+        
+        @media (max-width: 768px) {
+            .team-member.featured {
+                grid-column: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,7 +135,7 @@
             <p>The brilliant minds behind NovaSphere's revolutionary technology</p>
             
             <div class="team-grid">
-                <div class="team-member">
+                <div class="team-member featured">
                     <img src="https://via.placeholder.com/200x200" alt="Sarah Chen">
                     <h3>Sarah Chen</h3>
                     <div class="position">CEO & Founder</div>
@@ -123,17 +143,17 @@
                 </div>
                 
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/200x200" alt="Marcus Rodriguez">
-                    <h3>Marcus Rodriguez</h3>
-                    <div class="position">Chief Technology Officer</div>
-                    <p class="bio">With 15 years of experience in holographic interfaces, Marcus oversees the technical development of NovaSphere's core technologies.</p>
-                </div>
-                
-                <div class="team-member">
                     <img src="https://via.placeholder.com/200x200" alt="Dr. Aisha Patel">
                     <h3>Dr. Aisha Patel</h3>
                     <div class="position">Head of Research</div>
                     <p class="bio">Leading our R&D department, Aisha brings expertise in neural networks and machine learning to advance our AI capabilities.</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/200x200" alt="Marcus Rodriguez">
+                    <h3>Marcus Rodriguez</h3>
+                    <div class="position">Chief Technology Officer</div>
+                    <p class="bio">With 15 years of experience in holographic interfaces, Marcus oversees the technical development of NovaSphere's core technologies.</p>
                 </div>
                 
                 <div class="team-member">
