@@ -1,0 +1,3 @@
+# Quantum Physics Summary
+
+Quantum physics, or quantum mechanics, describes nature at the scale of atoms and subatomic particles. Core principles include wave-particle duality, quantization of energy, and the uncertainty principle, which limits how precisely position and momentum can be known simultaneously. The Schrödinger equation models the probabilistic evolution of quantum states, while phenomena like entanglement show that particles can share correlated properties regardless of distance. Quantum theory underpins technologies such as semiconductors, lasers, and emerging quantum computers. 
