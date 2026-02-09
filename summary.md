@@ -1,0 +1,3 @@
+# Quantum Physics Summary
+
+Quantum physics (quantum mechanics) describes the behavior of matter and energy at atomic and subatomic scales. Its key principles include wave-particle duality, where particles exhibit both wave-like and particle-like properties; quantization of energy levels; and the probabilistic nature of particle positions and momenta described by the Schrödinger equation. Quantum entanglement allows particles to exhibit correlated states regardless of distance, challenging classical intuitions about locality. Applications span semiconductors, lasers, MRI technology, and emerging quantum computing.
