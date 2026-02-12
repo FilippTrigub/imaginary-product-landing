@@ -1,3 +1,11 @@
+/**
+ * Simple hello world function
+ * @returns {string} Hello World message
+ */
+function helloWorld() {
+    return 'Hello, World!';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
