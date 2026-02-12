@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const name = process.argv[2] || 'Friend';
+const time = new Date().getHours();
+
+let greeting;
+if (time < 12) {
+    greeting = 'Good morning';
+} else if (time < 18) {
+    greeting = 'Good afternoon';
+} else {
+    greeting = 'Good evening';
+}
+
+console.log(`${greeting}, ${name}!`);
+console.log(`The current time is ${new Date().toLocaleTimeString()}`);
