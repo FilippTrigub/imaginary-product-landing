@@ -1,3 +1,11 @@
+// Simple hello world function
+function helloWorld() {
+    return 'Hello, World!';
+}
+
+// Call the function on load
+console.log(helloWorld());
+
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
