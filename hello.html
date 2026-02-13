@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="hello-text">Loading...</h1>
+        <button onclick="changeGreeting()">Change Greeting</button>
+    </div>
+
+    <script>
+        // Hello World in JavaScript
+        document.getElementById('hello-text').textContent = 'Hello, World!';
+        
+        function changeGreeting() {
+            const greetings = [
+                'Hello, World!',
+                'Hola, Mundo!',
+                'Bonjour, le Monde!',
+                'Hallo, Welt!',
+                'Ciao, Mondo!',
+                'こんにちは, 世界!'
+            ];
+            
+            const randomIndex = Math.floor(Math.random() * greetings.length);
+            document.getElementById('hello-text').textContent = greetings[randomIndex];
+        }
+    </script>
+</body>
+</html>
