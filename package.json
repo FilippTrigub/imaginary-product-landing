@@ -1,0 +1,12 @@
+{
+  "name": "novasphere-landing-page",
+  "version": "1.0.0",
+  "description": "NovaSphere landing page tests",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
