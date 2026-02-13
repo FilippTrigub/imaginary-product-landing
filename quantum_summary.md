@@ -1,0 +1,3 @@
+# Quantum Physics Summary
+
+Quantum physics, also known as quantum mechanics, describes the behavior of matter and energy at atomic and subatomic scales. It introduces discrete energy levels, wave-particle duality, uncertainty principles, and probabilistic interpretation of physical phenomena. Key concepts include superposition, entanglement, quantization, and tunneling, which explain observations that classical mechanics cannot. Quantum theory underpins modern technologies like semiconductors, lasers, magnetic resonance imaging, and emerging fields such as quantum computing and quantum encryption.
