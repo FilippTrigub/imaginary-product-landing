@@ -1,0 +1,13 @@
+total 56
+drwxr-xr-x 4 vercel-sandbox vercel-sandbox   176 Feb 13 16:04 .
+drwxr-xr-x 5 root           root              48 Feb  5 12:44 ..
+drwxr-xr-x 7 vercel-sandbox vercel-sandbox   147 Feb 13 16:03 .git
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox    43 Feb 13 16:02 .gitignore
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox   201 Feb 13 16:02 README.md
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox     0 Feb 13 16:04 dir_listing.txt
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox 15954 Feb 13 16:02 header.html
+drwxr-xr-x 2 vercel-sandbox vercel-sandbox    41 Feb 13 16:02 images
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox   141 Feb 13 16:02 main.js
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox  2475 Feb 13 16:02 script.js
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox  9532 Feb 13 16:02 styles.css
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox  8238 Feb 13 16:02 team.html
