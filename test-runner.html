@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere Test Runner</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            background: #fff;
+        }
+        
+        .test-section h2 {
+            color: #667eea;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .test-results {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 2px solid #e1e8ed;
+        }
+        
+        .result-summary {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .result-card {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .result-card.pass {
+            border-left: 4px solid #28a745;
+        }
+        
+        .result-card.fail {
+            border-left: 4px solid #dc3545;
+        }
+        
+        .result-card.info {
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .result-card h3 {
+            margin: 0;
+            font-size: 2em;
+            color: #667eea;
+        }
+        
+        .result-card p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .test-logs {
+            background: #2d3748;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .test-log-entry {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .test-log-entry.pass {
+            color: #a8e6cf;
+        }
+        
+        .test-log-entry.fail {
+            color: #ff8b94;
+        }
+        
+        .test-log-entry.info {
+            color: #87ceeb;
+        }
+        
+        .test-log-entry.error {
+            color: #ff6b6b;
+        }
+        
+        .test-log-entry.warn {
+            color: #ffd93d;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn.running {
+            background: #ff6b6b;
+        }
+        
+        .btn.running:hover {
+            background: #e05656;
+        }
+        
+        .failed-tests {
+            background: #fff0f0;
+            border: 1px solid #ffcccc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .failed-tests.show {
+            display: block;
+        }
+        
+        .failed-tests h3 {
+            color: #dc3545;
+            margin-top: 0;
+        }
+        
+        .failed-test-item {
+            padding: 8px;
+            background: white;
+            margin: 5px 0;
+            border-radius: 4px;
+            border-left: 3px solid #dc3545;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .result-summary {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <span>🧪</span>
+            NovaSphere Test Runner
+        </h1>
+        <p style="margin: 10px 0 0 0; opacity: 0.9;">Comprehensive test suite for NovaSphere landing page functionality</p>
+    </header>
+    
+    <div class="test-container">
+        <div class="test-section">
+            <h2>Test Suite Overview</h2>
+            <p>This test runner will execute comprehensive tests for the NovaSphere landing page, including:</p>
+            <ul>
+                <li>📄 <strong>DOM Tests:</strong> Basic DOM manipulation and element creation</li>
+                <li>🎯 <strong>Main.js Tests:</strong> Core landing page functionality</li>
+                <li>🔗 <strong>Smooth Scrolling Tests:</strong> Anchor link navigation behavior</li>
+                <li>📝 <strong>Form Handling Tests:</strong> Contact form submission and validation</li>
+                <li>🎭 <strong>Animation Tests:</strong> Feature card animations on scroll</li>
+            </ul>
+            
+            <button id="run-tests-btn" class="btn">Run All Tests</button>
+        </div>
+        
+        <div class="test-results" id="test-results">
+            <h2>Test Results</h2>
+            
+            <div class="result-summary" id="result-summary">
+                <div class="result-card info">
+                    <h3 id="total-tests">0</h3>
+                    <p>Total Tests</p>
+                </div>
+                <div class="result-card pass">
+                    <h3 id="passed-tests">0</h3>
+                    <p>Passed</p>
+                </div>
+                <div class="result-card fail">
+                    <h3 id="failed-tests">0</h3>
+                    <p>Failed</p>
+                </div>
+            </div>
+            
+            <div class="test-logs" id="test-logs">
+                <div class="test-log-entry info">Waiting to run tests...</div>
+            </div>
+            
+            <div class="failed-tests" id="failed-tests-container">
+                <h3>Failed Tests Details</h3>
+                <div id="failed-tests-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load the test script -->
+    <script src="test-script.js"></script>
+    
+    <!-- Test runner UI script -->
+    <script>
+        // Capture console.log output for display
+        const originalConsoleLog = console.log;
+        const testLogsContainer = document.getElementById('test-logs');
+        
+        console.log = function(...args) {
+            originalConsoleLog.apply(console, args);
+            
+            // Parse the log message to extract type and content
+            const message = args.join(' ');
+            let type = 'info';
+            let content = message;
+            
+            // Extract emoji and determine type
+            if (message.includes('📋')) type = 'info';
+            if (message.includes('✅')) type = 'pass';
+            if (message.includes('❌')) type = 'fail';
+            if (message.includes('💥')) type = 'error';
+            if (message.includes('⚠️')) type = 'warn';
+            
+            // Create log entry
+            const logEntry = document.createElement('div');
+            logEntry.className = `test-log-entry ${type}`;
+            logEntry.textContent = message;
+            testLogsContainer.appendChild(logEntry);
+            
+            // Scroll to bottom
+            testLogsContainer.scrollTop = testLogsContainer.scrollHeight;
+        };
+        
+        // Modify the test runner to update UI
+        const originalRunAllTests = TestRunner.runAllTests;
+        TestRunner.runAllTests = function() {
+            // Clear previous results
+            testLogsContainer.innerHTML = '';
+            document.getElementById('failed-tests-container').classList.remove('show');
+            document.getElementById('failed-tests-list').innerHTML = '';
+            
+            // Update button state
+            const runButton = document.getElementById('run-tests-btn');
+            runButton.classList.add('running');
+            runButton.textContent = 'Running Tests...';
+            runButton.disabled = true;
+            
+            // Run tests
+            const result = originalRunAllTests.call(this);
+            
+            // Update UI with results
+            document.getElementById('total-tests').textContent = TEST_CONFIG.testResults.total;
+            document.getElementById('passed-tests').textContent = TEST_CONFIG.testResults.passed;
+            document.getElementById('failed-tests').textContent = TEST_CONFIG.testResults.failed;
+            
+            // Show failed tests if any
+            if (TEST_CONFIG.testResults.failed > 0) {
+                document.getElementById('failed-tests-container').classList.add('show');
+                const failedList = document.getElementById('failed-tests-list');
+                TEST_CONFIG.testResults.errors.forEach(error => {
+                    const item = document.createElement('div');
+                    item.className = 'failed-test-item';
+                    item.textContent = error;
+                    failedList.appendChild(item);
+                });
+            }
+            
+            // Reset button
+            runButton.classList.remove('running');
+            runButton.textContent = 'Run All Tests';
+            runButton.disabled = false;
+            
+            return result;
+        };
+        
+        // Set up run button
+        document.getElementById('run-tests-btn').addEventListener('click', function() {
+            // Clear console logs
+            testLogsContainer.innerHTML = '<div class="test-log-entry info">Starting test execution...</div>';
+            
+            // Run tests
+            TestRunner.runAllTests();
+        });
+        
+        // Add info message
+        console.log('📋 Test runner initialized. Click "Run All Tests" to start.');
+    </script>
+</body>
+</html>
