@@ -1,0 +1,17 @@
+total 80
+drwxr-xr-x 5 vercel-sandbox vercel-sandbox  4096 Feb 16 19:27 .
+drwxr-xr-x 5 root           root              48 Feb  5 12:44 ..
+drwxr-xr-x 7 vercel-sandbox vercel-sandbox   147 Feb 16 19:24 .git
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox    43 Feb 16 19:24 .gitignore
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox   201 Feb 16 19:24 README.md
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox     0 Feb 16 19:27 dir_listing.txt
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox 15954 Feb 16 19:24 header.html
+drwxr-xr-x 2 vercel-sandbox vercel-sandbox    41 Feb 16 19:24 images
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox   141 Feb 16 19:24 main.js
+drwxr-xr-x 2 vercel-sandbox vercel-sandbox     6 Feb 16 19:25 new_dummy_dir
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox 11714 Feb 16 19:25 quantum_physics_excerpt.txt
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox   615 Feb 16 19:27 quantum_physics_summary.md
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox  1202 Feb 16 19:27 quantum_physics_text_snippet.txt
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox  2475 Feb 16 19:24 script.js
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox  9532 Feb 16 19:24 styles.css
+-rw-r--r-- 1 vercel-sandbox vercel-sandbox  8238 Feb 16 19:24 team.html
