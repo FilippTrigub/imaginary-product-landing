@@ -1,3 +1,5 @@
+console.log('Hello, World!');
+
 const app = document.createElement('div');
-app.innerHTML = '<h1>NovaSphere landing page rebuilt in JS</h1>';
+app.textContent = 'Hello, World!';
 document.body.appendChild(app);
