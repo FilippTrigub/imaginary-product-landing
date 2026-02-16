@@ -1,0 +1,3 @@
+# Quantum Physics Summary
+
+Quantum physics (quantum mechanics) describes nature at atomic and subatomic scales, where energy and matter exhibit discrete quantized states instead of continuous values. Classical mechanics fails in this regime, so physicists developed a probabilistic framework built on wavefunctions evolving via the Schrödinger equation. Key principles include wave-particle duality, uncertainty relations, superposition, and entanglement, each verified in experiments such as the double-slit and Bell tests. Quantum theory enables technologies like semiconductors, lasers, atomic clocks, and quantum information systems, while ongoing research explores quantum field theory, gravity, and computation.
