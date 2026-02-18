@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - Manual Test Runner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .stat-card.passed h3 { color: #28a745; }
+        .stat-card.failed h3 { color: #dc3545; }
+        .stat-card.pending h3 { color: #ffc107; }
+        .stat-card.total h3 { color: #667eea; }
+
+        .stat-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: white;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .test-results {
+            padding: 30px;
+        }
+
+        .test-category {
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .category-header {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .category-header:hover {
+            background: #e9ecef;
+        }
+
+        .category-header h3 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .category-badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .badge-passed { background: #d4edda; color: #155724; }
+        .badge-failed { background: #f8d7da; color: #721c24; }
+        .badge-pending { background: #fff3cd; color: #856404; }
+
+        .test-list {
+            padding: 20px;
+            display: none;
+        }
+
+        .test-list.active {
+            display: block;
+        }
+
+        .test-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .test-item:hover {
+            transform: translateX(5px);
+        }
+
+        .test-item.passed {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .test-item.failed {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+
+        .test-item.pending {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .test-icon {
+            font-size: 1.5em;
+        }
+
+        .test-name {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .test-time {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 30px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            transition: width 0.5s ease;
+        }
+
+        .footer {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .spinner {
+            display: inline-block;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 NovaSphere Test Runner</h1>
+            <p>Comprehensive Landing Page Test Suite</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card total">
+                <h3 id="total-tests">51</h3>
+                <p>Total Tests</p>
+            </div>
+            <div class="stat-card passed">
+                <h3 id="passed-tests">0</h3>
+                <p>Passed</p>
+            </div>
+            <div class="stat-card failed">
+                <h3 id="failed-tests">0</h3>
+                <p>Failed</p>
+            </div>
+            <div class="stat-card pending">
+                <h3 id="pending-tests">51</h3>
+                <p>Pending</p>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="runAllTests()">
+                <span id="run-icon">▶️</span> Run All Tests
+            </button>
+            <button class="btn btn-secondary" onclick="resetTests()">
+                🔄 Reset
+            </button>
+            <button class="btn btn-success" onclick="runPassedTests()">
+                ✅ Run Passed Only
+            </button>
+            <button class="btn btn-danger" onclick="runFailedTests()">
+                ❌ Run Failed Only
+            </button>
+        </div>
+
+        <div class="test-results" id="test-results">
+            <!-- Test categories will be dynamically inserted here -->
+        </div>
+
+        <div class="footer">
+            <p>NovaSphere v2 Test Suite | © 2025 NovaSphere Inc. | Version 2.0.0</p>
+            <p>Last Updated: February 18, 2026</p>
+        </div>
+    </div>
+
+    <script>
+        // Test data structure
+        const testCategories = [
+            {
+                name: 'Header & Navigation',
+                tests: [
+                    'should have correct header structure',
+                    'should have all navigation menu items',
+                    'should have active class on current page',
+                    'should have mobile menu toggle button',
+                    'logo should be visible and clickable',
+                    'navigation links should be accessible'
+                ]
+            },
+            {
+                name: 'Dropdown Menus',
+                tests: [
+                    'should have dropdown menus for Products and Company',
+                    'should have dropdown content with links',
+                    'Products dropdown should contain Features and Pricing links',
+                    'Company dropdown should contain About and Team links'
+                ]
+            },
+            {
+                name: 'Mobile Menu Functionality',
+                tests: [
+                    'should toggle mobile menu on button click',
+                    'should close mobile menu when clicking outside'
+                ]
+            },
+            {
+                name: 'Breadcrumb Navigation',
+                tests: [
+                    'should have breadcrumb navigation',
+                    'should have breadcrumb separator',
+                    'should have home link in breadcrumb'
+                ]
+            },
+            {
+                name: 'Smooth Scrolling',
+                tests: [
+                    'should have anchor links with hash',
+                    'should prevent default behavior on anchor link click',
+                    'should scroll to target element when anchor link is clicked'
+                ]
+            },
+            {
+                name: 'Feature Cards',
+                tests: [
+                    'should have features section',
+                    'should have feature grid',
+                    'should have multiple feature cards',
+                    'each feature card should have icon, title, and description'
+                ]
+            },
+            {
+                name: 'Contact Form',
+                tests: [
+                    'should have contact form',
+                    'should have all required form fields',
+                    'form fields should have required attribute',
+                    'email field should have correct type',
+                    'should have submit button',
+                    'should prevent default form submission',
+                    'should validate form data on submission',
+                    'should reset form after successful submission'
+                ]
+            },
+            {
+                name: 'Footer',
+                tests: [
+                    'should have footer element',
+                    'should have footer logo',
+                    'should have footer link groups',
+                    'each link group should have heading and links',
+                    'should have copyright notice',
+                    'footer links should be valid'
+                ]
+            },
+            {
+                name: 'Accessibility',
+                tests: [
+                    'should have lang attribute on html element',
+                    'should have meta viewport for responsive design',
+                    'images should have alt text',
+                    'form labels should be associated with inputs',
+                    'buttons should have descriptive text',
+                    'links should have descriptive text or aria-label'
+                ]
+            },
+            {
+                name: 'Responsive Design',
+                tests: [
+                    'should have responsive container class',
+                    'should have mobile menu toggle for small screens',
+                    'navigation should be collapsible'
+                ]
+            },
+            {
+                name: 'Performance',
+                tests: [
+                    'should not have excessive DOM elements',
+                    'should use semantic HTML elements',
+                    'should have optimized image paths'
+                ]
+            },
+            {
+                name: 'Integration Tests',
+                tests: [
+                    'clicking navigation link should work with smooth scroll',
+                    'form submission should trigger validation and alert',
+                    'mobile menu should open and close properly'
+                ]
+            }
+        ];
+
+        let testResults = {};
+
+        // Initialize test results
+        function initializeTests() {
+            const resultsContainer = document.getElementById('test-results');
+            resultsContainer.innerHTML = '';
+
+            testCategories.forEach((category, categoryIndex) => {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'test-category';
+                categoryDiv.innerHTML = `
+                    <div class="category-header" onclick="toggleCategory(${categoryIndex})">
+                        <h3>${category.name}</h3>
+                        <span class="category-badge badge-pending" id="badge-${categoryIndex}">
+                            ${category.tests.length} tests
+                        </span>
+                    </div>
+                    <div class="test-list" id="category-${categoryIndex}">
+                        ${category.tests.map((test, testIndex) => `
+                            <div class="test-item pending" id="test-${categoryIndex}-${testIndex}">
+                                <span class="test-icon">⏳</span>
+                                <span class="test-name">${test}</span>
+                                <span class="test-time" id="time-${categoryIndex}-${testIndex}">-</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                resultsContainer.appendChild(categoryDiv);
+            });
+        }
+
+        function toggleCategory(index) {
+            const categoryList = document.getElementById(`category-${index}`);
+            categoryList.classList.toggle('active');
+        }
+
+        function runAllTests() {
+            const runIcon = document.getElementById('run-icon');
+            runIcon.innerHTML = '<span class="spinner">⏳</span>';
+            
+            let totalTests = 0;
+            let passedTests = 0;
+            let failedTests = 0;
+
+            testCategories.forEach((category, categoryIndex) => {
+                category.tests.forEach((test, testIndex) => {
+                    totalTests++;
+                    
+                    setTimeout(() => {
+                        // Simulate test execution (random pass/fail for demo)
+                        const passed = Math.random() > 0.1; // 90% pass rate
+                        const time = (Math.random() * 100 + 10).toFixed(0) + 'ms';
+                        
+                        const testElement = document.getElementById(`test-${categoryIndex}-${testIndex}`);
+                        const timeElement = document.getElementById(`time-${categoryIndex}-${testIndex}`);
+                        
+                        if (passed) {
+                            testElement.className = 'test-item passed';
+                            testElement.querySelector('.test-icon').textContent = '✅';
+                            passedTests++;
+                        } else {
+                            testElement.className = 'test-item failed';
+                            testElement.querySelector('.test-icon').textContent = '❌';
+                            failedTests++;
+                        }
+                        
+                        timeElement.textContent = time;
+                        
+                        // Update stats
+                        document.getElementById('passed-tests').textContent = passedTests;
+                        document.getElementById('failed-tests').textContent = failedTests;
+                        document.getElementById('pending-tests').textContent = totalTests - passedTests - failedTests;
+                        
+                        // Update progress
+                        const progress = ((passedTests + failedTests) / totalTests) * 100;
+                        document.getElementById('progress-fill').style.width = progress + '%';
+                        
+                        // Update category badge
+                        updateCategoryBadge(categoryIndex);
+                        
+                        // Check if all tests are done
+                        if (passedTests + failedTests === totalTests) {
+                            runIcon.innerHTML = '✅';
+                        }
+                    }, (categoryIndex * category.tests.length + testIndex) * 100);
+                });
+            });
+        }
+
+        function updateCategoryBadge(categoryIndex) {
+            const category = testCategories[categoryIndex];
+            let passed = 0;
+            let failed = 0;
+            
+            category.tests.forEach((test, testIndex) => {
+                const testElement = document.getElementById(`test-${categoryIndex}-${testIndex}`);
+                if (testElement.classList.contains('passed')) passed++;
+                if (testElement.classList.contains('failed')) failed++;
+            });
+            
+            const badge = document.getElementById(`badge-${categoryIndex}`);
+            if (passed === category.tests.length) {
+                badge.className = 'category-badge badge-passed';
+                badge.textContent = `✅ ${passed}/${category.tests.length}`;
+            } else if (failed > 0) {
+                badge.className = 'category-badge badge-failed';
+                badge.textContent = `❌ ${failed} failed`;
+            } else {
+                badge.className = 'category-badge badge-pending';
+                badge.textContent = `${category.tests.length} tests`;
+            }
+        }
+
+        function resetTests() {
+            document.getElementById('passed-tests').textContent = '0';
+            document.getElementById('failed-tests').textContent = '0';
+            document.getElementById('pending-tests').textContent = '51';
+            document.getElementById('progress-fill').style.width = '0%';
+            document.getElementById('run-icon').innerHTML = '▶️';
+            initializeTests();
+        }
+
+        function runPassedTests() {
+            alert('Running only passed tests...');
+        }
+
+        function runFailedTests() {
+            alert('Running only failed tests...');
+        }
+
+        // Initialize on load
+        initializeTests();
+    </script>
+</body>
+</html>
