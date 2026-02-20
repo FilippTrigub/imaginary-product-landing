@@ -1,0 +1,15 @@
+{
+  "name": "novasphere",
+  "version": "2.0.0",
+  "description": "NovaSphere - The Future of Personal Computing",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "landing-page",
+    "static-site"
+  ],
+  "author": "NovaSphere Inc.",
+  "license": "MIT"
+}
