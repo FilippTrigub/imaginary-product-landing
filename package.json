@@ -1,0 +1,19 @@
+{
+  "name": "novasphere-static-app",
+  "version": "2.0.0",
+  "description": "NovaSphere v2 - The Future of Personal Computing - Static Landing Page",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp -r *.html *.js *.css images/ dist/ && echo 'Build completed successfully'",
+    "start": "echo 'Static app - serve the dist directory with your preferred web server'",
+    "serve": "npx serve dist -p 3000",
+    "preview": "npx serve dist -p 8080"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {},
+  "keywords": ["static", "landing-page", "novasphere", "cloud-run"],
+  "author": "NovaSphere Team",
+  "license": "MIT"
+}
