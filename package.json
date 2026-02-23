@@ -1,0 +1,10 @@
+{
+  "name": "landing-page-app",
+  "version": "1.0.0",
+  "description": "Simple npm app landing page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}
