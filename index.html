@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - The Future of Personal Computing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            display: none;
+        }
+
+        .banner.visible {
+            display: block;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner" id="foobar-banner">
+        🎉 foobar is set
+    </div>
+
+    <div class="hero">
+        <h1>NovaSphere</h1>
+        <p>The Future of Personal Computing</p>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to NovaSphere</h2>
+        <p>Experience cutting-edge technology with holographic interfaces and advanced computing capabilities.</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Holographic Display</h3>
+                <p>Immerse yourself in stunning 3D holographic projections</p>
+            </div>
+            <div class="feature-card">
+                <h3>AI-Powered</h3>
+                <p>Advanced artificial intelligence for seamless interaction</p>
+            </div>
+            <div class="feature-card">
+                <h3>Cloud Integration</h3>
+                <p>Access your data anywhere with secure cloud synchronization</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 NovaSphere Inc. All rights reserved.
+    </footer>
+
+    <script>
+        // Check if NEXT_PUBLIC_FOOBAR environment variable is set
+        const foobarValue = '__NEXT_PUBLIC_FOOBAR__';
+        if (foobarValue && foobarValue !== '__NEXT_PUBLIC_FOOBAR__') {
+            document.getElementById('foobar-banner').classList.add('visible');
+        }
+    </script>
+</body>
+</html>
