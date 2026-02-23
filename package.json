@@ -1,0 +1,16 @@
+{
+  "name": "landing-page-app",
+  "version": "1.0.0",
+  "description": "Simple landing page npm app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
