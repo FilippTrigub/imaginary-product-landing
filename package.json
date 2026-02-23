@@ -1,0 +1,13 @@
+{
+  "name": "landing-page-app",
+  "version": "1.0.0",
+  "description": "Simple landing page app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
