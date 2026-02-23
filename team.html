@@ -42,7 +42,7 @@
     <style>
         .team-section {
             padding: 80px 0;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f5f5f5 0%, #FFE4E1 25%, #E0FFFF 50%, #F0E6FF 75%, #fff5f9 100%);
         }
         
         .team-grid {
@@ -54,15 +54,36 @@
         
         .team-member {
             text-align: center;
-            background: white;
+            background: linear-gradient(135deg, white 0%, #FFF0F5 100%);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(255, 0, 110, 0.15);
+            transition: all 0.3s ease;
+            border-top: 4px solid #FF006E;
+            position: relative;
         }
-        
+
+        .team-member:nth-child(2) {
+            border-top-color: #00D9FF;
+            background: linear-gradient(135deg, white 0%, #E0FFFF 100%);
+            box-shadow: 0 5px 20px rgba(0, 217, 255, 0.15);
+        }
+
+        .team-member:nth-child(3) {
+            border-top-color: #8338EC;
+            background: linear-gradient(135deg, white 0%, #F0E6FF 100%);
+            box-shadow: 0 5px 20px rgba(131, 56, 236, 0.15);
+        }
+
+        .team-member:nth-child(4) {
+            border-top-color: #00FF88;
+            background: linear-gradient(135deg, white 0%, #E0FFE0 100%);
+            box-shadow: 0 5px 20px rgba(0, 255, 136, 0.15);
+        }
+
         .team-member:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(255, 0, 110, 0.3), 0 0 20px rgba(0, 217, 255, 0.2);
         }
         
         .team-member img {
@@ -74,14 +95,19 @@
         }
         
         .team-member h3 {
-            color: #333;
+            background: linear-gradient(135deg, #FF006E 0%, #8338EC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 5px;
+            font-weight: 700;
         }
         
         .team-member .position {
-            color: #666;
+            color: #FF006E;
             font-size: 0.9em;
             margin-bottom: 15px;
+            font-weight: 600;
         }
         
         .team-member .bio {

@@ -9,7 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #f5f5f5 0%, #FFE4E1 25%, #E0FFFF 50%, #F0FFFF 75%, #FFFACD 100%);
 }
 
 img {
@@ -33,25 +33,25 @@ ul {
 
 /* Button Styles */
 .btn-primary {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #FF006E, #FB5607);
     color: white;
     padding: 12px 24px;
     border-radius: 30px;
     font-weight: 600;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 0, 110, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 15px rgba(110, 142, 251, 0.6);
+    box-shadow: 0 7px 20px rgba(255, 0, 110, 0.6);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #6e8efb;
-    border: 2px solid #6e8efb;
+    color: white;
+    border: 2px solid white;
     padding: 10px 22px;
     border-radius: 30px;
     font-weight: 600;
@@ -60,18 +60,25 @@ ul {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(110, 142, 251, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
 /* Header Styles */
 header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #FF006E 0%, #FF1493 20%, #8338EC 40%, #00D9FF 60%, #00FF88 80%, #3A86FF 100%);
+    background-size: 200% auto;
+    box-shadow: 0 8px 32px rgba(255, 0, 110, 0.5), 0 0 20px rgba(0, 217, 255, 0.3);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    animation: headerShift 8s linear infinite;
+}
+
+@keyframes headerShift {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
 
 header .container {
@@ -94,9 +101,10 @@ header .container {
 .logo span {
     font-weight: 700;
     font-size: 1.5rem;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #FFFF00, #FF006E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: white;
 }
 
 nav ul {
@@ -110,13 +118,22 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6e8efb;
+    color: #FFFF00;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
 }
 
 /* Hero Section */
 .hero {
     padding: 160px 0 80px;
-    background: linear-gradient(135deg, #f5f7fa, #e6e9f0);
+    background: linear-gradient(135deg, #FF006E 0%, #FF1493 20%, #8338EC 40%, #00D9FF 60%, #00FF88 80%, #3A86FF 100%);
+    background-size: 200% auto;
+    animation: heroGradient 10s ease infinite;
+}
+
+@keyframes heroGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero .container {
@@ -131,15 +148,14 @@ nav ul li a:hover {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    background: linear-gradient(135deg, #333, #6e8efb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 30px;
-    color: #666;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .cta-buttons {
@@ -167,14 +183,17 @@ nav ul li a:hover {
 /* Features Section */
 .features {
     padding: 100px 0;
-    background-color: white;
+    background: linear-gradient(135deg, #f5f5f5 0%, #FFE4E1 25%, #E0FFFF 50%, #FFFACD 75%, #fff5ee 100%);
 }
 
 section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: #333;
+    background: linear-gradient(135deg, #FF006E 0%, #8338EC 50%, #3A86FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .feature-grid {
@@ -184,17 +203,36 @@ section h2 {
 }
 
 .feature-card {
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, white 0%, #FFF0F5 100%);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(255, 0, 110, 0.2);
+    border-top: 4px solid #FF006E;
+}
+
+.feature-card:nth-child(2) {
+    border-top-color: #00D9FF;
+    background: linear-gradient(135deg, white 0%, #E0FFFF 100%);
+    box-shadow: 0 5px 20px rgba(0, 217, 255, 0.2);
+}
+
+.feature-card:nth-child(3) {
+    border-top-color: #8338EC;
+    background: linear-gradient(135deg, white 0%, #F0E6FF 100%);
+    box-shadow: 0 5px 20px rgba(131, 56, 236, 0.2);
+}
+
+.feature-card:nth-child(4) {
+    border-top-color: #00FF88;
+    background: linear-gradient(135deg, white 0%, #E0FFE0 100%);
+    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(255, 0, 110, 0.2);
 }
 
 .icon {
@@ -211,7 +249,7 @@ section h2 {
 /* Pricing Section */
 .pricing {
     padding: 100px 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #FFFACD 0%, #FFE4E1 25%, #E0FFFF 50%, #F0E6FF 75%, #f5f5f5 100%);
 }
 
 .pricing-grid {
@@ -221,19 +259,22 @@ section h2 {
 }
 
 .pricing-card {
-    background-color: white;
+    background: linear-gradient(135deg, white 0%, #FFF8DC 100%);
     padding: 40px 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(255, 0, 110, 0.15);
     position: relative;
+    border: 2px solid transparent;
 }
 
 .pricing-card.featured {
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(110, 142, 251, 0.2);
-    border: 2px solid #6e8efb;
+    box-shadow: 0 15px 40px rgba(255, 0, 110, 0.4), 0 0 30px rgba(0, 217, 255, 0.2);
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #FF006E, #00D9FF) 1;
+    background: linear-gradient(135deg, white 0%, #FFF0F5 100%);
 }
 
 .badge {
@@ -241,12 +282,13 @@ section h2 {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #FF006E, #FB5607);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 0, 110, 0.3);
 }
 
 .pricing-card h3 {
@@ -259,7 +301,10 @@ section h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 30px;
-    color: #6e8efb;
+    background: linear-gradient(135deg, #FF006E 0%, #8338EC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .pricing-card ul {
@@ -277,14 +322,14 @@ section h2 {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #6e8efb;
+    color: #FF006E;
     font-weight: bold;
 }
 
 /* Product & Vision Section */
 .product-vision {
     padding: 100px 0;
-    background: linear-gradient(135deg, #ffffff, #f3f6ff);
+    background: linear-gradient(135deg, #ffffff, #fff5f9);
 }
 
 .pv-grid {
@@ -314,15 +359,16 @@ section h2 {
 }
 
 .pv-feature {
-    background: white;
+    background: linear-gradient(135deg, white 0%, #fff5f9 100%);
     padding: 12px 16px;
     border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(102, 126, 234, 0.08);
+    box-shadow: 0 6px 18px rgba(255, 0, 110, 0.1);
     display: flex;
     gap: 12px;
     align-items: center;
     font-weight: 600;
     color: #333;
+    border-left: 4px solid #FF006E;
 }
 
 .pv-feature .emoji {
@@ -375,10 +421,11 @@ section h2 {
 
 .pv-vision {
     margin-top: 28px;
-    background: rgba(110, 142, 251, 0.06);
+    background: linear-gradient(135deg, rgba(255, 0, 110, 0.08) 0%, rgba(131, 56, 236, 0.08) 100%);
     padding: 18px;
     border-radius: 12px;
     color: #2b2b2b;
+    border-left: 4px solid #FF006E;
 }
 
 .pv-vision h4 {
@@ -395,7 +442,7 @@ section h2 {
 /* About Section */
 .about {
     padding: 80px 0;
-    background-color: white;
+    background: linear-gradient(135deg, #f5f5f5 0%, #fff5f9 100%);
 }
 
 .about-content {
@@ -413,7 +460,7 @@ section h2 {
 /* Contact Section */
 .contact {
     padding: 100px 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #fffaf0 0%, #f5f5f5 100%);
 }
 
 .contact-form {
@@ -446,15 +493,18 @@ section h2 {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #6e8efb;
-    box-shadow: 0 0 0 2px rgba(110, 142, 251, 0.2);
+    border-color: #FF006E;
+    box-shadow: 0 0 0 2px rgba(255, 0, 110, 0.2);
 }
 
 /* Footer */
 footer {
-    background-color: #2d3748;
+    background: linear-gradient(135deg, #1a1a3e 0%, #2d1b4d 25%, #1a3a52 50%, #2a3a5e 75%, #1a2a4a 100%);
     color: white;
     padding: 60px 0 20px;
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, #FF006E, #00D9FF, #8338EC, #00FF88) 1;
+    box-shadow: 0 -4px 20px rgba(0, 217, 255, 0.2);
 }
 
 .footer-content {
@@ -501,7 +551,8 @@ footer {
 }
 
 .link-group ul li a:hover {
-    color: white;
+    color: #FF006E;
+    text-decoration: underline;
 }
 
 .copyright {

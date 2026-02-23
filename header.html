@@ -43,12 +43,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         .enhanced-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+            background: linear-gradient(90deg, #FF006E 0%, #FF1493 20%, #8338EC 40%, #00D9FF 60%, #00FF88 80%, #3A86FF 100%);
+            background-size: 200% auto;
+            box-shadow: 0 8px 32px rgba(255, 0, 110, 0.4), 0 0 25px rgba(0, 217, 255, 0.3);
             position: sticky;
             top: 0;
             z-index: 1000;
             padding: 15px 0;
+            animation: headerGradientFlow 8s linear infinite;
+        }
+
+        @keyframes headerGradientFlow {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
         }
         
         .enhanced-header .container {
@@ -102,8 +109,11 @@
         }
         
         .enhanced-nav a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-1px);
+            background: linear-gradient(135deg, rgba(255, 255, 0, 0.3), rgba(0, 255, 136, 0.3));
+            transform: translateY(-2px);
+            color: #FFFF00;
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(0, 255, 136, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
         }
         
         .enhanced-nav a.active {
@@ -191,9 +201,10 @@
         }
         
         .page-breadcrumb {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #FFE4E1 50%, #E0FFFF 100%);
             padding: 15px 0;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, #FF006E, #00D9FF, #8338EC) 1;
         }
         
         .breadcrumb {
@@ -205,12 +216,14 @@
         }
         
         .breadcrumb a {
-            color: #667eea;
+            color: #FF006E;
             text-decoration: none;
+            font-weight: 600;
         }
-        
+
         .breadcrumb a:hover {
             text-decoration: underline;
+            color: #8338EC;
         }
         
         .breadcrumb-separator {
