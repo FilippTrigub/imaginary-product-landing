@@ -1,0 +1,15 @@
+{
+  "name": "novasphere-landing",
+  "version": "1.0.0",
+  "description": "NovaSphere landing page as a simple npm app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
