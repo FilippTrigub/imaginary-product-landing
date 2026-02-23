@@ -1,3 +1,24 @@
+/* Banner styles */
+.banner {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.banner.visible {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.banner.hidden {
+    display: none;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
