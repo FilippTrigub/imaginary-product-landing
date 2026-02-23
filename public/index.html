@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            margin-top: 60px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner"></div>
+    <div class="container">
+        <h1>Welcome to NovaSphere</h1>
+        <p>A simple landing page built with Node.js and Express</p>
+    </div>
+
+    <script>
+        // Check if NEXT_PUBLIC_FOOBAR is set and display banner
+        fetch('/api/config')
+            .then(res => res.json())
+            .then(data => {
+                if (data.foobarIsSet) {
+                    const banner = document.getElementById('banner');
+                    banner.textContent = 'foobar is set';
+                }
+            });
+    </script>
+</body>
+</html>
