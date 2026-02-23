@@ -1,0 +1,13 @@
+{
+  "name": "simple-landing-app",
+  "version": "1.0.0",
+  "description": "A simple npm app that shows a landing page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["landing", "page"],
+  "author": "",
+  "license": "ISC"
+}
