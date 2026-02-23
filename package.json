@@ -1,0 +1,12 @@
+{
+  "name": "simple-landing-page",
+  "version": "1.0.0",
+  "description": "Simple landing page with environment variable detection",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
