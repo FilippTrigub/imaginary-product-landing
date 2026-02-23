@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+
+        .banner {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div id="banner-container"></div>
+
+    <div class="container">
+        <h1>Welcome to NovaSphere</h1>
+        <p>A simple landing page built with vanilla HTML, CSS, and JavaScript served through Node.js</p>
+        <a href="#" class="button">Get Started</a>
+    </div>
+
+    <script>
+        // Check for NEXT_PUBLIC_FOOBAR environment variable
+        fetch('/api/env')
+            .then(response => response.json())
+            .then(data => {
+                if (data.foobarIsSet) {
+                    const banner = document.createElement('div');
+                    banner.className = 'banner';
+                    banner.textContent = '✓ foobar is set';
+                    document.getElementById('banner-container').appendChild(banner);
+                }
+            })
+            .catch(err => console.log('Environment check failed:', err));
+    </script>
+</body>
+</html>
