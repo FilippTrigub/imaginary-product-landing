@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - The Future of Personal Computing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .foobar-banner {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            display: none;
+        }
+        
+        .foobar-banner.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Foobar Banner (shown when NEXT_PUBLIC_FOOBAR is set) -->
+    <div id="foobar-banner" class="foobar-banner">
+        🎉 foobar is set
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="NovaSphere Logo">
+                <span>NovaSphere</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The Future of Personal Computing</h1>
+                <p>Experience revolutionary holographic interfaces and quantum-powered performance with NovaSphere.</p>
+                <div class="cta-buttons">
+                    <a href="#features" class="btn-primary">Explore Features</a>
+                    <a href="#pricing" class="btn-secondary">View Pricing</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/product.svg" alt="NovaSphere Product">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Revolutionary Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Holographic Interface</h3>
+                    <p>Interact with your data in stunning 3D holographic displays.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Quantum Processing</h3>
+                    <p>Powered by next-generation quantum processors for unmatched speed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Neural Security</h3>
+                    <p>Advanced biometric authentication keeps your data secure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">☁️</div>
+                    <h3>Cloud Integration</h3>
+                    <p>Seamlessly sync across all your devices with quantum encryption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$999</div>
+                    <ul>
+                        <li>Standard Holographic Display</li>
+                        <li>Dual-Core Quantum Processor</li>
+                        <li>256GB Storage</li>
+                        <li>1 Year Warranty</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">$1,999</div>
+                    <ul>
+                        <li>Advanced Holographic Display</li>
+                        <li>Quad-Core Quantum Processor</li>
+                        <li>512GB Storage</li>
+                        <li>Neural Security Suite</li>
+                        <li>2 Year Warranty</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$3,999</div>
+                    <ul>
+                        <li>Premium Holographic Display</li>
+                        <li>Octa-Core Quantum Processor</li>
+                        <li>1TB Storage</li>
+                        <li>Full Security Suite</li>
+                        <li>Priority Support</li>
+                        <li>3 Year Warranty</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About NovaSphere</h2>
+            <div class="about-content">
+                <p>NovaSphere is pioneering the future of personal computing with revolutionary holographic interfaces and quantum-powered performance.</p>
+                <p>Founded by a team of visionary engineers and designers, we're committed to transforming how people interact with technology.</p>
+                <p>Our mission is to make advanced computing accessible, intuitive, and beautiful.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="NovaSphere Logo">
+                    <span>NovaSphere</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 NovaSphere Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Check if NEXT_PUBLIC_FOOBAR is set and show banner
+        fetch('/api/config')
+            .then(response => response.json())
+            .then(data => {
+                if (data.foobarSet) {
+                    document.getElementById('foobar-banner').classList.add('show');
+                }
+            })
+            .catch(error => {
+                console.log('Could not fetch config:', error);
+            });
+    </script>
+</body>
+</html>
