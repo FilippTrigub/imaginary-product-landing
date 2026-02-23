@@ -1,0 +1,21 @@
+{
+  "name": "simple-landing-page",
+  "version": "1.0.0",
+  "description": "A simple landing page that shows a foobar banner when NEXT_PUBLIC_FOOBAR is set",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "landing",
+    "page",
+    "env",
+    "banner"
+  ],
+  "author": "Vercel Sandbox",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

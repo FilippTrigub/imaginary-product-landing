@@ -565,7 +565,22 @@ footer {
         align-items: center;
     }
 
-    .pv-visual .device {
+    /* Foobar Banner */
+#foobar-banner {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#foobar-banner.hidden {
+    display: none;
+}
+
+.pv-visual .device {
         width: 260px;
     }
 }

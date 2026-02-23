@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Foobar banner will appear here if NEXT_PUBLIC_FOOBAR is set -->
+    <div id="foobar-banner" class="hidden">
+      <p>Foobar is set!</p>
+    </div>
+    
+    <header>
+      <h1>Welcome to Our Landing Page</h1>
+    </header>
+    
+    <main>
+      <section class="hero">
+        <h2>Discover Amazing Features</h2>
+        <p>This is a simple landing page demonstrating environment variable usage.</p>
+        <button onclick="checkFoobarStatus()">Check Foobar Status</button>
+      </section>
+      
+      <section class="features">
+        <h3>Our Key Features</h3>
+        <ul>
+          <li>Simplicity</li>
+          <li>Ease of Use</li>
+          <li>Clean Design</li>
+        </ul>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2026 Simple Landing Page. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
