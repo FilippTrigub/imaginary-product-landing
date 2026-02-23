@@ -1,0 +1,13 @@
+{
+  "name": "novasphere-app",
+  "version": "1.0.0",
+  "description": "Simple NovaSphere landing page app",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": ["novasphere"],
+  "author": "",
+  "license": "MIT"
+}
