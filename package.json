@@ -1,0 +1,13 @@
+{
+  "name": "novasphere-landing",
+  "version": "1.0.0",
+  "description": "NovaSphere landing page with environment variable banner",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["landing-page", "novasphere"],
+  "author": "",
+  "license": "ISC"
+}
