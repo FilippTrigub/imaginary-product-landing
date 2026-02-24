@@ -63,4 +63,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call once on load and then on scroll
     animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);
+
+    // Lorem Ipsum Generator
+    const generateLoremIpsum = () => {
+        const loremIpsumText = [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+            "Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+            "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+            "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+        ];
+
+        const paragraphs = parseInt(document.getElementById('paragraphs').value) || 3;
+        const output = document.getElementById('output');
+        let html = '';
+
+        for (let i = 0; i < paragraphs; i++) {
+            const randomIndex = Math.floor(Math.random() * loremIpsumText.length);
+            html += `<p>${loremIpsumText[randomIndex]}</p>`;
+        }
+
+        output.innerHTML = html;
+    };
+
+    // Initialize lorem ipsum generator
+    const generateBtn = document.getElementById('generateBtn');
+    if (generateBtn) {
+        generateBtn.addEventListener('click', generateLoremIpsum);
+        
+        // Also generate on page load with default paragraphs
+        generateLoremIpsum();
+    }
 });
