@@ -12,6 +12,21 @@ body {
     background-color: #f8f9fa;
 }
 
+.center-circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.center-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #ff0000;
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.35);
+}
+
 img {
     max-width: 100%;
 }
