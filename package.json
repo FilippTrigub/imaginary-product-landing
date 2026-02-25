@@ -1,0 +1,26 @@
+{
+  "name": "novasphere-website",
+  "version": "2.0.0",
+  "description": "Website for NovaSphere - an imaginary product that features holographic interfaces and advanced computing technologies",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "serve -s dist",
+    "test-env": "FOOBAR=test_value pnpm run dev",
+    "test-public-env": "NEXT_PUBLIC_FOOBAR=test_public_value pnpm run dev"
+  },
+  "dependencies": {
+    "vite": "^5.0.0",
+    "serve": "^14.2.1"
+  },
+  "keywords": [
+    "novasphere",
+    "holographic",
+    "computing",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "ISC"
+}

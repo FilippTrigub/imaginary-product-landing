@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - The Future of Personal Computing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Inject environment variables as meta tags if they exist in the server context -->
+    <meta name="next-public-foobar" content="" id="env-meta-tag" />
+</head>
+<body>
+    <!-- Banner will appear here if the environment variable is set -->
+    <div id="env-banner" style="
+        display: none; 
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        color: white; 
+        padding: 15px 0;
+        text-align: center;
+        font-weight: bold; 
+        font-size: 1.2em;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 9999;
+    ">
+        <div class="container">
+            Environment variable detected: <span id="banner-message"></span>
+        </div>
+    </div>
+
+    <!-- Set environment variables in a global variable that the JS can read -->
+    <script>
+        // Initialize a global app environment variable object that JavaScript can access
+        window.APP_ENV_VARS = {};
+        window.APP_ENV_VARS.FOOBAR = window.APP_ENV_VARS.FOOBAR || '';
+        window.APP_ENV_VARS.NEXT_PUBLIC_FOOBAR = window.APP_ENV_VARS.NEXT_PUBLIC_FOOBAR || '';
+        
+        // We'll set them based on environment if this were served with server-side code
+        // This is just preparation for when the file is served with environment variable values
+    </script>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="NovaSphere Logo">
+                <span>NovaSphere v2</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Experience the Next Generation of Personal Computing</h1>
+                <p>NovaSphere brings holographic interfaces and advanced computing technologies directly to your desktop with revolutionary ease of use.</p>
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn-primary">Get Started Today</a>
+                    <a href="#features" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/product.svg" alt="NovaSphere 3D Render">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Revolutionary Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">🔮</div>
+                    <h3>Holographic Interface</h3>
+                    <p>Interact with your computer using intuitive 3D holographic projection technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🧠</div>
+                    <h3>AI-Powered Experience</h3>
+                    <p>Adaptive intelligence that learns your habits and enhances your productivity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Quantum Processing</h3>
+                    <p>Lightning-fast processing powered by next-generation quantum computing technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Seamless Integration</h3>
+                    <p>Works flawlessly with all your existing applications and digital ecosystems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product & Vision Section -->
+    <section class="product-vision" id="vision">
+        <div class="container">
+            <div class="pv-grid">
+                <div class="pv-content">
+                    <h2>The NovaSphere Vision</h2>
+                    <p>Our mission is to democratize advanced computing technologies for everyone. By bringing sophisticated holographic interfaces and AI-powered assistance into the mainstream, we're creating a more intuitive, efficient, and engaging way to interact with digital information.</p>
+
+                    <div class="pv-features">
+                        <div class="pv-feature">
+                            <div class="emoji">🌟</div>
+                            <div>User-first design</div>
+                        </div>
+                        <div class="pv-feature">
+                            <div class="emoji">🔒</div>
+                            <div>Security-first</div>
+                        </div>
+                        <div class="pv-feature">
+                            <div class="emoji">📈</div>
+                            <div>Scalable</div>
+                        </div>
+                        <div class="pv-feature">
+                            <div class="emoji">🔄</div>
+                            <div>Sustainable</div>
+                        </div>
+                    </div>
+
+                    <div class="pv-cta">
+                        <a href="#features" class="btn-primary" style="margin-right: 12px;">Explore Features</a>
+                        <a href="#contact" class="btn-secondary">Contact Sales</a>
+                    </div>
+                </div>
+
+                <div class="pv-visual">
+                    <img src="images/product.svg" alt="NovaSphere 3D Interface Visualization" class="device">
+                    
+                    <div class="pv-stats">
+                        <div class="pv-stat">
+                            <h4>Faster</h4>
+                            <p>5× Speed</p>
+                        </div>
+                        <div class="pv-stat">
+                            <h4>More Intuitive</h4>
+                            <p>75% Easier</p>
+                        </div>
+                        <div class="pv-stat">
+                            <h4>Efficient</h4>
+                            <p>3× Productivity</p>
+                        </div>
+                    </div>
+
+                    <div class="pv-vision">
+                        <h4>Our Vision Forward</h4>
+                        <p>We believe the future of computing is intuitive, accessible, and powerful. NovaSphere is the bridge to that future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$49<span>/month</span></div>
+                    <ul>
+                        <li>Premium holographic interface features</li>
+                        <li>Up to 5 users</li>
+                        <li>Basic AI assistant</li>
+                        <li>1TB storage space</li>
+                        <li>Standard support</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Start Free Trial</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="badge">MOST POPULAR</div>
+                    <h3>Professional</h3>
+                    <div class="price">$99<span>/month</span></div>
+                    <ul>
+                        <li>Full holographic interface suite</li>
+                        <li>Up to 20 users</li>
+                        <li>Advanced AI customization</li>
+                        <li>10TB storage space</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul>
+                        <li>Complete feature set</li>
+                        <li>Unlimited users</li>
+                        <li>Custom AI training</li>
+                        <li>Custom storage</li>
+                        <li>24/7 dedicated support</li>
+                        <li>SLA guarantees</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About NovaSphere</h2>
+                <p>Founded by pioneers in quantum computing and holographic visualization, NovaSphere aims to revolutionize how we interact with computers. We're committed to sustainable technology solutions that enhance human creativity and productivity.</p>
+                <p>Our team of world-class researchers, engineers, and designers bring decades of experience from Apple, Google, Microsoft, and quantum computing labs around the globe.</p>
+                <a href="team.html" class="btn-secondary">Meet Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="NovaSphere Logo">
+                    <span>NovaSphere v2</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support Center</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Developer API</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 NovaSphere Inc. All rights reserved. Version 2.0
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
