@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 });
 
 // Route for team page
-app.get('/team.html', (req, res) => {
+app.get('/index.html', (req, res) => {
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
   
