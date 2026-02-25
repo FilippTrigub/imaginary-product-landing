@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check for environment variables and show banner if needed
+    const foobarValue = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
+    if (foobarValue) {
+        const banner = document.createElement('div');
+        banner.id = 'env-banner';
+        banner.style.backgroundColor = '#ff6b6b';
+        banner.style.color = 'white';
+        banner.style.textAlign = 'center';
+        banner.style.padding = '10px';
+        banner.style.fontWeight = 'bold';
+        banner.style.position = 'fixed';
+        banner.style.top = '0';
+        banner.style.left = '0';
+        banner.style.width = '100%';
+        banner.style.zIndex = '1001';
+        banner.textContent = `Environment Variable Set: ${foobarValue}`;
+        
+        document.body.prepend(banner);
+        
+        // Adjust header position to account for banner
+        const header = document.querySelector('header') || document.querySelector('header.enhanced-header');
+        if (header) {
+            header.style.top = '40px';
+        }
+    }
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
