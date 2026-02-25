@@ -1,0 +1,14 @@
+{
+  "name": "novasphere-app",
+  "version": "1.0.0",
+  "description": "NovaSphere landing page as a simple pnpm app",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
