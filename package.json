@@ -1,0 +1,17 @@
+{
+  "name": "novasphere-landing-page",
+  "version": "1.0.0",
+  "description": "NovaSphere - The Future of Personal Computing",
+  "main": "index.html",
+  "scripts": {
+    "dev": "pnpm serve",
+    "serve": "live-server --port=3000 --host=localhost"
+  },
+  "keywords": ["novasphere", "landing-page", "web-application"],
+  "author": "NovaSphere Team",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
