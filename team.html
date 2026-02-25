@@ -36,6 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaSphere v2 - Our Team</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -92,6 +93,9 @@
     </style>
 </head>
 <body>
+    <!-- Environment Variable Banner -->
+    <div id="env-banner-container"></div>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -184,5 +188,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Display environment variable banner
+        function showEnvBanner() {
+            const bannerContainer = document.getElementById('env-banner-container');
+            const foobar = window.FOOBAR_VALUE || '';
+
+            if (foobar) {
+                const banner = document.createElement('div');
+                banner.className = 'env-banner';
+                banner.innerHTML = `
+                    <div class="env-banner-content">
+                        <span class="env-banner-label">Environment Variable:</span>
+                        <span class="env-banner-value">${escapeHtml(foobar)}</span>
+                    </div>
+                `;
+                bannerContainer.appendChild(banner);
+            }
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Initialize banner on page load
+        document.addEventListener('DOMContentLoaded', showEnvBanner);
+    </script>
 </body>
 </html>
