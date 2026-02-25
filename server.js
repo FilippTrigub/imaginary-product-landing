@@ -23,10 +23,13 @@ function addBannerToHtml(content, isHeaderPage = false) {
         }
         .page-breadcrumb {
           top: 40px !important;
-        }` : 
+        }` :
           `header {
           top: 40px !important;
         }`
+        }
+        .center-red-circle {
+          margin-top: 40px;
         }
       </style>
     `;
