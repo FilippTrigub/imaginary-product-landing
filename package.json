@@ -1,0 +1,11 @@
+{
+  "name": "novasphere-landing",
+  "version": "2.0.0",
+  "description": "NovaSphere landing page",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
