@@ -1,12 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check for FOOBAR or NEXT_PUBLIC_FOOBAR environment variable
+    // The banner will be added by server.js if the env var is set
+    // Here we check if the banner exists and show the red circle accordingly
+    const envBanner = document.getElementById('env-banner');
+    const redCircle = document.createElement('div');
+    redCircle.className = 'red-circle';
+    if (envBanner) {
+        redCircle.classList.add('visible');
+    }
+    document.body.appendChild(redCircle);
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const headerOffset = 100;
                 const elementPosition = targetElement.getBoundingClientRect().top;
@@ -25,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form data
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            
+
             // Show success message (in a real app, this would send data to a server)
             alert(`Thank you, ${name}! Your message has been received. We will contact you at ${email} shortly.`);
-            
+
             // Reset form
             this.reset();
         });
@@ -45,21 +56,21 @@ document.addEventListener('DOMContentLoaded', () => {
         featureCards.forEach(card => {
             const cardPosition = card.getBoundingClientRect().top;
             const screenPosition = window.innerHeight / 1.3;
-            
+
             if (cardPosition < screenPosition) {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
             }
         });
     };
-    
+
     // Set initial state for animation
     document.querySelectorAll('.feature-card').forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'all 0.5s ease';
     });
-    
+
     // Call once on load and then on scroll
     animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);

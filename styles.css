@@ -532,19 +532,48 @@ footer {
     }
 }
 
+/* Red Circle Styles */
+.red-circle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 999;
+    display: none;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.red-circle.visible {
+    display: block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         display: none;
     }
-    
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     section h2 {
         font-size: 2rem;
     }
@@ -567,5 +596,10 @@ footer {
 
     .pv-visual .device {
         width: 260px;
+    }
+
+    .red-circle {
+        width: 150px;
+        height: 150px;
     }
 }
