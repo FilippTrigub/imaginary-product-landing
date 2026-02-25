@@ -2,17 +2,19 @@
   "name": "sandbox",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
-    "dev": "node server.js",
-    "build": "node build.js",
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.30.1",
   "dependencies": {
+    "next": "^15.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "express": "^5.2.1"
   }
 }

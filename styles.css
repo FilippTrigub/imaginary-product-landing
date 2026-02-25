@@ -65,8 +65,247 @@ ul {
 }
 
 /* Header Styles */
-header {
-    background-color: white;
+.enhanced-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: top 0.3s ease;
+}
+
+/* Adjusted header style when banner is present */
+.has-env-banner .enhanced-header {
+    top: 60px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.enhanced-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.enhanced-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.enhanced-logo span {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.enhanced-nav {
+    display: flex;
+    align-items: center;
+}
+
+.enhanced-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.enhanced-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.enhanced-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.enhanced-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.enhanced-nav .dropdown {
+    position: relative;
+}
+
+.enhanced-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+.enhanced-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.enhanced-nav .dropdown-content a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 0;
+}
+
+.enhanced-nav .dropdown-content a:hover {
+    background-color: #f8f9fa;
+    transform: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .enhanced-nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(102, 126, 234, 0.95);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .enhanced-nav ul.active {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .enhanced-nav .dropdown-content {
+        position: static;
+        display: block;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .enhanced-nav .dropdown-content a {
+        color: white;
+        padding-left: 40px;
+    }
+}
+
+.page-breadcrumb {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+    transition: margin-top 0.3s ease;
+}
+
+/* Adjusted breadcrumb styles based on banner presence */
+.has-env-banner .page-breadcrumb {
+    margin-top: 40px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.breadcrumb a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: #ccc;
+}
+
+/* Special styles for big red circle */
+.big-red-circle {
+    width: 400px;
+    height: 400px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.6);
+    position: relative;
+    border: 8px solid #cc0000;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.circle-container {
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+    margin-top: 160px;
+}
+
+/* When environment banner is displayed */
+.has-env-banner .circle-container {
+    min-height: calc(100vh - 200px);
+    margin-top: 200px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 20px 40px rgba(255, 0, 0, 0.6);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 25px 50px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 20px 40px rgba(255, 0, 0, 0.6);
+    }
+}
+
+.big-red-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(255, 0, 0, 0.8);
+}
+
+/* Hero Section */
+.enhanced-header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -74,7 +313,7 @@ header {
     z-index: 1000;
 }
 
-header .container {
+.enhanced-header .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -518,15 +757,15 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-content {
         text-align: center;
     }
-    
+
     .cta-buttons {
         justify-content: center;
     }
-    
+
     .pricing-card.featured {
         transform: scale(1);
     }
@@ -536,15 +775,15 @@ footer {
     nav ul {
         display: none;
     }
-    
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     section h2 {
         font-size: 2rem;
     }
