@@ -9,7 +9,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #f0f4ff, #e6f0ff, #ffe6f0, #fff0e6);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 img {
@@ -33,25 +41,28 @@ ul {
 
 /* Button Styles */
 .btn-primary {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     padding: 12px 24px;
     border-radius: 30px;
     font-weight: 600;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 15px rgba(110, 142, 251, 0.6);
+    box-shadow: 0 7px 15px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #764ba2, #667eea);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #6e8efb;
-    border: 2px solid #6e8efb;
+    color: #a777e3;
+    border: 2px solid #a777e3;
     padding: 10px 22px;
     border-radius: 30px;
     font-weight: 600;
@@ -60,8 +71,9 @@ ul {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(110, 142, 251, 0.1);
+    background-color: rgba(167, 119, 227, 0.1);
     transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(167, 119, 227, 0.3);
 }
 
 /* Header Styles */
@@ -116,7 +128,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     padding: 160px 0 80px;
-    background: linear-gradient(135deg, #f5f7fa, #e6e9f0);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .hero .container {
@@ -131,7 +143,7 @@ nav ul li a:hover {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    background: linear-gradient(135deg, #333, #6e8efb);
+    background: linear-gradient(135deg, #fff, #e0e7ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -167,7 +179,7 @@ nav ul li a:hover {
 /* Features Section */
 .features {
     padding: 100px 0;
-    background-color: white;
+    background: linear-gradient(to bottom, #ffffff, #f0f5ff);
 }
 
 section h2 {
@@ -175,6 +187,10 @@ section h2 {
     font-size: 2.5rem;
     margin-bottom: 60px;
     color: #333;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .feature-grid {
@@ -184,17 +200,19 @@ section h2 {
 }
 
 .feature-card {
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.15);
+    border: 1px solid rgba(102, 126, 234, 0.1);
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 30px rgba(102, 126, 234, 0.25);
+    background: linear-gradient(135deg, #e6f7ff, #ccf0ff);
 }
 
 .icon {

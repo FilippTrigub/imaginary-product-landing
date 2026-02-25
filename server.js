@@ -1,64 +1,33 @@
 const express = require('express');
+const next = require('next');
 const path = require('path');
-const app = express();
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files
-app.use(express.static(path.join(__dirname)));
+app.prepare().then(() => {
+  const server = express();
 
-// Check for environment variables
-const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
+  // Serve static assets (images, fonts, CSS, etc.)
+  server.use('/images', express.static(path.join(__dirname, 'public/images')));
 
-// Function to add banner to HTML content
-function addBannerToHtml(content, isHeaderPage = false) {
-  if (foobar) {
-    const bannerHtml = `
-      <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
-        Environment Variable Set: ${foobar}
-      </div>
-      <style>
-        ${isHeaderPage ? 
-          `header.enhanced-header {
-          top: 40px !important;
-        }
-        .page-breadcrumb {
-          top: 40px !important;
-        }` : 
-          `header {
-          top: 40px !important;
-        }`
-        }
-      </style>
-    `;
-    content = content.replace('</head>', `${bannerHtml}</head>`);
-  }
-  return content;
-}
+  // Custom route for API calls if needed
+  server.get('/api/env', (req, res) => {
+    const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
+    res.json({ foobar });
+  });
 
-// Route for the main page
-app.get('/', (req, res) => {
-  // Read the header.html file
-  const fs = require('fs');
-  let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
-  
-  // Add banner if environment variable is set
-  content = addBannerToHtml(content, true);
-  
-  res.send(content);
-});
+  // Pass all other routes to Next.js
+  server.all('*', (req, res) => {
+    return handle(req, res);
+  });
 
-// Route for team page
-app.get('/team.html', (req, res) => {
-  const fs = require('fs');
-  let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
-  
-  // Add banner if environment variable is set
-  content = addBannerToHtml(content, false);
-  
-  res.send(content);
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  server.listen(PORT, (err) => {
+    if (err) throw err;
+    console.log(`> Ready on http://localhost:${PORT}`);
+  });
+}).catch((ex) => {
+  console.error(ex.stack);
+  process.exit(1);
 });
