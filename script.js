@@ -26,15 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Show success message (in a real app, this would send data to a server)
             alert(`Thank you, ${name}! Your message has been received. We will contact you at ${email} shortly.`);
             
-            // Reset form
             this.reset();
         });
     }
@@ -53,14 +50,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-    // Set initial state for animation
     document.querySelectorAll('.feature-card').forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'all 0.5s ease';
     });
     
-    // Call once on load and then on scroll
     animateOnScroll();
     window.addEventListener('scroll', animateOnScroll);
+
+    // Check for environment variables and show/hide elements
+    fetch('/check-env')
+        .then(response => response.json())
+        .then(data => {
+            if (data.showBanner) {
+                document.getElementById('red-circle-container').style.display = 'block';
+                document.getElementById('banner').style.display = 'block';
+            }
+        });
+
 });
