@@ -366,7 +366,37 @@
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.querySelector('.enhanced-nav');
+
+    <div id="env-banner">
+        <div class="red-circle"></div>
+    </div>
+
+    <script>
+      fetch("/env")
+        .then(response => response.json())
+        .then(data => {
+          if (data.FOOBAR) {
+            document.getElementById("env-banner").style.display = "block";
+          }
+        });
+    </script>
+  
             const toggle = document.querySelector('.mobile-menu-toggle');
+
+    <div id="env-banner">
+        <div class="red-circle"></div>
+    </div>
+
+    <script>
+      fetch("/env")
+        .then(response => response.json())
+        .then(data => {
+          if (data.FOOBAR) {
+            document.getElementById("env-banner").style.display = "block";
+          }
+        });
+    </script>
+  
             const menu = document.getElementById('nav-menu');
             
             if (!nav.contains(event.target) && menu.classList.contains('active')) {
