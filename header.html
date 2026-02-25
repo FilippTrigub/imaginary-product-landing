@@ -272,7 +272,10 @@
     </div>
     
     <!-- Demo Content -->
-    <section style="padding: 60px 0; text-align: center;">
+    <section style="padding: 60px 0; text-align: center; position: relative;">
+        <!-- Big Red Circle -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background-color: red; border-radius: 50%; z-index: 10;"></div>
+
         <div class="container">
             <h1>Enhanced Header with Navigation</h1>
             <p style="font-size: 1.1em; color: #666; margin-bottom: 40px;">
@@ -357,23 +360,49 @@
     </footer>
     
     <script>
+        // Check for environment variable and display banner
+        (function() {
+            // In browser environment, we need to get env vars from server
+            // For client-side display, check if NEXT_PUBLIC_FOOBAR is available
+            const foobarValue = typeof NEXT_PUBLIC_FOOBAR !== 'undefined' ? NEXT_PUBLIC_FOOBAR : null;
+
+            if (foobarValue || window.ENV_FOOBAR) {
+                const banner = document.createElement('div');
+                banner.id = 'env-banner-client';
+                banner.style.cssText = 'background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;';
+                banner.textContent = 'Environment Variable Set: ' + (foobarValue || window.ENV_FOOBAR);
+                document.body.insertBefore(banner, document.body.firstChild);
+
+                // Adjust header position
+                const header = document.querySelector('.enhanced-header');
+                if (header) {
+                    header.style.top = '40px';
+                }
+
+                const breadcrumb = document.querySelector('.page-breadcrumb');
+                if (breadcrumb) {
+                    breadcrumb.style.top = '40px';
+                }
+            }
+        })();
+
         // Mobile menu toggle functionality
         function toggleMobileMenu() {
             const navMenu = document.getElementById('nav-menu');
             navMenu.classList.toggle('active');
         }
-        
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.querySelector('.enhanced-nav');
             const toggle = document.querySelector('.mobile-menu-toggle');
             const menu = document.getElementById('nav-menu');
-            
+
             if (!nav.contains(event.target) && menu.classList.contains('active')) {
                 menu.classList.remove('active');
             }
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

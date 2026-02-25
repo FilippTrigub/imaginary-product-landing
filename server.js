@@ -16,14 +16,17 @@ function addBannerToHtml(content, isHeaderPage = false) {
       <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
         Environment Variable Set: ${foobar}
       </div>
+      <script>
+        window.ENV_FOOBAR = '${foobar}';
+      </script>
       <style>
-        ${isHeaderPage ? 
+        ${isHeaderPage ?
           `header.enhanced-header {
           top: 40px !important;
         }
         .page-breadcrumb {
           top: 40px !important;
-        }` : 
+        }` :
           `header {
           top: 40px !important;
         }`
