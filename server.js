@@ -28,6 +28,9 @@ function addBannerToHtml(content, isHeaderPage = false) {
           top: 40px !important;
         }`
         }
+        .center-circle {
+          top: calc(50% + 20px) !important;
+        }
       </style>
     `;
     content = content.replace('</head>', `${bannerHtml}</head>`);
