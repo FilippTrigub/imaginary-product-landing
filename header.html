@@ -216,9 +216,24 @@
         .breadcrumb-separator {
             color: #ccc;
         }
+
+        .red-dot {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
     </style>
 </head>
 <body>
+    <!-- Big Red Dot -->
+    <div class="red-dot"></div>
+
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
