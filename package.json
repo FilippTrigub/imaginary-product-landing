@@ -1,0 +1,18 @@
+{
+  "name": "novasphere",
+  "version": "1.0.0",
+  "description": "NovaSphere landing page with environment variable banner",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["novasphere", "landing-page"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
