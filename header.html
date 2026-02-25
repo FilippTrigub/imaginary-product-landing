@@ -216,9 +216,52 @@
         .breadcrumb-separator {
             color: #ccc;
         }
+
+        /* Red circle in the middle */
+        .red-circle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            z-index: 999;
+            pointer-events: none;
+        }
+
+        /* Environment variable banner */
+        .env-banner {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .env-banner.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
+    <!-- Red Circle -->
+    <div class="red-circle"></div>
+
+    <!-- Environment Variable Banner -->
+    <div class="env-banner" id="envBanner">
+        Environment variable FOOBAR or NEXT_PUBLIC_FOOBAR is set!
+    </div>
+
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
@@ -357,23 +400,42 @@
     </footer>
     
     <script>
+        // Check for environment variables and show banner
+        // In browser environment, we need to expose env vars during build/server-side
+        // For client-side checking, we'll use a script tag that gets replaced during build
+        const checkEnvVars = () => {
+            // Check if environment variables are set (exposed during build)
+            const foobar = typeof FOOBAR !== 'undefined' ? FOOBAR : null;
+            const nextPublicFoobar = typeof NEXT_PUBLIC_FOOBAR !== 'undefined' ? NEXT_PUBLIC_FOOBAR : null;
+
+            if (foobar || nextPublicFoobar) {
+                const banner = document.getElementById('envBanner');
+                if (banner) {
+                    banner.classList.add('show');
+                }
+            }
+        };
+
+        // Run on page load
+        checkEnvVars();
+
         // Mobile menu toggle functionality
         function toggleMobileMenu() {
             const navMenu = document.getElementById('nav-menu');
             navMenu.classList.toggle('active');
         }
-        
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.querySelector('.enhanced-nav');
             const toggle = document.querySelector('.mobile-menu-toggle');
             const menu = document.getElementById('nav-menu');
-            
+
             if (!nav.contains(event.target) && menu.classList.contains('active')) {
                 menu.classList.remove('active');
             }
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
