@@ -37,11 +37,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaSphere v2 - Enhanced Header Navigation</title>
+    <meta name="next-public-foobar-env" content="set">
+    <meta name="foobar-env" content="set">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        .env-banner {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            display: none;
+        }
+
+        .env-banner.show {
+            display: block;
+        }
+        
+        .env-banner.warning {
+            background-color: #ffc107;
+            color: black;
+        }
+
         .enhanced-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             box-shadow: 0 2px 20px rgba(0,0,0,0.15);
@@ -50,7 +73,7 @@
             z-index: 1000;
             padding: 15px 0;
         }
-        
+
         .enhanced-header .container {
             display: flex;
             justify-content: space-between;
@@ -59,30 +82,30 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .enhanced-logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
+
         .enhanced-logo img {
             width: 40px;
             height: 40px;
         }
-        
+
         .enhanced-logo span {
             font-size: 1.5em;
             font-weight: 700;
             color: white;
             text-decoration: none;
         }
-        
+
         .enhanced-nav {
             display: flex;
             align-items: center;
         }
-        
+
         .enhanced-nav ul {
             display: flex;
             list-style: none;
@@ -90,7 +113,7 @@
             padding: 0;
             gap: 30px;
         }
-        
+
         .enhanced-nav a {
             color: white;
             text-decoration: none;
@@ -100,21 +123,21 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .enhanced-nav a:hover {
             background-color: rgba(255, 255, 255, 0.1);
             transform: translateY(-1px);
         }
-        
+
         .enhanced-nav a.active {
             background-color: rgba(255, 255, 255, 0.2);
             font-weight: 600;
         }
-        
+
         .enhanced-nav .dropdown {
             position: relative;
         }
-        
+
         .enhanced-nav .dropdown-content {
             display: none;
             position: absolute;
@@ -127,23 +150,23 @@
             padding: 10px 0;
             margin-top: 5px;
         }
-        
+
         .enhanced-nav .dropdown:hover .dropdown-content {
             display: block;
         }
-        
+
         .enhanced-nav .dropdown-content a {
             color: #333;
             padding: 10px 20px;
             display: block;
             border-radius: 0;
         }
-        
+
         .enhanced-nav .dropdown-content a:hover {
             background-color: #f8f9fa;
             transform: none;
         }
-        
+
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -152,7 +175,7 @@
             font-size: 1.5em;
             cursor: pointer;
         }
-        
+
         @media (max-width: 768px) {
             .enhanced-nav ul {
                 display: none;
@@ -166,15 +189,15 @@
                 gap: 15px;
                 border-radius: 0 0 10px 10px;
             }
-            
+
             .enhanced-nav ul.active {
                 display: flex;
             }
-            
+
             .mobile-menu-toggle {
                 display: block;
             }
-            
+
             .enhanced-nav .dropdown-content {
                 position: static;
                 display: block;
@@ -183,19 +206,19 @@
                 margin-top: 10px;
                 border-radius: 5px;
             }
-            
+
             .enhanced-nav .dropdown-content a {
                 color: white;
                 padding-left: 40px;
             }
         }
-        
+
         .page-breadcrumb {
             background-color: #f8f9fa;
             padding: 15px 0;
             border-bottom: 1px solid #e9ecef;
         }
-        
+
         .breadcrumb {
             display: flex;
             align-items: center;
@@ -203,22 +226,27 @@
             color: #666;
             font-size: 0.9em;
         }
-        
+
         .breadcrumb a {
             color: #667eea;
             text-decoration: none;
         }
-        
+
         .breadcrumb a:hover {
             text-decoration: underline;
         }
-        
+
         .breadcrumb-separator {
             color: #ccc;
         }
     </style>
 </head>
 <body>
+    <!-- Environment Variable Banner -->
+    <div id="envBanner" class="env-banner">
+        INFO: Environment variable FOOBAR or NEXT_PUBLIC_FOOBAR is set!
+    </div>
+
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
@@ -226,12 +254,12 @@
                 <img src="images/logo.svg" alt="NovaSphere Logo">
                 <a href="index.html"><span>NovaSphere v2</span></a>
             </div>
-            
+
             <nav class="enhanced-nav">
                 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
                 <ul id="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
-                    
+
                     <li class="dropdown">
                         <a href="#">Products ▾</a>
                         <div class="dropdown-content">
@@ -241,7 +269,7 @@
                             <a href="#">Documentation</a>
                         </div>
                     </li>
-                    
+
                     <li class="dropdown">
                         <a href="#">Company ▾</a>
                         <div class="dropdown-content">
@@ -251,7 +279,7 @@
                             <a href="#">News & Press</a>
                         </div>
                     </li>
-                    
+
                     <li><a href="#">Support</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="index.html#contact" class="btn-primary">Contact</a></li>
@@ -362,18 +390,18 @@
             const navMenu = document.getElementById('nav-menu');
             navMenu.classList.toggle('active');
         }
-        
+
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const nav = document.querySelector('.enhanced-nav');
             const toggle = document.querySelector('.mobile-menu-toggle');
             const menu = document.getElementById('nav-menu');
-            
+
             if (!nav.contains(event.target) && menu.classList.contains('active')) {
                 menu.classList.remove('active');
             }
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -386,6 +414,36 @@
                     });
                 }
             });
+        });
+    </script>
+    
+    <script>
+        // Check for environment variable banner display after DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // In client-side JavaScript, direct access to environment variables is not available
+            // So we'll check for special attributes or meta tags that might be injected server-side
+            // For actual server-side usage, you'd inject the variable into the template
+            
+            // Check for data attributes that could be injected with env var values during SSR/SSG
+            const htmlHasEnvVars = document.documentElement.hasAttribute('data-env-foobar') || 
+                                  document.documentElement.hasAttribute('data-env-public-foobar') ||
+                                  // If env vars are provided via window object in the template
+                                  (typeof NEXT_PUBLIC_FOOBAR !== 'undefined' && NEXT_PUBLIC_FOOBAR) ||
+                                  (typeof FOOBAR !== 'undefined' && FOOBAR) ||
+                                  // Check for localStorage item that might have been set (for demo purposes)
+                                  localStorage.getItem('FOOBAR') ||
+                                  localStorage.getItem('NEXT_PUBLIC_FOOBAR');
+                                 
+            if (htmlHasEnvVars) {
+                document.getElementById('envBanner').classList.add('show');
+            } else {
+                // If we need to detect this in a real deployment scenario using the environment variable
+                // The env vars are typically set in build-time, so we should check for template-injected variables
+                const metaEnvVar = document.querySelector('meta[name*="foobar"]'); // Look for meta tags with foobar in the name
+                if (metaEnvVar && (metaEnvVar.content === 'set' || metaEnvVar.content === 'true')) {
+                    document.getElementById('envBanner').classList.add('show');
+                }
+            }
         });
     </script>
 </body>

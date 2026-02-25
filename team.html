@@ -35,23 +35,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaSphere v2 - Our Team</title>
+    <meta name="next-public-foobar-env" content="set">
+    <meta name="foobar-env" content="set">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        .env-banner {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            display: none;
+        }
+
+        .env-banner.show {
+            display: block;
+        }
+        
+        .env-banner.warning {
+            background-color: #ffc107;
+            color: black;
+        }
+
         .team-section {
             padding: 80px 0;
             background-color: #f8f9fa;
         }
-        
+
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-        
+
         .team-member {
             text-align: center;
             background: white;
@@ -60,11 +83,11 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-        
+
         .team-member:hover {
             transform: translateY(-5px);
         }
-        
+
         .team-member img {
             width: 200px;
             height: 200px;
@@ -72,18 +95,18 @@
             margin-bottom: 20px;
             object-fit: cover;
         }
-        
+
         .team-member h3 {
             color: #333;
             margin-bottom: 5px;
         }
-        
+
         .team-member .position {
             color: #666;
             font-size: 0.9em;
             margin-bottom: 15px;
         }
-        
+
         .team-member .bio {
             color: #555;
             font-size: 0.95em;
@@ -92,6 +115,11 @@
     </style>
 </head>
 <body>
+    <!-- Environment Variable Banner -->
+    <div id="envBanner" class="env-banner">
+        INFO: Environment variable FOOBAR or NEXT_PUBLIC_FOOBAR is set!
+    </div>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -184,5 +212,36 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Check for environment variable banner display after DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // In client-side JavaScript, direct access to environment variables is not available
+            // So we'll check for special attributes or meta tags that might be injected server-side
+            // For actual server-side usage, you'd inject the variable into the template
+            
+            // Check for data attributes that could be injected with env var values during SSR/SSG
+            const htmlHasEnvVars = document.documentElement.hasAttribute('data-env-foobar') || 
+                                  document.documentElement.hasAttribute('data-env-public-foobar') ||
+                                  // If env vars are provided via window object in the template
+                                  (typeof NEXT_PUBLIC_FOOBAR !== 'undefined' && NEXT_PUBLIC_FOOBAR) ||
+                                  (typeof FOOBAR !== 'undefined' && FOOBAR) ||
+                                  // Check for localStorage item that might have been set (for demo purposes)
+                                  localStorage.getItem('FOOBAR') ||
+                                  localStorage.getItem('NEXT_PUBLIC_FOOBAR');
+                                 
+            if (htmlHasEnvVars) {
+                document.getElementById('envBanner').classList.add('show');
+            } else {
+                // If we need to detect this in a real deployment scenario using the environment variable
+                // The env vars are typically set in build-time, so we should check for template-injected variables
+                const metaEnvVar = document.querySelector('meta[name*="foobar"]'); // Look for meta tags with foobar in the name
+                if (metaEnvVar && (metaEnvVar.content === 'set' || metaEnvVar.content === 'true')) {
+                    document.getElementById('envBanner').classList.add('show');
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>

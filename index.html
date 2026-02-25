@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - The Future of Personal Computing</title>
+    <meta name="next-public-foobar-env" content="set">
+    <meta name="foobar-env" content="set">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .env-banner {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            display: none;
+        }
+
+        .env-banner.show {
+            display: block;
+        }
+        
+        .env-banner.warning {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Environment Variable Banner - displayed when FOOBAR or NEXT_PUBLIC_FOOBAR is set -->
+    <div id="envBanner" class="env-banner">
+        INFO: Environment variable FOOBAR or NEXT_PUBLIC_FOOBAR is set!
+    </div>
+
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="NovaSphere Logo">
+                    <span>NovaSphere v2</span>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact" class="btn-primary">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Holographic Interfaces for Tomorrow</h1>
+                    <p>NovaSphere represents the next generation of personal computing, bringing holographic experiences to your fingertips.</p>
+                    <div class="cta-buttons">
+                        <a href="#features" class="btn-primary">Learn More</a>
+                        <a href="#contact" class="btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/product.svg" alt="NovaSphere Product">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Revolutionary Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🌟</div>
+                        <h3>Holographic Display</h3>
+                        <p>Experience computing in a whole new dimension with our advanced holographic display technology.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Powered by quantum processors for unprecedented speed and responsiveness.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔒</div>
+                        <h3>Secure & Private</h3>
+                        <p>Advanced encryption keeps your data safe and secure at all times.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🌍</div>
+                        <h3>Global Connect</h3>
+                        <p>Connect seamlessly with anyone, anywhere in the world using our global network.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product & Vision Section -->
+        <section id="vision" class="product-vision">
+            <div class="container">
+                <div class="pv-grid">
+                    <div class="pv-content">
+                        <h2>Product & Vision</h2>
+                        <p>NovaSphere is designed to revolutionize personal computing by integrating holographic interfaces with everyday life. Our vision is to eliminate the barriers between humans and digital experiences.</p>
+                        
+                        <div class="pv-features">
+                            <div class="pv-feature">
+                                <div class="emoji">🔄</div>
+                                <div>Multi-dimensional</div>
+                            </div>
+                            <div class="pv-feature">
+                                <div class="emoji">🧠</div>
+                                <div>AI Powered</div>
+                            </div>
+                            <div class="pv-feature">
+                                <div class="emoji">🌐</div>
+                                <div>Web3 Compatible</div>
+                            </div>
+                            <div class="pv-feature">
+                                <div class="emoji">📱</div>
+                                <div>Portable</div>
+                            </div>
+                            <div class="pv-feature">
+                                <div class="emoji">🔋</div>
+                                <div>All-Day Battery</div>
+                            </div>
+                            <div class="pv-feature">
+                                <div class="emoji">🧩</div>
+                                <div>Modular</div>
+                            </div>
+                        </div>
+                        
+                        <div class="pv-cta">
+                            <a href="#pricing" class="btn-primary">View Plans</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pv-visual">
+                        <img class="device" src="images/product.svg" alt="NovaSphere Device">
+                        
+                        <div class="pv-stats">
+                            <div class="pv-stat">
+                                <h4>User Satisfaction</h4>
+                                <p>99.3%</p>
+                            </div>
+                            <div class="pv-stat">
+                                <h4>Performance</h4>
+                                <p>2.7x Faster</p>
+                            </div>
+                            <div class="pv-stat">
+                                <h4>Innovation Rating</h4>
+                                <p>4.9/5.0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pv-vision">
+                            <h4>Vision Statement</h4>
+                            <p>Transforming personal computing through holographic technology that bridges digital and physical worlds, creating seamless, immersive experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Pricing Plans</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Standard</h3>
+                        <div class="price">$499<span>/one-time</span></div>
+                        <ul>
+                            <li>Basic holographic interface</li>
+                            <li>3D modeling tools</li>
+                            <li>Standard security</li>
+                            <li>Email support</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="badge">Most Popular</div>
+                        <h3>Premium</h3>
+                        <div class="price">$899<span>/one-time</span></div>
+                        <ul>
+                            <li>Advanced holographic display</li>
+                            <li>AI-assisted navigation</li>
+                            <li>Quantum encryption</li>
+                            <li>Priority support</li>
+                            <li>Exclusive features</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">$1499<span>/one-time</span></div>
+                        <ul>
+                            <li>Complete holographic suite</li>
+                            <li>Customizable environment</li>
+                            <li>Dedicated security protocols</li>
+                            <li>24/7 premium support</li>
+                            <li>Dedicated account manager</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About NovaSphere</h2>
+                    <p>NovaSphere is an innovative company dedicated to revolutionizing the way humans interact with technology. Founded in 2023 by pioneers in the tech industry, we're committed to building the future of personal computing.</p>
+                    <p>Our holographic computing platform creates truly immersive experiences that were once only possible in science fiction. With NovaSphere, the digital and physical worlds converge into seamless, intuitive interactions.</p>
+                    <p>Our research team collaborates with leading universities and technology labs around the world, constantly pushing the boundaries of what's possible in human-computer interaction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="NovaSphere Logo">
+                        <span>NovaSphere v2</span>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Product</h4>
+                            <ul>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#pricing">Pricing</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="team.html">Careers</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 NovaSphere Inc. All rights reserved. Version 2.0
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="mock-env.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

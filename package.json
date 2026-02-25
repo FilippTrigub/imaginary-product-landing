@@ -1,0 +1,23 @@
+{
+  "name": "novasphere-landing-page",
+  "version": "1.0.0",
+  "description": "The landing page for NovaSphere, an imaginary product featuring holographic interfaces and advanced computing technologies.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -o",
+    "start": "http-server -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing-page",
+    "novasphere",
+    "holographic",
+    "web"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
