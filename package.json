@@ -1,0 +1,25 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "This repository contains the landing page for NovaSphere, an imaginary product that features holographic interfaces and advanced computing technologies.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FilippTrigub/imaginary-product-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FilippTrigub/imaginary-product-landing/issues"
+  },
+  "homepage": "https://github.com/FilippTrigub/imaginary-product-landing#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
