@@ -540,11 +540,11 @@ footer {
     transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
-    background-color: red;
+    background-color: blue;
     border-radius: 50%;
     z-index: 999;
     display: none;
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 255, 0.5);
 }
 
 .red-circle.visible {
