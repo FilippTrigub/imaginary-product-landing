@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - The Future of Personal Computing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner for environment variable -->
+    <div id="envVarBanner" style="display: none; position: fixed; top: 0; left: 0; right: 0; padding: 12px; background-color: #ff6b6b; color: white; text-align: center; font-weight: bold; z-index: 10000; font-size: 16px;">
+        Environment variable FOOBAR/NEXT_PUBLIC_FOOBAR is set!</div>
+
+    <!-- Enhanced Header with Navigation -->
+    <header class="enhanced-header">
+        <div class="container">
+            <div class="enhanced-logo">
+                <img src="images/logo.svg" alt="NovaSphere Logo">
+                <a href="index.html"><span>NovaSphere</span></a>
+            </div>
+
+            <nav class="enhanced-nav">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Products ▾</a>
+                        <div class="dropdown-content">
+                            <a href="#features">Features</a>
+                            <a href="#pricing">Pricing Plans</a>
+                            <a href="#">Tech Specs</a>
+                            <a href="#">Documentation</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Company ▾</a>
+                        <div class="dropdown-content">
+                            <a href="#about">About Us</a>
+                            <a href="team.html">Our Team</a>
+                            <a href="#">Careers</a>
+                            <a href="#">News & Press</a>
+                        </div>
+                    </li>
+
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>NovaSphere - The Future of Personal Computing</h1>
+                <p>Experience the next generation of holographic interfaces and advanced computing technology. Designed for the way we imagine tomorrow.</p>
+                <div class="cta-buttons">
+                    <a href="#products" class="btn-primary">Explore Products</a>
+                    <a href="#features" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/product.svg" alt="NovaSphere Product Visualization">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Innovative Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>Advanced AI Processing</h3>
+                    <p>Intelligent algorithms optimized for next-generation computing experiences with adaptive learning capabilities.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Quantum Networking</h3>
+                    <p>Revolutionary network protocols designed for low-latency, secure communication at quantum speeds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Secure Holographics</h3>
+                    <p>Holographic displays with military-grade encryption providing privacy in crowded environments.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Instant Interaction</h3>
+                    <p>Intuitive gesture controls with response times faster than human perception can detect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product & Vision Section -->
+    <section id="products" class="product-vision">
+        <div class="container">
+            <div class="pv-grid">
+                <div class="pv-content">
+                    <h2>Unprecedented Visual Experience</h2>
+                    <p>Our holographic interfaces push the boundaries of human-computer interaction. Experience computing in ways you never imagined possible with 3D visualizations that respond to your thoughts and movements.</p>
+                    
+                    <div class="pv-features">
+                        <div class="pv-feature">
+                            <div class="emoji">🚀</div>
+                            <span>Lightning Fast</span>
+                        </div>
+                        <div class="pv-feature">
+                            <div class="emoji">🎯</div>
+                            <span>High Precision</span>
+                        </div>
+                        <div class="pv-feature">
+                            <div class="emoji">🎨</div>
+                            <span>Visually Stunning</span>
+                        </div>
+                    </div>
+
+                    <div class="pv-cta">
+                        <a href="#pricing" class="btn-primary">Check Plans</a>
+                        <a href="#demo" class="btn-secondary">Try Demo</a>
+                    </div>
+
+                    <div class="pv-vision">
+                        <h4>Our Vision</h4>
+                        <p>"To create truly immersive computing experiences that feel like natural extensions of human thought and creativity. NovaSphere transforms data visualization and processing into an intuitive, multi-dimensional journey."</p>
+                    </div>
+                </div>
+                <div class="pv-visual">
+                    <img src="images/product.svg" alt="NovaSphere in Action" class="device">
+                    <div class="pv-stats">
+                        <div class="pv-stat">
+                            <h4>Speed</h4>
+                            <p>2.4x faster</p>
+                        </div>
+                        <div class="pv-stat">
+                            <h4>Efficiency</h4>
+                            <p>4.2x improvement</p>
+                        </div>
+                        <div class="pv-stat">
+                            <h4>Accuracy</h4>
+                            <p>99.98% match</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Simple & Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Explorer</h3>
+                    <div class="price">$49<span>/month</span></div>
+                    <ul>
+                        <li>Holographic Display (Basic)</li>
+                        <li>Standard AI Assistant</li>
+                        <li>Email Support</li>
+                        <li>Weekly Feature Updates</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">MOST POPULAR</div>
+                    <h3>Creator</h3>
+                    <div class='price'>$149<span>/month</span></div>
+                    <ul>
+                        <li>Full Holographic Experience</li>
+                        <li>Premium AI Suite</li>
+                        <li>Priority Support</li>
+                        <li>Daily Feature Updates</li>
+                        <li>Advanced Analytics</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$449<span>/month</span></div>
+                    <ul>
+                        <li>Advanced Holographic Suite</li>
+                        <li>Custom AI Solution</li>
+                        <li>24/7 Dedicated Support</li>
+                        <li>On-site Training</li>
+                        <li>Custom Integrations</li>
+                        <li>White-label Options</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About NovaSphere</h2>
+                <p>Founded by industry veterans from major tech companies, NovaSphere is committed to pioneering the future of personal computing. Our team combines decades of experience in computer science, artificial intelligence, and user experience design to create products that transcend conventional limitations.</p>
+                
+                <p>We believe computing should be intuitive, immersive, and limitless – a seamless extension of human thought and creativity rather than a barrier to it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="NovaSphere Logo">
+                    <span>NovaSphere</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Tech Specs</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Social Media</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 NovaSphere Inc. All rights reserved. Version 2.0
+                <br>123 Innovation Drive, Tech Valley, CA 94000 | Phone: (555) 123-4567 | Email: info@novasphere.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to check for environment variables
+        function checkEnvironmentVariables() {
+            // Check for the existence of environment variables from server-side or 
+            // via data attributes embedded by build system
+            const hasEnvVar = document.body.hasAttribute('data-env-foobar-set');
+            
+            // Check URL params for testing purposes (would not typically be used in production)
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlHasFoobar = urlParams.has('FOOBAR') || urlParams.has('NEXT_PUBLIC_FOOBAR');
+            
+            // If any condition is true, show the banner
+            if (hasEnvVar || urlHasFoobar) {
+                document.getElementById('envVarBanner').style.display = 'block';
+            }
+        }
+        
+        // Run the check when DOM is loaded
+        document.addEventListener('DOMContentLoaded', checkEnvironmentVariables);
+        
+        // Mobile menu toggle functionality
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.enhanced-nav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const menu = document.getElementById('nav-menu');
+
+            if (nav && !nav.contains(event.target) && menu && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

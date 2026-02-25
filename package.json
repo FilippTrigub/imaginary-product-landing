@@ -1,0 +1,20 @@
+{
+  "name": "novasphere-landing",
+  "version": "1.0.0",
+  "description": "NovaSphere - The Future of Personal Computing - Landing Page",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "preview": "node server.js",
+    "serve": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["novasphere", "landing", "computing", "holographic"],
+  "author": "NovaSphere Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {}
+}
