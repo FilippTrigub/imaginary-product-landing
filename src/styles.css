@@ -1,0 +1,25 @@
+/* Basic styling for the webpage */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Styling for the environment banner */
+.env-banner {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #ffc107;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the main content */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
