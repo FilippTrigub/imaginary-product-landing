@@ -1,0 +1,19 @@
+{
+  "name": "novasphere-landing",
+  "version": "2.0.0",
+  "description": "NovaSphere landing page with conditional banner support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["novasphere", "landing-page"],
+  "author": "NovaSphere Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
