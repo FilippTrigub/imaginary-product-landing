@@ -1,0 +1,15 @@
+{
+  "name": "novasphere-simple",
+  "version": "1.0.0",
+  "description": "Simple pnpm app that displays webpage with environment variable banner",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "packageManager": "pnpm@8.0.0"
+}
