@@ -1,0 +1,47 @@
+/* styles.css - Global styles for the application */
+
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Circle container positioning */
+.circle-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* The red circle styling */
+.red-circle {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+}
+
+/* Banner styling - shown when environment variable is set */
+.banner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: orange;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
