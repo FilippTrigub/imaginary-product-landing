@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaSphere - The Future of Personal Computing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner that appears if environment variable is set -->
+    <div id="env-banner" class="env-banner hidden">
+        <div class="banner-content">
+            <strong>Environment Variable Detected:</strong> FOOBAR/NEXT_PUBLIC_FOOBAR is set
+        </div>
+    </div>
+
+    <!-- Enhanced Header with Navigation -->
+    <header class="enhanced-header">
+        <div class="container">
+            <div class="enhanced-logo">
+                <img src="images/logo.svg" alt="NovaSphere Logo">
+                <a href="index.html"><span>NovaSphere v2</span></a>
+            </div>
+
+            <nav class="enhanced-nav">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Products ▾</a>
+                        <div class="dropdown-content">
+                            <a href="#features">Features</a>
+                            <a href="#pricing">Pricing Plans</a>
+                            <a href="#">Tech Specs</a>
+                            <a href="#">Documentation</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Company ▾</a>
+                        <div class="dropdown-content">
+                            <a href="#about">About Us</a>
+                            <a href="team.html">Our Team</a>
+                            <a href="#">Careers</a>
+                            <a href="#">News & Press</a>
+                        </div>
+                    </li>
+
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact" class="btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="page-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>NovaSphere v2</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Experience the Future of Personal Computing</h1>
+                <p>NovaSphere introduces groundbreaking holographic interfaces and next-gen computing technologies that will transform how you interact with digital information.</p>
+                <div class="cta-buttons">
+                    <a href="#features" class="btn-primary">Explore Features</a>
+                    <a href="#pricing" class="btn-secondary">View Pricing</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/product.svg" alt="NovaSphere Holographic Interface">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Revolutionary Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>Holographic Displays</h3>
+                    <p>Project rich 3D content into any physical space using our revolutionary holographic display technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🧠</div>
+                    <h3>AI Integration</h3>
+                    <p>Harness the power of advanced AI for intelligent personal assistants that truly understand your needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Instant Processing</h3>
+                    <p>Experience unprecedented computing power with our revolutionary quantum-classic hybrid processors.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Seamless Connectivity</h3>
+                    <p>Connect effortlessly with all your devices and cloud services using our universal interface protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product & Vision Section -->
+    <section id="product-vision" class="product-vision">
+        <div class="container">
+            <div class="pv-grid">
+                <div class="pv-content">
+                    <h2>Advanced Technologies</h2>
+                    <p>NovaSphere integrates cutting-edge technologies to create an unparalleled computing experience designed for the future of human-computer interaction.</p>
+                    <div class="pv-features">
+                        <div class="pv-feature">
+                            <span class="emoji">🔒</span> Enhanced Privacy
+                        </div>
+                        <div class="pv-feature">
+                            <span class="emoji">📱</span> Cross-Platform
+                        </div>
+                        <div class="pv-feature">
+                            <span class="emoji">🔋</span> Optimized Battery
+                        </div>
+                        <div class="pv-feature">
+                            <span class="emoji">🔄</span> Continuous Updates
+                        </div>
+                        <div class="pv-feature">
+                            <span class="emoji">🌐</span> Global Access
+                        </div>
+                        <div class="pv-feature">
+                            <span class="emoji">👥</span> Social Features
+                        </div>
+                    </div>
+                    <div class="pv-stat">
+                        <h4>Performance Rating</h4>
+                        <p>98/100 from verified users</p>
+                    </div>
+                    <a href="#pricing" class="btn-primary">Get NovaSphere</a>
+                    
+                    <div class="pv-vision">
+                        <h4>Our Mission</h4>
+                        <p>We're developing technologies that democratize access to computational resources and transform the way people interact with digital information.</p>
+                    </div>
+                </div>
+                <div class="pv-visual">
+                    <img class="device" src="images/product.svg" alt="NovaSphere Device Perspective">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="badge">STANDARD</div>
+                    <h3>Essential</h3>
+                    <div class="price">$599</div>
+                    <ul>
+                        <li>Baseline hardware specifications</li>
+                        <li>Standard holographic display</li>
+                        <li>Basic AI capabilities</li>
+                        <li>1-year warranty and support</li>
+                        <li>Community access</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Select</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">RECOMMENDED</div>
+                    <h3>Professional</h3>
+                    <div class="price">$999</div>
+                    <ul>
+                        <li>Upgraded hardware</li>
+                        <li>Enhanced holographic display</li>
+                        <li>Advanced AI capabilities</li>
+                        <li>3-year warranty and premium support</li>
+                        <li>Priority community access</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Select</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="badge">PREMIUM</div>
+                    <h3>Enterprise</h3>
+                    <div class="price">$1,499</div>
+                    <ul>
+                        <li>Maximum performance specifications</li>
+                        <li>Ultra-high resolution display</li>
+                        <li>Top-tier AI capabilities</li>
+                        <li>Lifetime warranty and instant support</li>
+                        <li>Exclusive enterprise features</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Select</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About NovaSphere</h2>
+                <p>NovaSphere is at the forefront of the next computing revolution, combining holographic interfaces, quantum processing, and artificial intelligence into a unified platform that transforms how humans interact with technology.</p>
+                <p>Founded by industry veterans and researchers from leading technology companies, our mission is to create tools that amplify human potential rather than replace human intelligence.</p>
+                <a href="team.html" class="btn-primary">Meet Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="NovaSphere Logo">
+                    <span>NovaSphere v2</span>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Tech Specs</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Social Media</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 NovaSphere Inc. All rights reserved. Version 2.0
+                <br>123 Innovation Drive, Tech Valley, CA 94000 | Phone: (555) 123-4567 | Email: info@novasphere.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Check for environment variables and show banner if set
+        // This will be handled by the server side to inject the variable
+        document.addEventListener('DOMContentLoaded', function() {
+            // The banner visibility logic will be implemented in the JS file
+        });
+    </script>
+    
+    <script>
+        // Mobile menu toggle functionality
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.enhanced-nav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const menu = document.getElementById('nav-menu');
+
+            if (!nav.contains(event.target) && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
