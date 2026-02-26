@@ -13,20 +13,23 @@ const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 function addBannerToHtml(content, isHeaderPage = false) {
   if (foobar) {
     const bannerHtml = `
-      <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
-        Environment Variable Set: ${foobar}
+      <div id="env-banner" style="background-color: #4CAF50; color: white; text-align: center; padding: 15px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        🔔 Environment Variable Active: FOOBAR="${foobar}"
       </div>
       <style>
-        ${isHeaderPage ? 
+        ${isHeaderPage ?
           `header.enhanced-header {
-          top: 40px !important;
+          top: 50px !important;
         }
         .page-breadcrumb {
-          top: 40px !important;
-        }` : 
+          top: 50px !important;
+        }` :
           `header {
-          top: 40px !important;
+          top: 50px !important;
         }`
+        }
+        body {
+          padding-top: 50px;
         }
       </style>
     `;
