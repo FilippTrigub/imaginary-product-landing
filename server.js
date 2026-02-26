@@ -9,10 +9,15 @@ app.use(express.static(path.join(__dirname)));
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
-// Function to add banner to HTML content
+// Function to add banner and env variables to HTML content
 function addBannerToHtml(content, isHeaderPage = false) {
   if (foobar) {
     const bannerHtml = `
+      <script>
+        // Expose environment variables to client-side
+        window.FOOBAR = '${foobar}';
+        window.NEXT_PUBLIC_FOOBAR = '${foobar}';
+      </script>
       <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
         Environment Variable Set: ${foobar}
       </div>
