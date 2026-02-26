@@ -216,9 +216,45 @@
         .breadcrumb-separator {
             color: #ccc;
         }
+
+        .red-circle {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 500;
+        }
+
+        .env-banner {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1002;
+            display: none;
+        }
+
+        .env-banner.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
+    <!-- Environment Variable Banner -->
+    <div id="envBanner" class="env-banner"></div>
+
+    <!-- Red Circle -->
+    <div class="red-circle"></div>
+
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
@@ -357,6 +393,25 @@
     </footer>
     
     <script>
+        // Check for environment variables and show banner
+        function checkEnvVars() {
+            fetch('/api/check-env')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.hasEnvVar) {
+                        const banner = document.getElementById('envBanner');
+                        banner.textContent = `Environment Variable Set: ${data.value}`;
+                        banner.classList.add('show');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking environment variables:', error);
+                });
+        }
+
+        // Check env vars on page load
+        checkEnvVars();
+
         // Mobile menu toggle functionality
         function toggleMobileMenu() {
             const navMenu = document.getElementById('nav-menu');
