@@ -9,6 +9,14 @@ app.use(express.static(path.join(__dirname)));
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
+// API endpoint to check environment variables
+app.get('/api/env-check', (req, res) => {
+  res.json({
+    foobarSet: !!process.env.FOOBAR,
+    nextPublicFoobarSet: !!process.env.NEXT_PUBLIC_FOOBAR
+  });
+});
+
 // Function to add banner to HTML content
 function addBannerToHtml(content, isHeaderPage = false) {
   if (foobar) {
