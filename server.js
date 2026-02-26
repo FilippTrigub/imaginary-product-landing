@@ -3,9 +3,6 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files
-app.use(express.static(path.join(__dirname)));
-
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
@@ -17,15 +14,21 @@ function addBannerToHtml(content, isHeaderPage = false) {
         Environment Variable Set: ${foobar}
       </div>
       <style>
-        ${isHeaderPage ? 
+        ${isHeaderPage ?
           `header.enhanced-header {
           top: 40px !important;
         }
         .page-breadcrumb {
           top: 40px !important;
-        }` : 
+        }
+        .red-circle {
+          top: calc(50% + 20px) !important;
+        }` :
           `header {
           top: 40px !important;
+        }
+        .red-circle {
+          top: calc(50% + 20px) !important;
         }`
         }
       </style>
@@ -40,10 +43,11 @@ app.get('/', (req, res) => {
   // Read the header.html file
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
-  
+
   // Add banner if environment variable is set
   content = addBannerToHtml(content, true);
-  
+
+  res.setHeader('Content-Type', 'text/html');
   res.send(content);
 });
 
@@ -51,12 +55,16 @@ app.get('/', (req, res) => {
 app.get('/team.html', (req, res) => {
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
-  
+
   // Add banner if environment variable is set
   content = addBannerToHtml(content, false);
-  
+
+  res.setHeader('Content-Type', 'text/html');
   res.send(content);
 });
+
+// Serve static files for all other requests
+app.use(express.static(path.join(__dirname)));
 
 // Start server
 app.listen(PORT, () => {
