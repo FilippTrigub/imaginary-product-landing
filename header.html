@@ -42,6 +42,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Red Circle in the middle */
+        .red-circle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 999;
+            box-shadow: 0 8px 30px rgba(255, 0, 0, 0.4);
+        }
+        
+        /* Environment variable banner */
+        .env-banner {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1001;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .env-banner-active .enhanced-header {
+            top: 50px;
+        }
+        
+        .env-banner-active .page-breadcrumb {
+            padding-top: 65px;
+        }
+        
         .enhanced-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             box-shadow: 0 2px 20px rgba(0,0,0,0.15);
@@ -219,6 +256,9 @@
     </style>
 </head>
 <body>
+    <!-- Red Circle in the middle of the page -->
+    <div class="red-circle"></div>
+    
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
@@ -357,6 +397,18 @@
     </footer>
     
     <script>
+        // Check for environment variables and show banner
+        const envVarValue = '{{ENV_VAR_VALUE}}'; // This will be replaced by server
+        
+        if (envVarValue && envVarValue !== '{{ENV_VAR_VALUE}}') {
+            // Create and inject the banner
+            const banner = document.createElement('div');
+            banner.className = 'env-banner';
+            banner.innerHTML = `Environment Variable Set: ${envVarValue}`;
+            document.body.insertBefore(banner, document.body.firstChild);
+            document.body.classList.add('env-banner-active');
+        }
+        
         // Mobile menu toggle functionality
         function toggleMobileMenu() {
             const navMenu = document.getElementById('nav-menu');
