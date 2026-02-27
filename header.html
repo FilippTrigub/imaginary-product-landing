@@ -216,9 +216,26 @@
         .breadcrumb-separator {
             color: #ccc;
         }
+
+        /* Big Red Circle in the middle of the page */
+        .red-circle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 999;
+            box-shadow: 0 8px 30px rgba(255, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body>
+    <!-- Big Red Circle -->
+    <div class="red-circle"></div>
+
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">

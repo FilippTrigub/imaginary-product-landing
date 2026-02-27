@@ -3,10 +3,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files
-app.use(express.static(path.join(__dirname)));
-
-// Check for environment variables
+// Check for environment variables before setting up routes
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
 // Function to add banner to HTML content
@@ -35,15 +32,26 @@ function addBannerToHtml(content, isHeaderPage = false) {
   return content;
 }
 
-// Route for the main page
+// Route for the main page - serve header.html
 app.get('/', (req, res) => {
   // Read the header.html file
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
-  
+
   // Add banner if environment variable is set
   content = addBannerToHtml(content, true);
-  
+
+  res.send(content);
+});
+
+// Route for header.html
+app.get('/header.html', (req, res) => {
+  const fs = require('fs');
+  let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
+
+  // Add banner if environment variable is set
+  content = addBannerToHtml(content, true);
+
   res.send(content);
 });
 
@@ -51,12 +59,15 @@ app.get('/', (req, res) => {
 app.get('/team.html', (req, res) => {
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
-  
+
   // Add banner if environment variable is set
   content = addBannerToHtml(content, false);
-  
+
   res.send(content);
 });
+
+// Serve static files for other resources
+app.use(express.static(path.join(__dirname)));
 
 // Start server
 app.listen(PORT, () => {
