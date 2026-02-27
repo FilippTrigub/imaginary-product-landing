@@ -3,9 +3,6 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files
-app.use(express.static(path.join(__dirname)));
-
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
@@ -47,6 +44,17 @@ app.get('/', (req, res) => {
   res.send(content);
 });
 
+// Route for the header page
+app.get('/header.html', (req, res) => {
+  const fs = require('fs');
+  let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
+
+  // Add banner if environment variable is set
+  content = addBannerToHtml(content, true);
+
+  res.send(content);
+});
+
 // Route for team page
 app.get('/team.html', (req, res) => {
   const fs = require('fs');
@@ -57,6 +65,9 @@ app.get('/team.html', (req, res) => {
   
   res.send(content);
 });
+
+// Serve static files
+app.use(express.static(path.join(__dirname)));
 
 // Start server
 app.listen(PORT, () => {
