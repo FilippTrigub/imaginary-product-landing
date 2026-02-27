@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname)));
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
-// Function to add banner to HTML content
+// Function to add banner and modifications to HTML content
 function addBannerToHtml(content, isHeaderPage = false) {
   if (foobar) {
     const bannerHtml = `
@@ -17,13 +17,13 @@ function addBannerToHtml(content, isHeaderPage = false) {
         Environment Variable Set: ${foobar}
       </div>
       <style>
-        ${isHeaderPage ? 
+        ${isHeaderPage ?
           `header.enhanced-header {
           top: 40px !important;
         }
         .page-breadcrumb {
           top: 40px !important;
-        }` : 
+        }` :
           `header {
           top: 40px !important;
         }`
