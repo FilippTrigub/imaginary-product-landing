@@ -13,24 +13,48 @@ const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 function addBannerToHtml(content, isHeaderPage = false) {
   if (foobar) {
     const bannerHtml = `
-      <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
-        Environment Variable Set: ${foobar}
-      </div>
       <style>
-        ${isHeaderPage ? 
-          `header.enhanced-header {
-          top: 40px !important;
+        #env-banner {
+          background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+          color: white;
+          text-align: center;
+          padding: 15px 20px;
+          font-weight: bold;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 10000;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+          font-size: 16px;
         }
-        .page-breadcrumb {
-          top: 40px !important;
-        }` : 
-          `header {
-          top: 40px !important;
-        }`
+        
+        ${isHeaderPage ? 
+          `body {
+            padding-top: 50px !important;
+          }
+          header.enhanced-header {
+            top: 50px !important;
+          }
+          .page-breadcrumb {
+            margin-top: 50px !important;
+          }` : 
+          `body {
+            padding-top: 50px !important;
+          }
+          header {
+            top: 50px !important;
+          }`
         }
       </style>
     `;
+    const bannerDiv = `
+      <div id="env-banner">
+        🔔 Environment Variable Detected: FOOBAR/NEXT_PUBLIC_FOOBAR is set to "${foobar}"
+      </div>
+    `;
     content = content.replace('</head>', `${bannerHtml}</head>`);
+    content = content.replace('<body>', `<body>${bannerDiv}`);
   }
   return content;
 }
