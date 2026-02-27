@@ -51,11 +51,20 @@ app.get('/', (req, res) => {
 app.get('/team.html', (req, res) => {
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
-  
+
   // Add banner if environment variable is set
   content = addBannerToHtml(content, false);
-  
+
   res.send(content);
+});
+
+// API endpoint to check environment variables
+app.get('/api/check-env', (req, res) => {
+  const envValue = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
+  res.json({
+    envSet: !!envValue,
+    value: envValue || ''
+  });
 });
 
 // Start server
