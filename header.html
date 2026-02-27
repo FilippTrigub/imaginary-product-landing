@@ -216,9 +216,24 @@
         .breadcrumb-separator {
             color: #ccc;
         }
+
+        .red-circle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 500;
+        }
     </style>
 </head>
 <body>
+    <!-- Red Circle -->
+    <div class="red-circle"></div>
+
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
@@ -357,6 +372,31 @@
     </footer>
     
     <script>
+        // Check for environment variables and show banner
+        (function() {
+            // Try to get env vars from window object (set by server)
+            const foobar = window.ENV_FOOBAR || window.ENV_NEXT_PUBLIC_FOOBAR;
+
+            if (foobar) {
+                const banner = document.createElement('div');
+                banner.id = 'env-var-banner';
+                banner.style.cssText = 'background-color: #4CAF50; color: white; text-align: center; padding: 15px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 2000; box-shadow: 0 2px 5px rgba(0,0,0,0.2);';
+                banner.textContent = 'Environment Variable Detected: ' + foobar;
+                document.body.insertBefore(banner, document.body.firstChild);
+
+                // Adjust header position to account for banner
+                const header = document.querySelector('.enhanced-header');
+                if (header) {
+                    header.style.top = '51px';
+                }
+
+                const breadcrumb = document.querySelector('.page-breadcrumb');
+                if (breadcrumb) {
+                    breadcrumb.style.marginTop = '51px';
+                }
+            }
+        })();
+
         // Mobile menu toggle functionality
         function toggleMobileMenu() {
             const navMenu = document.getElementById('nav-menu');

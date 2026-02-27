@@ -9,28 +9,16 @@ app.use(express.static(path.join(__dirname)));
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
-// Function to add banner to HTML content
-function addBannerToHtml(content, isHeaderPage = false) {
+// Function to add environment variables to HTML content
+function addEnvVarsToHtml(content) {
   if (foobar) {
-    const bannerHtml = `
-      <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
-        Environment Variable Set: ${foobar}
-      </div>
-      <style>
-        ${isHeaderPage ? 
-          `header.enhanced-header {
-          top: 40px !important;
-        }
-        .page-breadcrumb {
-          top: 40px !important;
-        }` : 
-          `header {
-          top: 40px !important;
-        }`
-        }
-      </style>
+    const envScript = `
+      <script>
+        window.ENV_FOOBAR = '${foobar.replace(/'/g, "\\'")}';
+        window.ENV_NEXT_PUBLIC_FOOBAR = '${foobar.replace(/'/g, "\\'")}';
+      </script>
     `;
-    content = content.replace('</head>', `${bannerHtml}</head>`);
+    content = content.replace('</head>', `${envScript}</head>`);
   }
   return content;
 }
@@ -40,10 +28,10 @@ app.get('/', (req, res) => {
   // Read the header.html file
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
-  
-  // Add banner if environment variable is set
-  content = addBannerToHtml(content, true);
-  
+
+  // Add environment variables if set
+  content = addEnvVarsToHtml(content);
+
   res.send(content);
 });
 
@@ -51,10 +39,10 @@ app.get('/', (req, res) => {
 app.get('/team.html', (req, res) => {
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
-  
-  // Add banner if environment variable is set
-  content = addBannerToHtml(content, false);
-  
+
+  // Add environment variables if set
+  content = addEnvVarsToHtml(content);
+
   res.send(content);
 });
 
