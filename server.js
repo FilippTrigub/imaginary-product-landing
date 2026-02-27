@@ -3,14 +3,18 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files
-app.use(express.static(path.join(__dirname)));
-
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
-// Function to add banner to HTML content
+// Function to add banner and red circle to HTML content
 function addBannerToHtml(content, isHeaderPage = false) {
+  // Add red circle to body
+  const redCircleHtml = `
+    <div class="big-red-circle"></div>
+  `;
+  content = content.replace('</body>', `${redCircleHtml}</body>`);
+  
+  // Add banner if environment variable is set
   if (foobar) {
     const bannerHtml = `
       <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
@@ -57,6 +61,20 @@ app.get('/team.html', (req, res) => {
   
   res.send(content);
 });
+
+// Route for header page
+app.get('/header.html', (req, res) => {
+  const fs = require('fs');
+  let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
+  
+  // Add banner and red circle
+  content = addBannerToHtml(content, true);
+  
+  res.send(content);
+});
+
+// Serve static files (after specific routes)
+app.use(express.static(path.join(__dirname)));
 
 // Start server
 app.listen(PORT, () => {

@@ -512,6 +512,21 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Big Red Circle */
+.big-red-circle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    z-index: 999;
+    pointer-events: none;
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero .container,
