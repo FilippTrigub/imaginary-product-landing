@@ -89,9 +89,24 @@
             font-size: 0.95em;
             line-height: 1.6;
         }
+
+        .red-circle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 500;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Big Red Circle in the Middle -->
+    <div class="red-circle"></div>
     <header>
         <div class="container">
             <div class="logo">
