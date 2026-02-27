@@ -272,13 +272,26 @@
     </div>
     
     <!-- Demo Content -->
-    <section style="padding: 60px 0; text-align: center;">
+    <section style="padding: 60px 0; text-align: center; position: relative; min-height: 600px;">
         <div class="container">
             <h1>Enhanced Header with Navigation</h1>
             <p style="font-size: 1.1em; color: #666; margin-bottom: 40px;">
                 This page demonstrates the enhanced header with dropdown navigation for subpages.
             </p>
-            
+
+            <!-- Big Red Circle -->
+            <div id="big-red-circle" style="
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+            "></div>
+
             <div style="background: #f8f9fa; padding: 40px; border-radius: 10px; text-align: left; max-width: 800px; margin: 0 auto;">
                 <h3>Navigation Features:</h3>
                 <ul style="line-height: 2; color: #555;">
@@ -289,7 +302,7 @@
                     <li><strong>Sticky Header:</strong> Stays visible while scrolling</li>
                     <li><strong>Smooth Animations:</strong> Hover effects and transitions</li>
                 </ul>
-                
+
                 <h3 style="margin-top: 30px;">Available Subpages:</h3>
                 <ul style="line-height: 2; color: #555;">
                     <li><a href="index.html">Home</a> - Main landing page</li>

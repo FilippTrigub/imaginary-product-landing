@@ -47,14 +47,25 @@ app.get('/', (req, res) => {
   res.send(content);
 });
 
+// Route for header.html page
+app.get('/header.html', (req, res) => {
+  const fs = require('fs');
+  let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
+
+  // Add banner if environment variable is set
+  content = addBannerToHtml(content, true);
+
+  res.send(content);
+});
+
 // Route for team page
 app.get('/team.html', (req, res) => {
   const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
-  
+
   // Add banner if environment variable is set
   content = addBannerToHtml(content, false);
-  
+
   res.send(content);
 });
 
