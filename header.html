@@ -216,6 +216,21 @@
         .breadcrumb-separator {
             color: #ccc;
         }
+
+        .center-circle-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+
+        .big-red-circle {
+            width: 260px;
+            height: 260px;
+            background: #e00000;
+            border-radius: 50%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -259,6 +274,10 @@
             </nav>
         </div>
     </header>
+
+    <section class="center-circle-section">
+        <div class="big-red-circle"></div>
+    </section>
     
     <!-- Breadcrumb Navigation -->
     <div class="page-breadcrumb">
