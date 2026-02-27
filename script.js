@@ -39,6 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const banner = document.getElementById('env-banner');
+    const bannerValue = document.getElementById('env-banner-value');
+    if (banner && bannerValue) {
+        const envValue = window.FOOBAR || window.NEXT_PUBLIC_FOOBAR || '';
+        if (envValue) {
+            bannerValue.textContent = envValue;
+            banner.hidden = false;
+        }
+    }
+
     // Simple animation for feature cards on scroll
     const animateOnScroll = () => {
         const featureCards = document.querySelectorAll('.feature-card');
