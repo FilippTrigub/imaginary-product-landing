@@ -536,15 +536,15 @@ footer {
     nav ul {
         display: none;
     }
-    
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .footer-links {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     section h2 {
         font-size: 2rem;
     }
@@ -568,4 +568,18 @@ footer {
     .pv-visual .device {
         width: 260px;
     }
+}
+
+/* Big Red Circle */
+.big-red-circle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
 }
