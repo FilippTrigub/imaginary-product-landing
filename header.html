@@ -216,9 +216,22 @@
         .breadcrumb-separator {
             color: #ccc;
         }
+
+        .center-circle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 500;
+        }
     </style>
 </head>
 <body>
+    <div class="center-circle" aria-hidden="true"></div>
     <!-- Enhanced Header with Navigation -->
     <header class="enhanced-header">
         <div class="container">
