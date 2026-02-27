@@ -9,8 +9,15 @@ app.use(express.static(path.join(__dirname)));
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
-// Function to add banner to HTML content
+// Function to add banner and red circle to HTML content
 function addBannerToHtml(content, isHeaderPage = false) {
+  // Always add the red circle
+  const redCircleHtml = `
+    <div class="red-circle"></div>
+  `;
+  content = content.replace('<body>', `<body>${redCircleHtml}`);
+  
+  // Add banner if environment variable is set
   if (foobar) {
     const bannerHtml = `
       <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
