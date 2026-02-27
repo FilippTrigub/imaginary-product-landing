@@ -12,6 +12,18 @@ body {
     background-color: #f8f9fa;
 }
 
+.center-circle {
+    width: 220px;
+    height: 220px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
 img {
     max-width: 100%;
 }
