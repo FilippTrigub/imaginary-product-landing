@@ -15,7 +15,7 @@ body {
 .center-circle {
     width: 220px;
     height: 220px;
-    background-color: #ff0000;
+    background-color: #0000ff;
     border-radius: 50%;
     position: fixed;
     top: 50%;
