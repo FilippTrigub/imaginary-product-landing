@@ -9,10 +9,13 @@ app.use(express.static(path.join(__dirname)));
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
 
-// Function to add banner to HTML content
+// Function to add banner and red circle to HTML content
 function addBannerToHtml(content, isHeaderPage = false) {
+  let additions = '';
+  
+  // Add banner if environment variable is set
   if (foobar) {
-    const bannerHtml = `
+    additions += `
       <div id="env-banner" style="background-color: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; left: 0; width: 100%; z-index: 1001;">
         Environment Variable Set: ${foobar}
       </div>
@@ -30,8 +33,31 @@ function addBannerToHtml(content, isHeaderPage = false) {
         }
       </style>
     `;
-    content = content.replace('</head>', `${bannerHtml}</head>`);
   }
+  
+  // Always add the red circle
+  additions += `
+    <div id="red-circle"></div>
+    <style>
+      #red-circle {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        background-color: #ff0000;
+        border-radius: 50%;
+        z-index: 999;
+        pointer-events: none;
+      }
+    </style>
+  `;
+  
+  if (additions) {
+    content = content.replace('</head>', `${additions}</head>`);
+  }
+  
   return content;
 }
 
