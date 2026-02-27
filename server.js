@@ -1,10 +1,8 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-// Serve static files
-app.use(express.static(path.join(__dirname)));
 
 // Check for environment variables
 const foobar = process.env.FOOBAR || process.env.NEXT_PUBLIC_FOOBAR;
@@ -35,28 +33,29 @@ function addBannerToHtml(content, isHeaderPage = false) {
   return content;
 }
 
-// Route for the main page
+// Route for the main page (must come before static middleware)
 app.get('/', (req, res) => {
-  // Read the header.html file
-  const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
-  
-  // Add banner if environment variable is set
   content = addBannerToHtml(content, true);
-  
+  res.send(content);
+});
+
+// Route for header.html
+app.get('/header.html', (req, res) => {
+  let content = fs.readFileSync(path.join(__dirname, 'header.html'), 'utf8');
+  content = addBannerToHtml(content, true);
   res.send(content);
 });
 
 // Route for team page
 app.get('/team.html', (req, res) => {
-  const fs = require('fs');
   let content = fs.readFileSync(path.join(__dirname, 'team.html'), 'utf8');
-  
-  // Add banner if environment variable is set
   content = addBannerToHtml(content, false);
-  
   res.send(content);
 });
+
+// Serve static files (must come after routes)
+app.use(express.static(path.join(__dirname)));
 
 // Start server
 app.listen(PORT, () => {
